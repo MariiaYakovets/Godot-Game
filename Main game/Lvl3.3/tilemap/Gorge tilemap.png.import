@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da5ybxn0nbxk5"
-path="res://.godot/imported/GorgeBG.png-5bae34c6a6b23a756cadb651091a31b6.ctex"
+uid="uid://dt432nvuxotvs"
+path="res://.godot/imported/Gorge tilemap.png-f73f52413a74ef0faf4cfd46e77ae1e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl3.3/GorgeBG.png"
-dest_files=["res://.godot/imported/GorgeBG.png-5bae34c6a6b23a756cadb651091a31b6.ctex"]
+source_file="res://Main game/Lvl3.3/tilemap/Gorge tilemap.png"
+dest_files=["res://.godot/imported/Gorge tilemap.png-f73f52413a74ef0faf4cfd46e77ae1e6.ctex"]
 
 [params]
 
