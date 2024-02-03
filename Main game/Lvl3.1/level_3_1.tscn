@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dccgfna5p47vc"]
+
+[ext_resource type="Texture2D" uid="uid://b45tlrm62p0v4" path="res://Main game/Lvl3.1/assets/bg/Volcanoes Background 1000x593.png" id="1_llstp"]
+
+[node name="level3_1" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_llstp")
+expand_mode = 1
