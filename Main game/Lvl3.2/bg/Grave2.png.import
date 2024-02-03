@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj3i1ahx3c5tn"
-path="res://.godot/imported/ghost flying.png-18710a40a477e301a57bba8fc5c4b54c.ctex"
+uid="uid://7jmwguw7wew3"
+path="res://.godot/imported/Grave2.png-65c3ad6b4037fcc0ceb0f1d4bd62b5e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl3.2/enemies/ghost flying.png"
-dest_files=["res://.godot/imported/ghost flying.png-18710a40a477e301a57bba8fc5c4b54c.ctex"]
+source_file="res://Main game/Lvl3.2/bg/Grave2.png"
+dest_files=["res://.godot/imported/Grave2.png-65c3ad6b4037fcc0ceb0f1d4bd62b5e0.ctex"]
 
 [params]
 
