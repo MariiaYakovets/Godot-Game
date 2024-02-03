@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b66bt2cbo74bl"
-path="res://.godot/imported/Farm BG.png-b0f059c1a3a69e3fc8a8aabc6dcb0365.ctex"
+path="res://.godot/imported/Farm BG.png-16f2a41358d904ca33f36fc47f1aaac7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/Farm BG.png"
-dest_files=["res://.godot/imported/Farm BG.png-b0f059c1a3a69e3fc8a8aabc6dcb0365.ctex"]
+source_file="res://Main game/Lvl1/bg/Farm BG.png"
+dest_files=["res://.godot/imported/Farm BG.png-16f2a41358d904ca33f36fc47f1aaac7.ctex"]
 
 [params]
 
