@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd4fybkfsg3dt"
-path="res://.godot/imported/Graveyard Tilemap.png-0bcbbac394cdd259b0bfe42307f31e4c.ctex"
+uid="uid://yb1lkbxkcccw"
+path="res://.godot/imported/3.png-33244b5312d0a4d0c8419323842c2c77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl3.2/Graveyard Tilemap.png"
-dest_files=["res://.godot/imported/Graveyard Tilemap.png-0bcbbac394cdd259b0bfe42307f31e4c.ctex"]
+source_file="res://Main game/Lvl3.2/enemies/skeleton/3.png"
+dest_files=["res://.godot/imported/3.png-33244b5312d0a4d0c8419323842c2c77.ctex"]
 
 [params]
 
