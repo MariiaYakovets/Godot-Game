@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=2 format=3 uid="uid://dxy4dioy61tca"]
+
+[ext_resource type="Texture2D" uid="uid://b66bt2cbo74bl" path="res://Main game/Lvl1/bg/Farm BG.png" id="1_vffae"]
 
 [node name="Level 1" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(1152, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_offset = Vector2(1152, 0)
+
+[node name="FarmBg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(572.5, 316)
+scale = Vector2(1.161, 1.288)
+texture = ExtResource("1_vffae")
