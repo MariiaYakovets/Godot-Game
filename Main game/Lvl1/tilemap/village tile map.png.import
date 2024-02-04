@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mpni74haftrh"
-path="res://.godot/imported/Farmer in red coat2.png-55920e09387a7c1f93ba13337c30df04.ctex"
+uid="uid://c4w6keg8bjjtm"
+path="res://.godot/imported/village tile map.png-27fff4ae60021f7b14cd2d89d8b2f8e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/enemies/Farmer in red coat2.png"
-dest_files=["res://.godot/imported/Farmer in red coat2.png-55920e09387a7c1f93ba13337c30df04.ctex"]
+source_file="res://Main game/Lvl1/tilemap/village tile map.png"
+dest_files=["res://.godot/imported/village tile map.png-27fff4ae60021f7b14cd2d89d8b2f8e4.ctex"]
 
 [params]
 

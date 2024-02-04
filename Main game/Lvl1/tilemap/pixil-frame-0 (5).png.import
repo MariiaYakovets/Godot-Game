@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdo37roin4so4"
-path="res://.godot/imported/Farmer in green coat2.png-c0bc222c14388dd77b0a1d016f25bb86.ctex"
+uid="uid://bs8v534nioqu2"
+path="res://.godot/imported/pixil-frame-0 (5).png-4e93d906770b6b40cceda4bff1a56fe9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/enemies/Farmer in green coat2.png"
-dest_files=["res://.godot/imported/Farmer in green coat2.png-c0bc222c14388dd77b0a1d016f25bb86.ctex"]
+source_file="res://Main game/Lvl1/tilemap/pixil-frame-0 (5).png"
+dest_files=["res://.godot/imported/pixil-frame-0 (5).png-4e93d906770b6b40cceda4bff1a56fe9.ctex"]
 
 [params]
 

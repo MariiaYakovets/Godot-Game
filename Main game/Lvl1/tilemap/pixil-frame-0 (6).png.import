@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b66bt2cbo74bl"
-path="res://.godot/imported/Farm BG.png-16f2a41358d904ca33f36fc47f1aaac7.ctex"
+uid="uid://xl028wl5xjxs"
+path="res://.godot/imported/pixil-frame-0 (6).png-395ba7bc1633ba7185bf2996704a7425.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/bg/Farm BG.png"
-dest_files=["res://.godot/imported/Farm BG.png-16f2a41358d904ca33f36fc47f1aaac7.ctex"]
+source_file="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png"
+dest_files=["res://.godot/imported/pixil-frame-0 (6).png-395ba7bc1633ba7185bf2996704a7425.ctex"]
 
 [params]
 

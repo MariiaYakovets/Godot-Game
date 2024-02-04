@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diiu1bkivty1a"
-path="res://.godot/imported/walkingweat.png-2ea2ee2cd9fb98338b588a33c089e137.ctex"
+uid="uid://wlw25c3mscep"
+path="res://.godot/imported/Well.png-4100b1cdf4e1bc5f1a8a4d456e1fbb81.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/enemies/walkingweat.png"
-dest_files=["res://.godot/imported/walkingweat.png-2ea2ee2cd9fb98338b588a33c089e137.ctex"]
+source_file="res://Main game/Lvl1/tilemap/Well.png"
+dest_files=["res://.godot/imported/Well.png-4100b1cdf4e1bc5f1a8a4d456e1fbb81.ctex"]
 
 [params]
 

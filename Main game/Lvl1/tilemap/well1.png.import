@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlu52y07xgcni"
-path="res://.godot/imported/Castle bg.png-3b64688d229d5c1a057b6fc9321d06c0.ctex"
+uid="uid://wtk3je5ele53"
+path="res://.godot/imported/well1.png-31a3dfa3edbc187c4ce5f90feff753a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/bg/Castle bg.png"
-dest_files=["res://.godot/imported/Castle bg.png-3b64688d229d5c1a057b6fc9321d06c0.ctex"]
+source_file="res://Main game/Lvl1/tilemap/well1.png"
+dest_files=["res://.godot/imported/well1.png-31a3dfa3edbc187c4ce5f90feff753a7.ctex"]
 
 [params]
 

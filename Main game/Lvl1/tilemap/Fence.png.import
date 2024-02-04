@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4otu78anbcxp"
-path="res://.godot/imported/Farmer with fork.png-ace1158f99e7e6aaa3ec54c4b2e3fa88.ctex"
+uid="uid://nnxdgu8lr7km"
+path="res://.godot/imported/Fence.png-5234d7ce6f47029234d3aa3ee3c0a521.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/enemies/Farmer with fork.png"
-dest_files=["res://.godot/imported/Farmer with fork.png-ace1158f99e7e6aaa3ec54c4b2e3fa88.ctex"]
+source_file="res://Main game/Lvl1/tilemap/Fence.png"
+dest_files=["res://.godot/imported/Fence.png-5234d7ce6f47029234d3aa3ee3c0a521.ctex"]
 
 [params]
 

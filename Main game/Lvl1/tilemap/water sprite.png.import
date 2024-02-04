@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf3p3knkajlt4"
-path="res://.godot/imported/weatsprite.png-221da608da9b8c762dc03a8892642557.ctex"
+uid="uid://s24i17uemdht"
+path="res://.godot/imported/water sprite.png-7c8e0238f9cd5920899b12ec5952ece9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/enemies/weatsprite.png"
-dest_files=["res://.godot/imported/weatsprite.png-221da608da9b8c762dc03a8892642557.ctex"]
+source_file="res://Main game/Lvl1/tilemap/water sprite.png"
+dest_files=["res://.godot/imported/water sprite.png-7c8e0238f9cd5920899b12ec5952ece9.ctex"]
 
 [params]
 
