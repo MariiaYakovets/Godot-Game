@@ -29,7 +29,7 @@ texture = ExtResource("4_dwj2d")
 
 [node name="Fence2" type="Sprite2D" parent="ParallaxBackground"]
 texture_filter = 1
-position = Vector2(5861, 204)
+position = Vector2(5037, 181)
 rotation = 1.5708
 texture = ExtResource("6_xbrp4")
 

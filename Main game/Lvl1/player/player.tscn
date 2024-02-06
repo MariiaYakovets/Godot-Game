@@ -273,10 +273,11 @@ libraries = {
 }
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-14, 2)
-scale = Vector2(0.502857, 0.395202)
+position = Vector2(-14, -9.53674e-07)
+scale = Vector2(0.651429, 0.515783)
 sprite_frames = SubResource("SpriteFrames_42lpn")
 animation = &"run"
+frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(2, 3)
