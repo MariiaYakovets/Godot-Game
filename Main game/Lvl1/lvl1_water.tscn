@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnsx0inrivwjv"]
+
+[ext_resource type="Texture2D" uid="uid://s24i17uemdht" path="res://Main game/Lvl1/tilemap/water sprite.png" id="1_mjh34"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqwm1"]
+atlas = ExtResource("1_mjh34")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ds16"]
+atlas = ExtResource("1_mjh34")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecyyw"]
+atlas = ExtResource("1_mjh34")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gr2w"]
+atlas = ExtResource("1_mjh34")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_so30m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqwm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ds16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecyyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gr2w")
+}],
+"loop": true,
+"name": &"basic",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ctmn"]
+size = Vector2(96, 6)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_so30m")
+animation = &"basic"
+autoplay = "basic"
+frame = 3
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 47)
+shape = SubResource("RectangleShape2D_4ctmn")
