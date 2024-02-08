@@ -1,6 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnsx0inrivwjv"]
+[gd_scene load_steps=9 format=3 uid="uid://bnsx0inrivwjv"]
 
 [ext_resource type="Texture2D" uid="uid://s24i17uemdht" path="res://Main game/Lvl1/tilemap/water sprite.png" id="1_mjh34"]
+[ext_resource type="Script" path="res://Main game/Lvl1/bg/water.gd" id="1_yowy1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ctmn"]
+size = Vector2(115, 38)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aqwm1"]
 atlas = ExtResource("1_mjh34")
@@ -38,18 +42,18 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ctmn"]
-size = Vector2(96, 6)
-
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_yowy1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9.5, 31)
+shape = SubResource("RectangleShape2D_4ctmn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(16.5, 0)
+scale = Vector2(1.22, 1)
 sprite_frames = SubResource("SpriteFrames_so30m")
 animation = &"basic"
 autoplay = "basic"
 frame = 3
-frame_progress = 1.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 47)
-shape = SubResource("RectangleShape2D_4ctmn")
+frame_progress = 0.768291

@@ -10,7 +10,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var animation_player
 
 func _ready():
-	animation_player = get_node('AnimationPlayer2')
+	animation_player = get_node("AnimationPlayer2")
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -26,16 +26,24 @@ func _physics_process(delta):
 		$AnimatedSprite2D.flip_h = false
 	elif direction == -1:
 		$AnimatedSprite2D.flip_h = true
+		
 	if direction:
 		velocity.x = direction * SPEED
-		if is_on_floor():
-			animation_player.play('run')
+		if velocity.y == 0:
+			animation_player.play("run")
+			print("run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		if is_on_floor():
-			animation_player.play('idle')
+		if velocity.y ==0:
+			animation_player.play("idle")
+			print("idle")
+	#if velocity.y > 0:
+	#	animation_player.play("fall")
+	#	print("fall")
+		
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		animation_player.play('jump')
+		animation_player.play("jump")
+		print("jump")
 		velocity.y = JUMP_VELOCITY
 	
 		
