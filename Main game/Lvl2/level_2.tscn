@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://p4cj7wg14vmi"]
+
+[ext_resource type="Texture2D" uid="uid://b12eqh683r1m5" path="res://Main game/Lvl2/bg/swampBG.png" id="1_v0xjr"]
+[ext_resource type="PackedScene" uid="uid://r1apj4bcg4ia" path="res://Main game/Lvl2/tilemap/tilemap_lvl_2.tscn" id="2_lpg3f"]
+
+[node name="Level_2" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1275, 0)
+
+[node name="SwampBg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(634, 400)
+scale = Vector2(1.282, 1.0781)
+texture = ExtResource("1_v0xjr")
+
+[node name="Lvl2" parent="." instance=ExtResource("2_lpg3f")]
+position = Vector2(-7, 115)
