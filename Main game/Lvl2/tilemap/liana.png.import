@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3coh8b8e7uyu"
-path="res://.godot/imported/pixil-frame-0 (11).png-1944e0a04723f57da53ab506058d7d9a.ctex"
+uid="uid://d10oiylthak38"
+path="res://.godot/imported/liana.png-bc8de0c6ab499a328eeb4178bb78fccb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/bg/pixil-frame-0 (11).png"
-dest_files=["res://.godot/imported/pixil-frame-0 (11).png-1944e0a04723f57da53ab506058d7d9a.ctex"]
+source_file="res://Main game/Lvl2/tilemap/liana.png"
+dest_files=["res://.godot/imported/liana.png-bc8de0c6ab499a328eeb4178bb78fccb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beaxr3ygkn0ee"
-path="res://.godot/imported/460a28c9491dbd5e (1).PNG-7081910e61d36fbc25cb460667ace879.ctex"
+uid="uid://p3tb8faw7qhn"
+path="res://.godot/imported/image-removebg-preview — копия.png-b80edd7622d385c60baefb6de538ed89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/player/player/460a28c9491dbd5e (1).PNG"
-dest_files=["res://.godot/imported/460a28c9491dbd5e (1).PNG-7081910e61d36fbc25cb460667ace879.ctex"]
+source_file="res://Main game/Lvl2/player/image-removebg-preview — копия.png"
+dest_files=["res://.godot/imported/image-removebg-preview — копия.png-b80edd7622d385c60baefb6de538ed89.ctex"]
 
 [params]
 

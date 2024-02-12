@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://03pyuu1787oq"
-path="res://.godot/imported/pixil-frame-0 (10).png-c6ea1285be3a40ad71d882aef933ecad.ctex"
+uid="uid://bjo6eqplw7kgc"
+path="res://.godot/imported/cl2.png-22b4de5d002063420f54dbdc5a6d34fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/bg/pixil-frame-0 (10).png"
-dest_files=["res://.godot/imported/pixil-frame-0 (10).png-c6ea1285be3a40ad71d882aef933ecad.ctex"]
+source_file="res://Main game/Lvl2/tilemap/cl2.png"
+dest_files=["res://.godot/imported/cl2.png-22b4de5d002063420f54dbdc5a6d34fe.ctex"]
 
 [params]
 
