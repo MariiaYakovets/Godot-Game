@@ -1,19 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=4 format=3 uid="uid://p4cj7wg14vmi"]
 
-[ext_resource type="Texture2D" uid="uid://b12eqh683r1m5" path="res://Main game/Lvl2/bg/swampBG.png" id="1_v0xjr"]
+[ext_resource type="Texture2D" uid="uid://cqqdd0gxrb7sg" path="res://Main game/Lvl2/bg/pixil-frame-0 (12).png" id="1_48db2"]
 [ext_resource type="PackedScene" uid="uid://r1apj4bcg4ia" path="res://Main game/Lvl2/tilemap/tilemap_lvl_2.tscn" id="2_lpg3f"]
+[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/Lvl2/player/player/player.tscn" id="3_do26w"]
 
 [node name="Level_2" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(-641.826, -839.587)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1275, 0)
+motion_mirroring = Vector2(1073.95, 0)
 
-[node name="SwampBg" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(634, 400)
-scale = Vector2(1.282, 1.0781)
-texture = ExtResource("1_v0xjr")
+[node name="Pixil-frame-0(12)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.427451, 0.631373, 0.639216, 1)
+position = Vector2(536, 406)
+scale = Vector2(1.074, 1.04873)
+texture = ExtResource("1_48db2")
 
 [node name="Lvl2" parent="." instance=ExtResource("2_lpg3f")]
 position = Vector2(-7, 115)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
+position = Vector2(106, 494)
