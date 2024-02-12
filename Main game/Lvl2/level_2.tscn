@@ -1,14 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=9 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="Texture2D" uid="uid://cqqdd0gxrb7sg" path="res://Main game/Lvl2/bg/swamp bg (12).png" id="1_xat46"]
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl2/tilemap/liana.png" id="2_2cxvi"]
 [ext_resource type="PackedScene" uid="uid://r1apj4bcg4ia" path="res://Main game/Lvl2/tilemap/tilemap_lvl_2.tscn" id="2_lpg3f"]
+[ext_resource type="Texture2D" uid="uid://bygibtrl2plfx" path="res://Main game/Lvl2/tilemap/liana2.png" id="3_cafwo"]
 [ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/Lvl2/player/player.tscn" id="3_do26w"]
 [ext_resource type="Texture2D" uid="uid://8upjgmhppcgn" path="res://Main game/Lvl2/tilemap/dorozhka.png" id="3_uq24i"]
 [ext_resource type="Texture2D" uid="uid://bjo6eqplw7kgc" path="res://Main game/Lvl2/tilemap/cl2.png" id="4_hw3q3"]
 [ext_resource type="Texture2D" uid="uid://w0jt5hctn2su" path="res://Main game/Lvl2/tilemap/cl1.png" id="5_bsyh7"]
 
 [node name="Level_2" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
+position = Vector2(9387, 361)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2(-641.826, -839.587)
@@ -18,208 +22,207 @@ motion_mirroring = Vector2(1073.95, 0)
 
 [node name="Pixil-frame-0(12)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.427451, 0.631373, 0.639216, 1)
-position = Vector2(536, 406)
-scale = Vector2(1.074, 1.04873)
+position = Vector2(535, 395)
+scale = Vector2(1.074, 1.07176)
 texture = ExtResource("1_xat46")
 
 [node name="Lianas" type="Node2D" parent="."]
 
 [node name="Liana" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(10159, 441.5)
+position = Vector2(10157, 377.5)
 scale = Vector2(0.975, 1.21)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana2" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(10404, 463.71)
+position = Vector2(10402, 399.71)
 scale = Vector2(0.975, 1.21)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana3" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(10608, 477.71)
+position = Vector2(10606, 413.71)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana4" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(10698, 489.71)
+position = Vector2(10696, 425.71)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana5" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(10925, 478.71)
+position = Vector2(10923, 414.71)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana6" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(11107, 437.71)
+position = Vector2(11105, 373.71)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
 [node name="liana" type="Area2D" parent="Lianas"]
-position = Vector2(7155, 599.71)
-scale = Vector2(3.21, 0.685)
+position = Vector2(7155, 537)
+scale = Vector2(1.716, 1.175)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lianas/liana"]
-scale = Vector2(1, 1)
-polygon = PackedVector2Array(-198, -47, -159, -2, -118, 10, -46, 19, 45, 24, 111, 26, 145, 18, 183, -16, 196, -45, 195, -51, 189, -51, 180, -20, 145, 9, 109, 17, 48, 18, -43, 14, -113, 1, -154, -10, -189, -48)
+polygon = PackedVector2Array(-336.247, -86.5617, -281.468, -61.8809, -196.969, -44.8596, -111.305, -47.4128, -35.5479, -40.6043, 30.3032, -49.1149, 123.543, -41.4553, 221.445, -44.0085, 326.923, -77.2, 345.571, -103.583, 345.571, -118.051, 318.182, -80.6043, 268.065, -61.8809, 194.056, -54.2213, 127.04, -53.3702, 45.4546, -60.1787, -23.8926, -51.6681, -110.722, -55.9234, -195.221, -55.0724, -259.324, -65.2851, -324.592, -89.1149)
 
 [node name="Liana" type="Sprite2D" parent="Lianas/liana"]
 texture_filter = 1
-position = Vector2(-1, -1)
-texture = ExtResource("2_2cxvi")
+position = Vector2(0.582607, -61.8809)
+texture = ExtResource("3_cafwo")
 
 [node name="liana2" type="Area2D" parent="Lianas"]
-position = Vector2(10603, 440.71)
-scale = Vector2(3.21, 1.285)
+position = Vector2(10601, 376.71)
+scale = Vector2(1, 0.4)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lianas/liana2"]
-scale = Vector2(1, 1)
-polygon = PackedVector2Array(-46, 19, 45, 24, 111, 26, 145, 18, 183, -16, 196, -45, 195, -51, 189, -51, 180, -20, 145, 9, 109, 17, 48, 18, -43, 14)
+position = Vector2(342.61, 1.57933)
+scale = Vector2(1.43853, 1.96834)
+polygon = PackedVector2Array(-325.06, 30.0485, -42.8286, 33.8588, 45, 24, 111, 26, 145, 18, 183, -16, 196, -45, 195, -51, 189, -51, 180, -20, 145, 9, 109, 17, 48, 18, -66.4639, 27.5082, -325.06, 14.8072)
 
 [node name="Liana" type="Sprite2D" parent="Lianas/liana2"]
-position = Vector2(-1, -1)
-texture = ExtResource("2_2cxvi")
+texture_filter = 1
+position = Vector2(5.75017, 23.225)
+scale = Vector2(1.78643, 2.7)
+texture = ExtResource("3_cafwo")
 
 [node name="Rocks" type="Node2D" parent="."]
 
 [node name="Rock" type="Area2D" parent="Rocks"]
-position = Vector2(5932, 495)
+position = Vector2(5934, 449)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/Rock"]
 position = Vector2(-5954.5, -381.5)
 polygon = PackedVector2Array(5830, 367, 5843, 367, 5855, 369, 5864, 386, 5874, 366, 5884, 364, 5895, 366, 5899, 387, 5912, 374, 5931, 374, 5943, 387, 5955, 375, 5976, 375, 5982, 387, 5988, 374, 5996, 369, 6011, 367, 6024, 368, 6030, 376, 6032, 389, 6038, 376, 6066, 375, 6070, 385, 6082, 371, 6107, 370, 6120, 391, 6115, 407, 5823, 406, 5815, 380)
 
-[node name="Dorozhka" type="Sprite2D" parent="Rocks/Rock"]
-position = Vector2(18.4995, 0.500031)
-scale = Vector2(0.0607084, 0.0708333)
+[node name="Sprite2D" type="Sprite2D" parent="Rocks/Rock"]
+position = Vector2(20.9999, -2.99999)
+scale = Vector2(0.0629167, 0.0582292)
 texture = ExtResource("3_uq24i")
 
 [node name="Rock2" type="Area2D" parent="Rocks"]
-position = Vector2(5625, 495)
+position = Vector2(5627, 449)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/Rock2"]
 position = Vector2(-5954.5, -381.5)
 polygon = PackedVector2Array(5830, 367, 5843, 367, 5855, 369, 5864, 386, 5874, 366, 5884, 364, 5895, 366, 5899, 387, 5912, 374, 5931, 374, 5943, 387, 5955, 375, 5976, 375, 5982, 387, 5988, 374, 5996, 369, 6011, 367, 6024, 368, 6030, 376, 6032, 389, 6038, 376, 6066, 375, 6070, 385, 6082, 371, 6107, 370, 6120, 391, 6115, 407, 5823, 406, 5815, 380)
 
-[node name="Dorozhka" type="Sprite2D" parent="Rocks/Rock2"]
-position = Vector2(18.4995, 0.500031)
-scale = Vector2(0.0607084, 0.0708333)
+[node name="Sprite2D2" type="Sprite2D" parent="Rocks/Rock2"]
+position = Vector2(21.9999, -2)
+scale = Vector2(0.0629167, 0.0578646)
 texture = ExtResource("3_uq24i")
 
 [node name="Rock3" type="Area2D" parent="Rocks"]
-position = Vector2(5321, 496)
+position = Vector2(5323, 450)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/Rock3"]
 position = Vector2(-5954.5, -381.5)
 polygon = PackedVector2Array(5830, 367, 5843, 367, 5855, 369, 5864, 386, 5874, 366, 5884, 364, 5895, 366, 5899, 387, 5912, 374, 5931, 374, 5943, 387, 5955, 375, 5976, 375, 5982, 387, 5988, 374, 5996, 369, 6011, 367, 6024, 368, 6030, 376, 6032, 389, 6038, 376, 6066, 375, 6070, 385, 6082, 371, 6107, 370, 6120, 391, 6115, 407, 5823, 406, 5815, 380)
 
-[node name="Dorozhka" type="Sprite2D" parent="Rocks/Rock3"]
-position = Vector2(18.4995, 0.500031)
-scale = Vector2(0.0607084, 0.0708333)
+[node name="Sprite2D" type="Sprite2D" parent="Rocks/Rock3"]
+position = Vector2(21.9999, -2.78127)
+scale = Vector2(0.0629167, 0.0586979)
 texture = ExtResource("3_uq24i")
 
 [node name="Rock4" type="Area2D" parent="Rocks"]
-position = Vector2(5017, 497)
+position = Vector2(5019, 451)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/Rock4"]
 position = Vector2(-5954.5, -381.5)
 polygon = PackedVector2Array(5830, 367, 5843, 367, 5855, 369, 5864, 386, 5874, 366, 5884, 364, 5895, 366, 5899, 387, 5912, 374, 5931, 374, 5943, 387, 5955, 375, 5976, 375, 5982, 387, 5988, 374, 5996, 369, 6011, 367, 6024, 368, 6030, 376, 6032, 389, 6038, 376, 6066, 375, 6070, 385, 6082, 371, 6107, 370, 6120, 391, 6115, 407, 5823, 406, 5815, 380)
 
-[node name="Dorozhka" type="Sprite2D" parent="Rocks/Rock4"]
-position = Vector2(18.4995, 0.500031)
-scale = Vector2(0.0607084, 0.0708333)
+[node name="Sprite2D" type="Sprite2D" parent="Rocks/Rock4"]
+position = Vector2(15.25, -5.0625)
+scale = Vector2(0.0629167, 0.0565625)
 texture = ExtResource("3_uq24i")
 
 [node name="Clouds" type="Node2D" parent="."]
 
 [node name="Cl2" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(10247.6, 386.75)
+position = Vector2(10245.6, 322.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 
 [node name="Cl1" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(10411.6, 382.75)
+position = Vector2(10409.6, 318.75)
 scale = Vector2(0.103235, 0.115737)
 texture = ExtResource("5_bsyh7")
 
 [node name="Cl5" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(11107.6, 357.75)
+position = Vector2(11105.6, 293.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 flip_h = true
 
 [node name="Cl7" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(11024.6, 349.75)
+position = Vector2(11022.6, 285.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 
 [node name="Cl9" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(11107.6, 357.75)
+position = Vector2(11105.6, 293.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 flip_h = true
 
 [node name="Cl10" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(11024.6, 349.75)
+position = Vector2(11022.6, 285.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 
 [node name="Cl8" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(11017.6, 357.75)
+position = Vector2(11015.6, 293.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 
 [node name="Cl11" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(10756.9, 426.5)
+position = Vector2(10754.9, 362.5)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 flip_h = true
 
 [node name="Cl12" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(10666.9, 426.5)
+position = Vector2(10664.9, 362.5)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 
 [node name="Cl6" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(10900.6, 395.75)
+position = Vector2(10898.6, 331.75)
 scale = Vector2(0.103235, 0.115737)
 texture = ExtResource("5_bsyh7")
 
 [node name="Cl3" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(10622.6, 390.75)
+position = Vector2(10620.6, 326.75)
 scale = Vector2(0.0499154, 0.0569533)
 texture = ExtResource("5_bsyh7")
 
 [node name="Cl13" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(10120.6, 387.75)
+position = Vector2(10118.6, 323.75)
 scale = Vector2(0.0499154, 0.0569533)
 texture = ExtResource("5_bsyh7")
 
 [node name="Cl4" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(10506.6, 439.719)
+position = Vector2(10504.6, 375.719)
 scale = Vector2(0.0215518, 0.0220151)
 texture = ExtResource("5_bsyh7")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(106, 494)
-
 [node name="tilemap_Lvl2" parent="." instance=ExtResource("2_lpg3f")]
-position = Vector2(-7, 115)
+position = Vector2(-7, 1)
