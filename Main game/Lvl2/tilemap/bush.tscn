@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://bn4h5mpx8op5y"]
+
+[ext_resource type="Texture2D" uid="uid://cugdh8t57pctd" path="res://Main game/Lvl2/tilemap/bushmove.png" id="1_o167w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bifxb"]
+atlas = ExtResource("1_o167w")
+region = Rect2(0, 0, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jaom"]
+atlas = ExtResource("1_o167w")
+region = Rect2(300, 0, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efrd0"]
+atlas = ExtResource("1_o167w")
+region = Rect2(600, 0, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfh6o"]
+atlas = ExtResource("1_o167w")
+region = Rect2(900, 0, 300, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ft8te"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bifxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jaom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efrd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfh6o")
+}],
+"loop": true,
+"name": &"infanim",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(70, 52)
+scale = Vector2(0.436667, 0.465)
+sprite_frames = SubResource("SpriteFrames_ft8te")
+animation = &"infanim"
+autoplay = "infanim"
+frame_progress = 0.831699
