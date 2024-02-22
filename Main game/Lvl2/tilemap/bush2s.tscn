@@ -42,10 +42,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p5loo"]
 size = Vector2(42, 0)
 
-[sub_resource type="Animation" id="Animation_j707i"]
-resource_name = "anim"
-length = 2.0
-
 [sub_resource type="Animation" id="Animation_moomm"]
 length = 0.001
 tracks/0/type = "value"
@@ -60,6 +56,10 @@ tracks/0/keys = {
 "update": 1,
 "values": [1]
 }
+
+[sub_resource type="Animation" id="Animation_j707i"]
+resource_name = "anim"
+length = 2.0
 
 [sub_resource type="Animation" id="Animation_xcswx"]
 resource_name = "infanim"
