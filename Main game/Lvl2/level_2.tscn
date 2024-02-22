@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=10 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="Texture2D" uid="uid://cqqdd0gxrb7sg" path="res://Main game/Lvl2/bg/swamp bg (12).png" id="1_xat46"]
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl2/tilemap/liana.png" id="2_2cxvi"]
@@ -9,9 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bjo6eqplw7kgc" path="res://Main game/Lvl2/tilemap/cl2.png" id="4_hw3q3"]
 [ext_resource type="Texture2D" uid="uid://w0jt5hctn2su" path="res://Main game/Lvl2/tilemap/cl1.png" id="5_bsyh7"]
 [ext_resource type="PackedScene" uid="uid://bn4h5mpx8op5y" path="res://Main game/Lvl2/tilemap/bush.tscn" id="8_52oj0"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkmq2"]
-size = Vector2(34, 0)
 
 [node name="Level_2" type="Node2D"]
 
@@ -234,64 +231,40 @@ position = Vector2(-7, 1)
 [node name="Bushes" type="Node2D" parent="."]
 
 [node name="Area2D" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(2213, 122)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bushes/Area2D"]
-position = Vector2(69, 79)
-shape = SubResource("RectangleShape2D_jkmq2")
+position = Vector2(2223, 121)
 
 [node name="Area2D2" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3217, 329)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bushes/Area2D2"]
-position = Vector2(69, 79)
-shape = SubResource("RectangleShape2D_jkmq2")
+position = Vector2(3197, 330)
 
 [node name="Area2D3" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3287, 330)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bushes/Area2D3"]
-position = Vector2(69, 79)
-shape = SubResource("RectangleShape2D_jkmq2")
+position = Vector2(3240, 330)
 
 [node name="Area2D4" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3348, 328)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bushes/Area2D4"]
-position = Vector2(69, 79)
-shape = SubResource("RectangleShape2D_jkmq2")
+position = Vector2(3284, 330)
 
 [node name="Area2D5" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3405, 328)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bushes/Area2D5"]
-position = Vector2(69, 79)
-shape = SubResource("RectangleShape2D_jkmq2")
+position = Vector2(3327, 330)
 
 [node name="Area2D6" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3458, 327)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bushes/Area2D6"]
-position = Vector2(69, 79)
-shape = SubResource("RectangleShape2D_jkmq2")
+position = Vector2(3371, 330)
 
 [node name="Area2D7" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3515, 327)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bushes/Area2D7"]
-position = Vector2(69, 79)
-shape = SubResource("RectangleShape2D_jkmq2")
+position = Vector2(3414, 330)
 
 [node name="Area2D8" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3585, 328)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bushes/Area2D8"]
-position = Vector2(69, 79)
-shape = SubResource("RectangleShape2D_jkmq2")
+position = Vector2(3458, 330)
 
 [node name="Area2D9" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3651, 328)
+position = Vector2(3501, 330)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bushes/Area2D9"]
-position = Vector2(69, 79)
-shape = SubResource("RectangleShape2D_jkmq2")
+[node name="Area2D10" parent="Bushes" instance=ExtResource("8_52oj0")]
+position = Vector2(3543, 330)
+
+[node name="Area2D11" parent="Bushes" instance=ExtResource("8_52oj0")]
+position = Vector2(3586, 330)
+
+[node name="Area2D12" parent="Bushes" instance=ExtResource("8_52oj0")]
+position = Vector2(3621, 330)
+
+[node name="Area2D13" parent="Bushes" instance=ExtResource("8_52oj0")]
+position = Vector2(3664, 330)
