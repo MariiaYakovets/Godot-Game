@@ -235,6 +235,62 @@ position = Vector2(-7, 1)
 [node name="Area2D4" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(3200, 318)
 
+[node name="Area2D4" parent="Bushes/Area2D4" instance=ExtResource("9_sjhlo")]
+position = Vector2(659, 265)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D15" parent="Bushes/Area2D4" instance=ExtResource("9_sjhlo")]
+position = Vector2(1127, 262)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D3" parent="Bushes/Area2D4" instance=ExtResource("8_52oj0")]
+position = Vector2(783, 269)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D7" parent="Bushes/Area2D4" instance=ExtResource("8_52oj0")]
+position = Vector2(985, 270)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D8" parent="Bushes/Area2D4" instance=ExtResource("8_52oj0")]
+position = Vector2(1088, 270)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D2" parent="Bushes/Area2D4" instance=ExtResource("10_nxw0n")]
+position = Vector2(895, 272)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D5" parent="Bushes/Area2D4" instance=ExtResource("10_nxw0n")]
+position = Vector2(708, 271)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D12" parent="Bushes/Area2D4" instance=ExtResource("10_nxw0n")]
+position = Vector2(738, 271)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D13" parent="Bushes/Area2D4" instance=ExtResource("10_nxw0n")]
+position = Vector2(683, 270)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D9" parent="Bushes/Area2D4" instance=ExtResource("10_nxw0n")]
+position = Vector2(845, 272)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D6" parent="Bushes/Area2D4" instance=ExtResource("10_nxw0n")]
+position = Vector2(1032, 273)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D14" parent="Bushes/Area2D4" instance=ExtResource("10_nxw0n")]
+position = Vector2(1015, 273)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D10" parent="Bushes/Area2D4" instance=ExtResource("10_nxw0n")]
+position = Vector2(933, 272)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D11" parent="Bushes/Area2D4" instance=ExtResource("10_nxw0n")]
+position = Vector2(807, 272)
+scale = Vector2(0.5, 0.5)
+
 [node name="Area2D15" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(3662, 318)
 
@@ -260,7 +316,7 @@ position = Vector2(3252, 332)
 position = Vector2(3273, 332)
 
 [node name="Area2D13" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(3227, 332)
+position = Vector2(3224, 332)
 
 [node name="Area2D9" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3387, 332)
@@ -276,3 +332,199 @@ position = Vector2(3475, 332)
 
 [node name="Area2D11" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3349, 332)
+
+[node name="Area2D4" parent="." instance=ExtResource("9_sjhlo")]
+position = Vector2(15454, 358)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D15" parent="." instance=ExtResource("9_sjhlo")]
+position = Vector2(15922, 355)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D3" parent="." instance=ExtResource("8_52oj0")]
+position = Vector2(15578, 362)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D7" parent="." instance=ExtResource("8_52oj0")]
+position = Vector2(15780, 363)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D8" parent="." instance=ExtResource("8_52oj0")]
+position = Vector2(15883, 363)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D2" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15690, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D5" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15503, 364)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D12" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15533, 364)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D13" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15478, 363)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D9" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15640, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D6" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15827, 366)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D14" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15810, 366)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D10" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15728, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D11" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15602, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D16" parent="." instance=ExtResource("9_sjhlo")]
+position = Vector2(15947, 357)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D17" parent="." instance=ExtResource("9_sjhlo")]
+position = Vector2(16415, 354)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D18" parent="." instance=ExtResource("8_52oj0")]
+position = Vector2(16071, 361)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D19" parent="." instance=ExtResource("8_52oj0")]
+position = Vector2(16273, 362)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D20" parent="." instance=ExtResource("8_52oj0")]
+position = Vector2(16376, 362)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D21" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16183, 364)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D22" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15996, 363)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D23" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16026, 363)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D24" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15971, 362)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D25" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16133, 364)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D26" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16320, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D27" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16303, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D28" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16221, 364)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D29" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16095, 364)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D30" parent="." instance=ExtResource("9_sjhlo")]
+position = Vector2(16456, 360)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D31" parent="." instance=ExtResource("9_sjhlo")]
+position = Vector2(16924, 357)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D32" parent="." instance=ExtResource("8_52oj0")]
+position = Vector2(16580, 364)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D33" parent="." instance=ExtResource("8_52oj0")]
+position = Vector2(16782, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D34" parent="." instance=ExtResource("8_52oj0")]
+position = Vector2(16885, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D35" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16692, 367)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D36" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16505, 366)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D37" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16535, 366)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D38" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16480, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D39" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16642, 367)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D40" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16829, 368)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D41" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16812, 368)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D42" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16730, 367)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D43" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16604, 367)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D44" parent="." instance=ExtResource("9_sjhlo")]
+position = Vector2(16859, 357)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D45" parent="." instance=ExtResource("9_sjhlo")]
+position = Vector2(16428, 360)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D48" parent="." instance=ExtResource("8_52oj0")]
+position = Vector2(15863, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D50" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15429, 366)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D51" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(15898, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D52" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16905, 365)
+scale = Vector2(0.5, 0.5)
+
+[node name="Area2D54" parent="." instance=ExtResource("10_nxw0n")]
+position = Vector2(16349, 365)
+scale = Vector2(0.5, 0.5)
