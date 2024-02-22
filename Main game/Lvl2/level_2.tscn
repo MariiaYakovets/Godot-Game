@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=12 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="Texture2D" uid="uid://cqqdd0gxrb7sg" path="res://Main game/Lvl2/bg/swamp bg (12).png" id="1_xat46"]
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl2/tilemap/liana.png" id="2_2cxvi"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bjo6eqplw7kgc" path="res://Main game/Lvl2/tilemap/cl2.png" id="4_hw3q3"]
 [ext_resource type="Texture2D" uid="uid://w0jt5hctn2su" path="res://Main game/Lvl2/tilemap/cl1.png" id="5_bsyh7"]
 [ext_resource type="PackedScene" uid="uid://bn4h5mpx8op5y" path="res://Main game/Lvl2/tilemap/bush.tscn" id="8_52oj0"]
+[ext_resource type="PackedScene" uid="uid://cy7peo82ot8dy" path="res://Main game/Lvl2/tilemap/bushstatic.tscn" id="9_sjhlo"]
+[ext_resource type="PackedScene" uid="uid://b8ffsfis8skb4" path="res://Main game/Lvl2/tilemap/bush2s.tscn" id="10_nxw0n"]
 
 [node name="Level_2" type="Node2D"]
 
@@ -230,41 +232,47 @@ position = Vector2(-7, 1)
 
 [node name="Bushes" type="Node2D" parent="."]
 
+[node name="Area2D4" parent="Bushes" instance=ExtResource("9_sjhlo")]
+position = Vector2(3200, 318)
+
+[node name="Area2D15" parent="Bushes" instance=ExtResource("9_sjhlo")]
+position = Vector2(3662, 318)
+
 [node name="Area2D" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(2223, 121)
 
-[node name="Area2D2" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3197, 330)
-
 [node name="Area2D3" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3240, 330)
-
-[node name="Area2D4" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3284, 330)
-
-[node name="Area2D5" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3327, 330)
-
-[node name="Area2D6" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3371, 330)
+position = Vector2(3325, 329)
 
 [node name="Area2D7" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3414, 330)
+position = Vector2(3527, 330)
 
 [node name="Area2D8" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3458, 330)
+position = Vector2(3630, 330)
 
-[node name="Area2D9" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3501, 330)
+[node name="Area2D2" parent="Bushes" instance=ExtResource("10_nxw0n")]
+position = Vector2(3437, 332)
 
-[node name="Area2D10" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3543, 330)
+[node name="Area2D5" parent="Bushes" instance=ExtResource("10_nxw0n")]
+position = Vector2(3252, 332)
 
-[node name="Area2D11" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3586, 330)
+[node name="Area2D12" parent="Bushes" instance=ExtResource("10_nxw0n")]
+position = Vector2(3273, 332)
 
-[node name="Area2D12" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3621, 330)
+[node name="Area2D13" parent="Bushes" instance=ExtResource("10_nxw0n")]
+position = Vector2(3227, 332)
 
-[node name="Area2D13" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(3664, 330)
+[node name="Area2D9" parent="Bushes" instance=ExtResource("10_nxw0n")]
+position = Vector2(3387, 332)
+
+[node name="Area2D6" parent="Bushes" instance=ExtResource("10_nxw0n")]
+position = Vector2(3574, 333)
+
+[node name="Area2D14" parent="Bushes" instance=ExtResource("10_nxw0n")]
+position = Vector2(3557, 333)
+
+[node name="Area2D10" parent="Bushes" instance=ExtResource("10_nxw0n")]
+position = Vector2(3475, 332)
+
+[node name="Area2D11" parent="Bushes" instance=ExtResource("10_nxw0n")]
+position = Vector2(3349, 332)
