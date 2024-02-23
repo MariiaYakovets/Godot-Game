@@ -18,12 +18,12 @@
 scroll_offset = Vector2(-6790.56, -814.282)
 
 [node name="bg_main" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1261.5, 0)
+motion_mirroring = Vector2(1464.17, 0)
 
 [node name="BgLvl1Village" type="Sprite2D" parent="ParallaxBackground/bg_main"]
 texture_filter = 1
-position = Vector2(135, 428)
-scale = Vector2(1.2685, 1.14883)
+position = Vector2(367, 404)
+scale = Vector2(1.46725, 1.34275)
 texture = ExtResource("1_m75ei")
 
 [node name="Fence2" type="Sprite2D" parent="ParallaxBackground"]
@@ -71,7 +71,7 @@ texture = ExtResource("8_33ax0")
 [node name="Player" type="Node2D" parent="."]
 
 [node name="CharacterBody2D" parent="Player" instance=ExtResource("3_s5mkt")]
-position = Vector2(3133, 366)
+position = Vector2(2771, 185)
 
 [node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
 position = Vector2(-6, -136)

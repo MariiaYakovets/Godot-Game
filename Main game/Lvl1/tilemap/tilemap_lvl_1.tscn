@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cw1rpqj4ircoc"]
 
 [ext_resource type="Texture2D" uid="uid://nnxdgu8lr7km" path="res://Main game/Lvl1/tilemap/Fence.png" id="1_4s1p3"]
-[ext_resource type="Texture2D" uid="uid://cydhcmfo4miy" path="res://Main game/Lvl1/wider well.png" id="4_nlgjn"]
+[ext_resource type="Texture2D" uid="uid://cydhcmfo4miy" path="res://Main game/Lvl1/tilemap/wider well.png" id="4_nlgjn"]
 [ext_resource type="Texture2D" uid="uid://bs8v534nioqu2" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (5).png" id="4_solj5"]
 [ext_resource type="Texture2D" uid="uid://c4w6keg8bjjtm" path="res://Main game/Lvl1/tilemap/village tile map.png" id="5_13g0b"]
 [ext_resource type="Texture2D" uid="uid://wlw25c3mscep" path="res://Main game/Lvl1/tilemap/Well.png" id="6_4q2u1"]
