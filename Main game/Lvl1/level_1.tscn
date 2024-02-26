@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=13 format=3 uid="uid://dxy4dioy61tca"]
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://mdxakwk5epkb" path="res://Main game/Lvl1/bg/cloud2.png" id="7_icxq7"]
 [ext_resource type="Texture2D" uid="uid://dc0i77anr88bt" path="res://Main game/Lvl1/tilemap/pixilart-drawing.png" id="7_kbmu3"]
 [ext_resource type="Texture2D" uid="uid://d3hgts5enjmdw" path="res://Main game/Lvl1/bg/cloud4.png" id="8_33ax0"]
+[ext_resource type="PackedScene" uid="uid://dsmj1g1tkh1ei" path="res://Main game/Lvl1/enemy/weat.tscn" id="12_ili7s"]
 
 [node name="Level 1" type="Node2D"]
 
@@ -72,7 +73,7 @@ texture = ExtResource("8_33ax0")
 [node name="Player" type="Node2D" parent="."]
 
 [node name="CharacterBody2D" parent="Player" instance=ExtResource("3_s5mkt")]
-position = Vector2(2771, 185)
+position = Vector2(2856, 245)
 
 [node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
 position = Vector2(-6, -136)
@@ -140,3 +141,21 @@ position = Vector2(4303, 552)
 
 [node name="Area2D10" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(4408, 550)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("12_ili7s")]
+position = Vector2(3232, 488)
+start_x = 3250
+end_x = 3350
+speed = 2
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("12_ili7s")]
+position = Vector2(4764, 186)
+start_x = 4800
+end_x = 4900
+speed = 2
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("12_ili7s")]
+position = Vector2(6351, 309)
+start_x = 6400
+end_x = 6550
+speed = 2

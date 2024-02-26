@@ -10,7 +10,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var animation_player
 
 func _ready():
-	animation_player = get_node("AnimationPlayer2")
+	animation_player = get_node("AnimationPlayer")
 
 func _physics_process(delta):
 	# Add the gravity.
