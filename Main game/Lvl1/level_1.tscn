@@ -30,7 +30,7 @@ texture = ExtResource("1_m75ei")
 
 [node name="Fence2" type="Sprite2D" parent="ParallaxBackground"]
 texture_filter = 1
-position = Vector2(4960, 276)
+position = Vector2(5276, 281)
 rotation = 1.5708
 texture = ExtResource("6_xbrp4")
 
@@ -73,7 +73,7 @@ texture = ExtResource("8_33ax0")
 [node name="Player" type="Node2D" parent="."]
 
 [node name="CharacterBody2D" parent="Player" instance=ExtResource("3_s5mkt")]
-position = Vector2(2856, 245)
+position = Vector2(3350, 463)
 
 [node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
 position = Vector2(-6, -136)
@@ -81,83 +81,99 @@ position = Vector2(-6, -136)
 [node name="Weat" type="Node2D" parent="."]
 
 [node name="Pixilart-drawing" type="Sprite2D" parent="Weat"]
-position = Vector2(3664, 498)
-scale = Vector2(0.3, 0.3)
+position = Vector2(2732, 250)
+scale = Vector2(0.27, 0.23)
 texture = ExtResource("7_kbmu3")
 
 [node name="Pixilart-drawing2" type="Sprite2D" parent="Weat"]
-position = Vector2(3721, 497)
-scale = Vector2(0.3, 0.3)
+position = Vector2(2787, 249)
+scale = Vector2(0.305, 0.23)
 texture = ExtResource("7_kbmu3")
 
 [node name="Pixilart-drawing3" type="Sprite2D" parent="Weat"]
-position = Vector2(3778, 497)
-scale = Vector2(0.3, 0.3)
+position = Vector2(2847, 251)
+scale = Vector2(0.32, 0.21)
 texture = ExtResource("7_kbmu3")
 
 [node name="Pixilart-drawing4" type="Sprite2D" parent="Weat"]
-position = Vector2(3836, 497)
-scale = Vector2(0.3, 0.3)
+position = Vector2(2904.5, 250)
+scale = Vector2(0.275, 0.22)
 texture = ExtResource("7_kbmu3")
 
 [node name="Pixilart-drawing5" type="Sprite2D" parent="Weat"]
-position = Vector2(3892, 498)
-scale = Vector2(0.3, 0.3)
+position = Vector2(3481, 497)
+scale = Vector2(0.305, 0.195)
 texture = ExtResource("7_kbmu3")
 
 [node name="Pixilart-drawing6" type="Sprite2D" parent="Weat"]
-position = Vector2(3946, 500)
-scale = Vector2(0.3, 0.3)
+position = Vector2(3547, 496)
+scale = Vector2(0.310001, 0.21)
 texture = ExtResource("7_kbmu3")
 
 [node name="Water" type="Node2D" parent="."]
 
 [node name="Area2D" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(1998, 572)
+position = Vector2(1997, 573)
 
 [node name="Area2D2" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(2090, 571)
+position = Vector2(2089, 572)
 
 [node name="Area2D3" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(3273, 566)
+position = Vector2(3275, 566)
+metadata/_edit_lock_ = true
 
 [node name="Area2D4" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(3377, 566)
+metadata/_edit_lock_ = true
 
 [node name="Area2D6" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(3546, 566)
+position = Vector2(3574, 566)
+metadata/_edit_lock_ = true
+
+[node name="Area2D11" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3688, 566)
+metadata/_edit_lock_ = true
+
+[node name="Area2D12" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3802, 566)
+metadata/_edit_lock_ = true
+
+[node name="Area2D13" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3860, 566)
+metadata/_edit_lock_ = true
 
 [node name="Area2D5" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(3489, 566)
+position = Vector2(3471, 566)
+metadata/_edit_lock_ = true
 
 [node name="Area2D7" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(4082, 552)
+position = Vector2(4396, 557)
 
 [node name="Area2D8" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(4191, 552)
+position = Vector2(4505, 557)
 
 [node name="Area2D9" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(4303, 552)
+position = Vector2(4617, 557)
 
 [node name="Area2D10" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(4408, 550)
+position = Vector2(4722, 555)
 
 [node name="Mobs" type="Node2D" parent="."]
 
 [node name="RigidBody2D" parent="Mobs" instance=ExtResource("12_ili7s")]
-position = Vector2(3258, 505)
+position = Vector2(4934, 510)
 start_x = 3250
 end_x = 3350
 speed = 2
 
 [node name="RigidBody2D2" parent="Mobs" instance=ExtResource("12_ili7s")]
-position = Vector2(4764, 186)
+position = Vector2(5153, 190)
 start_x = 4800
 end_x = 4900
 speed = 2
 
 [node name="RigidBody2D3" parent="Mobs" instance=ExtResource("12_ili7s")]
-position = Vector2(6351, 309)
+position = Vector2(6801, 314)
 start_x = 6400
 end_x = 6550
 speed = 2

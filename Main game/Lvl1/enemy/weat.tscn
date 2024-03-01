@@ -104,7 +104,7 @@ frame = 1
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-37, -121)
 scale = Vector2(8.2716, 7.72859)
-polygon = PackedVector2Array(4.26667, 12.316, 5.51233, 14.4812, 7.46667, 17.8781, 1.42222, 17.8781)
+polygon = PackedVector2Array(3.62687, 13.5859, 4.71493, 13.5859, 7.46667, 17.8781, 1.42222, 17.8781)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

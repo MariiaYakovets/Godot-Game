@@ -44,7 +44,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		animation_player.play("jump")
 		print("jump")
-		velocity.y = JUMP_VELOCITY
+		velocity.y = JUMP_VELOCITY 
 	
 		
 	move_and_slide()
