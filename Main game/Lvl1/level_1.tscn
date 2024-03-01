@@ -78,34 +78,34 @@ position = Vector2(2856, 245)
 [node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
 position = Vector2(-6, -136)
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Weat" type="Node2D" parent="."]
 
-[node name="Pixilart-drawing" type="Sprite2D" parent="Node2D"]
+[node name="Pixilart-drawing" type="Sprite2D" parent="Weat"]
 position = Vector2(3664, 498)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_kbmu3")
 
-[node name="Pixilart-drawing2" type="Sprite2D" parent="Node2D"]
+[node name="Pixilart-drawing2" type="Sprite2D" parent="Weat"]
 position = Vector2(3721, 497)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_kbmu3")
 
-[node name="Pixilart-drawing3" type="Sprite2D" parent="Node2D"]
+[node name="Pixilart-drawing3" type="Sprite2D" parent="Weat"]
 position = Vector2(3778, 497)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_kbmu3")
 
-[node name="Pixilart-drawing4" type="Sprite2D" parent="Node2D"]
+[node name="Pixilart-drawing4" type="Sprite2D" parent="Weat"]
 position = Vector2(3836, 497)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_kbmu3")
 
-[node name="Pixilart-drawing5" type="Sprite2D" parent="Node2D"]
+[node name="Pixilart-drawing5" type="Sprite2D" parent="Weat"]
 position = Vector2(3892, 498)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_kbmu3")
 
-[node name="Pixilart-drawing6" type="Sprite2D" parent="Node2D"]
+[node name="Pixilart-drawing6" type="Sprite2D" parent="Weat"]
 position = Vector2(3946, 500)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("7_kbmu3")
@@ -142,19 +142,21 @@ position = Vector2(4303, 552)
 [node name="Area2D10" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(4408, 550)
 
-[node name="RigidBody2D" parent="." instance=ExtResource("12_ili7s")]
-position = Vector2(3232, 488)
+[node name="Mobs" type="Node2D" parent="."]
+
+[node name="RigidBody2D" parent="Mobs" instance=ExtResource("12_ili7s")]
+position = Vector2(3258, 505)
 start_x = 3250
 end_x = 3350
 speed = 2
 
-[node name="RigidBody2D2" parent="." instance=ExtResource("12_ili7s")]
+[node name="RigidBody2D2" parent="Mobs" instance=ExtResource("12_ili7s")]
 position = Vector2(4764, 186)
 start_x = 4800
 end_x = 4900
 speed = 2
 
-[node name="RigidBody2D3" parent="." instance=ExtResource("12_ili7s")]
+[node name="RigidBody2D3" parent="Mobs" instance=ExtResource("12_ili7s")]
 position = Vector2(6351, 309)
 start_x = 6400
 end_x = 6550
