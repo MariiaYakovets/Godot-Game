@@ -307,7 +307,7 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(318, 180)
 script = ExtResource("1_5o2at")
 
@@ -329,7 +329,7 @@ position = Vector2(2, 3)
 zoom = Vector2(2.1, 2.1)
 limit_left = 0
 limit_top = 0
-limit_bottom = 750
+limit_bottom = 1000
 position_smoothing_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

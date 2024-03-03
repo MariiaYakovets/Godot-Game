@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=14 format=3 uid="uid://dxy4dioy61tca"]
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dc0i77anr88bt" path="res://Main game/Lvl1/tilemap/pixilart-drawing.png" id="7_kbmu3"]
 [ext_resource type="Texture2D" uid="uid://d3hgts5enjmdw" path="res://Main game/Lvl1/bg/cloud4.png" id="8_33ax0"]
 [ext_resource type="PackedScene" uid="uid://dsmj1g1tkh1ei" path="res://Main game/Lvl1/enemy/weat.tscn" id="12_ili7s"]
+[ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="13_16uuo"]
 
 [node name="Level 1" type="Node2D"]
 
@@ -30,11 +31,12 @@ texture = ExtResource("1_m75ei")
 
 [node name="Fence2" type="Sprite2D" parent="ParallaxBackground"]
 texture_filter = 1
-position = Vector2(5276, 281)
+position = Vector2(5297, 324)
 rotation = 1.5708
 texture = ExtResource("6_xbrp4")
 
 [node name="Castle" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(21, 43)
 
 [node name="Pixil-frame-0(6)" type="Sprite2D" parent="ParallaxBackground/Castle"]
 texture_filter = 1
@@ -43,6 +45,7 @@ scale = Vector2(1.2, 1.2)
 texture = ExtResource("3_cso8c")
 
 [node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(21, 43)
 
 [node name="ParallaxBackground_Clouds#Cloud3" type="Sprite2D" parent="ParallaxBackground/Clouds"]
 position = Vector2(569, 232)
@@ -71,109 +74,119 @@ position = Vector2(917, 303)
 texture = ExtResource("8_33ax0")
 
 [node name="Player" type="Node2D" parent="."]
+position = Vector2(21, 43)
 
-[node name="CharacterBody2D" parent="Player" instance=ExtResource("3_s5mkt")]
-position = Vector2(3350, 463)
+[node name="Player" parent="Player" instance=ExtResource("3_s5mkt")]
+position = Vector2(1220, 415)
 
 [node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
-position = Vector2(-6, -136)
+position = Vector2(15, -88)
 
 [node name="Weat" type="Node2D" parent="."]
+position = Vector2(21, 43)
 
 [node name="Pixilart-drawing" type="Sprite2D" parent="Weat"]
-position = Vector2(2732, 250)
+position = Vector2(2730, 252)
 scale = Vector2(0.27, 0.23)
 texture = ExtResource("7_kbmu3")
 
 [node name="Pixilart-drawing2" type="Sprite2D" parent="Weat"]
-position = Vector2(2787, 249)
+position = Vector2(2785, 251)
 scale = Vector2(0.305, 0.23)
 texture = ExtResource("7_kbmu3")
 
 [node name="Pixilart-drawing3" type="Sprite2D" parent="Weat"]
-position = Vector2(2847, 251)
+position = Vector2(2845, 253)
 scale = Vector2(0.32, 0.21)
 texture = ExtResource("7_kbmu3")
 
 [node name="Pixilart-drawing4" type="Sprite2D" parent="Weat"]
-position = Vector2(2904.5, 250)
+position = Vector2(2902.5, 252)
 scale = Vector2(0.275, 0.22)
 texture = ExtResource("7_kbmu3")
 
 [node name="Pixilart-drawing5" type="Sprite2D" parent="Weat"]
-position = Vector2(3481, 497)
-scale = Vector2(0.305, 0.195)
+position = Vector2(3486, 501)
+scale = Vector2(0.32, 0.21)
 texture = ExtResource("7_kbmu3")
 
 [node name="Pixilart-drawing6" type="Sprite2D" parent="Weat"]
-position = Vector2(3547, 496)
-scale = Vector2(0.310001, 0.21)
+position = Vector2(3543.5, 500)
+scale = Vector2(0.275, 0.22)
 texture = ExtResource("7_kbmu3")
 
 [node name="Water" type="Node2D" parent="."]
+position = Vector2(21, 43)
 
 [node name="Area2D" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(1997, 573)
+position = Vector2(1998, 574)
 
 [node name="Area2D2" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(2089, 572)
+position = Vector2(2090, 574)
 
 [node name="Area2D3" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(3275, 566)
-metadata/_edit_lock_ = true
+position = Vector2(3297, 576)
 
 [node name="Area2D4" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(3377, 566)
+position = Vector2(3399, 576)
 metadata/_edit_lock_ = true
 
 [node name="Area2D6" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(3574, 566)
-metadata/_edit_lock_ = true
+position = Vector2(3589, 572)
 
 [node name="Area2D11" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(3688, 566)
-metadata/_edit_lock_ = true
+position = Vector2(3710, 576)
 
 [node name="Area2D12" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(3802, 566)
+position = Vector2(3824, 576)
+
+[node name="Area2D5" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3483, 576)
 metadata/_edit_lock_ = true
 
 [node name="Area2D13" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(3860, 566)
+position = Vector2(3596, 576)
 metadata/_edit_lock_ = true
 
-[node name="Area2D5" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(3471, 566)
-metadata/_edit_lock_ = true
+[node name="Area2D15" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3692, 576)
+
+[node name="Area2D16" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3860, 576)
 
 [node name="Area2D7" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(4396, 557)
+position = Vector2(4392, 560)
 
 [node name="Area2D8" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(4505, 557)
+position = Vector2(4501, 560)
 
 [node name="Area2D9" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(4617, 557)
+position = Vector2(4613, 560)
 
 [node name="Area2D10" parent="Water" instance=ExtResource("6_56ru6")]
-position = Vector2(4722, 555)
+position = Vector2(4721, 560)
 
 [node name="Mobs" type="Node2D" parent="."]
+position = Vector2(21, 43)
 
 [node name="RigidBody2D" parent="Mobs" instance=ExtResource("12_ili7s")]
-position = Vector2(4934, 510)
-start_x = 3250
-end_x = 3350
+position = Vector2(4024, 511)
+start_x = 4000
+end_x = 4250
 speed = 2
 
 [node name="RigidBody2D2" parent="Mobs" instance=ExtResource("12_ili7s")]
-position = Vector2(5153, 190)
-start_x = 4800
-end_x = 4900
+position = Vector2(5152, 208)
+start_x = 5100
+end_x = 5250
 speed = 2
 
 [node name="RigidBody2D3" parent="Mobs" instance=ExtResource("12_ili7s")]
-position = Vector2(6801, 314)
-start_x = 6400
-end_x = 6550
-speed = 2
+position = Vector2(6807, 331)
+start_x = 6550
+end_x = 7000
+speed = 1
+
+[node name="jump boost" parent="." instance=ExtResource("13_16uuo")]
+position = Vector2(1296, 622)
+multiplier = 2.0
