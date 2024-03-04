@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://clylld6yyi3ma"]
+
+[ext_resource type="Script" path="res://Main game/Lvl1/enemy/wise_man.gd" id="1_bhrvp"]
+[ext_resource type="Texture2D" uid="uid://dyb06bfvvtwbm" path="res://Main game/Lvl1/enemy/old man.png" id="1_ir1sx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yw8un"]
+radius = 49.0306
+
+[node name="wise man" type="CharacterBody2D"]
+script = ExtResource("1_bhrvp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(3.84017, -1.04912)
+scale = Vector2(1.64872, 1.49673)
+polygon = PackedVector2Array(-3, -15, 2, -12, 7, -4, 5.29268, 2.34168, 6.07317, 7.43126, 9.19491, 16.0678, 1.31, 16.0678, -7.18143, 15.3997, -9, 8, -7, 1, -4.7553, -5.31218, -7.78795, -5.31218, -7, -10, -7.18142, -13.9978)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(4, 5.96046e-08)
+scale = Vector2(1, 0.912)
+texture = ExtResource("1_ir1sx")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_yw8un")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

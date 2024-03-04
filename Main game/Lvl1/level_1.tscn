@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=18 format=3 uid="uid://dxy4dioy61tca"]
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
@@ -13,6 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://d3hgts5enjmdw" path="res://Main game/Lvl1/bg/cloud4.png" id="8_33ax0"]
 [ext_resource type="PackedScene" uid="uid://dsmj1g1tkh1ei" path="res://Main game/Lvl1/enemy/weat.tscn" id="12_ili7s"]
 [ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="13_16uuo"]
+[ext_resource type="PackedScene" uid="uid://clylld6yyi3ma" path="res://Main game/Lvl1/enemy/wise_man.tscn" id="14_sf4wv"]
+[ext_resource type="PackedScene" uid="uid://2ok27tiw4fvb" path="res://Main game/Lvl1/enemy/g_farmer.tscn" id="15_npjbj"]
+[ext_resource type="PackedScene" uid="uid://b7atnel0hjimp" path="res://Main game/Lvl1/enemy/r_farmer.tscn" id="16_2xcba"]
+[ext_resource type="PackedScene" uid="uid://bbseg340rsohi" path="res://Main game/Lvl1/enemy/f_farmer.tscn" id="17_f71tc"]
 
 [node name="Level 1" type="Node2D"]
 
@@ -77,7 +81,7 @@ texture = ExtResource("8_33ax0")
 position = Vector2(21, 43)
 
 [node name="Player" parent="Player" instance=ExtResource("3_s5mkt")]
-position = Vector2(1220, 415)
+position = Vector2(81, 443)
 
 [node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
 position = Vector2(15, -88)
@@ -120,12 +124,15 @@ position = Vector2(21, 43)
 
 [node name="Area2D" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(1998, 574)
+metadata/_edit_lock_ = true
 
 [node name="Area2D2" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(2090, 574)
+metadata/_edit_lock_ = true
 
 [node name="Area2D3" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(3297, 576)
+metadata/_edit_lock_ = true
 
 [node name="Area2D4" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(3399, 576)
@@ -133,12 +140,15 @@ metadata/_edit_lock_ = true
 
 [node name="Area2D6" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(3589, 572)
+metadata/_edit_lock_ = true
 
 [node name="Area2D11" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(3710, 576)
+metadata/_edit_lock_ = true
 
 [node name="Area2D12" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(3824, 576)
+metadata/_edit_lock_ = true
 
 [node name="Area2D5" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(3483, 576)
@@ -150,21 +160,27 @@ metadata/_edit_lock_ = true
 
 [node name="Area2D15" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(3692, 576)
+metadata/_edit_lock_ = true
 
 [node name="Area2D16" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(3860, 576)
+metadata/_edit_lock_ = true
 
 [node name="Area2D7" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(4392, 560)
+metadata/_edit_lock_ = true
 
 [node name="Area2D8" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(4501, 560)
+metadata/_edit_lock_ = true
 
 [node name="Area2D9" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(4613, 560)
+metadata/_edit_lock_ = true
 
 [node name="Area2D10" parent="Water" instance=ExtResource("6_56ru6")]
 position = Vector2(4721, 560)
+metadata/_edit_lock_ = true
 
 [node name="Mobs" type="Node2D" parent="."]
 position = Vector2(21, 43)
@@ -183,10 +199,88 @@ speed = 2
 
 [node name="RigidBody2D3" parent="Mobs" instance=ExtResource("12_ili7s")]
 position = Vector2(6807, 331)
-start_x = 6550
+start_x = 6750
 end_x = 7000
 speed = 1
 
-[node name="jump boost" parent="." instance=ExtResource("13_16uuo")]
+[node name="g_farmer" parent="Mobs" instance=ExtResource("15_npjbj")]
+position = Vector2(1821, 350)
+
+[node name="r_farmer" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(2600, 474)
+
+[node name="r_farmer6" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(2600, 474)
+
+[node name="g_farmer2" parent="Mobs" instance=ExtResource("15_npjbj")]
+position = Vector2(2249, 448)
+
+[node name="g_farmer3" parent="Mobs" instance=ExtResource("15_npjbj")]
+position = Vector2(5233, 497)
+
+[node name="r_farmer2" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(5357, 496)
+metadata/_edit_lock_ = true
+
+[node name="r_farmer5" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(5034, 516)
+
+[node name="g_farmer4" parent="Mobs" instance=ExtResource("15_npjbj")]
+position = Vector2(6239, 271)
+
+[node name="g_farmer5" parent="Mobs" instance=ExtResource("15_npjbj")]
+position = Vector2(5946, 360)
+
+[node name="r_farmer3" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(6512, 216)
+
+[node name="r_farmer4" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(7348, 316)
+
+[node name="f_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
+position = Vector2(3274, 519)
+
+[node name="f_farmer2" parent="Mobs" instance=ExtResource("17_f71tc")]
+position = Vector2(4818, 428)
+
+[node name="boosts" type="Node2D" parent="."]
+
+[node name="jump boost" parent="boosts" instance=ExtResource("13_16uuo")]
 position = Vector2(1296, 622)
-multiplier = 2.0
+y_multiplier = 1.9
+
+[node name="jump boost2" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(4316, 571)
+y_multiplier = 1.6
+
+[node name="jump boost3" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(5809, 390)
+y_multiplier = 1.5
+
+[node name="jump boost4" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(4722, 644)
+y_multiplier = 1.4
+
+[node name="jump boost8" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(6421, 322)
+y_multiplier = 1.4
+
+[node name="jump boost5" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(3940, 659)
+y_multiplier = 1.7
+
+[node name="jump boost9" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(2128, 663)
+y_multiplier = 1.7
+
+[node name="jump boost6" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(2788, 459)
+x_multiplier = 2.0
+
+[node name="jump boost7" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(2908, 462)
+x_multiplier = 2.0
+
+[node name="wise man" parent="." instance=ExtResource("14_sf4wv")]
+position = Vector2(514, 597)
+new_position_x = 7700
