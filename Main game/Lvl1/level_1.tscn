@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=22 format=3 uid="uid://dxy4dioy61tca"]
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
@@ -10,7 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://nnxdgu8lr7km" path="res://Main game/Lvl1/tilemap/Fence.png" id="6_xbrp4"]
 [ext_resource type="Texture2D" uid="uid://mdxakwk5epkb" path="res://Main game/Lvl1/bg/cloud2.png" id="7_icxq7"]
 [ext_resource type="Texture2D" uid="uid://dc0i77anr88bt" path="res://Main game/Lvl1/tilemap/pixilart-drawing.png" id="7_kbmu3"]
+[ext_resource type="Texture2D" uid="uid://dawnnw88e1mx1" path="res://Main game/Lvl1/signs/pixil-frame-0 (11).png" id="8_0p6b5"]
 [ext_resource type="Texture2D" uid="uid://d3hgts5enjmdw" path="res://Main game/Lvl1/bg/cloud4.png" id="8_33ax0"]
+[ext_resource type="Texture2D" uid="uid://c0vgoxr6iav25" path="res://Main game/Lvl1/signs/pixil-frame-0 (10).png" id="9_2i5w5"]
+[ext_resource type="Texture2D" uid="uid://cvclhakp7tdvp" path="res://Main game/Lvl1/signs/s_jump_high.png" id="9_oxfaw"]
+[ext_resource type="Texture2D" uid="uid://bohdr5hk6eecp" path="res://Main game/Lvl1/signs/s_jump_long.png" id="11_8muxu"]
 [ext_resource type="PackedScene" uid="uid://dsmj1g1tkh1ei" path="res://Main game/Lvl1/enemy/weat.tscn" id="12_ili7s"]
 [ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="13_16uuo"]
 [ext_resource type="PackedScene" uid="uid://clylld6yyi3ma" path="res://Main game/Lvl1/enemy/wise_man.tscn" id="14_sf4wv"]
@@ -77,11 +81,80 @@ texture = ExtResource("7_icxq7")
 position = Vector2(917, 303)
 texture = ExtResource("8_33ax0")
 
+[node name="Sings" type="Node2D" parent="."]
+
+[node name="platf_sign" type="TextureRect" parent="Sings"]
+texture_filter = 1
+offset_left = 2309.0
+offset_top = 442.0
+offset_right = 2385.0
+offset_bottom = 515.0
+texture = ExtResource("8_0p6b5")
+expand_mode = 1
+
+[node name="s_updwn" type="TextureRect" parent="Sings"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="s_leftright" type="TextureRect" parent="Sings"]
+texture_filter = 1
+offset_left = 3349.0
+offset_top = 515.0
+offset_right = 3405.0
+offset_bottom = 580.0
+texture = ExtResource("9_2i5w5")
+expand_mode = 1
+
+[node name="boost_sign" type="TextureRect" parent="Sings"]
+texture_filter = 1
+offset_left = 1275.0
+offset_top = 576.0
+offset_right = 1331.0
+offset_bottom = 631.0
+texture = ExtResource("9_oxfaw")
+expand_mode = 1
+
+[node name="boost_sign2" type="TextureRect" parent="Sings"]
+texture_filter = 1
+offset_left = 2725.0
+offset_top = 461.0
+offset_right = 2795.0
+offset_bottom = 533.0
+texture = ExtResource("11_8muxu")
+expand_mode = 1
+
+[node name="boost_sign3" type="TextureRect" parent="Sings"]
+texture_filter = 1
+offset_left = 4230.0
+offset_top = 509.0
+offset_right = 4300.0
+offset_bottom = 581.0
+texture = ExtResource("9_oxfaw")
+expand_mode = 1
+
+[node name="boost_sign4" type="TextureRect" parent="Sings"]
+texture_filter = 1
+offset_left = 5731.0
+offset_top = 329.0
+offset_right = 5801.0
+offset_bottom = 401.0
+texture = ExtResource("9_oxfaw")
+expand_mode = 1
+
+[node name="boost_sign5" type="TextureRect" parent="Sings"]
+texture_filter = 1
+offset_left = 6317.0
+offset_top = 260.0
+offset_right = 6387.0
+offset_bottom = 332.0
+texture = ExtResource("9_oxfaw")
+expand_mode = 1
+
 [node name="Player" type="Node2D" parent="."]
 position = Vector2(21, 43)
 
 [node name="Player" parent="Player" instance=ExtResource("3_s5mkt")]
-position = Vector2(81, 443)
+position = Vector2(322, 423)
 
 [node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
 position = Vector2(15, -88)
@@ -198,7 +271,7 @@ end_x = 5250
 speed = 2
 
 [node name="RigidBody2D3" parent="Mobs" instance=ExtResource("12_ili7s")]
-position = Vector2(6807, 331)
+position = Vector2(6807, 355)
 start_x = 6750
 end_x = 7000
 speed = 1
@@ -208,12 +281,13 @@ position = Vector2(1821, 350)
 
 [node name="r_farmer" parent="Mobs" instance=ExtResource("16_2xcba")]
 position = Vector2(2600, 474)
+metadata/_edit_lock_ = true
 
 [node name="r_farmer6" parent="Mobs" instance=ExtResource("16_2xcba")]
-position = Vector2(2600, 474)
+position = Vector2(1815, 432)
 
 [node name="g_farmer2" parent="Mobs" instance=ExtResource("15_npjbj")]
-position = Vector2(2249, 448)
+position = Vector2(2248, 448)
 
 [node name="g_farmer3" parent="Mobs" instance=ExtResource("15_npjbj")]
 position = Vector2(5233, 497)
@@ -235,7 +309,7 @@ position = Vector2(5946, 360)
 position = Vector2(6512, 216)
 
 [node name="r_farmer4" parent="Mobs" instance=ExtResource("16_2xcba")]
-position = Vector2(7348, 316)
+position = Vector2(7349, 404)
 
 [node name="f_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(3274, 519)
@@ -261,6 +335,10 @@ y_multiplier = 1.5
 position = Vector2(4722, 644)
 y_multiplier = 1.4
 
+[node name="jump boost10" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(4470, 646)
+y_multiplier = 1.4
+
 [node name="jump boost8" parent="boosts" instance=ExtResource("13_16uuo")]
 position = Vector2(6421, 322)
 y_multiplier = 1.4
@@ -283,4 +361,5 @@ x_multiplier = 2.0
 
 [node name="wise man" parent="." instance=ExtResource("14_sf4wv")]
 position = Vector2(514, 597)
-new_position_x = 7700
+new_position_x = 8000
+new_position_y = 460

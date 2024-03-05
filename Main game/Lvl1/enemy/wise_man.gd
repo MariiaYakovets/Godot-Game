@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var new_position_x : int
+@export var new_position_y : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,3 +21,4 @@ func _on_area_2d_body_entered(body):
 func _on_area_2d_body_exited(body):
 	await get_tree().create_timer(5).timeout
 	self.position.x = new_position_x 
+	self.position.y = new_position_y
