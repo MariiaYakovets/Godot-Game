@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=27 format=3 uid="uid://dxy4dioy61tca"]
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://mdxakwk5epkb" path="res://Main game/Lvl1/bg/cloud2.png" id="7_icxq7"]
 [ext_resource type="Texture2D" uid="uid://dc0i77anr88bt" path="res://Main game/Lvl1/tilemap/pixilart-drawing.png" id="7_kbmu3"]
 [ext_resource type="Texture2D" uid="uid://d3hgts5enjmdw" path="res://Main game/Lvl1/bg/cloud4.png" id="8_33ax0"]
+[ext_resource type="Texture2D" uid="uid://c0vgoxr6iav25" path="res://Main game/Lvl1/signs/pixil-frame-0 (10).png" id="9_3gxwq"]
+[ext_resource type="Texture2D" uid="uid://c50kobqf23wch" path="res://Main game/Lvl1/signs/pixil-frame-0 (14).png" id="10_ycisu"]
+[ext_resource type="Texture2D" uid="uid://b6xufvlvxcl70" path="res://Main game/Lvl1/signs/pixil-frame-0 (13).png" id="11_0ps4t"]
+[ext_resource type="Texture2D" uid="uid://dyemgc6kadnt0" path="res://Main game/Lvl1/signs/att 2.png" id="12_5vpw0"]
 [ext_resource type="PackedScene" uid="uid://dsmj1g1tkh1ei" path="res://Main game/Lvl1/enemy/weat.tscn" id="12_ili7s"]
 [ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="13_16uuo"]
 [ext_resource type="PackedScene" uid="uid://clylld6yyi3ma" path="res://Main game/Lvl1/enemy/wise_man.tscn" id="14_sf4wv"]
@@ -21,6 +25,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gqd8"]
 size = Vector2(4, 4)
+
+[sub_resource type="Animation" id="Animation_gubhm"]
+length = 0.9
 
 [sub_resource type="Animation" id="Animation_oi85n"]
 resource_name = "sing_blink"
@@ -38,9 +45,6 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1.1, 1.1)]
 }
-
-[sub_resource type="Animation" id="Animation_gubhm"]
-length = 0.9
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_br2i3"]
 _data = {
@@ -128,6 +132,196 @@ texture_filter = 1
 position = Vector2(0, 4.75)
 scale = Vector2(0.21, 0.2225)
 texture = ExtResource("18_41ws8")
+
+[node name="up_jump2" type="Area2D" parent="sings"]
+position = Vector2(5775, 344)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump2"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump2"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump2"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="up_jump3" type="Area2D" parent="sings"]
+position = Vector2(6377, 264)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump3"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump3"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump3"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="up_jump4" type="Area2D" parent="sings"]
+position = Vector2(4278, 512)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump4"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump4"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump4"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="long_jump" type="Area2D" parent="sings"]
+position = Vector2(2856, 408)
+scale = Vector2(1.05086, 1.05086)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/long_jump"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/long_jump"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/long_jump"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("9_3gxwq")
+
+[node name="slide_platform" type="Area2D" parent="sings"]
+position = Vector2(3423, 507)
+scale = Vector2(1.0537, 1.0537)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/slide_platform"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/slide_platform"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/slide_platform"]
+texture_filter = 1
+position = Vector2(1.89804, 0.949018)
+scale = Vector2(0.318231, 0.371168)
+texture = ExtResource("10_ycisu")
+
+[node name="upd_platform" type="Area2D" parent="sings"]
+position = Vector2(2346, 460)
+scale = Vector2(1.05508, 1.05508)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/upd_platform"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/upd_platform"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/upd_platform"]
+texture_filter = 1
+position = Vector2(-0.948133, -3.33786e-06)
+scale = Vector2(0.32973, 0.356523)
+texture = ExtResource("11_0ps4t")
+
+[node name="saving" type="Area2D" parent="sings"]
+position = Vector2(2124, 599)
+scale = Vector2(1.0739, 1.0739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/saving"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/saving"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/saving"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("12_5vpw0")
+
+[node name="saving2" type="Area2D" parent="sings"]
+position = Vector2(3922, 604)
+scale = Vector2(1.0739, 1.0739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/saving2"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/saving2"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/saving2"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("12_5vpw0")
+
+[node name="saving3" type="Area2D" parent="sings"]
+position = Vector2(4708, 585)
+scale = Vector2(1.0739, 1.0739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/saving3"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/saving3"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/saving3"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("12_5vpw0")
+
+[node name="saving4" type="Area2D" parent="sings"]
+position = Vector2(4480, 590)
+scale = Vector2(1.0739, 1.0739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/saving4"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/saving4"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/saving4"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("12_5vpw0")
 
 [node name="Player" type="Node2D" parent="."]
 position = Vector2(21, 43)
@@ -257,6 +451,7 @@ speed = 1
 
 [node name="g_farmer" parent="Mobs" instance=ExtResource("15_npjbj")]
 position = Vector2(1821, 350)
+metadata/_edit_lock_ = true
 
 [node name="r_farmer" parent="Mobs" instance=ExtResource("16_2xcba")]
 position = Vector2(2600, 474)
@@ -264,12 +459,15 @@ metadata/_edit_lock_ = true
 
 [node name="r_farmer6" parent="Mobs" instance=ExtResource("16_2xcba")]
 position = Vector2(1815, 432)
+metadata/_edit_lock_ = true
 
 [node name="g_farmer2" parent="Mobs" instance=ExtResource("15_npjbj")]
 position = Vector2(2248, 448)
+metadata/_edit_lock_ = true
 
 [node name="g_farmer3" parent="Mobs" instance=ExtResource("15_npjbj")]
 position = Vector2(5233, 497)
+metadata/_edit_lock_ = true
 
 [node name="r_farmer2" parent="Mobs" instance=ExtResource("16_2xcba")]
 position = Vector2(5357, 496)
@@ -277,24 +475,31 @@ metadata/_edit_lock_ = true
 
 [node name="r_farmer5" parent="Mobs" instance=ExtResource("16_2xcba")]
 position = Vector2(5034, 516)
+metadata/_edit_lock_ = true
 
 [node name="g_farmer4" parent="Mobs" instance=ExtResource("15_npjbj")]
 position = Vector2(6239, 271)
+metadata/_edit_lock_ = true
 
 [node name="g_farmer5" parent="Mobs" instance=ExtResource("15_npjbj")]
 position = Vector2(5946, 360)
+metadata/_edit_lock_ = true
 
 [node name="r_farmer3" parent="Mobs" instance=ExtResource("16_2xcba")]
 position = Vector2(6512, 216)
+metadata/_edit_lock_ = true
 
 [node name="r_farmer4" parent="Mobs" instance=ExtResource("16_2xcba")]
 position = Vector2(7349, 404)
+metadata/_edit_lock_ = true
 
 [node name="f_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(3274, 519)
+metadata/_edit_lock_ = true
 
 [node name="f_farmer2" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(4818, 428)
+metadata/_edit_lock_ = true
 
 [node name="boosts" type="Node2D" parent="."]
 
