@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://cf7kxe5mmuysi"]
+
+[ext_resource type="Texture2D" uid="uid://d3qbnv463nhcj" path="res://Swamp/Mermaid2.png" id="1_7ue1w"]
+[ext_resource type="Script" path="res://mermaid_2.gd" id="1_l858n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1hso7"]
+radius = 12.0
+height = 42.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50j6u"]
+atlas = ExtResource("1_7ue1w")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1ilb"]
+atlas = ExtResource("1_7ue1w")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wplik"]
+atlas = ExtResource("1_7ue1w")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nlxq5"]
+atlas = ExtResource("1_7ue1w")
+region = Rect2(600, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnhlv"]
+atlas = ExtResource("1_7ue1w")
+region = Rect2(800, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi47t"]
+atlas = ExtResource("1_7ue1w")
+region = Rect2(1000, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vjljn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50j6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1ilb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wplik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nlxq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnhlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi47t")
+}],
+"loop": true,
+"name": &"mermaid",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="mermaid_2" type="RigidBody2D" parent="."]
+script = ExtResource("1_l858n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mermaid_2"]
+position = Vector2(138, 89)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_1hso7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mermaid_2"]
+position = Vector2(139.5, 87)
+scale = Vector2(0.295, 0.3)
+sprite_frames = SubResource("SpriteFrames_vjljn")
+animation = &"mermaid"
+autoplay = "mermaid"
+frame_progress = 0.0824029

@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://dbmnlb0mwp468"]
+
+[ext_resource type="Script" path="res://Kikimor.gd" id="1_whucn"]
+[ext_resource type="Texture2D" uid="uid://blpkl1cghvjks" path="res://Swamp/Kikimor.png" id="2_1y2xm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aqe4k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ukm0"]
+atlas = ExtResource("2_1y2xm")
+region = Rect2(500, 0, 2150, 3321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5d1e"]
+atlas = ExtResource("2_1y2xm")
+region = Rect2(2650, 0, 2150, 3321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4kir"]
+atlas = ExtResource("2_1y2xm")
+region = Rect2(4800, 0, 2150, 3321)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcelj"]
+atlas = ExtResource("2_1y2xm")
+region = Rect2(6950, 0, 2150, 3321)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ik8fm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ukm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5d1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4kir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcelj")
+}],
+"loop": true,
+"name": &"Kikimor",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Kikimor" type="RigidBody2D" parent="."]
+script = ExtResource("1_whucn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kikimor"]
+position = Vector2(124, 33)
+shape = SubResource("CapsuleShape2D_aqe4k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Kikimor"]
+position = Vector2(125, 35)
+scale = Vector2(0.0116279, 0.0114423)
+sprite_frames = SubResource("SpriteFrames_ik8fm")
+animation = &"Kikimor"
+autoplay = "Kikimor"
+frame = 1
+frame_progress = 0.348998
