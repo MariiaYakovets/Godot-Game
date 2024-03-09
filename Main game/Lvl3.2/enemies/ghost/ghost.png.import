@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://soliyvyllrqr"
-path="res://.godot/imported/121212121212122222222222222221.png-b358780bbb77beb3fecda08d43ca4a38.ctex"
+uid="uid://h3s5qgwkpeu3"
+path="res://.godot/imported/ghost.png-aae20be3e70144f7cd8fcd8e0461bc5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl3.2/enemies/121212121212122222222222222221.png"
-dest_files=["res://.godot/imported/121212121212122222222222222221.png-b358780bbb77beb3fecda08d43ca4a38.ctex"]
+source_file="res://Main game/Lvl3.2/enemies/ghost/ghost.png"
+dest_files=["res://.godot/imported/ghost.png-aae20be3e70144f7cd8fcd8e0461bc5a.ctex"]
 
 [params]
 

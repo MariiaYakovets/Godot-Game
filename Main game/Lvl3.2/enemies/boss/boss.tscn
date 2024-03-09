@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://6l68alvk4oh4"]
+
+[ext_resource type="Texture2D" uid="uid://soliyvyllrqr" path="res://Main game/Lvl3.2/enemies/boss/121212121212122222222222222221.png" id="1_xmsx2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pox2s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xmsx2")
+}],
+"loop": true,
+"name": &"boss ",
+"speed": 5.0
+}]
+
+[node name="Boss" type="CharacterBody2D"]
+position = Vector2(-1, 2)
+
+[node name="Animation boss" type="AnimatedSprite2D" parent="."]
+position = Vector2(-15.3592, -27.4063)
+scale = Vector2(0.259282, 0.251188)
+sprite_frames = SubResource("SpriteFrames_pox2s")
+animation = &"boss "
+
+[node name="Boss stoit )))" type="CollisionPolygon2D" parent="."]
+position = Vector2(-361, -54)
+scale = Vector2(1.46507, 1.31135)
+polygon = PackedVector2Array(228, -21, 229, -15, 219, -18, 223.197, -4.57543, 223, 16, 219, 21, 223, 30, 222, 80, 227, 40, 235, 28, 227, 86, 274, 88, 281, 84, 265, 70, 259.078, 56.1102, 257, 30, 251, 22, 284, 25, 263, 5, 256, 6, 255, -1, 263, -1, 262, -5, 254, -14, 248, -14, 240, -8, 241, 4, 236, 6, 235, 17, 228, 15, 232, -16)
