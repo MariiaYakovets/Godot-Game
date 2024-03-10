@@ -61,7 +61,7 @@ script = ExtResource("1_3o4cp")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mermaid_3"]
 texture_filter = 1
 position = Vector2(3, 1)
-scale = Vector2(0.278125, 0.285625)
+scale = Vector2(0.835, 0.859)
 sprite_frames = SubResource("SpriteFrames_r4fic")
 animation = &"mermaid"
 autoplay = "mermaid"
@@ -69,25 +69,31 @@ frame = 5
 frame_progress = 0.177266
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mermaid_3"]
-position = Vector2(-68.5, -75)
+visible = false
+position = Vector2(-188.744, -180.162)
+scale = Vector2(2.58, 2.58)
 polygon = PackedVector2Array(74, 66, 84, 69, 91, 72, 91, 78, 87, 91, 83, 89, 86, 82, 83, 77, 77, 73, 73, 69)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="mermaid_3"]
 visible = false
-position = Vector2(-68.5, -75)
+position = Vector2(-188.744, -180.162)
+scale = Vector2(2.58, 2.58)
 polygon = PackedVector2Array(58, 70, 67, 67, 76, 64, 84, 70, 95, 76, 91, 80, 83, 73, 77, 74, 78, 79, 69, 76, 61, 74)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="mermaid_3"]
 visible = false
-position = Vector2(-68.5, -75)
+position = Vector2(-188.744, -180.162)
+scale = Vector2(2.58, 2.58)
 polygon = PackedVector2Array(57, 82, 61, 75, 66, 66, 70, 68, 74, 64, 76, 57, 81, 60, 75, 69, 72, 74, 77, 75, 78, 78, 62, 84)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="mermaid_3"]
 visible = false
-position = Vector2(-68.5, -75)
+position = Vector2(-188.744, -180.162)
+scale = Vector2(2.58, 2.58)
 polygon = PackedVector2Array(58, 82, 60, 78, 65, 66, 71, 68, 76, 58, 81, 60, 73, 72, 78, 77, 64, 83, 60, 85)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="mermaid_3"]
 visible = false
-position = Vector2(-68.5, -75)
+position = Vector2(-188.744, -180.162)
+scale = Vector2(2.58, 2.58)
 polygon = PackedVector2Array(54, 87, 62, 73, 66, 75, 71, 71, 73, 64, 78, 67, 69, 81, 73, 81, 75, 83, 59, 91, 56, 90)
