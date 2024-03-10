@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5q3ghrnsei8f"
-path="res://.godot/imported/Kikimor.png-a33c67850ba6bd9e9d0300e105e25258.ctex"
+uid="uid://e2xsf206o4w"
+path="res://.godot/imported/vaterDu2.png-fbace02f4e13876243e9bb1f9d84689b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/enemies/Kikimor.png"
-dest_files=["res://.godot/imported/Kikimor.png-a33c67850ba6bd9e9d0300e105e25258.ctex"]
+source_file="res://Main game/Lvl2/enemies/Swamp/vaterDu2.png"
+dest_files=["res://.godot/imported/vaterDu2.png-fbace02f4e13876243e9bb1f9d84689b.ctex"]
 
 [params]
 

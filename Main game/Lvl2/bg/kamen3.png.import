@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7c26fesklycn"
-path="res://.godot/imported/vaterDu2.png-7bf1c9a62ba9ce8c7dbcb9d212cd70fd.ctex"
+uid="uid://dfq75l6m4a56t"
+path="res://.godot/imported/kamen3.png-d1ab311b8de1e78420a83f67d7299e64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/enemies/vaterDu2.png"
-dest_files=["res://.godot/imported/vaterDu2.png-7bf1c9a62ba9ce8c7dbcb9d212cd70fd.ctex"]
+source_file="res://Main game/Lvl2/bg/kamen3.png"
+dest_files=["res://.godot/imported/kamen3.png-d1ab311b8de1e78420a83f67d7299e64.ctex"]
 
 [params]
 

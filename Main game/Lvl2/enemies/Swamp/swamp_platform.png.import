@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6gj3nr5v3fob"
-path="res://.godot/imported/Mermaid2.png-925e4eea60f23074295d2afb90fbcf48.ctex"
+uid="uid://bmnm3a01cy4bc"
+path="res://.godot/imported/swamp_platform.png-dff682586c70ae90dd9cca37690c3a17.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/enemies/Mermaid2.png"
-dest_files=["res://.godot/imported/Mermaid2.png-925e4eea60f23074295d2afb90fbcf48.ctex"]
+source_file="res://Main game/Lvl2/enemies/Swamp/swamp_platform.png"
+dest_files=["res://.godot/imported/swamp_platform.png-dff682586c70ae90dd9cca37690c3a17.ctex"]
 
 [params]
 
