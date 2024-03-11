@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=29 format=3 uid="uid://dxy4dioy61tca"]
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://b7atnel0hjimp" path="res://Main game/Lvl1/enemy/r_farmer.tscn" id="16_2xcba"]
 [ext_resource type="PackedScene" uid="uid://bbseg340rsohi" path="res://Main game/Lvl1/enemy/f_farmer.tscn" id="17_f71tc"]
 [ext_resource type="Texture2D" uid="uid://djv3jewuc7p6f" path="res://Main game/Lvl1/signs/pixil-frame-0 (12).png" id="18_41ws8"]
+[ext_resource type="PackedScene" uid="uid://c14wi2cs5ijco" path="res://Main game/Lvl1/food/cheese.tscn" id="23_gh4c8"]
+[ext_resource type="PackedScene" uid="uid://mm34b7a3r6x6" path="res://Main game/Lvl1/food/bread.tscn" id="24_t5ov3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gqd8"]
 size = Vector2(4, 4)
@@ -171,6 +173,25 @@ position = Vector2(0, 4.75)
 scale = Vector2(0.21, 0.2225)
 texture = ExtResource("18_41ws8")
 
+[node name="up_jump5" type="Area2D" parent="sings"]
+position = Vector2(6111, 177)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump5"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump5"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump5"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
 [node name="up_jump4" type="Area2D" parent="sings"]
 position = Vector2(4278, 512)
 scale = Vector2(1.08, 1.08)
@@ -185,6 +206,44 @@ libraries = {
 autoplay = "sing_blink"
 
 [node name="Sprite2D" type="Sprite2D" parent="sings/up_jump4"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="up_jump6" type="Area2D" parent="sings"]
+position = Vector2(2523, 209)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump6"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump6"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump6"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="up_jump7" type="Area2D" parent="sings"]
+position = Vector2(3876, 123)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump7"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump7"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump7"]
 texture_filter = 1
 position = Vector2(0, 4.75)
 scale = Vector2(0.21, 0.2225)
@@ -327,7 +386,7 @@ texture = ExtResource("12_5vpw0")
 position = Vector2(21, 43)
 
 [node name="Player" parent="Player" instance=ExtResource("3_s5mkt")]
-position = Vector2(322, 423)
+position = Vector2(2624, 423)
 
 [node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
 position = Vector2(15, -88)
@@ -507,6 +566,15 @@ metadata/_edit_lock_ = true
 position = Vector2(1296, 622)
 y_multiplier = 1.9
 
+[node name="jump boost12" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(2534, 278)
+y_multiplier = 1.9
+
+[node name="jump boost13" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(3903, 199)
+x_multiplier = 1.3
+y_multiplier = 1.9
+
 [node name="jump boost2" parent="boosts" instance=ExtResource("13_16uuo")]
 position = Vector2(4316, 571)
 y_multiplier = 1.6
@@ -527,6 +595,10 @@ y_multiplier = 1.4
 position = Vector2(6421, 322)
 y_multiplier = 1.4
 
+[node name="jump boost11" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(6136, 231)
+y_multiplier = 2.0
+
 [node name="jump boost5" parent="boosts" instance=ExtResource("13_16uuo")]
 position = Vector2(3940, 659)
 y_multiplier = 1.7
@@ -537,13 +609,54 @@ y_multiplier = 1.7
 
 [node name="jump boost6" parent="boosts" instance=ExtResource("13_16uuo")]
 position = Vector2(2788, 459)
-x_multiplier = 2.0
+x_multiplier = 1.5
 
 [node name="jump boost7" parent="boosts" instance=ExtResource("13_16uuo")]
-position = Vector2(2908, 462)
-x_multiplier = 2.0
+position = Vector2(2921, 462)
+x_multiplier = 1.5
 
 [node name="wise man" parent="." instance=ExtResource("14_sf4wv")]
 position = Vector2(514, 597)
 new_position_x = 8000
 new_position_y = 460
+
+[node name="food_pot" type="Node2D" parent="."]
+
+[node name="cheese" parent="food_pot" instance=ExtResource("23_gh4c8")]
+position = Vector2(1442, 649)
+
+[node name="bread" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(2620, 612)
+
+[node name="bread2" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(2964, 454)
+
+[node name="bread3" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(2600, 110)
+
+[node name="cheese2" parent="food_pot" instance=ExtResource("23_gh4c8")]
+position = Vector2(3680, 212)
+
+[node name="bread4" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(4059, 151)
+
+[node name="bread5" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(4698, 521)
+
+[node name="bread6" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(5953, 296)
+
+[node name="cheese3" parent="food_pot" instance=ExtResource("23_gh4c8")]
+position = Vector2(6420, 432)
+
+[node name="cheese4" parent="food_pot" instance=ExtResource("23_gh4c8")]
+position = Vector2(6225, 99)
+
+[node name="bread7" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(6522, 485)
+
+[node name="bread8" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(6084, 647)
+
+[node name="bread9" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(7558, 474)
