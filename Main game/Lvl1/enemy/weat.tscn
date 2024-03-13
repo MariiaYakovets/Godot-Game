@@ -1,0 +1,112 @@
+[gd_scene load_steps=12 format=3 uid="uid://dsmj1g1tkh1ei"]
+
+[ext_resource type="Script" path="res://Main game/Lvl1/enemy/weat.gd" id="1_hpkdb"]
+[ext_resource type="Texture2D" uid="uid://cf6jkejps70l5" path="res://Main game/Lvl1/enemy/walkingweat.png" id="2_8eufd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v77oe"]
+atlas = ExtResource("2_8eufd")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7djs"]
+atlas = ExtResource("2_8eufd")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ssb3"]
+atlas = ExtResource("2_8eufd")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfucj"]
+atlas = ExtResource("2_8eufd")
+region = Rect2(600, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjvsv"]
+atlas = ExtResource("2_8eufd")
+region = Rect2(800, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b7ii4"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v77oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7djs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ssb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfucj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjvsv")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_d0asr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_7qmnj"]
+resource_name = "walk"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wjnaw"]
+_data = {
+"RESET": SubResource("Animation_d0asr"),
+"walk": SubResource("Animation_7qmnj")
+}
+
+[node name="RigidBody2D" type="RigidBody2D"]
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_hpkdb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1, -2)
+scale = Vector2(0.575781, 0.563324)
+sprite_frames = SubResource("SpriteFrames_b7ii4")
+animation = &"walk"
+frame = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-37, -121)
+scale = Vector2(8.2716, 7.72859)
+polygon = PackedVector2Array(3.62687, 13.5859, 4.71493, 13.5859, 7.46667, 17.8781, 1.42222, 17.8781)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wjnaw")
+}

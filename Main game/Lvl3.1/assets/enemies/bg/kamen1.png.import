@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+<<<<<<<< HEAD:Main game/Lvl1/tilemap/Well.png.import
+uid="uid://wlw25c3mscep"
+path="res://.godot/imported/Well.png-4100b1cdf4e1bc5f1a8a4d456e1fbb81.ctex"
+========
+uid="uid://dde6yvfoh2u4w"
+path="res://.godot/imported/kamen1.png-4799bd52354b0815120fad62035c89e6.ctex"
+>>>>>>>> c4e5216a9b734bfd416efc6d666a0a9b190ea141:Main game/Lvl2/bg/kamen1.png.import
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+<<<<<<<< HEAD:Main game/Lvl1/tilemap/Well.png.import
+source_file="res://Main game/Lvl1/tilemap/Well.png"
+dest_files=["res://.godot/imported/Well.png-4100b1cdf4e1bc5f1a8a4d456e1fbb81.ctex"]
+========
+source_file="res://Main game/Lvl2/bg/kamen1.png"
+dest_files=["res://.godot/imported/kamen1.png-4799bd52354b0815120fad62035c89e6.ctex"]
+>>>>>>>> c4e5216a9b734bfd416efc6d666a0a9b190ea141:Main game/Lvl2/bg/kamen1.png.import
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

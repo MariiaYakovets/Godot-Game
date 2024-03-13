@@ -1,0 +1,662 @@
+[gd_scene load_steps=29 format=3 uid="uid://dxy4dioy61tca"]
+
+[ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
+[ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
+[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/Lvl1/player/player.tscn" id="3_s5mkt"]
+[ext_resource type="PackedScene" uid="uid://cw1rpqj4ircoc" path="res://Main game/Lvl1/tilemap/tilemap_lvl_1.tscn" id="5_lo0es"]
+[ext_resource type="Texture2D" uid="uid://d1cbtxqqqgc5s" path="res://Main game/Lvl1/bg/cloud3.png" id="5_xjy5j"]
+[ext_resource type="PackedScene" uid="uid://bnsx0inrivwjv" path="res://Main game/Lvl1/bg/lvl1_water.tscn" id="6_56ru6"]
+[ext_resource type="Texture2D" uid="uid://p4acgemmslay" path="res://Main game/Lvl1/bg/cloud1.png" id="6_plsro"]
+[ext_resource type="Texture2D" uid="uid://nnxdgu8lr7km" path="res://Main game/Lvl1/tilemap/Fence.png" id="6_xbrp4"]
+[ext_resource type="Texture2D" uid="uid://mdxakwk5epkb" path="res://Main game/Lvl1/bg/cloud2.png" id="7_icxq7"]
+[ext_resource type="Texture2D" uid="uid://dc0i77anr88bt" path="res://Main game/Lvl1/tilemap/pixilart-drawing.png" id="7_kbmu3"]
+[ext_resource type="Texture2D" uid="uid://d3hgts5enjmdw" path="res://Main game/Lvl1/bg/cloud4.png" id="8_33ax0"]
+[ext_resource type="Texture2D" uid="uid://c0vgoxr6iav25" path="res://Main game/Lvl1/signs/pixil-frame-0 (10).png" id="9_3gxwq"]
+[ext_resource type="Texture2D" uid="uid://c50kobqf23wch" path="res://Main game/Lvl1/signs/pixil-frame-0 (14).png" id="10_ycisu"]
+[ext_resource type="Texture2D" uid="uid://b6xufvlvxcl70" path="res://Main game/Lvl1/signs/pixil-frame-0 (13).png" id="11_0ps4t"]
+[ext_resource type="Texture2D" uid="uid://dyemgc6kadnt0" path="res://Main game/Lvl1/signs/att 2.png" id="12_5vpw0"]
+[ext_resource type="PackedScene" uid="uid://dsmj1g1tkh1ei" path="res://Main game/Lvl1/enemy/weat.tscn" id="12_ili7s"]
+[ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="13_16uuo"]
+[ext_resource type="PackedScene" uid="uid://clylld6yyi3ma" path="res://Main game/Lvl1/enemy/wise_man.tscn" id="14_sf4wv"]
+[ext_resource type="PackedScene" uid="uid://2ok27tiw4fvb" path="res://Main game/Lvl1/enemy/g_farmer.tscn" id="15_npjbj"]
+[ext_resource type="PackedScene" uid="uid://b7atnel0hjimp" path="res://Main game/Lvl1/enemy/r_farmer.tscn" id="16_2xcba"]
+[ext_resource type="PackedScene" uid="uid://bbseg340rsohi" path="res://Main game/Lvl1/enemy/f_farmer.tscn" id="17_f71tc"]
+[ext_resource type="Texture2D" uid="uid://djv3jewuc7p6f" path="res://Main game/Lvl1/signs/pixil-frame-0 (12).png" id="18_41ws8"]
+[ext_resource type="PackedScene" uid="uid://c14wi2cs5ijco" path="res://Main game/Lvl1/food/cheese.tscn" id="23_gh4c8"]
+[ext_resource type="PackedScene" uid="uid://mm34b7a3r6x6" path="res://Main game/Lvl1/food/bread.tscn" id="24_t5ov3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5gqd8"]
+size = Vector2(4, 4)
+
+[sub_resource type="Animation" id="Animation_gubhm"]
+length = 0.9
+
+[sub_resource type="Animation" id="Animation_oi85n"]
+resource_name = "sing_blink"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_br2i3"]
+_data = {
+"RESET": SubResource("Animation_gubhm"),
+"sing_blink": SubResource("Animation_oi85n")
+}
+
+[node name="Level 1" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(-6790.56, -814.282)
+
+[node name="bg_main" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1464.17, 0)
+
+[node name="BgLvl1Village" type="Sprite2D" parent="ParallaxBackground/bg_main"]
+modulate = Color(0.596078, 0.596078, 0.596078, 1)
+texture_filter = 1
+position = Vector2(367, 404)
+scale = Vector2(1.46725, 1.34275)
+texture = ExtResource("1_m75ei")
+metadata/_edit_lock_ = true
+
+[node name="Fence2" type="Sprite2D" parent="ParallaxBackground"]
+texture_filter = 1
+position = Vector2(5297, 324)
+rotation = 1.5708
+texture = ExtResource("6_xbrp4")
+
+[node name="Castle" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(21, 43)
+
+[node name="Pixil-frame-0(6)" type="Sprite2D" parent="ParallaxBackground/Castle"]
+texture_filter = 1
+position = Vector2(-70, 350)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_cso8c")
+
+[node name="Clouds" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(21, 43)
+
+[node name="ParallaxBackground_Clouds#Cloud3" type="Sprite2D" parent="ParallaxBackground/Clouds"]
+position = Vector2(569, 232)
+texture = ExtResource("5_xjy5j")
+
+[node name="ParallaxBackground_Clouds#Cloud1" type="Sprite2D" parent="ParallaxBackground/Clouds"]
+position = Vector2(260, 320)
+texture = ExtResource("6_plsro")
+
+[node name="ParallaxBackground_Clouds#Cloud5" type="Sprite2D" parent="ParallaxBackground/Clouds"]
+position = Vector2(1078, 187)
+scale = Vector2(0.547619, 0.709677)
+texture = ExtResource("6_plsro")
+
+[node name="ParallaxBackground_Clouds#Cloud2" type="Sprite2D" parent="ParallaxBackground/Clouds"]
+position = Vector2(485, 212)
+texture = ExtResource("7_icxq7")
+
+[node name="ParallaxBackground_Clouds#Cloud6" type="Sprite2D" parent="ParallaxBackground/Clouds"]
+position = Vector2(1266, 306)
+scale = Vector2(0.630435, 0.586957)
+texture = ExtResource("7_icxq7")
+
+[node name="ParallaxBackground_Clouds#Cloud4" type="Sprite2D" parent="ParallaxBackground/Clouds"]
+position = Vector2(917, 303)
+texture = ExtResource("8_33ax0")
+
+[node name="sings" type="Node2D" parent="."]
+
+[node name="up_jump" type="Area2D" parent="sings"]
+position = Vector2(1297, 610)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="up_jump2" type="Area2D" parent="sings"]
+position = Vector2(5775, 344)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump2"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump2"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump2"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="up_jump3" type="Area2D" parent="sings"]
+position = Vector2(6377, 264)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump3"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump3"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump3"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="up_jump5" type="Area2D" parent="sings"]
+position = Vector2(6111, 177)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump5"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump5"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump5"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="up_jump4" type="Area2D" parent="sings"]
+position = Vector2(4278, 512)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump4"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump4"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump4"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="up_jump6" type="Area2D" parent="sings"]
+position = Vector2(2523, 209)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump6"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump6"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump6"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="up_jump7" type="Area2D" parent="sings"]
+position = Vector2(3876, 123)
+scale = Vector2(1.08, 1.08)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/up_jump7"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/up_jump7"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/up_jump7"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("18_41ws8")
+
+[node name="long_jump" type="Area2D" parent="sings"]
+position = Vector2(2856, 408)
+scale = Vector2(1.05086, 1.05086)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/long_jump"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/long_jump"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/long_jump"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("9_3gxwq")
+
+[node name="slide_platform" type="Area2D" parent="sings"]
+position = Vector2(3423, 507)
+scale = Vector2(1.0537, 1.0537)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/slide_platform"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/slide_platform"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/slide_platform"]
+texture_filter = 1
+position = Vector2(1.89804, 0.949018)
+scale = Vector2(0.318231, 0.371168)
+texture = ExtResource("10_ycisu")
+
+[node name="upd_platform" type="Area2D" parent="sings"]
+position = Vector2(2346, 460)
+scale = Vector2(1.05508, 1.05508)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/upd_platform"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/upd_platform"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/upd_platform"]
+texture_filter = 1
+position = Vector2(-0.948133, -3.33786e-06)
+scale = Vector2(0.32973, 0.356523)
+texture = ExtResource("11_0ps4t")
+
+[node name="saving" type="Area2D" parent="sings"]
+position = Vector2(2124, 599)
+scale = Vector2(1.0739, 1.0739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/saving"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/saving"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/saving"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("12_5vpw0")
+
+[node name="saving2" type="Area2D" parent="sings"]
+position = Vector2(3922, 604)
+scale = Vector2(1.0739, 1.0739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/saving2"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/saving2"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/saving2"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("12_5vpw0")
+
+[node name="saving3" type="Area2D" parent="sings"]
+position = Vector2(4708, 585)
+scale = Vector2(1.0739, 1.0739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/saving3"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/saving3"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/saving3"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("12_5vpw0")
+
+[node name="saving4" type="Area2D" parent="sings"]
+position = Vector2(4480, 590)
+scale = Vector2(1.0739, 1.0739)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sings/saving4"]
+shape = SubResource("RectangleShape2D_5gqd8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="sings/saving4"]
+libraries = {
+"": SubResource("AnimationLibrary_br2i3")
+}
+autoplay = "sing_blink"
+
+[node name="Sprite2D" type="Sprite2D" parent="sings/saving4"]
+texture_filter = 1
+position = Vector2(0, 4.75)
+scale = Vector2(0.21, 0.2225)
+texture = ExtResource("12_5vpw0")
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(21, 43)
+
+[node name="Player" parent="Player" instance=ExtResource("3_s5mkt")]
+position = Vector2(2624, 423)
+
+[node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
+position = Vector2(15, -88)
+
+[node name="Weat" type="Node2D" parent="."]
+position = Vector2(21, 43)
+
+[node name="Pixilart-drawing" type="Sprite2D" parent="Weat"]
+position = Vector2(2730, 252)
+scale = Vector2(0.27, 0.23)
+texture = ExtResource("7_kbmu3")
+
+[node name="Pixilart-drawing2" type="Sprite2D" parent="Weat"]
+position = Vector2(2785, 251)
+scale = Vector2(0.305, 0.23)
+texture = ExtResource("7_kbmu3")
+
+[node name="Pixilart-drawing3" type="Sprite2D" parent="Weat"]
+position = Vector2(2845, 253)
+scale = Vector2(0.32, 0.21)
+texture = ExtResource("7_kbmu3")
+
+[node name="Pixilart-drawing4" type="Sprite2D" parent="Weat"]
+position = Vector2(2902.5, 252)
+scale = Vector2(0.275, 0.22)
+texture = ExtResource("7_kbmu3")
+
+[node name="Pixilart-drawing5" type="Sprite2D" parent="Weat"]
+position = Vector2(3486, 501)
+scale = Vector2(0.32, 0.21)
+texture = ExtResource("7_kbmu3")
+
+[node name="Pixilart-drawing6" type="Sprite2D" parent="Weat"]
+position = Vector2(3543.5, 500)
+scale = Vector2(0.275, 0.22)
+texture = ExtResource("7_kbmu3")
+
+[node name="Water" type="Node2D" parent="."]
+position = Vector2(21, 43)
+
+[node name="Area2D" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(1998, 574)
+metadata/_edit_lock_ = true
+
+[node name="Area2D2" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(2090, 574)
+metadata/_edit_lock_ = true
+
+[node name="Area2D3" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3297, 576)
+metadata/_edit_lock_ = true
+
+[node name="Area2D4" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3399, 576)
+metadata/_edit_lock_ = true
+
+[node name="Area2D6" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3589, 572)
+metadata/_edit_lock_ = true
+
+[node name="Area2D11" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3710, 576)
+metadata/_edit_lock_ = true
+
+[node name="Area2D12" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3824, 576)
+metadata/_edit_lock_ = true
+
+[node name="Area2D5" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3483, 576)
+metadata/_edit_lock_ = true
+
+[node name="Area2D13" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3596, 576)
+metadata/_edit_lock_ = true
+
+[node name="Area2D15" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3692, 576)
+metadata/_edit_lock_ = true
+
+[node name="Area2D16" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(3860, 576)
+metadata/_edit_lock_ = true
+
+[node name="Area2D7" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(4392, 560)
+metadata/_edit_lock_ = true
+
+[node name="Area2D8" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(4501, 560)
+metadata/_edit_lock_ = true
+
+[node name="Area2D9" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(4613, 560)
+metadata/_edit_lock_ = true
+
+[node name="Area2D10" parent="Water" instance=ExtResource("6_56ru6")]
+position = Vector2(4721, 560)
+metadata/_edit_lock_ = true
+
+[node name="Mobs" type="Node2D" parent="."]
+position = Vector2(21, 43)
+
+[node name="RigidBody2D" parent="Mobs" instance=ExtResource("12_ili7s")]
+position = Vector2(4024, 511)
+start_x = 4000
+end_x = 4250
+speed = 2
+
+[node name="RigidBody2D2" parent="Mobs" instance=ExtResource("12_ili7s")]
+position = Vector2(5152, 208)
+start_x = 5100
+end_x = 5250
+speed = 2
+
+[node name="RigidBody2D3" parent="Mobs" instance=ExtResource("12_ili7s")]
+position = Vector2(6807, 355)
+start_x = 6750
+end_x = 7000
+speed = 1
+
+[node name="g_farmer" parent="Mobs" instance=ExtResource("15_npjbj")]
+position = Vector2(1821, 350)
+metadata/_edit_lock_ = true
+
+[node name="r_farmer" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(2600, 474)
+metadata/_edit_lock_ = true
+
+[node name="r_farmer6" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(1815, 432)
+metadata/_edit_lock_ = true
+
+[node name="g_farmer2" parent="Mobs" instance=ExtResource("15_npjbj")]
+position = Vector2(2248, 448)
+metadata/_edit_lock_ = true
+
+[node name="g_farmer3" parent="Mobs" instance=ExtResource("15_npjbj")]
+position = Vector2(5233, 497)
+metadata/_edit_lock_ = true
+
+[node name="r_farmer2" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(5357, 496)
+metadata/_edit_lock_ = true
+
+[node name="r_farmer5" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(5034, 516)
+metadata/_edit_lock_ = true
+
+[node name="g_farmer4" parent="Mobs" instance=ExtResource("15_npjbj")]
+position = Vector2(6239, 271)
+metadata/_edit_lock_ = true
+
+[node name="g_farmer5" parent="Mobs" instance=ExtResource("15_npjbj")]
+position = Vector2(5946, 360)
+metadata/_edit_lock_ = true
+
+[node name="r_farmer3" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(6512, 216)
+metadata/_edit_lock_ = true
+
+[node name="r_farmer4" parent="Mobs" instance=ExtResource("16_2xcba")]
+position = Vector2(7349, 404)
+metadata/_edit_lock_ = true
+
+[node name="f_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
+position = Vector2(3274, 519)
+metadata/_edit_lock_ = true
+
+[node name="f_farmer2" parent="Mobs" instance=ExtResource("17_f71tc")]
+position = Vector2(4818, 428)
+metadata/_edit_lock_ = true
+
+[node name="boosts" type="Node2D" parent="."]
+
+[node name="jump boost" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(1296, 622)
+y_multiplier = 1.9
+
+[node name="jump boost12" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(2534, 278)
+y_multiplier = 1.9
+
+[node name="jump boost13" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(3903, 199)
+x_multiplier = 1.3
+y_multiplier = 1.9
+
+[node name="jump boost2" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(4316, 571)
+y_multiplier = 1.6
+
+[node name="jump boost3" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(5809, 390)
+y_multiplier = 1.5
+
+[node name="jump boost4" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(4722, 644)
+y_multiplier = 1.4
+
+[node name="jump boost10" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(4470, 646)
+y_multiplier = 1.4
+
+[node name="jump boost8" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(6421, 322)
+y_multiplier = 1.4
+
+[node name="jump boost11" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(6136, 231)
+y_multiplier = 2.0
+
+[node name="jump boost5" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(3940, 659)
+y_multiplier = 1.7
+
+[node name="jump boost9" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(2128, 663)
+y_multiplier = 1.7
+
+[node name="jump boost6" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(2788, 459)
+x_multiplier = 1.5
+
+[node name="jump boost7" parent="boosts" instance=ExtResource("13_16uuo")]
+position = Vector2(2921, 462)
+x_multiplier = 1.5
+
+[node name="wise man" parent="." instance=ExtResource("14_sf4wv")]
+position = Vector2(514, 597)
+new_position_x = 8000
+new_position_y = 460
+
+[node name="food_pot" type="Node2D" parent="."]
+
+[node name="cheese" parent="food_pot" instance=ExtResource("23_gh4c8")]
+position = Vector2(1442, 649)
+
+[node name="bread" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(2620, 612)
+
+[node name="bread2" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(2964, 454)
+
+[node name="bread3" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(2600, 110)
+
+[node name="cheese2" parent="food_pot" instance=ExtResource("23_gh4c8")]
+position = Vector2(3680, 212)
+
+[node name="bread4" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(4059, 151)
+
+[node name="bread5" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(4698, 521)
+
+[node name="bread6" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(5953, 296)
+
+[node name="cheese3" parent="food_pot" instance=ExtResource("23_gh4c8")]
+position = Vector2(6420, 432)
+
+[node name="cheese4" parent="food_pot" instance=ExtResource("23_gh4c8")]
+position = Vector2(6225, 99)
+
+[node name="bread7" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(6522, 485)
+
+[node name="bread8" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(6084, 647)
+
+[node name="bread9" parent="food_pot" instance=ExtResource("24_t5ov3")]
+position = Vector2(7558, 474)

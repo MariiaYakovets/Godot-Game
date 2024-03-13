@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dieskvj0ahfgg"]
+
+[ext_resource type="Script" path="res://Main game/Lvl1/boosts/jump_boost.gd" id="1_frhl0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agmig"]
+size = Vector2(29, 10.5)
+
+[node name="jump boost" type="Area2D"]
+position = Vector2(1269, 579)
+script = ExtResource("1_frhl0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 3.25)
+shape = SubResource("RectangleShape2D_agmig")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
