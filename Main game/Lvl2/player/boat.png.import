@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beaxr3ygkn0ee"
-path="res://.godot/imported/460a28c9491dbd5e (1).PNG-5f03f427fb707abb84b87e5fcf50ee5d.ctex"
+uid="uid://j1iovn11hkkt"
+path="res://.godot/imported/boat.png-ac5c2601a08b839ca98eeb56eabea6d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/player/460a28c9491dbd5e (1).PNG"
-dest_files=["res://.godot/imported/460a28c9491dbd5e (1).PNG-5f03f427fb707abb84b87e5fcf50ee5d.ctex"]
+source_file="res://Main game/Lvl1/player/boat.png"
+dest_files=["res://.godot/imported/boat.png-ac5c2601a08b839ca98eeb56eabea6d8.ctex"]
 
 [params]
 

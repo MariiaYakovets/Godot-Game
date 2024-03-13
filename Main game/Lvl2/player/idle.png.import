@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p3tb8faw7qhn"
-path="res://.godot/imported/image-removebg-preview — копия.png-b80edd7622d385c60baefb6de538ed89.ctex"
+uid="uid://d1tx86ybpdsna"
+path="res://.godot/imported/idle.png-fee51d37c4fcb8761a5a1cf4ce7443f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/player/image-removebg-preview — копия.png"
-dest_files=["res://.godot/imported/image-removebg-preview — копия.png-b80edd7622d385c60baefb6de538ed89.ctex"]
+source_file="res://Main game/Lvl1/player/idle.png"
+dest_files=["res://.godot/imported/idle.png-fee51d37c4fcb8761a5a1cf4ce7443f8.ctex"]
 
 [params]
 
