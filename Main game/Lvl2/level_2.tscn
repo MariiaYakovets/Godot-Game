@@ -22,7 +22,7 @@
 [node name="Level_2" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(2943, 418)
+position = Vector2(364, 478)
 
 [node name="Merm_1" parent="." instance=ExtResource("2_sugcb")]
 position = Vector2(3524, 524)
@@ -31,7 +31,7 @@ position = Vector2(3524, 524)
 position = Vector2(3374, 526)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_offset = Vector2(-641.826, -839.587)
+scroll_offset = Vector2(-1146.82, -1470.38)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1073.95, 0)
@@ -341,7 +341,7 @@ scale = Vector2(0.0215518, 0.0220151)
 texture = ExtResource("5_bsyh7")
 
 [node name="tilemap_Lvl2" parent="." instance=ExtResource("2_lpg3f")]
-position = Vector2(-7, 1)
+position = Vector2(-7, 171)
 
 [node name="Bushes" type="Node2D" parent="."]
 metadata/_edit_lock_ = true

@@ -23,6 +23,6 @@ func _on_player_detection_body_entered(body):
 #			$AnimatedSprite2D.flip_h = true
 
 
-func _on_player_detection_body_exited(body):
-	$AnimatedSprite2D.play('Kikimor')
-	chase = false
+#func _on_player_detection_body_exited(body):
+#	$AnimatedSprite2D.play('Kikimor')
+#	chase = false
