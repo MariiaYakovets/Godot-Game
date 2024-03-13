@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy7peo82ot8dy"]
+
+[ext_resource type="Texture2D" uid="uid://bsge7n31k3inj" path="res://Main game/Lvl2/tilemap/bushstatic.png" id="1_a4cd3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_883g2"]
+size = Vector2(35, 0)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 8.0
+offset_top = 19.0
+offset_right = 548.0
+offset_bottom = 109.0
+texture = ExtResource("1_a4cd3")
+expand_mode = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(73.5, 92)
+shape = SubResource("RectangleShape2D_883g2")

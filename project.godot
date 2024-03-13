@@ -11,7 +11,11 @@ config_version=5
 [application]
 
 config/name="Magician_Game"
+<<<<<<< HEAD
 run/main_scene="res://Main game/Lvl1/level_1.tscn"
+=======
+run/main_scene="res://Main game/Lvl2/level_2.tscn"
+>>>>>>> c4e5216a9b734bfd416efc6d666a0a9b190ea141
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
