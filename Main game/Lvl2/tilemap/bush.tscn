@@ -1,0 +1,99 @@
+[gd_scene load_steps=12 format=3 uid="uid://bn4h5mpx8op5y"]
+
+[ext_resource type="Script" path="res://Main game/Lvl2/tilemap/bush.gd" id="1_1gvq5"]
+[ext_resource type="Texture2D" uid="uid://cugdh8t57pctd" path="res://Main game/Lvl2/tilemap/bushmove.png" id="1_o167w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bifxb"]
+atlas = ExtResource("1_o167w")
+region = Rect2(0, 0, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jaom"]
+atlas = ExtResource("1_o167w")
+region = Rect2(300, 0, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efrd0"]
+atlas = ExtResource("1_o167w")
+region = Rect2(600, 0, 300, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfh6o"]
+atlas = ExtResource("1_o167w")
+region = Rect2(900, 0, 300, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ft8te"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bifxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jaom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efrd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfh6o")
+}],
+"loop": false,
+"name": &"infanim",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25tx5"]
+size = Vector2(43, 0)
+
+[sub_resource type="Animation" id="Animation_1xfto"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_lyaqq"]
+resource_name = "infanim"
+length = 1.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sexpm"]
+_data = {
+"RESET": SubResource("Animation_1xfto"),
+"infanim": SubResource("Animation_lyaqq")
+}
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_1gvq5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(70, 52)
+scale = Vector2(0.436667, 0.465)
+sprite_frames = SubResource("SpriteFrames_ft8te")
+animation = &"infanim"
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(69.5, 81)
+shape = SubResource("RectangleShape2D_25tx5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sexpm")
+}
