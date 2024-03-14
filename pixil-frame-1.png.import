@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:pixil-frame-1.png.import
-uid="uid://2eyd5n2xka1y"
+uid="uid://ch5fdrqwlaw6x"
 path="res://.godot/imported/pixil-frame-1.png-ad93a550e7a02ba3dcd3532114ce39ec.ctex"
-========
-uid="uid://db67flxpitdfl"
-path="res://.godot/imported/kamen2.png-eebcc1109d23d3463c654f1b55fa809f.ctex"
->>>>>>>> c4e5216a9b734bfd416efc6d666a0a9b190ea141:Main game/Lvl2/bg/kamen2.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:pixil-frame-1.png.import
 source_file="res://pixil-frame-1.png"
 dest_files=["res://.godot/imported/pixil-frame-1.png-ad93a550e7a02ba3dcd3532114ce39ec.ctex"]
-========
-source_file="res://Main game/Lvl2/bg/kamen2.png"
-dest_files=["res://.godot/imported/kamen2.png-eebcc1109d23d3463c654f1b55fa809f.ctex"]
->>>>>>>> c4e5216a9b734bfd416efc6d666a0a9b190ea141:Main game/Lvl2/bg/kamen2.png.import
 
 [params]
 

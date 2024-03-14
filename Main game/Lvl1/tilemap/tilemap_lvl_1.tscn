@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bs8v534nioqu2" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (5).png" id="4_solj5"]
 [ext_resource type="Texture2D" uid="uid://c4w6keg8bjjtm" path="res://Main game/Lvl1/tilemap/village tile map.png" id="5_13g0b"]
 [ext_resource type="Texture2D" uid="uid://s24i17uemdht" path="res://Main game/Lvl1/tilemap/water sprite.png" id="5_u8tvb"]
-[ext_resource type="Texture2D" uid="uid://wlw25c3mscep" path="res://Main game/Lvl1/tilemap/Well.png" id="6_4q2u1"]
+[ext_resource type="Texture2D" uid="uid://hwqermm22f4p" path="res://Main game/Lvl1/tilemap/Well.png" id="6_4q2u1"]
 [ext_resource type="Script" path="res://Main game/Lvl1/tilemap/moving platform.gd" id="6_afip0"]
 [ext_resource type="Texture2D" uid="uid://defkhem1wodgi" path="res://Main game/Lvl1/tilemap/moving platform.png" id="6_tr22x"]
 [ext_resource type="Texture2D" uid="uid://de58d7ty52yx7" path="res://Main game/Lvl1/tilemap/cloud3 platform.png" id="10_jq3vv"]

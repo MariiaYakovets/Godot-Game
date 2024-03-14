@@ -2,36 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://m0ehhfalvwgr"
+uid="uid://d0xsxn6c5ofsi"
 path="res://.godot/imported/krakur.png-6804f5c2b9fe9da32fcbff4deebe2457.ctex"
-=======
-<<<<<<<< HEAD:Main game/Lvl3.1/assets/enemies/krakur.png.import
-uid="uid://m0ehhfalvwgr"
-path="res://.godot/imported/krakur.png-6804f5c2b9fe9da32fcbff4deebe2457.ctex"
-========
-uid="uid://p4acgemmslay"
-path="res://.godot/imported/cloud1.png-88c262133203a4a7f82401309609d7b6.ctex"
->>>>>>>> main:Main game/Lvl1/bg/cloud1.png.import
->>>>>>> 6540c5580ea715d95de1b3d55b114a6078af0d75
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<< HEAD
 source_file="res://Main game/Lvl3.1/assets/enemies/krakur.png"
 dest_files=["res://.godot/imported/krakur.png-6804f5c2b9fe9da32fcbff4deebe2457.ctex"]
-=======
-<<<<<<<< HEAD:Main game/Lvl3.1/assets/enemies/krakur.png.import
-source_file="res://Main game/Lvl3.1/assets/enemies/krakur.png"
-dest_files=["res://.godot/imported/krakur.png-6804f5c2b9fe9da32fcbff4deebe2457.ctex"]
-========
-source_file="res://Main game/Lvl1/bg/cloud1.png"
-dest_files=["res://.godot/imported/cloud1.png-88c262133203a4a7f82401309609d7b6.ctex"]
->>>>>>>> main:Main game/Lvl1/bg/cloud1.png.import
->>>>>>> 6540c5580ea715d95de1b3d55b114a6078af0d75
 
 [params]
 

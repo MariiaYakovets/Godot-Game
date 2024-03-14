@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpkjx8ili2vwh"
-path="res://.godot/imported/tiles for swamp_fprest.png-65be1d6fdb734755d921f90b39d06c3d.ctex"
+path="res://.godot/imported/tiles for swamp_fprest.png-f6cb00d528bc7c2294c5cd6c651457ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/tilemap/tiles for swamp_fprest.png"
-dest_files=["res://.godot/imported/tiles for swamp_fprest.png-65be1d6fdb734755d921f90b39d06c3d.ctex"]
+source_file="res://Main game/Lvl3.1/assets/enemies/tilemap/tiles for swamp_fprest.png"
+dest_files=["res://.godot/imported/tiles for swamp_fprest.png-f6cb00d528bc7c2294c5cd6c651457ef.ctex"]
 
 [params]
 

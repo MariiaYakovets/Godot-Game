@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b45tlrm62p0v4" path="res://Main game/Lvl3.1/assets/bg/Volcanoes Background 1000x593.png" id="1_llstp"]
 [ext_resource type="PackedScene" uid="uid://bjhg036ii71g2" path="res://Main game/Lvl3.1/assets/tilemap/level_3_1_block_1.tscn" id="2_m2p10"]
-[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/Lvl3.1/assets/player/player.tscn" id="3_xix4b"]
+[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/Lvl1/player/player.tscn" id="3_xix4b"]
 
 [node name="level3_1" type="Node2D"]
 

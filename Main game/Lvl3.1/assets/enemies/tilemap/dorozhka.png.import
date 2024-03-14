@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8upjgmhppcgn"
-path="res://.godot/imported/dorozhka.png-500decebccc37854263de42485787b85.ctex"
+path="res://.godot/imported/dorozhka.png-520a2a257058ce7b32eaaa006a7aa138.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/tilemap/dorozhka.png"
-dest_files=["res://.godot/imported/dorozhka.png-500decebccc37854263de42485787b85.ctex"]
+source_file="res://Main game/Lvl3.1/assets/enemies/tilemap/dorozhka.png"
+dest_files=["res://.godot/imported/dorozhka.png-520a2a257058ce7b32eaaa006a7aa138.ctex"]
 
 [params]
 

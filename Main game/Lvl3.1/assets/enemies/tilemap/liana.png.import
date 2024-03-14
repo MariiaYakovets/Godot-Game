@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d10oiylthak38"
-path="res://.godot/imported/liana.png-bc8de0c6ab499a328eeb4178bb78fccb.ctex"
+path="res://.godot/imported/liana.png-8b7dbfe7e16a65a95f94b2ed84fd2d2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/tilemap/liana.png"
-dest_files=["res://.godot/imported/liana.png-bc8de0c6ab499a328eeb4178bb78fccb.ctex"]
+source_file="res://Main game/Lvl3.1/assets/enemies/tilemap/liana.png"
+dest_files=["res://.godot/imported/liana.png-8b7dbfe7e16a65a95f94b2ed84fd2d2c.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dksni6y3k74n0"
-path="res://.godot/imported/pixil-frame-0 (6).png-f94bdfbc1e1aed070a7be72da232a587.ctex"
+path="res://.godot/imported/pixil-frame-0 (6).png-09792939714edad0d9a57c70afd1b87d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/tilemap/pixil-frame-0 (6).png"
-dest_files=["res://.godot/imported/pixil-frame-0 (6).png-f94bdfbc1e1aed070a7be72da232a587.ctex"]
+source_file="res://Main game/Lvl3.1/assets/enemies/tilemap/pixil-frame-0 (6).png"
+dest_files=["res://.godot/imported/pixil-frame-0 (6).png-09792939714edad0d9a57c70afd1b87d.ctex"]
 
 [params]
 
