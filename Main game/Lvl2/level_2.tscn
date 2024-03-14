@@ -1,15 +1,15 @@
-[gd_scene load_steps=21 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=20 format=3 uid="uid://p4cj7wg14vmi"]
 
-[ext_resource type="Texture2D" uid="uid://cqqdd0gxrb7sg" path="res://Main game/Lvl3.1/assets/enemies/bg/swamp bg (12).png" id="1_xat46"]
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl3.1/assets/enemies/tilemap/liana.png" id="2_2cxvi"]
 [ext_resource type="PackedScene" uid="uid://cff58e024vxby" path="res://Main game/Lvl3.1/assets/enemies/enemies/mermaid_1.tscn" id="2_sugcb"]
-[ext_resource type="PackedScene" uid="uid://r1apj4bcg4ia" path="res://Main game/Lvl2/tilemap/tilemap_lvl_2.tscn" id="2_w80ak"]
+[ext_resource type="PackedScene" uid="uid://r1apj4bcg4ia" path="res://Main game/Lvl3.1/assets/enemies/tilemap/tilemap_lvl_2.tscn" id="2_w80ak"]
 [ext_resource type="Texture2D" uid="uid://bygibtrl2plfx" path="res://Main game/Lvl3.1/assets/enemies/tilemap/liana2.png" id="3_cafwo"]
 [ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/Lvl1/player/player.tscn" id="3_do26w"]
 [ext_resource type="PackedScene" uid="uid://cf7kxe5mmuysi" path="res://Main game/Lvl3.1/assets/enemies/enemies/mermaid_2.tscn" id="3_n85jb"]
 [ext_resource type="Texture2D" uid="uid://8upjgmhppcgn" path="res://Main game/Lvl3.1/assets/enemies/tilemap/dorozhka.png" id="3_uq24i"]
 [ext_resource type="Texture2D" uid="uid://bjo6eqplw7kgc" path="res://Main game/Lvl3.1/assets/enemies/tilemap/cl2.png" id="4_hw3q3"]
 [ext_resource type="Texture2D" uid="uid://w0jt5hctn2su" path="res://Main game/Lvl3.1/assets/enemies/tilemap/cl1.png" id="5_bsyh7"]
+[ext_resource type="Texture2D" uid="uid://5m58r5mrx3ny" path="res://Main game/Lvl2/bg/bg for swamp without green box.png" id="5_ep0ax"]
 [ext_resource type="Texture2D" uid="uid://dde6yvfoh2u4w" path="res://Main game/Lvl2/bg/kamen1.png" id="7_dli2e"]
 [ext_resource type="PackedScene" uid="uid://bn4h5mpx8op5y" path="res://Main game/Lvl3.1/assets/enemies/tilemap/bush.tscn" id="8_52oj0"]
 [ext_resource type="Texture2D" uid="uid://db67flxpitdfl" path="res://Main game/Lvl2/bg/kamen2.png" id="9_pdpiy"]
@@ -17,14 +17,43 @@
 [ext_resource type="Texture2D" uid="uid://dfq75l6m4a56t" path="res://Main game/Lvl3.1/assets/enemies/bg/kamen3.png" id="10_1m3qx"]
 [ext_resource type="PackedScene" uid="uid://b8ffsfis8skb4" path="res://Main game/Lvl3.1/assets/enemies/tilemap/bush2s.tscn" id="10_nxw0n"]
 [ext_resource type="PackedScene" uid="uid://dbmnlb0mwp468" path="res://Main game/Lvl3.1/assets/enemies/enemies/kikimor.tscn" id="12_k6a36"]
-[ext_resource type="PackedScene" uid="uid://dy5wbsbgt3unp" path="res://Main game/Lvl3.1/assets/enemies/bg/platform_open_lid.tscn" id="13_aac0g"]
 [ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="19_w765i"]
 [ext_resource type="PackedScene" uid="uid://dcr7ockq86qtx" path="res://Main game/Lvl2/platforms/disap_platf.tscn" id="20_gx31i"]
 
 [node name="Level_2" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(2808, 478)
+position = Vector2(7876, 393)
+
+[node name="liana" type="Area2D" parent="."]
+position = Vector2(5620, 610)
+scale = Vector2(1.716, 1.175)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="liana"]
+visible = false
+position = Vector2(57.956, 0)
+scale = Vector2(0.834081, 1)
+polygon = PackedVector2Array(-341.313, -109.787, -321.918, -80, -281.468, -61.8809, -196.969, -44.8596, -111.305, -47.4128, -35.5479, -40.6043, 30.3032, -49.1149, 123.543, -41.4553, 221.445, -44.0085, 326.923, -77.2, 345.571, -103.583, 338.541, -107.234, 318.182, -80.6043, 268.065, -61.8809, 194.056, -54.2213, 127.04, -53.3702, 45.4546, -60.1787, -23.8926, -51.6681, -68.4121, -53.617, -110.722, -55.9234, -195.221, -55.0724, -259.324, -65.2851, -302.501, -77.4468, -328.152, -114.043)
+
+[node name="Liana" type="Sprite2D" parent="liana"]
+texture_filter = 1
+position = Vector2(63.3161, -57.5532)
+scale = Vector2(0.815269, 0.908511)
+texture = ExtResource("3_cafwo")
+
+[node name="liana2" type="Area2D" parent="."]
+position = Vector2(8570, 477)
+scale = Vector2(1, 0.4)
+
+[node name="Liana" type="Sprite2D" parent="liana2"]
+texture_filter = 1
+position = Vector2(-95, -40)
+scale = Vector2(1.455, 2.7)
+texture = ExtResource("3_cafwo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="liana2"]
+visible = false
+polygon = PackedVector2Array(-572, -152.5, -505, -80, -402, -15, -277, -37.5, -149, -15, 4, -20, 111, -7.5, 234, -40, 301, -47.5, 359, -92.5, 381, -145, 408, -147.5, 393, -110, 334, -12.5, 262, 10, 171, 7.5, 66, 17.5, -64, 2.5, -153, 17.5, -249, 7.5, -321, -2.5, -411, 12.5, -479, -35, -523, -40, -582, -125)
 
 [node name="Lvl2" parent="." instance=ExtResource("2_w80ak")]
 position = Vector2(-18, 148)
@@ -39,81 +68,45 @@ position = Vector2(2672, 612)
 scroll_offset = Vector2(-3615, -1593)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1073.95, 0)
+motion_mirroring = Vector2(1073.85, 0)
 
 [node name="Pixil-frame-0(12)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.427451, 0.631373, 0.639216, 1)
 position = Vector2(532, 435)
 scale = Vector2(1.074, 1.07176)
-texture = ExtResource("1_xat46")
+texture = ExtResource("5_ep0ax")
 
 [node name="Lianas" type="Node2D" parent="."]
 
-[node name="Liana" type="Sprite2D" parent="Lianas"]
-texture_filter = 1
-position = Vector2(8081, 143.5)
-scale = Vector2(0.975, 1.21)
-texture = ExtResource("2_2cxvi")
-
 [node name="Liana2" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(8326, 165.71)
-scale = Vector2(0.975, 1.21)
+position = Vector2(8264, 427.375)
+scale = Vector2(0.975, 0.7325)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana3" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(8530, 179.71)
+position = Vector2(8314, 408)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana4" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(8620, 191.71)
+position = Vector2(8592, 431)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana5" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(8847, 180.71)
+position = Vector2(8830, 449)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana6" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(9029, 139.71)
+position = Vector2(8697, 391)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
-
-[node name="liana" type="Area2D" parent="Lianas"]
-position = Vector2(5634, 641)
-scale = Vector2(1.716, 1.175)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lianas/liana"]
-position = Vector2(57.956, 0)
-scale = Vector2(0.834081, 1)
-polygon = PackedVector2Array(-341.313, -109.787, -321.918, -80, -281.468, -61.8809, -196.969, -44.8596, -111.305, -47.4128, -35.5479, -40.6043, 30.3032, -49.1149, 123.543, -41.4553, 221.445, -44.0085, 326.923, -77.2, 345.571, -103.583, 345.571, -118.051, 318.182, -80.6043, 268.065, -61.8809, 194.056, -54.2213, 127.04, -53.3702, 45.4546, -60.1787, -23.8926, -51.6681, -68.4121, -53.617, -110.722, -55.9234, -195.221, -55.0724, -259.324, -65.2851, -302.501, -77.4468, -328.152, -114.043)
-
-[node name="Liana" type="Sprite2D" parent="Lianas/liana"]
-texture_filter = 1
-position = Vector2(63.3161, -57.5532)
-scale = Vector2(0.815269, 0.908511)
-texture = ExtResource("3_cafwo")
-
-[node name="liana2" type="Area2D" parent="Lianas"]
-position = Vector2(8570, 477)
-scale = Vector2(1, 0.4)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Lianas/liana2"]
-position = Vector2(342.61, 1.57933)
-scale = Vector2(1.43853, 1.96834)
-polygon = PackedVector2Array(-325.06, 30.0485, -42.8286, 33.8588, 45, 24, 111, 26, 145, 18, 183, -16, 196, -45, 195, -51, 189, -51, 180, -20, 145, 9, 109, 17, 48, 18, -66.4639, 27.5082, -325.06, 14.8072)
-
-[node name="Liana" type="Sprite2D" parent="Lianas/liana2"]
-texture_filter = 1
-position = Vector2(-110.25, 23.225)
-scale = Vector2(1.455, 2.7)
-texture = ExtResource("3_cafwo")
 
 [node name="Rocks" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -160,7 +153,7 @@ scale = Vector2(0.0722224, 0.0751366)
 texture = ExtResource("9_pdpiy")
 
 [node name="gr_rock6" type="StaticBody2D" parent="Rocks"]
-position = Vector2(4823, 504)
+position = Vector2(4825, 496)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/gr_rock6"]
 position = Vector2(-5.49609, -11.5659)
@@ -219,7 +212,7 @@ position = Vector2(5715, 459)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock3/gr_rock4"]
 position = Vector2(1.96736, -12.176)
 scale = Vector2(0.330974, 0.485863)
-polygon = PackedVector2Array(-93, -6, -55, -30, 34, -34, 67, -25, 100, 10, 91, 54, 33, 71, -73, 71, -107, 47, -106, 12)
+polygon = PackedVector2Array(-93.5635, -16.1033, -48.2432, -34.627, 36.3555, -38.7434, 67, -25, 100, 10, 91, 54, 33, 71, -73, 71, -107, 47, -106, 12)
 
 [node name="Sprite2D" type="Sprite2D" parent="Rocks/rock3/gr_rock4"]
 texture_filter = 1
@@ -258,24 +251,11 @@ metadata/_edit_lock_ = true
 [node name="Clouds" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
 
-[node name="Cl2" type="Sprite2D" parent="Clouds"]
-texture_filter = 1
-position = Vector2(8169.6, 88.75)
-scale = Vector2(0.0585333, 0.0623928)
-texture = ExtResource("4_hw3q3")
-
 [node name="Cl1" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(8333.6, 84.75)
+position = Vector2(8507, 366)
 scale = Vector2(0.103235, 0.115737)
 texture = ExtResource("5_bsyh7")
-
-[node name="Cl5" type="Sprite2D" parent="Clouds"]
-texture_filter = 1
-position = Vector2(9029.6, 59.75)
-scale = Vector2(0.0585333, 0.0623928)
-texture = ExtResource("4_hw3q3")
-flip_h = true
 
 [node name="Cl7" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
@@ -283,59 +263,40 @@ position = Vector2(8946.6, 51.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 
-[node name="Cl9" type="Sprite2D" parent="Clouds"]
-texture_filter = 1
-position = Vector2(9029.6, 59.75)
-scale = Vector2(0.0585333, 0.0623928)
-texture = ExtResource("4_hw3q3")
-flip_h = true
-
 [node name="Cl10" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
 position = Vector2(8946.6, 51.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 
-[node name="Cl8" type="Sprite2D" parent="Clouds"]
-texture_filter = 1
-position = Vector2(8939.6, 59.75)
-scale = Vector2(0.0585333, 0.0623928)
-texture = ExtResource("4_hw3q3")
-
 [node name="Cl11" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(8678.9, 128.5)
+position = Vector2(8881.25, 351.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 flip_h = true
 
 [node name="Cl12" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(8588.9, 128.5)
+position = Vector2(8791.25, 351.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 
-[node name="Cl6" type="Sprite2D" parent="Clouds"]
-texture_filter = 1
-position = Vector2(8822.6, 97.75)
-scale = Vector2(0.103235, 0.115737)
-texture = ExtResource("5_bsyh7")
-
 [node name="Cl3" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(8544.6, 92.75)
+position = Vector2(8701, 421)
 scale = Vector2(0.0499154, 0.0569533)
 texture = ExtResource("5_bsyh7")
 
 [node name="Cl13" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(8042.6, 89.75)
+position = Vector2(8347, 399)
 scale = Vector2(0.0499154, 0.0569533)
 texture = ExtResource("5_bsyh7")
 
 [node name="Cl4" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(8428.6, 141.719)
+position = Vector2(8636, 300)
 scale = Vector2(0.0215518, 0.0220151)
 texture = ExtResource("5_bsyh7")
 
@@ -345,326 +306,460 @@ metadata/_edit_lock_ = true
 [node name="Area2D8" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(3060, 606)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D15" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(3544, 550)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D65" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(3184, 610)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D66" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(3386, 611)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D67" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(3509, 555)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D68" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3296, 613)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D69" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3109, 612)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D70" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3139, 612)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D71" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3084, 611)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D72" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3246, 613)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D73" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3433, 614)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D74" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3416, 614)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D75" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3334, 613)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D76" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(3208, 613)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D4" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(2518, 384)
+metadata/_edit_lock_ = true
 
 [node name="Area2D" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(1748, 228)
+metadata/_edit_lock_ = true
 
 [node name="Area2D3" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(2643, 395)
+metadata/_edit_lock_ = true
 
 [node name="Area2D7" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(2845, 396)
+metadata/_edit_lock_ = true
 
 [node name="Area2D2" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(2755, 398)
+metadata/_edit_lock_ = true
 
 [node name="Area2D5" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(2570, 398)
+metadata/_edit_lock_ = true
 
 [node name="Area2D12" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(2591, 398)
+metadata/_edit_lock_ = true
 
 [node name="Area2D13" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(2542, 398)
+metadata/_edit_lock_ = true
 
 [node name="Area2D9" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(2705, 398)
+metadata/_edit_lock_ = true
 
 [node name="Area2D6" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(2892, 399)
+metadata/_edit_lock_ = true
 
 [node name="Area2D14" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(2875, 399)
+metadata/_edit_lock_ = true
 
 [node name="Area2D10" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(2793, 398)
+metadata/_edit_lock_ = true
 
 [node name="Area2D11" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(2667, 398)
+metadata/_edit_lock_ = true
 
 [node name="Area2D16" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(15446, 324)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D17" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(15914, 321)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D18" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(15570, 328)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D19" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(15772, 329)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D20" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(15875, 329)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D21" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15682, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D22" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15495, 330)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D23" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15525, 330)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D24" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15470, 329)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D25" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15632, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D26" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15819, 332)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D27" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15802, 332)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D28" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15720, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D29" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15594, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D30" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(15939, 323)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D31" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(16407, 320)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D32" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(16063, 327)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D33" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(16265, 328)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D34" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(16368, 328)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D35" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16175, 330)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D36" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15988, 329)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D37" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16018, 329)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D38" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15963, 328)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D39" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16125, 330)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D40" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16312, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D41" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16295, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D42" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16213, 330)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D43" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16087, 330)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D44" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(16448, 326)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D45" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(16916, 323)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D46" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(16572, 330)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D47" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(16774, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D48" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(16877, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D49" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16684, 333)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D50" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16497, 332)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D51" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16527, 332)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D52" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16472, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D53" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16634, 333)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D54" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16821, 334)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D55" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16804, 334)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D56" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16722, 333)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D57" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16596, 333)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D58" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(16851, 323)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D59" parent="Bushes" instance=ExtResource("9_sjhlo")]
 position = Vector2(16420, 326)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D60" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(15855, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D61" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15421, 332)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D62" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(15890, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D63" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16897, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Area2D64" parent="Bushes" instance=ExtResource("10_nxw0n")]
 position = Vector2(16341, 331)
 scale = Vector2(0.5, 0.5)
+metadata/_edit_lock_ = true
 
 [node name="Kikimor" parent="." instance=ExtResource("12_k6a36")]
 position = Vector2(995, 542)
 
-[node name="platform_open_lid" parent="." instance=ExtResource("13_aac0g")]
-position = Vector2(4544, 428)
+[node name="platforms" type="Node2D" parent="."]
+position = Vector2(995, 542)
 
-[node name="jump boost" parent="." instance=ExtResource("19_w765i")]
-position = Vector2(1460, 441)
+[node name="disap_platf" parent="platforms" instance=ExtResource("20_gx31i")]
+position = Vector2(2712, 27)
+
+[node name="disap_platf2" parent="platforms" instance=ExtResource("20_gx31i")]
+position = Vector2(2567, 54)
+
+[node name="disap_platf3" parent="platforms" instance=ExtResource("20_gx31i")]
+position = Vector2(2712, 73)
+
+[node name="disap_platf4" parent="platforms" instance=ExtResource("20_gx31i")]
+position = Vector2(2712, 116)
+
+[node name="boosts" type="Node2D" parent="."]
+position = Vector2(995, 542)
+
+[node name="jump boost" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(465, -101)
 y_multiplier = 1.3
 
-[node name="jump boost2" parent="." instance=ExtResource("19_w765i")]
-position = Vector2(1538, 390)
+[node name="jump boost2" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(543, -152)
 y_multiplier = 1.3
 
-[node name="jump boost3" parent="." instance=ExtResource("19_w765i")]
-position = Vector2(3719, 567)
+[node name="jump boost3" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(2724, 25)
 y_multiplier = 1.5
 
-[node name="jump boost4" parent="." instance=ExtResource("19_w765i")]
-position = Vector2(4031, 762)
+[node name="jump boost4" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(3036, 220)
 y_multiplier = 2.0
 
-[node name="disap_platf" parent="." instance=ExtResource("20_gx31i")]
-position = Vector2(3707, 569)
-timeout = 2
+[node name="jump boost5" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(4157, -37)
+x_multiplier = 1.2
+y_multiplier = 1.1
 
-[node name="disap_platf2" parent="." instance=ExtResource("20_gx31i")]
-position = Vector2(3562, 596)
+[node name="jump boost9" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(3999, 12)
+x_multiplier = 1.2
+y_multiplier = 1.6
 
-[node name="disap_platf3" parent="." instance=ExtResource("20_gx31i")]
-position = Vector2(3638, 605)
+[node name="jump boost10" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(7917, 21)
+x_multiplier = 1.4
+y_multiplier = 1.3
 
-[node name="disap_platf4" parent="." instance=ExtResource("20_gx31i")]
-position = Vector2(3701, 659)
-timeout = 1
+[node name="jump boost16" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(7999, 149)
+x_multiplier = 1.1
+y_multiplier = 1.6
+
+[node name="jump boost11" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(8230, -109)
+y_multiplier = 1.4
+
+[node name="jump boost12" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(8436, -110)
+x_multiplier = 1.1
+y_multiplier = 1.8
+
+[node name="jump boost13" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(8839, -111)
+x_multiplier = 1.1
+y_multiplier = 1.8
+
+[node name="jump boost14" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(9056, -111)
+x_multiplier = 1.5
+y_multiplier = 1.8
+
+[node name="jump boost15" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(9426, -162)
+x_multiplier = 1.2
+y_multiplier = 1.5
+
+[node name="jump boost6" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(4267, -75)
+x_multiplier = 1.4
+y_multiplier = 1.5
+
+[node name="jump boost7" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(5258, 71)
+y_multiplier = 1.8
+
+[node name="jump boost8" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(5742, -36)
+y_multiplier = 2.0

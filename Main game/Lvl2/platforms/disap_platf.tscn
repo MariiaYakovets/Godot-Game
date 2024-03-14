@@ -3,16 +3,16 @@
 [ext_resource type="Script" path="res://Main game/Lvl2/platforms/disap_platf.gd" id="1_1ffdb"]
 [ext_resource type="Texture2D" uid="uid://d0ncl8ntlf7jd" path="res://Main game/Lvl1/tilemap/disap_platf.png" id="1_kqxrf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bu1kj"]
-size = Vector2(57, 8)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u2xu"]
+size = Vector2(56, 0)
 
 [node name="disap_platf" type="CharacterBody2D"]
-visible = false
 script = ExtResource("1_1ffdb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 5)
-shape = SubResource("RectangleShape2D_bu1kj")
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_6u2xu")
+one_way_collision = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
