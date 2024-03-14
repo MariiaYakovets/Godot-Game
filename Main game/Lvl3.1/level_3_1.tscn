@@ -1,18 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://dccgfna5p47vc"]
+[gd_scene load_steps=5 format=3 uid="uid://dccgfna5p47vc"]
 
-[ext_resource type="Texture2D" uid="uid://b45tlrm62p0v4" path="res://Main game/Lvl3.1/assets/bg/Volcanoes Background 1000x593.png" id="1_llstp"]
-[ext_resource type="PackedScene" uid="uid://bjhg036ii71g2" path="res://Main game/Lvl3.1/assets/tilemap/level_3_1_block_1.tscn" id="2_m2p10"]
+[ext_resource type="PackedScene" uid="uid://cjs64t4d30ia5" path="res://Main game/Lvl3.1/assets/tilemap/tilemap_lvl_3_1.tscn" id="2_0c0xc"]
+[ext_resource type="Texture2D" uid="uid://b17ikjdbrrh8d" path="res://Main game/Lvl3.1/assets/bg/edit volc.png" id="3_41bgc"]
 [ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/Lvl1/player/player.tscn" id="3_xix4b"]
+[ext_resource type="Texture2D" uid="uid://c61e56xqxarc8" path="res://Main game/Lvl3.1/assets/bg/botoom.png" id="4_scamy"]
 
 [node name="level3_1" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_xix4b")]
+
+[node name="tilemap_lvl3_1" parent="." instance=ExtResource("2_0c0xc")]
+position = Vector2(4, 343)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Top" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1411.15, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/Top"]
+modulate = Color(0.458824, 0.396078, 0.345098, 1)
 offset_right = 1412.0
 offset_bottom = 791.0
-texture = ExtResource("1_llstp")
+texture = ExtResource("3_41bgc")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="level3_1block1" parent="." instance=ExtResource("2_m2p10")]
-position = Vector2(-3, 99)
+[node name="Bottom" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1411.15, 365)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_xix4b")]
+[node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/Bottom"]
+modulate = Color(0.458824, 0.396078, 0.345098, 1)
+offset_top = 790.0
+offset_right = 1413.0
+offset_bottom = 1159.0
+texture = ExtResource("4_scamy")
+expand_mode = 1

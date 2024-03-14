@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=22 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl3.1/assets/enemies/tilemap/liana.png" id="2_2cxvi"]
 [ext_resource type="PackedScene" uid="uid://cff58e024vxby" path="res://Main game/Lvl3.1/assets/enemies/enemies/mermaid_1.tscn" id="2_sugcb"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://dbmnlb0mwp468" path="res://Main game/Lvl3.1/assets/enemies/enemies/kikimor.tscn" id="12_k6a36"]
 [ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="19_w765i"]
 [ext_resource type="PackedScene" uid="uid://dcr7ockq86qtx" path="res://Main game/Lvl2/platforms/disap_platf.tscn" id="20_gx31i"]
+[ext_resource type="PackedScene" uid="uid://b47pvw3lepf4g" path="res://Main game/Lvl2/food/mushroom.tscn" id="20_kemd5"]
+[ext_resource type="PackedScene" uid="uid://car3p2bqq2vo3" path="res://Main game/Lvl2/food/muchomor.tscn" id="21_vk4pk"]
 
 [node name="Level_2" type="Node2D"]
 
@@ -778,3 +780,182 @@ y_multiplier = 1.8
 [node name="jump boost8" parent="boosts" instance=ExtResource("19_w765i")]
 position = Vector2(6723, -27)
 y_multiplier = 2.0
+
+[node name="food" type="Node2D" parent="."]
+position = Vector2(5305, 573)
+rotation = 0.0698132
+
+[node name="mushroom" parent="food" instance=ExtResource("20_kemd5")]
+scale = Vector2(1, 1)
+
+[node name="mushroom2" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(175.027, 65.9514)
+scale = Vector2(1, 1)
+
+[node name="mushroom3" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(318.286, -64.3593)
+scale = Vector2(1, 1)
+
+[node name="mushroom4" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(361.153, -96.4277)
+scale = Vector2(1, 1)
+
+[node name="mushroom5" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(476.32, -212.745)
+scale = Vector2(1, 1)
+
+[node name="mushroom6" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(547.439, 15.8512)
+scale = Vector2(1, 1)
+
+[node name="mushroom7" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(426.901, 55.3557)
+scale = Vector2(1, 1)
+
+[node name="mushroom8" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(-85.4627, 25.0225)
+scale = Vector2(1, 1)
+
+[node name="mushroom9" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(27.4162, -181.354)
+scale = Vector2(1, 1)
+
+[node name="mushroom10" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(218.816, -296.987)
+scale = Vector2(1, 1)
+
+[node name="mushroom11" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(599.404, -287.513)
+scale = Vector2(1, 1)
+
+[node name="mushroom12" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(733.775, -143.535)
+scale = Vector2(1, 1)
+
+[node name="mushroom13" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(698.204, -35.7914)
+scale = Vector2(1, 1)
+
+[node name="mushroom14" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(780.297, 48.6878)
+scale = Vector2(1, 1)
+
+[node name="mushroom16" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(855.945, -131.027)
+scale = Vector2(1, 1)
+
+[node name="mushroom17" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1054.53, -143.911)
+scale = Vector2(1, 1)
+
+[node name="mushroom18" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1126.96, -269.269)
+scale = Vector2(1, 1)
+
+[node name="mushroom19" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1126.96, -269.269)
+scale = Vector2(1, 1)
+
+[node name="mushroom20" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(982.148, -290.218)
+scale = Vector2(1, 1)
+
+[node name="mushroom21" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(881.011, -360.334)
+scale = Vector2(1, 1)
+
+[node name="mushroom22" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(748.349, -408.197)
+scale = Vector2(1, 1)
+
+[node name="mushroom23" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(600.242, -418.891)
+scale = Vector2(1, 1)
+
+[node name="mushroom24" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(432.051, -387.081)
+scale = Vector2(1, 1)
+
+[node name="mushroom25" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(243.156, -421.99)
+scale = Vector2(1, 1)
+
+[node name="mushroom26" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1574.14, -339.634)
+scale = Vector2(1, 1)
+
+[node name="mushroom27" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1416.17, -376.705)
+scale = Vector2(1, 1)
+
+[node name="mushroom28" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1473.02, -180.192)
+scale = Vector2(1, 1)
+
+[node name="mushroom29" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1757.7, -166.015)
+scale = Vector2(1, 1)
+
+[node name="mushroom30" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1992.41, -178.418)
+scale = Vector2(1, 1)
+
+[node name="mushroom32" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1708.33, -26.2311)
+scale = Vector2(1, 1)
+
+[node name="mushroom33" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1513.68, -71.7639)
+scale = Vector2(1, 1)
+
+[node name="mushroom31" parent="food" instance=ExtResource("20_kemd5")]
+position = Vector2(1997.64, -390.299)
+scale = Vector2(1, 1)
+
+[node name="muchomor" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(759.684, -174.418)
+scale = Vector2(1, 1)
+
+[node name="muchomor2" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(877.424, -10.2309)
+scale = Vector2(1, 1)
+
+[node name="muchomor4" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(1102.34, -4.90735)
+scale = Vector2(1, 1)
+
+[node name="muchomor7" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(1260.71, -277.618)
+scale = Vector2(1, 1)
+
+[node name="muchomor8" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(1370.72, -94.8478)
+scale = Vector2(1, 1)
+
+[node name="muchomor9" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(1625.03, -113.633)
+scale = Vector2(1, 1)
+
+[node name="muchomor11" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(1877.7, -270.641)
+scale = Vector2(1, 1)
+
+[node name="muchomor12" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(1838.01, -365.102)
+scale = Vector2(1, 1)
+
+[node name="muchomor10" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(1613.83, 41.5263)
+scale = Vector2(1, 1)
+
+[node name="muchomor6" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(1205.12, -126.373)
+scale = Vector2(1, 1)
+
+[node name="muchomor3" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(161.781, -223.83)
+scale = Vector2(1, 1)
+
+[node name="muchomor5" parent="food" instance=ExtResource("21_vk4pk")]
+position = Vector2(189.386, -244.807)
+scale = Vector2(1, 1)
