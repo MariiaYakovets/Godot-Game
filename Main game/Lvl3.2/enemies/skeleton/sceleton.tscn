@@ -1,0 +1,105 @@
+[gd_scene load_steps=17 format=3 uid="uid://b67tyduwx2fdu"]
+
+[ext_resource type="Script" path="res://Main game/Lvl3.2/enemies/CharacterBody2D.gd" id="1_2kpbn"]
+[ext_resource type="Texture2D" uid="uid://0jf08eo5o0yj" path="res://Main game/Lvl3.2/enemies/skeleton/10.png" id="1_73maj"]
+[ext_resource type="Texture2D" uid="uid://dlojm2wo2oae7" path="res://Main game/Lvl3.2/enemies/skeleton/4.png" id="1_rcv6y"]
+[ext_resource type="Texture2D" uid="uid://cr3dtci6ynnhc" path="res://Main game/Lvl3.2/enemies/skeleton/11.png" id="2_8kche"]
+[ext_resource type="Texture2D" uid="uid://dvedv8wj5f1g" path="res://Main game/Lvl3.2/enemies/skeleton/5.png" id="2_gr175"]
+[ext_resource type="Texture2D" uid="uid://dlv44m1760pub" path="res://Main game/Lvl3.2/enemies/skeleton/6.png" id="3_ih5f4"]
+[ext_resource type="Texture2D" uid="uid://cvc7bije6jm4t" path="res://Main game/Lvl3.2/enemies/skeleton/12.png" id="3_k5jxv"]
+[ext_resource type="Texture2D" uid="uid://bl8xcarg4evk3" path="res://Main game/Lvl3.2/enemies/skeleton/7.png" id="4_3nxdx"]
+[ext_resource type="Texture2D" uid="uid://bmygl8547uk6l" path="res://Main game/Lvl3.2/enemies/skeleton/13.png" id="4_satn6"]
+[ext_resource type="Texture2D" uid="uid://cpqomk815vq3x" path="res://Main game/Lvl3.2/enemies/skeleton/14.png" id="5_ftq3q"]
+[ext_resource type="Texture2D" uid="uid://dtj4wxs5ckyre" path="res://Main game/Lvl3.2/enemies/skeleton/8.png" id="5_uo2qk"]
+[ext_resource type="Texture2D" uid="uid://cfntsldponpma" path="res://Main game/Lvl3.2/enemies/skeleton/15.png" id="6_tdpal"]
+[ext_resource type="Texture2D" uid="uid://d3y1ju4s1fqdo" path="res://Main game/Lvl3.2/enemies/skeleton/16.png" id="7_xcjfv"]
+[ext_resource type="Texture2D" uid="uid://d2u5cwqwyuwhv" path="res://Main game/Lvl3.2/enemies/skeleton/17.png" id="8_yfwnt"]
+[ext_resource type="Texture2D" uid="uid://ba88d06orh71x" path="res://Main game/Lvl3.2/enemies/skeleton/18.png" id="9_jxgpp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_twqx2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_73maj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8kche")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k5jxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_satn6")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ftq3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tdpal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xcjfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yfwnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jxgpp")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rcv6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gr175")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ih5f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3nxdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uo2qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ih5f4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3nxdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uo2qk")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sceleton" type="CharacterBody2D" parent="."]
+script = ExtResource("1_2kpbn")
+
+[node name="Sceleton animation" type="AnimatedSprite2D" parent="Sceleton"]
+position = Vector2(10, -7.00001)
+scale = Vector2(0.251799, 0.278409)
+sprite_frames = SubResource("SpriteFrames_twqx2")
+animation = &"attack"
+frame_progress = 0.0309998
+
+[node name="Sceleton kakogo hera netu drugoy animation" type="CollisionPolygon2D" parent="Sceleton"]
+position = Vector2(-52.887, -65.309)
+scale = Vector2(0.998904, 0.993056)
+polygon = PackedVector2Array(50, 52, 41, 63, 41, 69, 29, 73, 31, 76, 45, 73, 42, 85, 45, 85, 50, 71, 56, 71, 66, 86, 57, 69, 84, 66, 86, 63, 81, 61, 72, 59, 68, 64, 62, 56, 62, 45, 58, 41, 53, 41, 50, 45)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sceleton"]

@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://wxsn57ek3xpd"]
+
+[ext_resource type="Texture2D" uid="uid://cj3i1ahx3c5tn" path="res://Main game/Lvl3.2/enemies/ghost/ghost flying.png" id="1_7ok4h"]
+[ext_resource type="Texture2D" uid="uid://h3s5qgwkpeu3" path="res://Main game/Lvl3.2/enemies/ghost/ghost.png" id="2_ln33d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbvmr"]
+atlas = ExtResource("2_ln33d")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83xvq"]
+atlas = ExtResource("2_ln33d")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_086sf"]
+atlas = ExtResource("2_ln33d")
+region = Rect2(600, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrbvq"]
+atlas = ExtResource("2_ln33d")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yqeqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7ok4h")
+}],
+"loop": true,
+"name": &"Ghost fly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbvmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83xvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_086sf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrbvq")
+}],
+"loop": true,
+"name": &"Ghost ниче не понял че он там машет но вы поняли",
+"speed": 1.0
+}]
+
+[node name="Ghost" type="CharacterBody2D"]
+modulate = Color(1, 1, 1, 0.631373)
+
+[node name="Ghost fly" type="CollisionPolygon2D" parent="."]
+position = Vector2(-118, -65.3)
+polygon = PackedVector2Array(119, 41, 114, 42, 112, 52, 107, 59, 109, 63, 109, 70, 113, 77, 122, 79, 130, 78, 134, 76, 131, 64, 131, 59, 128, 54, 124, 44)
+
+[node name="Ghost hz che delaet" type="CollisionPolygon2D" parent="."]
+position = Vector2(-118, -65.3)
+polygon = PackedVector2Array(116, 41, 114, 43, 113, 47, 112, 50, 110, 52, 108, 52, 106, 51, 104, 51, 102, 53, 104, 55, 104, 57, 104, 58, 105, 61, 107, 64, 107, 65, 107, 70, 107, 73, 108, 76, 112, 79, 114, 79, 120, 79, 123, 79, 125, 80, 127, 79, 130, 77, 131, 75, 130, 71, 130, 68, 130, 64, 131, 62, 131, 61, 132, 58, 133, 56, 135, 53, 135, 51, 133, 50, 130, 50, 128, 52, 127, 52, 126, 51, 125, 49, 125, 48, 124, 46, 123, 44, 123, 43, 121, 42, 119, 41)
+
+[node name="Ghost" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(3, -4.29999)
+scale = Vector2(0.34, 0.2925)
+sprite_frames = SubResource("SpriteFrames_yqeqc")
+animation = &"Ghost ниче не понял че он там машет но вы поняли"
+frame_progress = 0.521828

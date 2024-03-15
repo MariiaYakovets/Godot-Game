@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx32tpobksncd"
-path="res://.godot/imported/9.png-333ec0a3b47c416a8e91b52311b26205.ctex"
+uid="uid://cj3i1ahx3c5tn"
+path="res://.godot/imported/ghost flying.png-09d3ac5707e3f35416ebbe56f185a8db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl3.2/enemies/skeleton/9.png"
-dest_files=["res://.godot/imported/9.png-333ec0a3b47c416a8e91b52311b26205.ctex"]
+source_file="res://Main game/Lvl3.2/enemies/ghost/ghost flying.png"
+dest_files=["res://.godot/imported/ghost flying.png-09d3ac5707e3f35416ebbe56f185a8db.ctex"]
 
 [params]
 

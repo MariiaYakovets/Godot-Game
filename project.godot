@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Magician_Game"
+run/main_scene="res://Main game/Lvl3.2/tilemap/tilemap3_2.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=20930
 
 [editor]
 
