@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=23 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl3.1/assets/enemies/tilemap/liana.png" id="2_2cxvi"]
 [ext_resource type="PackedScene" uid="uid://cff58e024vxby" path="res://Main game/Lvl3.1/assets/enemies/enemies/mermaid_1.tscn" id="2_sugcb"]
@@ -21,11 +21,12 @@
 [ext_resource type="PackedScene" uid="uid://dcr7ockq86qtx" path="res://Main game/Lvl2/platforms/disap_platf.tscn" id="20_gx31i"]
 [ext_resource type="PackedScene" uid="uid://b47pvw3lepf4g" path="res://Main game/Lvl2/food/mushroom.tscn" id="20_kemd5"]
 [ext_resource type="PackedScene" uid="uid://car3p2bqq2vo3" path="res://Main game/Lvl2/food/muchomor.tscn" id="21_vk4pk"]
+[ext_resource type="PackedScene" uid="uid://2ugk6g28nojt" path="res://Main game/Lvl2/food/plural_much.tscn" id="22_ne04x"]
 
 [node name="Level_2" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(4949, 508)
+position = Vector2(3465, 593)
 
 [node name="liana" type="Area2D" parent="."]
 position = Vector2(5620, 610)
@@ -949,7 +950,7 @@ position = Vector2(1613.83, 41.5263)
 scale = Vector2(1, 1)
 
 [node name="muchomor6" parent="food" instance=ExtResource("21_vk4pk")]
-position = Vector2(1205.12, -126.373)
+position = Vector2(1207.48, -135.56)
 scale = Vector2(1, 1)
 
 [node name="muchomor3" parent="food" instance=ExtResource("21_vk4pk")]
@@ -958,4 +959,40 @@ scale = Vector2(1, 1)
 
 [node name="muchomor5" parent="food" instance=ExtResource("21_vk4pk")]
 position = Vector2(189.386, -244.807)
+scale = Vector2(1, 1)
+
+[node name="plural_much" parent="food" instance=ExtResource("22_ne04x")]
+position = Vector2(1718.71, -293.606)
+scale = Vector2(1, 1)
+
+[node name="plural_much2" parent="food" instance=ExtResource("22_ne04x")]
+position = Vector2(958.305, -401.827)
+scale = Vector2(1, 1)
+
+[node name="plural_much3" parent="food" instance=ExtResource("22_ne04x")]
+position = Vector2(1227.75, -490.839)
+scale = Vector2(1, 1)
+
+[node name="plural_much4" parent="food" instance=ExtResource("22_ne04x")]
+position = Vector2(161.243, -102.497)
+scale = Vector2(1, 1)
+
+[node name="plural_much5" parent="food" instance=ExtResource("22_ne04x")]
+position = Vector2(987.1, 67.3074)
+scale = Vector2(1, 1)
+
+[node name="plural_much6" parent="food" instance=ExtResource("22_ne04x")]
+position = Vector2(2144.35, -399.556)
+scale = Vector2(1, 1)
+
+[node name="plural_much7" parent="food" instance=ExtResource("22_ne04x")]
+position = Vector2(1708.98, -461.336)
+scale = Vector2(1, 1)
+
+[node name="plural_much8" parent="food" instance=ExtResource("22_ne04x")]
+position = Vector2(1195.92, -71.5975)
+scale = Vector2(1, 1)
+
+[node name="plural_much9" parent="food" instance=ExtResource("22_ne04x")]
+position = Vector2(565.955, -120.773)
 scale = Vector2(1, 1)

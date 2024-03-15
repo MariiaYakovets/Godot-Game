@@ -35,3 +35,4 @@ offset_right = 1413.0
 offset_bottom = 1159.0
 texture = ExtResource("4_scamy")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
