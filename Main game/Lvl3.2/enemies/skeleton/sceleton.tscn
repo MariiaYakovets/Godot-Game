@@ -1,6 +1,5 @@
-[gd_scene load_steps=17 format=3 uid="uid://b67tyduwx2fdu"]
+[gd_scene load_steps=16 format=3 uid="uid://b67tyduwx2fdu"]
 
-[ext_resource type="Script" path="res://Main game/Lvl3.2/enemies/CharacterBody2D.gd" id="1_2kpbn"]
 [ext_resource type="Texture2D" uid="uid://0jf08eo5o0yj" path="res://Main game/Lvl3.2/enemies/skeleton/10.png" id="1_73maj"]
 [ext_resource type="Texture2D" uid="uid://dlojm2wo2oae7" path="res://Main game/Lvl3.2/enemies/skeleton/4.png" id="1_rcv6y"]
 [ext_resource type="Texture2D" uid="uid://cr3dtci6ynnhc" path="res://Main game/Lvl3.2/enemies/skeleton/11.png" id="2_8kche"]
@@ -85,21 +84,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="sceleton" type="CharacterBody2D"]
 
-[node name="Sceleton" type="CharacterBody2D" parent="."]
-script = ExtResource("1_2kpbn")
-
-[node name="Sceleton animation" type="AnimatedSprite2D" parent="Sceleton"]
+[node name="Sceleton animation" type="AnimatedSprite2D" parent="."]
 position = Vector2(10, -7.00001)
 scale = Vector2(0.251799, 0.278409)
 sprite_frames = SubResource("SpriteFrames_twqx2")
 animation = &"attack"
 frame_progress = 0.0309998
 
-[node name="Sceleton kakogo hera netu drugoy animation" type="CollisionPolygon2D" parent="Sceleton"]
+[node name="Sceleton kakogo hera netu drugoy animation" type="CollisionPolygon2D" parent="."]
 position = Vector2(-52.887, -65.309)
 scale = Vector2(0.998904, 0.993056)
 polygon = PackedVector2Array(50, 52, 41, 63, 41, 69, 29, 73, 31, 76, 45, 73, 42, 85, 45, 85, 50, 71, 56, 71, 66, 86, 57, 69, 84, 66, 86, 63, 81, 61, 72, 59, 68, 64, 62, 56, 62, 45, 58, 41, 53, 41, 50, 45)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sceleton"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -7,10 +7,10 @@
 
 [node name="Level3_2" type="Node2D"]
 
-[node name="Node2D" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(2877, 240)
 
-[node name="Node2D2" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton2" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(3237, 239)
 
 [node name="Ghost" parent="." instance=ExtResource("2_tl6cw")]
@@ -25,25 +25,25 @@ position = Vector2(4352, 19)
 [node name="Ghost4" parent="." instance=ExtResource("2_tl6cw")]
 position = Vector2(4235, 28)
 
-[node name="Node2D3" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton3" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(4049, 29)
 
-[node name="Node2D4" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton4" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(4662, 110)
 
-[node name="Node2D5" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton5" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(5042, 171)
 
-[node name="Node2D6" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton6" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(5247, 168)
 
-[node name="Node2D7" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton7" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(5476, 170)
 
-[node name="Node2D8" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton8" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(5664, 171)
 
-[node name="Node2D9" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton9" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(5856, 170)
 
 [node name="Ghost5" parent="." instance=ExtResource("2_tl6cw")]
@@ -79,28 +79,28 @@ position = Vector2(7435, 361)
 [node name="Ghost15" parent="." instance=ExtResource("2_tl6cw")]
 position = Vector2(7621, 373)
 
-[node name="Node2D10" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton10" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(8550, 488)
 
-[node name="Node2D11" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton11" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(8748, 491)
 
-[node name="Node2D12" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton12" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(8952, 491)
 
-[node name="Node2D13" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton13" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(9128, 494)
 
-[node name="Node2D14" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton14" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(9330, 491)
 
-[node name="Node2D15" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton15" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(9721, 402)
 
-[node name="Node2D16" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton16" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(10106, 406)
 
-[node name="Node2D17" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton17" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(10464, 404)
 
 [node name="Ghost16" parent="." instance=ExtResource("2_tl6cw")]
@@ -121,47 +121,47 @@ position = Vector2(13063, 110)
 [node name="Ghost21" parent="." instance=ExtResource("2_tl6cw")]
 position = Vector2(13355, 90)
 
-[node name="Node2D18" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton18" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(13288, 134)
 
-[node name="Node2D19" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton19" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(12958, 134)
 
-[node name="Node2D20" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton20" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(13556, 138)
 
-[node name="Node2D21" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton21" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(14138, 58)
 
-[node name="Node2D22" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton22" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(14254, 56)
 
-[node name="Node2D23" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton23" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(14397, 59)
 
-[node name="Node2D24" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton24" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(14535, 57)
 
-[node name="Node2D25" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton25" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(14660, 57)
 
-[node name="Node2D26" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton26" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(14786, 57)
 
-[node name="Node2D27" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton27" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(14912, 57)
 
-[node name="Node2D28" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton28" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(15025, 57)
 
-[node name="Node2D29" parent="." instance=ExtResource("1_3xsgh")]
+[node name="sceleton29" parent="." instance=ExtResource("1_3xsgh")]
 position = Vector2(14011, 53)
 
 [node name="Ghost22" parent="." instance=ExtResource("2_tl6cw")]
 position = Vector2(16205, 147)
 
 [node name="Boss" parent="." instance=ExtResource("3_vdh4f")]
-position = Vector2(20403, 168)
+position = Vector2(20656, 246)
 
 [node name="Node2D30" parent="." instance=ExtResource("4_qvob4")]
 position = Vector2(3, 52)
