@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=26 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl3.1/assets/enemies/tilemap/liana.png" id="2_2cxvi"]
 [ext_resource type="PackedScene" uid="uid://cff58e024vxby" path="res://Main game/Lvl3.1/assets/enemies/enemies/mermaid_1.tscn" id="2_sugcb"]
@@ -9,8 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cf7kxe5mmuysi" path="res://Main game/Lvl3.1/assets/enemies/enemies/mermaid_2.tscn" id="3_n85jb"]
 [ext_resource type="Texture2D" uid="uid://8upjgmhppcgn" path="res://Main game/Lvl3.1/assets/enemies/tilemap/dorozhka.png" id="3_uq24i"]
 [ext_resource type="Texture2D" uid="uid://bjo6eqplw7kgc" path="res://Main game/Lvl3.1/assets/enemies/tilemap/cl2.png" id="4_hw3q3"]
+[ext_resource type="Texture2D" uid="uid://cou6v0i672p2j" path="res://Main game/Lvl2/bg/not gradual lianas.png" id="4_rmu3e"]
 [ext_resource type="Texture2D" uid="uid://w0jt5hctn2su" path="res://Main game/Lvl3.1/assets/enemies/tilemap/cl1.png" id="5_bsyh7"]
 [ext_resource type="Texture2D" uid="uid://5m58r5mrx3ny" path="res://Main game/Lvl2/bg/bg for swamp without green box.png" id="5_ep0ax"]
+[ext_resource type="Texture2D" uid="uid://c4rm63uf2b273" path="res://Main game/Lvl2/bg/three lianas.png" id="5_saxcq"]
 [ext_resource type="Texture2D" uid="uid://dde6yvfoh2u4w" path="res://Main game/Lvl2/bg/kamen1.png" id="7_dli2e"]
 [ext_resource type="PackedScene" uid="uid://bn4h5mpx8op5y" path="res://Main game/Lvl3.1/assets/enemies/tilemap/bush.tscn" id="8_52oj0"]
 [ext_resource type="Texture2D" uid="uid://db67flxpitdfl" path="res://Main game/Lvl2/bg/kamen2.png" id="9_pdpiy"]
@@ -27,120 +29,176 @@
 [node name="Level_2" type="Node2D"]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(3414, 394)
+position = Vector2(3905, 579)
 
 [node name="liana curtains" type="Node2D" parent="."]
 
 [node name="LianasCurtain" type="Sprite2D" parent="liana curtains"]
 texture_filter = 1
-position = Vector2(13172, 159)
+position = Vector2(13454, 155)
 texture = ExtResource("2_yu1ho")
 
 [node name="LianasCurtain2" type="Sprite2D" parent="liana curtains"]
 texture_filter = 1
-position = Vector2(13796, 159)
+position = Vector2(14078, 155)
 texture = ExtResource("2_yu1ho")
 
 [node name="LianasCurtain3" type="Sprite2D" parent="liana curtains"]
 texture_filter = 1
-position = Vector2(14432, 160)
+position = Vector2(14714, 156)
 texture = ExtResource("2_yu1ho")
 
 [node name="LianasCurtain4" type="Sprite2D" parent="liana curtains"]
 texture_filter = 1
-position = Vector2(15062, 156)
+position = Vector2(15344, 152)
 texture = ExtResource("2_yu1ho")
 
 [node name="LianasCurtain5" type="Sprite2D" parent="liana curtains"]
 texture_filter = 1
-position = Vector2(4161, 158)
+position = Vector2(4847.62, 156.875)
 texture = ExtResource("2_yu1ho")
 
 [node name="Sprite2D" type="Sprite2D" parent="liana curtains"]
 
-[node name="liana" type="Area2D" parent="."]
-position = Vector2(8685, 563)
+[node name="front_lianas" type="Node2D" parent="."]
+
+[node name="liana" type="Area2D" parent="front_lianas"]
+position = Vector2(9001, 442)
 scale = Vector2(1.716, 1.175)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="liana"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="front_lianas/liana"]
 visible = false
 position = Vector2(57.956, 0)
 scale = Vector2(0.834081, 1)
 polygon = PackedVector2Array(-341.313, -109.787, -321.918, -80, -281.468, -61.8809, -196.969, -44.8596, -111.305, -47.4128, -35.5479, -40.6043, 30.3032, -49.1149, 123.543, -41.4553, 221.445, -44.0085, 326.923, -77.2, 345.571, -103.583, 338.541, -107.234, 318.182, -80.6043, 268.065, -61.8809, 194.056, -54.2213, 127.04, -53.3702, 45.4546, -60.1787, -23.8926, -51.6681, -68.4121, -53.617, -110.722, -55.9234, -195.221, -55.0724, -259.324, -65.2851, -302.501, -77.4468, -328.152, -114.043)
 
-[node name="Liana" type="Sprite2D" parent="liana"]
+[node name="Liana" type="Sprite2D" parent="front_lianas/liana"]
 texture_filter = 1
 position = Vector2(100.961, -120.851)
 scale = Vector2(0.785465, 0.908511)
 texture = ExtResource("3_cafwo")
 
-[node name="Liana2" type="Sprite2D" parent="liana"]
+[node name="Liana2" type="Sprite2D" parent="front_lianas/liana"]
 texture_filter = 1
 position = Vector2(490.676, -160)
 scale = Vector2(0.742383, 0.752128)
 texture = ExtResource("3_cafwo")
 
-[node name="Liana3" type="Sprite2D" parent="liana"]
+[node name="Liana3" type="Sprite2D" parent="front_lianas/liana"]
 texture_filter = 1
 position = Vector2(417.832, 63.8298)
 scale = Vector2(0.742383, 0.752128)
 texture = ExtResource("3_cafwo")
 
-[node name="Liana4" type="Sprite2D" parent="liana"]
+[node name="Liana4" type="Sprite2D" parent="front_lianas/liana"]
 texture_filter = 1
 position = Vector2(758.996, -56.25)
 scale = Vector2(0.508554, 0.716489)
 texture = ExtResource("3_cafwo")
 
-[node name="Liana5" type="Sprite2D" parent="liana"]
+[node name="Liana5" type="Sprite2D" parent="front_lianas/liana"]
 texture_filter = 1
 position = Vector2(-72.6798, 86.8085)
 scale = Vector2(0.419112, 0.54468)
 texture = ExtResource("3_cafwo")
 
-[node name="Liana6" type="Sprite2D" parent="liana"]
+[node name="Liana6" type="Sprite2D" parent="front_lianas/liana"]
 texture_filter = 1
 position = Vector2(-124.627, -0.851026)
 scale = Vector2(0.237861, 0.391489)
 texture = ExtResource("3_cafwo")
 
-[node name="Liana7" type="Sprite2D" parent="liana"]
+[node name="Liana7" type="Sprite2D" parent="front_lianas/liana"]
 texture_filter = 1
 position = Vector2(87.9954, -28.0851)
 scale = Vector2(0.237861, 0.391489)
 texture = ExtResource("3_cafwo")
 
-[node name="Liana8" type="Sprite2D" parent="liana"]
+[node name="Liana8" type="Sprite2D" parent="front_lianas/liana"]
 texture_filter = 1
 position = Vector2(118.257, -188.511)
 scale = Vector2(0.194688, 0.53617)
 texture = ExtResource("3_cafwo")
 
-[node name="Liana9" type="Sprite2D" parent="liana"]
+[node name="Liana9" type="Sprite2D" parent="front_lianas/liana"]
 texture_filter = 1
 position = Vector2(383.762, -50.4255)
 scale = Vector2(0.143964, 0.310638)
 texture = ExtResource("3_cafwo")
 
-[node name="Liana10" type="Sprite2D" parent="liana"]
+[node name="Liana10" type="Sprite2D" parent="front_lianas/liana"]
 texture_filter = 1
 position = Vector2(821.096, 1.90735e-05)
 scale = Vector2(0.143964, 0.310638)
 texture = ExtResource("3_cafwo")
 
-[node name="liana2" type="Area2D" parent="."]
-position = Vector2(12611, 440)
+[node name="liana2" type="Area2D" parent="front_lianas"]
+position = Vector2(12893, 436)
 scale = Vector2(1, 0.4)
 
-[node name="Liana" type="Sprite2D" parent="liana2"]
+[node name="Liana" type="Sprite2D" parent="front_lianas/liana2"]
 texture_filter = 1
 position = Vector2(-95, -40)
 scale = Vector2(1.455, 2.7)
 texture = ExtResource("3_cafwo")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="liana2"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="front_lianas/liana2"]
 visible = false
 polygon = PackedVector2Array(-572, -152.5, -505, -80, -402, -15, -277, -37.5, -149, -15, 4, -20, 111, -7.5, 234, -40, 301, -47.5, 359, -92.5, 381, -145, 408, -147.5, 393, -110, 334, -12.5, 262, 10, 171, 7.5, 66, 17.5, -64, 2.5, -153, 17.5, -249, 7.5, -321, -2.5, -411, 12.5, -479, -35, -523, -40, -582, -125)
+
+[node name="3 Lianas" type="Sprite2D" parent="front_lianas"]
+texture_filter = 1
+position = Vector2(4813.62, 254.875)
+scale = Vector2(1.92336, 1.64377)
+texture = ExtResource("4_rmu3e")
+
+[node name="3 Lianas3" type="Sprite2D" parent="front_lianas"]
+texture_filter = 1
+position = Vector2(4713.63, 165.875)
+scale = Vector2(1.18887, 1.0647)
+texture = ExtResource("4_rmu3e")
+
+[node name="3 Lianas2" type="Sprite2D" parent="front_lianas"]
+texture_filter = 1
+position = Vector2(5059.62, 254.875)
+scale = Vector2(1.92336, 1.64377)
+texture = ExtResource("4_rmu3e")
+
+[node name="grad lianas" type="Sprite2D" parent="front_lianas"]
+texture_filter = 1
+position = Vector2(4938.62, 259.875)
+scale = Vector2(1.75547, 1.66613)
+texture = ExtResource("5_saxcq")
+
+[node name="grad lianas2" type="Sprite2D" parent="front_lianas"]
+texture_filter = 1
+position = Vector2(5086, 618.875)
+scale = Vector2(1.75547, 1.66613)
+texture = ExtResource("5_saxcq")
+
+[node name="grad lianas3" type="Sprite2D" parent="front_lianas"]
+texture_filter = 1
+position = Vector2(5342, 343.875)
+scale = Vector2(1.29379, 1.02157)
+texture = ExtResource("5_saxcq")
+
+[node name="grad lianas4" type="Sprite2D" parent="front_lianas"]
+texture_filter = 1
+position = Vector2(4414, 754.875)
+scale = Vector2(1.29379, 1.02157)
+texture = ExtResource("5_saxcq")
+
+[node name="grad lianas5" type="Sprite2D" parent="front_lianas"]
+texture_filter = 1
+position = Vector2(4641.62, 155.875)
+scale = Vector2(1.29379, 1.02157)
+texture = ExtResource("5_saxcq")
+
+[node name="grad lianas6" type="Sprite2D" parent="front_lianas"]
+texture_filter = 1
+position = Vector2(4529.62, 156.875)
+scale = Vector2(1.29379, 1.02157)
+texture = ExtResource("5_saxcq")
 
 [node name="Lvl2" parent="." instance=ExtResource("2_w80ak")]
 position = Vector2(-18, 148)
@@ -159,39 +217,39 @@ motion_mirroring = Vector2(1073.85, 0)
 
 [node name="Pixil-frame-0(12)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color(0.427451, 0.631373, 0.639216, 1)
-position = Vector2(532, 435)
-scale = Vector2(1.074, 1.07176)
+position = Vector2(532, 418.187)
+scale = Vector2(1.074, 1.11665)
 texture = ExtResource("5_ep0ax")
 
 [node name="Lianas" type="Node2D" parent="."]
 
 [node name="Liana2" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(12305, 390.375)
+position = Vector2(12587, 386.375)
 scale = Vector2(0.975, 0.7325)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana3" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(12355, 371)
+position = Vector2(12637, 367)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana4" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(12633, 394)
+position = Vector2(12915, 390)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana5" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(12871, 412)
+position = Vector2(13153, 408)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
 [node name="Liana6" type="Sprite2D" parent="Lianas"]
 texture_filter = 1
-position = Vector2(12738, 354)
+position = Vector2(13020, 350)
 scale = Vector2(0.604998, 0.605)
 texture = ExtResource("2_2cxvi")
 
@@ -199,7 +257,7 @@ texture = ExtResource("2_2cxvi")
 metadata/_edit_lock_ = true
 
 [node name="gr_rock2" type="StaticBody2D" parent="Rocks"]
-position = Vector2(4074, 397)
+position = Vector2(4067, 290.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/gr_rock2"]
 position = Vector2(3.92529, -7.90514)
@@ -216,12 +274,12 @@ texture = ExtResource("7_dli2e")
 position = Vector2(-1143, 208)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock2"]
-position = Vector2(-277.5, 23.6638)
+position = Vector2(-284.5, -82.4612)
 scale = Vector2(1, 0.892442)
 polygon = PackedVector2Array(5830, 367, 5843, 367, 5855, 369, 5864, 386, 5874, 366, 5884, 364, 5895, 366, 5899, 387, 5912, 374, 5931, 374, 5943, 387, 5955, 375, 5976, 375, 5982, 387, 5988, 374, 5996, 369, 6011, 367, 6024, 368, 6030, 376, 6032, 389, 6038, 376, 6066, 375, 6070, 385, 6082, 371, 6107, 370, 6120, 391, 6115, 407, 5823, 406, 5815, 380)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Rocks/rock2"]
-position = Vector2(5699, 361.859)
+position = Vector2(5692, 255.734)
 scale = Vector2(0.0629167, 0.0514323)
 texture = ExtResource("3_uq24i")
 
@@ -229,12 +287,12 @@ texture = ExtResource("3_uq24i")
 position = Vector2(-1063, 438)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock5"]
-position = Vector2(-277.5, 23.6638)
+position = Vector2(-284.5, -82.4612)
 scale = Vector2(1, 0.892442)
 polygon = PackedVector2Array(5830, 367, 5843, 367, 5855, 369, 5864, 386, 5874, 366, 5884, 364, 5895, 366, 5899, 387, 5912, 374, 5931, 374, 5943, 387, 5955, 375, 5976, 375, 5982, 387, 5988, 374, 5996, 369, 6011, 367, 6024, 368, 6030, 376, 6032, 389, 6038, 376, 6066, 375, 6070, 385, 6082, 371, 6107, 370, 6120, 391, 6115, 407, 5823, 406, 5815, 380)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Rocks/rock5"]
-position = Vector2(5699, 361.859)
+position = Vector2(5692, 255.734)
 scale = Vector2(0.0629167, 0.0514323)
 texture = ExtResource("3_uq24i")
 
@@ -242,12 +300,12 @@ texture = ExtResource("3_uq24i")
 position = Vector2(-1407, 337)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock6"]
-position = Vector2(-277.5, 23.6638)
+position = Vector2(-284.5, -82.4612)
 scale = Vector2(1, 0.892442)
 polygon = PackedVector2Array(5830, 367, 5843, 367, 5855, 369, 5864, 386, 5874, 366, 5884, 364, 5895, 366, 5899, 387, 5912, 374, 5931, 374, 5943, 387, 5955, 375, 5976, 375, 5982, 387, 5988, 374, 5996, 369, 6011, 367, 6024, 368, 6030, 376, 6032, 389, 6038, 376, 6066, 375, 6070, 385, 6082, 371, 6107, 370, 6120, 391, 6115, 407, 5823, 406, 5815, 380)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Rocks/rock6"]
-position = Vector2(5699, 361.859)
+position = Vector2(5692, 255.734)
 scale = Vector2(0.0629167, 0.0514323)
 texture = ExtResource("3_uq24i")
 
@@ -255,17 +313,17 @@ texture = ExtResource("3_uq24i")
 position = Vector2(-530, 96)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock7"]
-position = Vector2(-277.5, 23.6638)
+position = Vector2(-284.5, -82.4612)
 scale = Vector2(1, 0.892442)
 polygon = PackedVector2Array(5830, 367, 5843, 367, 5855, 369, 5864, 386, 5874, 366, 5884, 364, 5895, 366, 5899, 387, 5912, 374, 5931, 374, 5943, 387, 5955, 375, 5976, 375, 5982, 387, 5988, 374, 5996, 369, 6011, 367, 6024, 368, 6030, 376, 6032, 389, 6038, 376, 6066, 375, 6070, 385, 6082, 371, 6107, 370, 6120, 391, 6115, 407, 5823, 406, 5815, 380)
 
 [node name="Sprite2D2" type="Sprite2D" parent="Rocks/rock7"]
-position = Vector2(5699, 361.859)
+position = Vector2(5692, 255.734)
 scale = Vector2(0.0629167, 0.0514323)
 texture = ExtResource("3_uq24i")
 
 [node name="gr_rock4" type="StaticBody2D" parent="Rocks"]
-position = Vector2(4477, 390)
+position = Vector2(4470, 283.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/gr_rock4"]
 position = Vector2(-5.49609, -2.41407)
@@ -279,7 +337,7 @@ scale = Vector2(0.0722224, 0.0751366)
 texture = ExtResource("9_pdpiy")
 
 [node name="gr_rock6" type="StaticBody2D" parent="Rocks"]
-position = Vector2(4737, 577)
+position = Vector2(4730, 470.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/gr_rock6"]
 position = Vector2(-5.49609, -11.5659)
@@ -293,7 +351,7 @@ scale = Vector2(0.0722224, 0.095173)
 texture = ExtResource("9_pdpiy")
 
 [node name="gr_rock5" type="StaticBody2D" parent="Rocks"]
-position = Vector2(4542, 580)
+position = Vector2(4535, 473.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/gr_rock5"]
 position = Vector2(-5.49609, -9.12536)
@@ -307,7 +365,7 @@ scale = Vector2(0.0722224, 0.090485)
 texture = ExtResource("10_1m3qx")
 
 [node name="gr_rock7" type="StaticBody2D" parent="Rocks"]
-position = Vector2(4800, 808)
+position = Vector2(4793, 701.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/gr_rock7"]
 position = Vector2(-5.49609, -9.12536)
@@ -321,7 +379,7 @@ scale = Vector2(0.0722224, 0.090485)
 texture = ExtResource("10_1m3qx")
 
 [node name="gr_rock8" type="StaticBody2D" parent="Rocks"]
-position = Vector2(4170, 704)
+position = Vector2(4163, 597.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/gr_rock8"]
 position = Vector2(-5.49609, -9.12536)
@@ -335,7 +393,7 @@ scale = Vector2(0.0722224, 0.090485)
 texture = ExtResource("10_1m3qx")
 
 [node name="gr_rock3" type="StaticBody2D" parent="Rocks"]
-position = Vector2(4275, 376)
+position = Vector2(4268, 269.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/gr_rock3"]
 position = Vector2(1.96736, -0.583697)
@@ -352,16 +410,16 @@ texture = ExtResource("9_pdpiy")
 position = Vector2(-1005, 38)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock3"]
-position = Vector2(-581.5, -20.5002)
+position = Vector2(-588.5, -126.625)
 polygon = PackedVector2Array(5830, 367, 5843, 367, 5855, 369, 5864, 386, 5874, 366, 5884, 364, 5895, 366, 5899, 387, 5912, 374, 5931, 374, 5943, 387, 5955, 375, 5976, 375, 5982, 387, 5988, 374, 5996, 369, 6011, 367, 6024, 368, 6030, 376, 6032, 389, 6038, 376, 6066, 375, 6070, 385, 6082, 371, 6107, 370, 6120, 391, 6115, 407, 5823, 406, 5815, 380)
 
 [node name="Sprite2D" type="Sprite2D" parent="Rocks/rock3"]
-position = Vector2(5395, 358.219)
+position = Vector2(5388, 252.094)
 scale = Vector2(0.0629167, 0.0586979)
 texture = ExtResource("3_uq24i")
 
 [node name="gr_rock4" type="StaticBody2D" parent="Rocks/rock3"]
-position = Vector2(5627, 540)
+position = Vector2(5620, 433.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock3/gr_rock4"]
 position = Vector2(1.96736, -12.176)
@@ -375,7 +433,7 @@ scale = Vector2(0.0933334, 0.113843)
 texture = ExtResource("9_pdpiy")
 
 [node name="gr_rock5" type="StaticBody2D" parent="Rocks/rock3"]
-position = Vector2(5584, 368)
+position = Vector2(5624, 263.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock3/gr_rock5"]
 position = Vector2(1.96736, -12.176)
@@ -389,7 +447,7 @@ scale = Vector2(0.0933334, 0.113843)
 texture = ExtResource("9_pdpiy")
 
 [node name="gr_rock7" type="StaticBody2D" parent="Rocks/rock3"]
-position = Vector2(6078, 423)
+position = Vector2(6071, 316.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock3/gr_rock7"]
 position = Vector2(1.96736, -12.176)
@@ -403,7 +461,7 @@ scale = Vector2(0.0933334, 0.113843)
 texture = ExtResource("9_pdpiy")
 
 [node name="gr_rock6" type="StaticBody2D" parent="Rocks/rock3"]
-position = Vector2(5942, 768)
+position = Vector2(5935, 661.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock3/gr_rock6"]
 position = Vector2(1.96736, -12.176)
@@ -420,16 +478,16 @@ texture = ExtResource("9_pdpiy")
 position = Vector2(-1005, 38)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/rock4"]
-position = Vector2(-885.5, -19.5002)
+position = Vector2(-892.5, -125.625)
 polygon = PackedVector2Array(5830, 367, 5843, 367, 5855, 369, 5864, 386, 5874, 366, 5884, 364, 5895, 366, 5899, 387, 5912, 374, 5931, 374, 5943, 387, 5955, 375, 5976, 375, 5982, 387, 5988, 374, 5996, 369, 6011, 367, 6024, 368, 6030, 376, 6032, 389, 6038, 376, 6066, 375, 6070, 385, 6082, 371, 6107, 370, 6120, 391, 6115, 407, 5823, 406, 5815, 380)
 
 [node name="Sprite2D" type="Sprite2D" parent="Rocks/rock4"]
-position = Vector2(5084.25, 356.938)
+position = Vector2(5077.25, 250.813)
 scale = Vector2(0.0629167, 0.0565625)
 texture = ExtResource("3_uq24i")
 
 [node name="gr_rock1" type="StaticBody2D" parent="Rocks"]
-position = Vector2(3883, 403)
+position = Vector2(3876, 296.875)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rocks/gr_rock1"]
 position = Vector2(3.92529, -3.953)
@@ -449,38 +507,38 @@ metadata/_edit_lock_ = true
 
 [node name="Cl1" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(12548, 329)
+position = Vector2(12830, 325)
 scale = Vector2(0.103235, 0.115737)
 texture = ExtResource("5_bsyh7")
 
 [node name="Cl11" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(12922.3, 314.75)
+position = Vector2(13204.3, 310.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 flip_h = true
 
 [node name="Cl12" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(12832.3, 314.75)
+position = Vector2(13114.3, 310.75)
 scale = Vector2(0.0585333, 0.0623928)
 texture = ExtResource("4_hw3q3")
 
 [node name="Cl3" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(12742, 384)
+position = Vector2(13024, 380)
 scale = Vector2(0.0499154, 0.0569533)
 texture = ExtResource("5_bsyh7")
 
 [node name="Cl13" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(12388, 362)
+position = Vector2(12670, 358)
 scale = Vector2(0.0499154, 0.0569533)
 texture = ExtResource("5_bsyh7")
 
 [node name="Cl4" type="Sprite2D" parent="Clouds"]
 texture_filter = 1
-position = Vector2(12677, 263)
+position = Vector2(12959, 259)
 scale = Vector2(0.0215518, 0.0220151)
 texture = ExtResource("5_bsyh7")
 
@@ -547,7 +605,7 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(2569, 299)
 
 [node name="Area2D" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(1799, 143)
+position = Vector2(1750, 229)
 
 [node name="Area2D3" parent="Bushes" instance=ExtResource("8_52oj0")]
 position = Vector2(2694, 310)
@@ -583,178 +641,181 @@ position = Vector2(2844, 313)
 position = Vector2(2718, 313)
 
 [node name="Area2D16" parent="Bushes" instance=ExtResource("9_sjhlo")]
-position = Vector2(16443, 410)
+position = Vector2(16725, 406)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D17" parent="Bushes" instance=ExtResource("9_sjhlo")]
-position = Vector2(16911, 407)
+position = Vector2(17193, 403)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D18" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(16567, 414)
+position = Vector2(16849, 410)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D19" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(16769, 415)
+position = Vector2(17051, 411)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D20" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(16872, 415)
+position = Vector2(17154, 411)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D21" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16679, 417)
+position = Vector2(16961, 413)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D22" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16492, 416)
+position = Vector2(16774, 412)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D23" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16522, 416)
+position = Vector2(16804, 412)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D24" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16467, 415)
+position = Vector2(16749, 411)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D25" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16629, 417)
+position = Vector2(16911, 413)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D26" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16816, 418)
+position = Vector2(17098, 414)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D27" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16799, 418)
+position = Vector2(17081, 414)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D28" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16717, 417)
+position = Vector2(16999, 413)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D29" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16591, 417)
+position = Vector2(16873, 413)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D30" parent="Bushes" instance=ExtResource("9_sjhlo")]
-position = Vector2(16936, 409)
+position = Vector2(17218, 405)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D31" parent="Bushes" instance=ExtResource("9_sjhlo")]
-position = Vector2(17404, 406)
+position = Vector2(17686, 402)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D32" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(17060, 413)
+position = Vector2(17342, 409)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D33" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(17262, 414)
+position = Vector2(17544, 410)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D34" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(17365, 414)
+position = Vector2(17647, 410)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D35" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17172, 416)
+position = Vector2(17454, 412)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D36" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16985, 415)
+position = Vector2(17267, 411)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D37" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17015, 415)
+position = Vector2(17297, 411)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D38" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16960, 414)
+position = Vector2(17242, 410)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D39" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17122, 416)
+position = Vector2(17404, 412)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D40" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17309, 417)
+position = Vector2(17591, 413)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D41" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17292, 417)
+position = Vector2(17574, 413)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D42" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17210, 416)
+position = Vector2(17492, 412)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D43" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17084, 416)
+position = Vector2(17366, 412)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D44" parent="Bushes" instance=ExtResource("9_sjhlo")]
-position = Vector2(17445, 412)
+position = Vector2(17727, 408)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D46" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(17569, 416)
+position = Vector2(17851, 412)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D50" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17494, 418)
+position = Vector2(17776, 414)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D51" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17524, 418)
+position = Vector2(17806, 414)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D52" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17469, 417)
+position = Vector2(17751, 413)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D57" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17593, 419)
+position = Vector2(17875, 415)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D59" parent="Bushes" instance=ExtResource("9_sjhlo")]
-position = Vector2(17417, 412)
+position = Vector2(17699, 408)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D60" parent="Bushes" instance=ExtResource("8_52oj0")]
-position = Vector2(16852, 417)
+position = Vector2(17134, 413)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D61" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16418, 418)
+position = Vector2(16700, 414)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D62" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(16887, 417)
+position = Vector2(17169, 413)
 scale = Vector2(0.5, 0.5)
 
 [node name="Area2D64" parent="Bushes" instance=ExtResource("10_nxw0n")]
-position = Vector2(17338, 417)
+position = Vector2(17620, 413)
 scale = Vector2(0.5, 0.5)
 
 [node name="Kikimor" parent="." instance=ExtResource("12_k6a36")]
-position = Vector2(995, 542)
+position = Vector2(952, 511)
 
 [node name="platforms" type="Node2D" parent="."]
 position = Vector2(995, 542)
 
 [node name="disap_platf" parent="platforms" instance=ExtResource("20_gx31i")]
-position = Vector2(2784, -54)
+position = Vector2(2796, -107)
 
 [node name="disap_platf2" parent="platforms" instance=ExtResource("20_gx31i")]
 position = Vector2(2613, -41)
 
 [node name="disap_platf3" parent="platforms" instance=ExtResource("20_gx31i")]
-position = Vector2(2784, -8)
+position = Vector2(2762, -15)
+
+[node name="disap_platf5" parent="platforms" instance=ExtResource("20_gx31i")]
+position = Vector2(2790, -60)
 
 [node name="disap_platf4" parent="platforms" instance=ExtResource("20_gx31i")]
-position = Vector2(2784, 35)
+position = Vector2(2761, 32)
 
 [node name="boosts" type="Node2D" parent="."]
 position = Vector2(995, 542)
@@ -768,199 +829,240 @@ position = Vector2(543, -152)
 y_multiplier = 1.3
 
 [node name="jump boost3" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(2796, -56)
-y_multiplier = 1.5
-
-[node name="jump boost4" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(3086, 131)
+position = Vector2(2808, -109)
 y_multiplier = 2.0
 
+[node name="jump boost4" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(3090, 221)
+y_multiplier = 2.0
+metadata/_edit_lock_ = true
+
+[node name="jump boost43" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(3939, 120.875)
+y_multiplier = 3.0
+
+[node name="jump boost44" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(4074, -223)
+y_multiplier = 2.5
+
+[node name="jump boost45" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(4951, -151)
+y_multiplier = 1.7
+
+[node name="jump boost50" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(5106, -115)
+y_multiplier = 1.7
+
+[node name="jump boost51" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(5586, -4.00002)
+y_multiplier = 1.7
+
+[node name="jump boost52" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(4692, -428)
+y_multiplier = 1.7
+
+[node name="jump boost46" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(5185, -233)
+y_multiplier = 1.7
+
+[node name="jump boost47" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(5180, -421)
+y_multiplier = 1.7
+
+[node name="jump boost49" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(5131, -530)
+y_multiplier = 1.7
+
+[node name="jump boost48" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(5610, -615)
+y_multiplier = 1.7
+
 [node name="jump boost5" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(7222, -84)
+position = Vector2(7538, -205)
 x_multiplier = 1.2
 y_multiplier = 1.1
 
 [node name="jump boost9" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(7064, -35)
+position = Vector2(7380, -156)
 x_multiplier = 1.2
 y_multiplier = 1.6
 
 [node name="jump boost10" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(11961, -16)
+position = Vector2(12243, -20)
 x_multiplier = 1.4
 y_multiplier = 1.3
 
 [node name="jump boost17" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(11253, -220)
+position = Vector2(11535, -224)
 y_multiplier = 1.2
 
 [node name="jump boost18" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(12234, -92)
+position = Vector2(12516, -96)
 y_multiplier = 1.2
 
 [node name="jump boost16" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(12045, 111)
+position = Vector2(12327, 107)
 x_multiplier = 1.1
 y_multiplier = 1.6
 
 [node name="jump boost11" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(12276, -147)
+position = Vector2(12558, -151)
 y_multiplier = 1.5
 
 [node name="jump boost19" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(12334, -242)
+position = Vector2(12616, -246)
 y_multiplier = 1.5
 
 [node name="jump boost12" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(12482, -148)
+position = Vector2(12764, -152)
 x_multiplier = 1.1
 y_multiplier = 1.8
 
 [node name="jump boost13" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(12885, -149)
+position = Vector2(13167, -153)
 x_multiplier = 1.1
 y_multiplier = 1.8
 
 [node name="jump boost14" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(13102, -149)
+position = Vector2(13384, -153)
 x_multiplier = 1.5
 y_multiplier = 1.8
 
 [node name="jump boost15" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(13472, -200)
+position = Vector2(13754, -204)
 x_multiplier = 1.2
 y_multiplier = 1.5
 
 [node name="jump boost6" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8371, 123)
+position = Vector2(8687, 2)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost24" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8461, 61)
+position = Vector2(8777, -60)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost20" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8160, 98)
+position = Vector2(8476, -23)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost25" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(7245, 95)
+position = Vector2(7561, -26)
 x_multiplier = 1.4
 y_multiplier = 1.55
 
 [node name="jump boost26" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(7898, 62)
+position = Vector2(8214, -59)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost27" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8307, 38)
+position = Vector2(8623, -83)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost34" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8315, 182)
+position = Vector2(8631, 61)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost35" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8200, 198)
+position = Vector2(8516, 77)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost36" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8047, 171)
+position = Vector2(8363, 50)
 x_multiplier = 1.4
 y_multiplier = 1.8
 
 [node name="jump boost37" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8430, 202)
+position = Vector2(8746, 81)
 x_multiplier = 1.4
 y_multiplier = 2.0
 
 [node name="jump boost38" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8720, 159)
+position = Vector2(9036, 38)
 x_multiplier = 1.4
 y_multiplier = 2.0
 
 [node name="jump boost39" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8866, 170)
+position = Vector2(9182, 49)
 x_multiplier = 1.4
 y_multiplier = 2.0
 
 [node name="jump boost40" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8953, 190)
+position = Vector2(9269, 69)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost41" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(9332, 139)
+position = Vector2(9648, 18)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost42" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(9436, 104)
+position = Vector2(9752, -17)
 x_multiplier = 1.4
 y_multiplier = 2.0
 
 [node name="jump boost28" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8767, -11)
+position = Vector2(9083, -132)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost23" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(7335, -128)
+position = Vector2(7651, -249)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost21" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8114, -212)
+position = Vector2(8430, -333)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost32" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(8955, -353)
+position = Vector2(9271, -474)
 x_multiplier = 1.3
 y_multiplier = 1.5
 
 [node name="jump boost33" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(9397, -167)
+position = Vector2(9713, -288)
 x_multiplier = 1.3
 y_multiplier = 1.5
 
 [node name="jump boost29" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(7659, -226)
+position = Vector2(7975, -347)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost30" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(7599, -298)
+position = Vector2(7915, -419)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost31" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(7830, -375)
+position = Vector2(8146, -496)
 x_multiplier = 1.6
 y_multiplier = 1.2
 
 [node name="jump boost22" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(9004, 146)
+position = Vector2(9320, 25)
 x_multiplier = 1.4
 y_multiplier = 1.5
 
 [node name="jump boost7" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(9304, 33)
+position = Vector2(9620, -88)
 y_multiplier = 1.8
 
 [node name="jump boost8" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(9788, -74)
+position = Vector2(10070, -78)
 y_multiplier = 2.0
 
 [node name="food" type="Node2D" parent="."]
-position = Vector2(8370, 526)
+position = Vector2(8686, 405)
 rotation = 0.0698132
 
 [node name="mushroom" parent="food" instance=ExtResource("20_kemd5")]
