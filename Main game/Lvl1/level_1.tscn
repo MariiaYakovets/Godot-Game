@@ -597,7 +597,6 @@ y_multiplier = 1.4
 
 [node name="jump boost11" parent="boosts" instance=ExtResource("13_16uuo")]
 position = Vector2(6136, 231)
-y_multiplier = 2.0
 
 [node name="jump boost5" parent="boosts" instance=ExtResource("13_16uuo")]
 position = Vector2(3940, 659)
