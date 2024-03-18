@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://00aye5u46r4t"]
 
-[ext_resource type="Script" path="res://Main game/MovingPlatform.gd" id="1_ygafm"]
-[ext_resource type="Texture2D" uid="uid://okcvxtub3bcs" path="res://Main game/pl2.png" id="2_tyf6a"]
+[ext_resource type="Script" path="res://Main game/Lvl3.1/platforms/MovingPlatform.gd" id="1_ygafm"]
+[ext_resource type="Texture2D" uid="uid://okcvxtub3bcs" path="res://Main game/Lvl3.1/platforms/pl2.png" id="2_tyf6a"]
 
 [sub_resource type="Curve2D" id="Curve2D_krg4n"]
 _data = {

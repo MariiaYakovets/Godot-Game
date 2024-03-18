@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://okcvxtub3bcs"
-path="res://.godot/imported/pl2.png-f4e67318c02461350c042e5c8672f564.ctex"
+path="res://.godot/imported/pl2.png-dc75bc8832a4ec2587d76eb4b3a9e7ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/pl2.png"
-dest_files=["res://.godot/imported/pl2.png-f4e67318c02461350c042e5c8672f564.ctex"]
+source_file="res://Main game/Lvl3.1/platforms/pl2.png"
+dest_files=["res://.godot/imported/pl2.png-dc75bc8832a4ec2587d76eb4b3a9e7ba.ctex"]
 
 [params]
 

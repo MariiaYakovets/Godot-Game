@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://xj8285dejdm1"]
 
-[ext_resource type="Texture2D" uid="uid://okcvxtub3bcs" path="res://Main game/pl2.png" id="1_bnmme"]
-[ext_resource type="Script" path="res://Main game/moving_platform(up;down).gd" id="1_oosrg"]
+[ext_resource type="Texture2D" uid="uid://okcvxtub3bcs" path="res://Main game/Lvl3.1/platforms/pl2.png" id="1_bnmme"]
+[ext_resource type="Script" path="res://Main game/Lvl3.1/platforms/moving_platform(up;down).gd" id="1_oosrg"]
 
 [sub_resource type="Curve2D" id="Curve2D_rwxtq"]
 _data = {
@@ -54,7 +54,6 @@ curve = SubResource("Curve2D_rwxtq")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(383, 262)
 rotation = -1.5708
-progress = 492.0
 rotates = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
