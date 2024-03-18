@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dccgfna5p47vc"]
+[gd_scene load_steps=10 format=3 uid="uid://dccgfna5p47vc"]
 
+[ext_resource type="Script" path="res://Main game/moving_platform(up;down).gd" id="1_2m33y"]
 [ext_resource type="PackedScene" uid="uid://cjs64t4d30ia5" path="res://Main game/Lvl3.1/assets/tilemap/tilemap_lvl_3_1.tscn" id="2_0c0xc"]
 [ext_resource type="Texture2D" uid="uid://b17ikjdbrrh8d" path="res://Main game/Lvl3.1/assets/bg/edit volc.png" id="3_41bgc"]
 [ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/Lvl1/player/player.tscn" id="3_xix4b"]
 [ext_resource type="Texture2D" uid="uid://c61e56xqxarc8" path="res://Main game/Lvl3.1/assets/bg/botoom.png" id="4_scamy"]
 [ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="5_3gynl"]
+[ext_resource type="PackedScene" uid="uid://00aye5u46r4t" path="res://Main game/MovingPlatform.tscn" id="7_p0lgj"]
+[ext_resource type="PackedScene" uid="uid://xj8285dejdm1" path="res://Main game/moving_platform(up;down).tscn" id="8_y7it2"]
+[ext_resource type="PackedScene" uid="uid://l6ymrijs25b2" path="res://Main game/moving_platform(diagonal).tscn" id="9_7q421"]
 
 [node name="level3_1" type="Node2D"]
+script = ExtResource("1_2m33y")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_xix4b")]
 
@@ -57,3 +62,44 @@ y_multiplier = 1.5
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2"]
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="MovingPlatform" parent="Platforms" instance=ExtResource("7_p0lgj")]
+position = Vector2(-180, 752)
+
+[node name="MovingPlatform(up;down)" parent="Platforms" instance=ExtResource("8_y7it2")]
+position = Vector2(19, 607)
+
+[node name="MovingPlatform(up;down)2" parent="Platforms" instance=ExtResource("8_y7it2")]
+position = Vector2(120, 798)
+
+[node name="MovingPlatform2" parent="Platforms" instance=ExtResource("7_p0lgj")]
+position = Vector2(284, 1005)
+
+[node name="MovingPlatform(up;down)3" parent="Platforms" instance=ExtResource("8_y7it2")]
+position = Vector2(568, 698)
+
+[node name="MovingPlatform3" parent="Platforms" instance=ExtResource("7_p0lgj")]
+position = Vector2(695, 667)
+
+[node name="MovingPlatform(up;down)4" parent="Platforms" instance=ExtResource("8_y7it2")]
+position = Vector2(998, 750)
+
+[node name="MovingPlatform4" parent="Platforms" instance=ExtResource("7_p0lgj")]
+position = Vector2(1025, 1006)
+
+[node name="MovingPlatform5" parent="Platforms" instance=ExtResource("7_p0lgj")]
+position = Vector2(2568, 785)
+
+[node name="MovingPlatform(up;down)5" parent="Platforms" instance=ExtResource("8_y7it2")]
+position = Vector2(3295, 837)
+
+[node name="MovingPlatform(up;down)6" parent="Platforms" instance=ExtResource("8_y7it2")]
+position = Vector2(3509, 835)
+
+[node name="MovingPlatform6" parent="Platforms" instance=ExtResource("7_p0lgj")]
+position = Vector2(3271, 806)
+
+[node name="MovingPlatform(diagonal)" parent="Platforms" instance=ExtResource("9_7q421")]
+position = Vector2(5785, 972)
