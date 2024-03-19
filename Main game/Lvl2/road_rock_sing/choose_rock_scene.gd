@@ -12,14 +12,14 @@ func _process(delta):
 
 
 func _on_rock_button_1_pressed():
-	get_tree().change_scene_to_file("res://Main game/Lvl3.1/level_3_1.tscn")
+	get_tree().change_scene_to_file("res://Main game/main screen/main_game_screen.tscn")
 	
 
-#func _on_rock_button_2_pressed():
-#	get_tree().change_scene_to_file("")
+func _on_rock_button_2_pressed():
+	get_tree().change_scene_to_file("res://Main game/main screen/main_game_screen.tscn")
 
 
 
-#func _on_rock_button_3_pressed():
-#	get_tree().change_scene_to_file("")
+func _on_rock_button_3_pressed():
+	get_tree().change_scene_to_file("res://Main game/main screen/main_game_screen.tscn")
 

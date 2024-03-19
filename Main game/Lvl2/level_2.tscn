@@ -66,7 +66,7 @@ position = Vector2(18982, 329)
 position = Vector2(20039, 333)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(17896, 154)
+position = Vector2(18326, 149)
 
 [node name="liana curtains" type="Node2D" parent="."]
 

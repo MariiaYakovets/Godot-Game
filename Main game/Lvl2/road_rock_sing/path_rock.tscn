@@ -22,6 +22,7 @@ polygon = PackedVector2Array(-11, -28, -23, -17, -30, 3, -31, 39, 16, 39, 21, 31
 polygon = PackedVector2Array(-11, -28, -23, -17, -30, 3, -32, 23, -31, 39, 16, 39, 21, 31, 16, 1, 3, -21)
 
 [node name="rock_read" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
 offset_left = -25.0
 offset_top = -12.0
 offset_right = 10.0
