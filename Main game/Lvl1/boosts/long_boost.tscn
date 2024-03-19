@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4sx2453knyf8"]
+
+[ext_resource type="Script" path="res://Main game/Lvl1/boosts/long_boost.gd" id="1_dna1i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gd1u0"]
+size = Vector2(218.5, 9)
+
+[node name="long boost" type="Area2D"]
+script = ExtResource("1_dna1i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_gd1u0")

@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://bomrbfcmnviv5"]
+
+[ext_resource type="Texture2D" uid="uid://bq6c27hnachri" path="res://Main game/Lvl2/trees/tree5move.png" id="1_pxigs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6gn58"]
+size = Vector2(44, 52)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1853"]
+atlas = ExtResource("1_pxigs")
+region = Rect2(0, 0, 337, 388)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovc53"]
+atlas = ExtResource("1_pxigs")
+region = Rect2(337, 0, 337, 388)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2gwi"]
+atlas = ExtResource("1_pxigs")
+region = Rect2(674, 0, 337, 388)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7eae"]
+atlas = ExtResource("1_pxigs")
+region = Rect2(1011, 0, 337, 388)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86ti8"]
+atlas = ExtResource("1_pxigs")
+region = Rect2(1348, 0, 337, 388)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xtj3"]
+atlas = ExtResource("1_pxigs")
+region = Rect2(1685, 0, 337, 388)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qhbr"]
+atlas = ExtResource("1_pxigs")
+region = Rect2(2022, 0, 337, 388)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7wg7j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1853")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovc53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2gwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7eae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86ti8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xtj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qhbr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="back tree 5" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6gn58")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-11, -67)
+scale = Vector2(0.487389, 0.496134)
+sprite_frames = SubResource("SpriteFrames_7wg7j")
+animation = &"idle"
+autoplay = "idle"

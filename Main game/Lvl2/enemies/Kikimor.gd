@@ -15,9 +15,9 @@ func _ready():
 	player = get_parent().get_node('CharacterBody2D')
 	start_x = self.position.x - distance/2
 	end_x = self.position.x + distance/2
-	print(start_x)
-	print(end_x)
-	print(self.position.x)
+	#print(start_x)
+	#print(end_x)
+	#print(self.position.x)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	# Add the gravity.
@@ -32,7 +32,7 @@ func _physics_process(delta):
 	else:
 		patrol()
 	move_and_slide()
-	print(self.position.x)
+	#print(self.position.x)
 
 func chase():
 	if self.position.x >= player.position.x:
@@ -40,7 +40,7 @@ func chase():
 	elif self.position.x <= player.position.x:
 		direction = 1
 	velocity.x = chase_speed * direction 
-	
+	print(flag_chase)
 	
 func patrol():
 	if self.position.x <= start_x:
@@ -48,18 +48,20 @@ func patrol():
 	if self.position.x >= end_x:
 		direction = -1
 	velocity.x = patrol_speed * direction
-
+	#print(flag_chase)
 
 func _on_player_detection_body_entered(body):
 	if not body.is_in_group('player'):
 		return
 	flag_chase = true
-	if chase:
-		if self.position.x >= player.position.x:
-			direction = -1
-		elif self.position.x <= player.position.x:
-			direction = 1
+	
+	if self.position.x >= player.position.x:
+		direction = -1
+	elif self.position.x <= player.position.x:
+		direction = 1
 
 func _on_player_detection_body_exited(body):
-	flag_chase = false
+	if flag_chase == true:
+		if body.is_in_group('player'):
+			flag_chase = false
 

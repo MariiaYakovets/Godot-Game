@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://wunttceuj5mj"]
+
+[ext_resource type="Texture2D" uid="uid://dvxromte7d8ql" path="res://Main game/Lvl2/trees/tree3move.png" id="1_oshcc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p48fo"]
+size = Vector2(100, 99)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0htm"]
+atlas = ExtResource("1_oshcc")
+region = Rect2(0, 0, 227, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uiu6r"]
+atlas = ExtResource("1_oshcc")
+region = Rect2(227, 0, 227, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crvjc"]
+atlas = ExtResource("1_oshcc")
+region = Rect2(454, 0, 227, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcfd0"]
+atlas = ExtResource("1_oshcc")
+region = Rect2(681, 0, 227, 331)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4gwl5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0htm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uiu6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crvjc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcfd0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="back tree 3" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 39.5)
+shape = SubResource("RectangleShape2D_p48fo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(10, -26)
+scale = Vector2(0.927313, 0.883686)
+sprite_frames = SubResource("SpriteFrames_4gwl5")
+animation = &"idle"

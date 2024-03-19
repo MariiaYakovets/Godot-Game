@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dcr7ockq86qtx"]
 
-[ext_resource type="Script" path="res://Main game/Lvl2/platforms/disap_platf.gd" id="1_1ffdb"]
+[ext_resource type="Script" path="res://Main game/Lvl2/platforms/oneway_platf.gd" id="1_1ffdb"]
 [ext_resource type="Texture2D" uid="uid://d0ncl8ntlf7jd" path="res://Main game/Lvl2/platforms/disap_platf.png" id="1_kqxrf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6u2xu"]

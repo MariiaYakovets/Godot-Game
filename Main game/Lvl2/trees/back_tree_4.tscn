@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2u4qnl0drwhl"]
+
+[ext_resource type="Texture2D" uid="uid://c0cwik8c6q1rb" path="res://Main game/Lvl2/trees/tree4move.png" id="1_3n6ht"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p48fo"]
+size = Vector2(100, 99)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2ymt"]
+atlas = ExtResource("1_3n6ht")
+region = Rect2(0, 0, 289, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsgei"]
+atlas = ExtResource("1_3n6ht")
+region = Rect2(289, 0, 289, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywkkq"]
+atlas = ExtResource("1_3n6ht")
+region = Rect2(578, 0, 289, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8uhv8"]
+atlas = ExtResource("1_3n6ht")
+region = Rect2(867, 0, 289, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ccu4p"]
+atlas = ExtResource("1_3n6ht")
+region = Rect2(1156, 0, 289, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlt8e"]
+atlas = ExtResource("1_3n6ht")
+region = Rect2(1445, 0, 289, 331)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vjxel"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2ymt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsgei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywkkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8uhv8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ccu4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlt8e")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="back tree 4" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 39.5)
+shape = SubResource("RectangleShape2D_p48fo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(24, 7)
+scale = Vector2(0.611592, 0.604985)
+sprite_frames = SubResource("SpriteFrames_vjxel")
+animation = &"idle"
+autoplay = "idle"

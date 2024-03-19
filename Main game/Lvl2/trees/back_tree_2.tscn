@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://xkmt5bp3gcpm"]
+
+[ext_resource type="Texture2D" uid="uid://bupg2h5xoluf7" path="res://Main game/Lvl2/trees/tree2move.png" id="1_mpn0i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywr6q"]
+atlas = ExtResource("1_mpn0i")
+region = Rect2(0, 0, 305, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_708ho"]
+atlas = ExtResource("1_mpn0i")
+region = Rect2(305, 0, 305, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp2um"]
+atlas = ExtResource("1_mpn0i")
+region = Rect2(610, 0, 305, 331)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dycol"]
+atlas = ExtResource("1_mpn0i")
+region = Rect2(915, 0, 305, 331)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fp3yh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywr6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_708ho")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp2um")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dycol")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p48fo"]
+size = Vector2(100, 99)
+
+[node name="back tree 2" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7.62939e-06, 1.14441e-05)
+scale = Vector2(0.686111, 0.688235)
+sprite_frames = SubResource("SpriteFrames_fp3yh")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 32)
+shape = SubResource("RectangleShape2D_p48fo")

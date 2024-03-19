@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://dlfuq3y7an6p7"]
+
+[ext_resource type="Texture2D" uid="uid://dfv2e2smd4nds" path="res://Main game/Lvl2/trees/tree1move.png" id="1_75hs3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4e7x"]
+atlas = ExtResource("1_75hs3")
+region = Rect2(0, 0, 360, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sqrwg"]
+atlas = ExtResource("1_75hs3")
+region = Rect2(360, 0, 360, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omt8x"]
+atlas = ExtResource("1_75hs3")
+region = Rect2(720, 0, 360, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgtxv"]
+atlas = ExtResource("1_75hs3")
+region = Rect2(1080, 0, 360, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6aqm"]
+atlas = ExtResource("1_75hs3")
+region = Rect2(1440, 0, 360, 340)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ueibt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4e7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sqrwg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omt8x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgtxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6aqm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqjqk"]
+size = Vector2(100, 99)
+
+[node name="Back tree 1" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7.62939e-06, 1.14441e-05)
+scale = Vector2(0.686111, 0.688235)
+sprite_frames = SubResource("SpriteFrames_ueibt")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 39.5)
+shape = SubResource("RectangleShape2D_iqjqk")

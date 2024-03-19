@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdvkbfw1us3fr"]
+
+[ext_resource type="Script" path="res://Main game/main screen/main_game_screen.gd" id="1_0u6ws"]
+[ext_resource type="Texture2D" uid="uid://bt4jllud4px5o" path="res://Main game/main screen/main screen tempotaty bg.png" id="1_qh688"]
+
+[node name="Main game screen" type="Node2D"]
+script = ExtResource("1_0u6ws")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(930, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+position = Vector2(591, 408)
+scale = Vector2(2.392, 1.636)
+texture = ExtResource("1_qh688")
+
+[node name="Play button" type="Button" parent="."]
+offset_left = 890.0
+offset_top = 139.0
+offset_right = 1235.0
+offset_bottom = 270.0
+text = "PLAY"
+
+[node name="Quit button" type="Button" parent="."]
+offset_left = 890.0
+offset_top = 304.0
+offset_right = 1235.0
+offset_bottom = 435.0
+text = "QUIT"
+
+[node name="Settings button" type="Button" parent="."]
+offset_left = 894.0
+offset_top = 465.0
+offset_right = 1239.0
+offset_bottom = 596.0
+text = "SETTINGS"
+
+[connection signal="pressed" from="Play button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Quit button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Settings button" to="." method="_on_settings_button_pressed"]
