@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbmnlb0mwp468"]
+[gd_scene load_steps=10 format=3 uid="uid://dbmnlb0mwp468"]
 
 [ext_resource type="Script" path="res://Main game/Lvl2/enemies/Kikimor.gd" id="1_whucn"]
-[ext_resource type="Texture2D" uid="uid://blpkl1cghvjks" path="res://Main game/Lvl3.1/assets/enemies/enemies/Swamp/Kikimor.png" id="2_1y2xm"]
+[ext_resource type="Texture2D" uid="uid://blpkl1cghvjks" path="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/Swamp/Kikimor.png" id="2_1y2xm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ukm0"]
 atlas = ExtResource("2_1y2xm")
@@ -42,6 +42,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6rhrg"]
 size = Vector2(469, 52)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_txbt2"]
+radius = 32.0
+height = 74.0
+
 [node name="Kikimor" type="CharacterBody2D"]
 script = ExtResource("1_whucn")
 
@@ -68,5 +72,12 @@ shape = SubResource("RectangleShape2D_6rhrg")
 
 [node name="Node2D" type="Node2D" parent="."]
 
+[node name="damage" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
+position = Vector2(-4, 1)
+shape = SubResource("CapsuleShape2D_txbt2")
+
 [connection signal="body_entered" from="player_detection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="player_detection" to="." method="_on_player_detection_body_exited"]
+[connection signal="body_entered" from="damage" to="." method="_on_damage_body_entered"]

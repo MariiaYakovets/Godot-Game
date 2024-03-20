@@ -1,6 +1,5 @@
 extends CharacterBody2D
 var flag_chase = false
-var player
 var direction : int = -1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var distance : int
@@ -8,6 +7,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var chase_speed: int
 var end_x
 var start_x
+var player
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group('enemies')
@@ -15,6 +15,7 @@ func _ready():
 	player = get_parent().get_node('CharacterBody2D')
 	start_x = self.position.x - distance/2
 	end_x = self.position.x + distance/2
+	#player = get_node("Player/Player")
 	#print(start_x)
 	#print(end_x)
 	#print(self.position.x)
@@ -65,3 +66,9 @@ func _on_player_detection_body_exited(body):
 		if body.is_in_group('player'):
 			flag_chase = false
 
+
+
+#func _on_damage_body_entered(body):
+#	if body.is_in_group('player'):
+#		player.currentHealth -=2
+#		print(player.currentHealth)

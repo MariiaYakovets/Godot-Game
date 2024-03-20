@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1mxsu2o82wqk"
-path="res://.godot/imported/png-transparent-character-video-game-personnage-de-jeu-video-mod-db-unity-2d-game-news-unity-2d-thumbnail2.png-2cba52345b4b84fc5ab93c3912e2df10.ctex"
+path="res://.godot/imported/png-transparent-character-video-game-personnage-de-jeu-video-mod-db-unity-2d-game-news-unity-2d-thumbnail2.png-7128fc7a0c7229178c195df1bd095b59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl3.1/assets/enemies/png-transparent-character-video-game-personnage-de-jeu-video-mod-db-unity-2d-game-news-unity-2d-thumbnail2.png"
-dest_files=["res://.godot/imported/png-transparent-character-video-game-personnage-de-jeu-video-mod-db-unity-2d-game-news-unity-2d-thumbnail2.png-2cba52345b4b84fc5ab93c3912e2df10.ctex"]
+source_file="res://Main game/Lvl3.1/enemies lvl3.1/png-transparent-character-video-game-personnage-de-jeu-video-mod-db-unity-2d-game-news-unity-2d-thumbnail2.png"
+dest_files=["res://.godot/imported/png-transparent-character-video-game-personnage-de-jeu-video-mod-db-unity-2d-game-news-unity-2d-thumbnail2.png-7128fc7a0c7229178c195df1bd095b59.ctex"]
 
 [params]
 

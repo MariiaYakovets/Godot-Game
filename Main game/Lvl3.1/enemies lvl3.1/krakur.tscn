@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://ce3odisyb644a"]
+
+[ext_resource type="Texture2D" uid="uid://7wqi5d1i6sk2" path="res://Main game/Lvl3.1/enemies lvl3.1/krakurcut1.png" id="1_qk34u"]
+[ext_resource type="Script" path="res://Main game/Lvl3.1/enemies lvl3.1/krakur.gd" id="1_tn2vy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m44mx"]
+atlas = ExtResource("1_qk34u")
+region = Rect2(0, 0, 164, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2f2y"]
+atlas = ExtResource("1_qk34u")
+region = Rect2(0, 103, 164, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_noipf"]
+atlas = ExtResource("1_qk34u")
+region = Rect2(0, 206, 164, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqoj3"]
+atlas = ExtResource("1_qk34u")
+region = Rect2(0, 309, 164, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrvew"]
+atlas = ExtResource("1_qk34u")
+region = Rect2(0, 412, 164, 103)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrxyf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m44mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2f2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_noipf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqoj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrvew")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7g5tu"]
+radius = 40.2616
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cpcca"]
+radius = 67.082
+
+[node name="krakur" type="CharacterBody2D"]
+script = ExtResource("1_tn2vy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xrxyf")
+animation = &"run"
+frame = 1
+frame_progress = 0.791691
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7g5tu")
+
+[node name="detect_player" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect_player"]
+shape = SubResource("CircleShape2D_cpcca")
+
+[connection signal="body_entered" from="detect_player" to="." method="_on_detect_player_body_entered"]

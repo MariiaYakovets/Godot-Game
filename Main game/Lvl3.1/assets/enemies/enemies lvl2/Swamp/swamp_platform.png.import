@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0xsxn6c5ofsi"
-path="res://.godot/imported/krakur.png-6804f5c2b9fe9da32fcbff4deebe2457.ctex"
+uid="uid://bmnm3a01cy4bc"
+path="res://.godot/imported/swamp_platform.png-8e21db1a5d333c63bfb8cc9671c8defd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl3.1/assets/enemies/krakur.png"
-dest_files=["res://.godot/imported/krakur.png-6804f5c2b9fe9da32fcbff4deebe2457.ctex"]
+source_file="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/Swamp/swamp_platform.png"
+dest_files=["res://.godot/imported/swamp_platform.png-8e21db1a5d333c63bfb8cc9671c8defd.ctex"]
 
 [params]
 

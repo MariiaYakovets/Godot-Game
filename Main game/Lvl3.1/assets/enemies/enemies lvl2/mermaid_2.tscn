@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cf7kxe5mmuysi"]
 
-[ext_resource type="Texture2D" uid="uid://d3qbnv463nhcj" path="res://Main game/Lvl2/enemies/Swamp/Mermaid2.png" id="1_7ue1w"]
+[ext_resource type="Texture2D" uid="uid://d3qbnv463nhcj" path="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/Swamp/Mermaid2.png" id="1_7ue1w"]
 [ext_resource type="Script" path="res://Main game/Lvl2/enemies/mermaid_2.gd" id="1_l858n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_50j6u"]

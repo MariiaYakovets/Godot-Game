@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bge2um50feehr"
-path="res://.godot/imported/big-crate.png-09d190da83516c5d937ed9dfc313311a.ctex"
+uid="uid://dik05kpah4efx"
+path="res://.godot/imported/krakurcut.png-1ead6e693b7376ab5e1c38611a7d6c2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl3.1/assets/enemies/enemies/Swamp/big-crate.png"
-dest_files=["res://.godot/imported/big-crate.png-09d190da83516c5d937ed9dfc313311a.ctex"]
+source_file="res://Main game/Lvl3.1/enemies lvl3.1/krakurcut.png"
+dest_files=["res://.godot/imported/krakurcut.png-1ead6e693b7376ab5e1c38611a7d6c2e.ctex"]
 
 [params]
 

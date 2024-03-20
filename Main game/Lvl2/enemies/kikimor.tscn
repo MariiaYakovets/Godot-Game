@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dbmnlb0mwp468"]
 
 [ext_resource type="Script" path="res://Main game/Lvl2/enemies/Kikimor.gd" id="1_whucn"]
-[ext_resource type="Texture2D" uid="uid://blpkl1cghvjks" path="res://Main game/Lvl2/enemies/Swamp/Kikimor.png" id="2_1y2xm"]
+[ext_resource type="Texture2D" uid="uid://blpkl1cghvjks" path="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/Swamp/Kikimor.png" id="2_1y2xm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ukm0"]
 atlas = ExtResource("2_1y2xm")

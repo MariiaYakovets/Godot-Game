@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bleu4i52q4rge"]
 
 [ext_resource type="Script" path="res://Main game/Lvl2/enemies/mermaid_3.gd" id="1_3o4cp"]
-[ext_resource type="Texture2D" uid="uid://b2fptn1fnjmir" path="res://Main game/Lvl2/enemies/Swamp/Mermaid3.png" id="1_o7co0"]
+[ext_resource type="Texture2D" uid="uid://b2fptn1fnjmir" path="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/Swamp/Mermaid3.png" id="1_o7co0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kigtc"]
 atlas = ExtResource("1_o7co0")

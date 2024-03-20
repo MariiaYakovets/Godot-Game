@@ -1,10 +1,14 @@
 extends CharacterBody2D
-
+class_name Player
+#signal healthChanged
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -300.0
 var jump_multiplier : float = 1
 var move_multiplier : float = 1
+#@export var maxHealth = 100
+#@onready var currentHealth: int = maxHealth
+#var isHurt : bool = false
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -45,8 +49,14 @@ func _physics_process(delta):
 		animation_player.play("jump")
 		velocity.y = JUMP_VELOCITY * jump_multiplier
 	
+#func hurt_by_enemy(area):
+#	currentHealth -=10
+#	if currentHealth <= 0:
+#		get_tree().change_scene_to_file("res://Main game/main screen/main_game_screen.tscn")
+#	isHurt = true 
+	#healthChanges.emit()
 		
-	move_and_slide()
+#	move_and_slide()
 	
 
 
