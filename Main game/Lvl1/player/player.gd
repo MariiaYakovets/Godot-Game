@@ -1,14 +1,15 @@
 extends CharacterBody2D
-class_name Player
+#class_name Player
 #signal healthChanged
-
+@onready var HPbar = $"../../CanvasLayer/TextureProgressBar"
 const SPEED = 200.0
 const JUMP_VELOCITY = -300.0
 var jump_multiplier : float = 1
 var move_multiplier : float = 1
-#@export var maxHealth = 100
-#@onready var currentHealth: int = maxHealth
-#var isHurt : bool = false
+@export var maxHealth = 100
+@onready var currentHealth: int = maxHealth
+var isHurt : bool = false
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -48,15 +49,20 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		animation_player.play("jump")
 		velocity.y = JUMP_VELOCITY * jump_multiplier
+	move_and_slide()
 	
-#func hurt_by_enemy(area):
-#	currentHealth -=10
-#	if currentHealth <= 0:
-#		get_tree().change_scene_to_file("res://Main game/main screen/main_game_screen.tscn")
-#	isHurt = true 
+func hurt_by_enemy(area):
+	currentHealth -=10
+	isHurt = true 
 	#healthChanges.emit()
-		
-#	move_and_slide()
 	
+func update_HP(hp: int):
+	if $Timer.time_left == 0:
+		$Timer.start(0.4)
+		currentHealth -= hp
+		HPbar.value = currentHealth
+		if currentHealth <= 0:
+			get_tree().change_scene_to_file("res://Main game/main screen/main_game_screen.tscn")
+
 
 

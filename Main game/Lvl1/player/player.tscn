@@ -374,3 +374,6 @@ position_smoothing_enabled = true
 position = Vector2(12, 9.00001)
 scale = Vector2(1.42857, 1.33984)
 polygon = PackedVector2Array(-14, -11.1954, -17.5, -5.22452, -16.8, 8.20992, -16.8, 16.4198, -8.39999, 16.4198, -2.8, 16.4198, -4.2, 8.20992, -4.90001, 2.23906, -3.5, -3.73181, -4.90001, -7.46359, -7.7, -10.449)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
