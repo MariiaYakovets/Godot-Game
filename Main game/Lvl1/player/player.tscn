@@ -382,7 +382,7 @@ animation = &"soot"
 position = Vector2(2, 3)
 zoom = Vector2(2, 2)
 limit_left = 20
-limit_top = 0
+limit_top = -500
 limit_bottom = 805
 position_smoothing_enabled = true
 
@@ -407,8 +407,12 @@ value = 100.0
 texture_progress = ExtResource("5_qbmg5")
 metadata/_edit_use_anchors_ = true
 
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="MarkerRight" type="Marker2D" parent="."]
-position = Vector2(23, 22)
+position = Vector2(31, 17)
 
 [node name="MarkerLeft" type="Marker2D" parent="."]
-position = Vector2(-38, 20)
+position = Vector2(-39, 17)

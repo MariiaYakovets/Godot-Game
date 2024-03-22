@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b7atnel0hjimp"]
+[gd_scene load_steps=9 format=3 uid="uid://b7atnel0hjimp"]
 
 [ext_resource type="Texture2D" uid="uid://c0n5nx5vjvrbj" path="res://Main game/Lvl1/enemy/Farmer in red coat2 500x500.png" id="1_5wl2j"]
+[ext_resource type="Script" path="res://Main game/Lvl1/enemy/r_farmer.gd" id="1_flpoa"]
 [ext_resource type="Texture2D" uid="uid://b1cuxune1lgi3" path="res://Main game/Lvl1/enemy/Farmer in red coat 500x500.png" id="2_xf6jg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a53o3"]
@@ -82,7 +83,10 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikw3n"]
 size = Vector2(13, 26)
 
-[node name="r_farmer" type="RigidBody2D"]
+[node name="r_farmer" type="RigidBody2D" groups=["Enemies"]]
+script = ExtResource("1_flpoa")
+hp = 10
+damage = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

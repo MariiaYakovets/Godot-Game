@@ -55,7 +55,7 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
-[node name="mermaid_3" type="CharacterBody2D" parent="."]
+[node name="mermaid_3" type="CharacterBody2D" parent="." groups=["Enemies"]]
 script = ExtResource("1_3o4cp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mermaid_3"]

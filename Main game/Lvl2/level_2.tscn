@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=36 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="PackedScene" uid="uid://dlfuq3y7an6p7" path="res://Main game/Lvl2/trees/back_tree.tscn" id="1_4q430"]
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl3.1/assets/enemies/tilemap/liana.png" id="2_2cxvi"]
@@ -33,6 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://c6ayp85wm41mt" path="res://Main game/Lvl2/platforms/disap_platform.tscn" id="30_s32qj"]
 [ext_resource type="Texture2D" uid="uid://bt4jllud4px5o" path="res://Main game/main screen/main screen tempotaty bg.png" id="31_0r86e"]
 [ext_resource type="PackedScene" uid="uid://boo8g7j3y0xs5" path="res://Main game/Lvl2/road_rock_sing/path_rock.tscn" id="33_xt82c"]
+[ext_resource type="PackedScene" uid="uid://bwb60yaqednoc" path="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/vaterDu2.tscn" id="34_oqrqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xd8q"]
 size = Vector2(10, 14)
@@ -66,7 +67,7 @@ position = Vector2(18982, 329)
 position = Vector2(20039, 333)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(808, 392)
+position = Vector2(3115, 432)
 
 [node name="liana curtains" type="Node2D" parent="."]
 
@@ -238,10 +239,10 @@ scale = Vector2(1.29379, 1.02157)
 texture = ExtResource("5_saxcq")
 
 [node name="Merm_1" parent="." instance=ExtResource("2_sugcb")]
-position = Vector2(3409, 465)
+position = Vector2(6854, -157)
 
 [node name="Merm_2" parent="." instance=ExtResource("3_n85jb")]
-position = Vector2(3183, 475)
+position = Vector2(6838, 635)
 
 [node name="Lvl2" parent="." instance=ExtResource("2_w80ak")]
 position = Vector2(-18, 148)
@@ -1855,5 +1856,12 @@ texture = ExtResource("31_0r86e")
 
 [node name="path_rock" parent="." instance=ExtResource("33_xt82c")]
 position = Vector2(20731, 380)
+
+[node name="VaterDu" parent="." instance=ExtResource("34_oqrqb")]
+position = Vector2(3423, 460)
+chase_speed = 100
+
+[node name="VaterDu2" parent="." instance=ExtResource("34_oqrqb")]
+position = Vector2(3710, 380)
 
 [connection signal="body_entered" from="button for pl" to="disap_platform" method="_on_button_for_pl_body_entered"]

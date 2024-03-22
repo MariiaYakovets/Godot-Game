@@ -542,8 +542,6 @@ metadata/_edit_lock_ = true
 
 [node name="g_farmer5" parent="Mobs" instance=ExtResource("15_npjbj")]
 position = Vector2(5946, 360)
-hp = 10
-damage = 1
 metadata/_edit_lock_ = true
 
 [node name="r_farmer3" parent="Mobs" instance=ExtResource("16_2xcba")]
