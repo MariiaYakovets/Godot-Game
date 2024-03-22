@@ -16,6 +16,9 @@ func _process(delta):
 	elif direction == -1:
 		$AnimatedSprite2D.flip_h = true
 	move_and_collide(velocity)
+	#var collision_body : Object = KinematicCollision2D.get_collider()
+	#if collision_body.is_in_group('Enemies'):
+		#damage_enemy(collision_body)
 
 func damage_enemy(body):
 	if body.is_in_group('Enemies'):
