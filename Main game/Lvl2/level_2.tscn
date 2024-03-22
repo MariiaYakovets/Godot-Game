@@ -1,28 +1,28 @@
 [gd_scene load_steps=36 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="PackedScene" uid="uid://dlfuq3y7an6p7" path="res://Main game/Lvl2/trees/back_tree.tscn" id="1_4q430"]
-[ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl3.1/assets/enemies/tilemap/liana.png" id="2_2cxvi"]
+[ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl2/tilemap/liana.png" id="2_2cxvi"]
 [ext_resource type="PackedScene" uid="uid://d2u4qnl0drwhl" path="res://Main game/Lvl2/trees/back_tree_4.tscn" id="2_eks2t"]
-[ext_resource type="PackedScene" uid="uid://cff58e024vxby" path="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/mermaid_1.tscn" id="2_sugcb"]
-[ext_resource type="PackedScene" uid="uid://r1apj4bcg4ia" path="res://Main game/Lvl3.1/assets/enemies/tilemap/tilemap_lvl_2.tscn" id="2_w80ak"]
+[ext_resource type="PackedScene" uid="uid://cff58e024vxby" path="res://Main game/Lvl2/enemies/enemies lvl2/mermaid_1.tscn" id="2_sugcb"]
+[ext_resource type="PackedScene" uid="uid://r1apj4bcg4ia" path="res://Main game/Lvl2/enemies/tilemap_lvl_2.tscn" id="2_w80ak"]
 [ext_resource type="Texture2D" uid="uid://csjdmm3kl6cpw" path="res://Main game/Lvl2/bg/lianas curtain.png" id="2_yu1ho"]
-[ext_resource type="Texture2D" uid="uid://bygibtrl2plfx" path="res://Main game/Lvl3.1/assets/enemies/tilemap/liana2.png" id="3_cafwo"]
-[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/Lvl1/player/player.tscn" id="3_do26w"]
+[ext_resource type="Texture2D" uid="uid://bygibtrl2plfx" path="res://Main game/Lvl2/tilemap/liana2.png" id="3_cafwo"]
+[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/player/player.tscn" id="3_do26w"]
 [ext_resource type="PackedScene" uid="uid://bomrbfcmnviv5" path="res://Main game/Lvl2/trees/back_tree_5.tscn" id="3_dob1c"]
-[ext_resource type="PackedScene" uid="uid://cf7kxe5mmuysi" path="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/mermaid_2.tscn" id="3_n85jb"]
-[ext_resource type="Texture2D" uid="uid://8upjgmhppcgn" path="res://Main game/Lvl3.1/assets/enemies/tilemap/dorozhka.png" id="3_uq24i"]
-[ext_resource type="Texture2D" uid="uid://bjo6eqplw7kgc" path="res://Main game/Lvl3.1/assets/enemies/tilemap/cl2.png" id="4_hw3q3"]
+[ext_resource type="PackedScene" uid="uid://cf7kxe5mmuysi" path="res://Main game/Lvl2/enemies/enemies lvl2/mermaid_2.tscn" id="3_n85jb"]
+[ext_resource type="Texture2D" uid="uid://8upjgmhppcgn" path="res://Main game/Lvl2/tilemap/dorozhka.png" id="3_uq24i"]
+[ext_resource type="Texture2D" uid="uid://bjo6eqplw7kgc" path="res://Main game/Lvl2/tilemap/cl2.png" id="4_hw3q3"]
 [ext_resource type="Texture2D" uid="uid://cou6v0i672p2j" path="res://Main game/Lvl2/bg/not gradual lianas.png" id="4_rmu3e"]
-[ext_resource type="Texture2D" uid="uid://w0jt5hctn2su" path="res://Main game/Lvl3.1/assets/enemies/tilemap/cl1.png" id="5_bsyh7"]
+[ext_resource type="Texture2D" uid="uid://w0jt5hctn2su" path="res://Main game/Lvl2/tilemap/cl1.png" id="5_bsyh7"]
 [ext_resource type="Texture2D" uid="uid://5m58r5mrx3ny" path="res://Main game/Lvl2/bg/bg for swamp without green box.png" id="5_ep0ax"]
 [ext_resource type="Texture2D" uid="uid://c4rm63uf2b273" path="res://Main game/Lvl2/bg/three lianas.png" id="5_saxcq"]
 [ext_resource type="Texture2D" uid="uid://dde6yvfoh2u4w" path="res://Main game/Lvl2/bg/kamen1.png" id="7_dli2e"]
-[ext_resource type="PackedScene" uid="uid://bn4h5mpx8op5y" path="res://Main game/Lvl3.1/assets/enemies/tilemap/bush.tscn" id="8_52oj0"]
+[ext_resource type="PackedScene" uid="uid://bn4h5mpx8op5y" path="res://Main game/Lvl2/tilemap/bush.tscn" id="8_52oj0"]
 [ext_resource type="Texture2D" uid="uid://db67flxpitdfl" path="res://Main game/Lvl2/bg/kamen2.png" id="9_pdpiy"]
-[ext_resource type="PackedScene" uid="uid://cy7peo82ot8dy" path="res://Main game/Lvl3.1/assets/enemies/tilemap/bushstatic.tscn" id="9_sjhlo"]
+[ext_resource type="PackedScene" uid="uid://cy7peo82ot8dy" path="res://Main game/Lvl2/tilemap/bushstatic.tscn" id="9_sjhlo"]
 [ext_resource type="Texture2D" uid="uid://dfq75l6m4a56t" path="res://Main game/Lvl3.1/assets/enemies/bg/kamen3.png" id="10_1m3qx"]
-[ext_resource type="PackedScene" uid="uid://b8ffsfis8skb4" path="res://Main game/Lvl3.1/assets/enemies/tilemap/bush2s.tscn" id="10_nxw0n"]
-[ext_resource type="PackedScene" uid="uid://dbmnlb0mwp468" path="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/kikimor.tscn" id="12_k6a36"]
+[ext_resource type="PackedScene" uid="uid://b8ffsfis8skb4" path="res://Main game/Lvl2/tilemap/bush2s.tscn" id="10_nxw0n"]
+[ext_resource type="PackedScene" uid="uid://dbmnlb0mwp468" path="res://Main game/Lvl2/enemies/enemies lvl2/kikimor.tscn" id="12_k6a36"]
 [ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="19_w765i"]
 [ext_resource type="PackedScene" uid="uid://dcr7ockq86qtx" path="res://Main game/Lvl2/platforms/oneway_platf.tscn" id="20_gx31i"]
 [ext_resource type="PackedScene" uid="uid://b47pvw3lepf4g" path="res://Main game/Lvl2/food/mushroom.tscn" id="20_kemd5"]
@@ -33,7 +33,7 @@
 [ext_resource type="PackedScene" uid="uid://c6ayp85wm41mt" path="res://Main game/Lvl2/platforms/disap_platform.tscn" id="30_s32qj"]
 [ext_resource type="Texture2D" uid="uid://bt4jllud4px5o" path="res://Main game/main screen/main screen tempotaty bg.png" id="31_0r86e"]
 [ext_resource type="PackedScene" uid="uid://boo8g7j3y0xs5" path="res://Main game/Lvl2/road_rock_sing/path_rock.tscn" id="33_xt82c"]
-[ext_resource type="PackedScene" uid="uid://bwb60yaqednoc" path="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/vaterDu2.tscn" id="34_oqrqb"]
+[ext_resource type="PackedScene" uid="uid://bwb60yaqednoc" path="res://Main game/Lvl2/enemies/enemies lvl2/vaterDu2.tscn" id="34_oqrqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xd8q"]
 size = Vector2(10, 14)
@@ -67,7 +67,7 @@ position = Vector2(18982, 329)
 position = Vector2(20039, 333)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(646, 422)
+position = Vector2(1074, 356)
 
 [node name="liana curtains" type="Node2D" parent="."]
 
@@ -1309,8 +1309,7 @@ metadata/_edit_lock_ = true
 position = Vector2(952, 511)
 distance = 250
 patrol_speed = 30
-chase_speed = 200
-damage = 10
+damage = 2
 
 [node name="Kikimor2" parent="." instance=ExtResource("12_k6a36")]
 position = Vector2(3707, 716)
@@ -1860,6 +1859,7 @@ position = Vector2(20731, 380)
 [node name="VaterDu" parent="." instance=ExtResource("34_oqrqb")]
 position = Vector2(3423, 460)
 chase_speed = 100
+hp = 3
 
 [node name="VaterDu2" parent="." instance=ExtResource("34_oqrqb")]
 position = Vector2(3710, 380)

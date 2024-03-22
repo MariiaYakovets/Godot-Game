@@ -15,20 +15,19 @@ func _process(delta):
 		$AnimatedSprite2D.flip_h = false
 	elif direction == -1:
 		$AnimatedSprite2D.flip_h = true
-	move_and_collide(velocity)
-	#var collision_body : Object = KinematicCollision2D.get_collider()
-	#if collision_body.is_in_group('Enemies'):
-		#damage_enemy(collision_body)
+	
+	var collision_object = move_and_collide(velocity)
+	if collision_object :
+		var collision_body : Object = collision_object.get_collider()
+		if collision_body.is_in_group('Enemies'):
+			damage_enemy(collision_body)
+		elif not collision_body.is_in_group('Enemies'):
+			queue_free()
 
 func damage_enemy(body):
-	if body.is_in_group('Enemies'):
-		body.hp -= damage
-		print('damage')
-		queue_free()
-	
-	elif not body.is_in_group('Enemies'):
-		queue_free()
-	print(body)
+	body.hp -= damage
+	print('damage')
+	queue_free()
 
-func _on_damage_area_body_entered(body):
-	damage_enemy(body)
+	
+

@@ -1,15 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://r1apj4bcg4ia"]
+[gd_scene load_steps=18 format=3 uid="uid://ds2eykv6yps2h"]
 
-[ext_resource type="Texture2D" uid="uid://botwoyfkg8fi2" path="res://Main game/Lvl3.1/assets/enemies/tilemap/Swamp Tilemap.png" id="1_owmeg"]
-[ext_resource type="Texture2D" uid="uid://dsjh4xwgupk7b" path="res://Main game/Lvl3.1/assets/enemies/tilemap/tileset.png" id="2_42eav"]
-[ext_resource type="Texture2D" uid="uid://2f20mmhs1rog" path="res://Main game/Lvl3.1/assets/enemies/tilemap/blosk tileset.png" id="3_3rcss"]
-[ext_resource type="Texture2D" uid="uid://du4ag8ylfqk7h" path="res://Main game/Lvl3.1/assets/enemies/tilemap/pixil-frame-0 (8).png" id="4_kiggu"]
-[ext_resource type="Texture2D" uid="uid://dksni6y3k74n0" path="res://Main game/Lvl3.1/assets/enemies/tilemap/pixil-frame-0 (6).png" id="5_n1c25"]
-[ext_resource type="Texture2D" uid="uid://4fdr4e1nf16" path="res://Main game/Lvl3.1/assets/enemies/tilemap/pixil-frame-0 (14).png" id="6_55ob0"]
-[ext_resource type="Texture2D" uid="uid://dqhoqfjlsvnwo" path="res://Main game/Lvl3.1/assets/enemies/tilemap/pixil-frame-0 (15).png" id="7_lte4v"]
+[ext_resource type="Texture2D" uid="uid://botwoyfkg8fi2" path="res://Main game/Lvl2/tilemap/Swamp Tilemap.png" id="1_ujaci"]
+[ext_resource type="Texture2D" uid="uid://du4ag8ylfqk7h" path="res://Main game/Lvl2/tilemap/pixil-frame-0 (8).png" id="2_t3qxj"]
+[ext_resource type="Texture2D" uid="uid://dsjh4xwgupk7b" path="res://Main game/Lvl2/tilemap/tileset.png" id="3_bypf1"]
+[ext_resource type="Texture2D" uid="uid://2f20mmhs1rog" path="res://Main game/Lvl2/tilemap/blosk tileset.png" id="4_4e5t1"]
+[ext_resource type="Texture2D" uid="uid://dksni6y3k74n0" path="res://Main game/Lvl2/tilemap/pixil-frame-0 (6).png" id="5_jnmpe"]
+[ext_resource type="Texture2D" uid="uid://4fdr4e1nf16" path="res://Main game/Lvl2/tilemap/pixil-frame-0 (14).png" id="6_dwqn1"]
+[ext_resource type="Texture2D" uid="uid://dqhoqfjlsvnwo" path="res://Main game/Lvl2/tilemap/pixil-frame-0 (15).png" id="7_0jfu3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mhte2"]
-texture = ExtResource("1_owmeg")
+texture = ExtResource("1_ujaci")
 margins = Vector2i(6, 0)
 15:0/0 = 0
 15:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -3529,7 +3529,7 @@ margins = Vector2i(6, 0)
 30:45/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4edgd"]
-texture = ExtResource("4_kiggu")
+texture = ExtResource("2_t3qxj")
 43:45/0 = 0
 43:45/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 43:45/0/physics_layer_0/angular_velocity = 0.0
@@ -3811,7 +3811,7 @@ texture = ExtResource("4_kiggu")
 31:44/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k3myb"]
-texture = ExtResource("2_42eav")
+texture = ExtResource("3_bypf1")
 margins = Vector2i(0, 10)
 15:1/0 = 0
 15:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -3841,7 +3841,7 @@ margins = Vector2i(0, 10)
 15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.375, -8, -5.25, 8, 5.125, 8, 4.875, -8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6piq"]
-texture = ExtResource("2_42eav")
+texture = ExtResource("3_bypf1")
 margins = Vector2i(6, 10)
 23:0/0 = 0
 23:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -3877,7 +3877,7 @@ margins = Vector2i(6, 10)
 23:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.25, -8, -2.25, 8, 8, 8, 8, -8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4lcso"]
-texture = ExtResource("3_3rcss")
+texture = ExtResource("4_4e5t1")
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
@@ -3949,7 +3949,7 @@ texture = ExtResource("3_3rcss")
 8:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_untdc"]
-texture = ExtResource("4_kiggu")
+texture = ExtResource("2_t3qxj")
 margins = Vector2i(9, 6)
 11:19/0 = 0
 11:19/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -6949,7 +6949,7 @@ margins = Vector2i(9, 6)
 42:40/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y6qy6"]
-texture = ExtResource("5_n1c25")
+texture = ExtResource("5_jnmpe")
 15:7/0 = 0
 15:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:7/0/physics_layer_0/angular_velocity = 0.0
@@ -7084,7 +7084,7 @@ texture = ExtResource("5_n1c25")
 10:15/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6pf1i"]
-texture = ExtResource("6_55ob0")
+texture = ExtResource("6_dwqn1")
 margins = Vector2i(15, 9)
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -7132,7 +7132,7 @@ margins = Vector2i(15, 9)
 3:4/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6p8r8"]
-texture = ExtResource("7_lte4v")
+texture = ExtResource("7_0jfu3")
 3:0/0 = 0
 3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:0/0/physics_layer_0/angular_velocity = 0.0

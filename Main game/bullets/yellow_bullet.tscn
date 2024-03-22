@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://iqqtlitv2drr"]
+[gd_scene load_steps=7 format=3 uid="uid://iqqtlitv2drr"]
 
 [ext_resource type="Script" path="res://Main game/bullets/yellow_bullet.gd" id="1_36o7g"]
 [ext_resource type="Texture2D" uid="uid://drdjduwr8bbng" path="res://Main game/bullets/bullets.png" id="1_ad27a"]
@@ -28,9 +28,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsh40"]
-size = Vector2(3, 2)
-
 [node name="yellow_bullet" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_36o7g")
@@ -51,11 +48,3 @@ autoplay = "bullet"
 frame_progress = 0.533595
 
 [node name="Timer" type="Timer" parent="."]
-
-[node name="damage_area" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="damage_area"]
-position = Vector2(10.5, 1)
-shape = SubResource("RectangleShape2D_gsh40")
-
-[connection signal="body_entered" from="damage_area" to="." method="_on_damage_area_body_entered"]

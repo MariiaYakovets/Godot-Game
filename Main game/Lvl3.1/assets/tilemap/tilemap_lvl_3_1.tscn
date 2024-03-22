@@ -4964,6 +4964,7 @@ sources/3 = SubResource("TileSetAtlasSource_1intr")
 [node name="tilemap_lvl3_1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-11, -5)
 scale = Vector2(0.4, 0.4)
 tile_set = SubResource("TileSet_o23a8")
 format = 2

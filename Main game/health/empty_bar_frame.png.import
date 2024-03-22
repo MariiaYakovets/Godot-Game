@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c38m3jvelykjd"
-path="res://.godot/imported/cloud3 platform.png-e9f1a05198f0efc5c9c9640bd5c805df.ctex"
+uid="uid://ddf4g05osqwde"
+path="res://.godot/imported/empty_bar_frame.png-ccf01ffe09e572042dc4d43d746ac1e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/tilemap/cloud3 platform.png"
-dest_files=["res://.godot/imported/cloud3 platform.png-e9f1a05198f0efc5c9c9640bd5c805df.ctex"]
+source_file="res://Main game/health/empty_bar_frame.png"
+dest_files=["res://.godot/imported/empty_bar_frame.png-ccf01ffe09e572042dc4d43d746ac1e6.ctex"]
 
 [params]
 

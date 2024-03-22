@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
-[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/Lvl1/player/player.tscn" id="3_s5mkt"]
+[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/player/player.tscn" id="3_s5mkt"]
 [ext_resource type="PackedScene" uid="uid://cw1rpqj4ircoc" path="res://Main game/Lvl1/tilemap/tilemap_lvl_1.tscn" id="5_lo0es"]
 [ext_resource type="Texture2D" uid="uid://d1cbtxqqqgc5s" path="res://Main game/Lvl1/bg/cloud3.png" id="5_xjy5j"]
 [ext_resource type="PackedScene" uid="uid://bnsx0inrivwjv" path="res://Main game/Lvl1/bg/lvl1_water.tscn" id="6_56ru6"]
@@ -57,7 +57,7 @@ _data = {
 [node name="Level 1" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_offset = Vector2(-6790.56, -814.282)
+scroll_offset = Vector2(-5227.09, -1000)
 
 [node name="bg_main" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1464.17, 0)

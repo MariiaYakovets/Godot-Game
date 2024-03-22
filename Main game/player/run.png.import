@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c38m3jvelykjd"
-path="res://.godot/imported/cloud3 platform.png-e9f1a05198f0efc5c9c9640bd5c805df.ctex"
+uid="uid://q54dh7oqmmw0"
+path="res://.godot/imported/run.png-f822dc8f944d182501d51d21f8af7c5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl1/tilemap/cloud3 platform.png"
-dest_files=["res://.godot/imported/cloud3 platform.png-e9f1a05198f0efc5c9c9640bd5c805df.ctex"]
+source_file="res://Main game/player/run.png"
+dest_files=["res://.godot/imported/run.png-f822dc8f944d182501d51d21f8af7c5d.ctex"]
 
 [params]
 

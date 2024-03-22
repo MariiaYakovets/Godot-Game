@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dy5wbsbgt3unp"]
 
 [ext_resource type="Script" path="res://Main game/Lvl2/bg/CharacterBody2D.gd" id="1_qmwgk"]
-[ext_resource type="Texture2D" uid="uid://bmnm3a01cy4bc" path="res://Main game/Lvl3.1/assets/enemies/enemies lvl2/Swamp/swamp_platform.png" id="1_rouyp"]
+[ext_resource type="Texture2D" uid="uid://bmnm3a01cy4bc" path="res://Main game/Lvl2/enemies/enemies lvl2/Swamp/swamp_platform.png" id="1_rouyp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4rkfa"]
 size = Vector2(327, 24)
