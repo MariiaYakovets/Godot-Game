@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://2ok27tiw4fvb"]
+[gd_scene load_steps=11 format=3 uid="uid://2ok27tiw4fvb"]
 
+[ext_resource type="Script" path="res://Main game/Lvl1/enemy/g_farmer.gd" id="1_dm62f"]
 [ext_resource type="Texture2D" uid="uid://d27w4d1vn7pig" path="res://Main game/Lvl1/enemy/Farmer in green coat2 500x500.png" id="1_i0mij"]
 [ext_resource type="Texture2D" uid="uid://c111h3ym244oi" path="res://Main game/Lvl1/enemy/Farmer in green coat 500x500.png" id="2_grdt1"]
 
@@ -82,7 +83,14 @@ _data = {
 "idle": SubResource("Animation_q7erq")
 }
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vosj0"]
+radius = 3.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q3ch1"]
+height = 28.0
+
 [node name="g_farmer" type="RigidBody2D"]
+script = ExtResource("1_dm62f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 1)
@@ -101,3 +109,22 @@ frame = 1
 libraries = {
 "": SubResource("AnimationLibrary_ba7ek")
 }
+
+[node name="kill_emeny" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kill_emeny"]
+position = Vector2(2, -3)
+shape = SubResource("CapsuleShape2D_vosj0")
+
+[node name="damage" type="Area2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
+position = Vector2(2, 0)
+shape = SubResource("CapsuleShape2D_q3ch1")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="kill_emeny" to="." method="_on_kill_emeny_body_entered"]
+[connection signal="body_entered" from="damage" to="." method="_on_damage_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

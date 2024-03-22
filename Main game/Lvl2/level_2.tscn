@@ -1309,6 +1309,7 @@ position = Vector2(952, 511)
 distance = 250
 patrol_speed = 30
 chase_speed = 200
+damage = 10
 
 [node name="Kikimor2" parent="." instance=ExtResource("12_k6a36")]
 position = Vector2(3707, 716)
@@ -1369,7 +1370,7 @@ position = Vector2(923, -116)
 y_multiplier = 1.3
 
 [node name="jump boost53" parent="boosts" instance=ExtResource("19_w765i")]
-position = Vector2(750, -13)
+position = Vector2(734, -13)
 y_multiplier = 1.3
 
 [node name="jump boost2" parent="boosts" instance=ExtResource("19_w765i")]

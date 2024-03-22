@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=29 format=3 uid="uid://dxy4dioy61tca"]
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
@@ -24,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://djv3jewuc7p6f" path="res://Main game/Lvl1/signs/pixil-frame-0 (12).png" id="18_41ws8"]
 [ext_resource type="PackedScene" uid="uid://c14wi2cs5ijco" path="res://Main game/Lvl1/food/cheese.tscn" id="23_gh4c8"]
 [ext_resource type="PackedScene" uid="uid://mm34b7a3r6x6" path="res://Main game/Lvl1/food/bread.tscn" id="24_t5ov3"]
-[ext_resource type="Texture2D" uid="uid://cejkvuxvfm8cc" path="res://Main game/health/hp.png" id="25_iyyfr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gqd8"]
 size = Vector2(4, 4)
@@ -543,6 +542,8 @@ metadata/_edit_lock_ = true
 
 [node name="g_farmer5" parent="Mobs" instance=ExtResource("15_npjbj")]
 position = Vector2(5946, 360)
+hp = 10
+damage = 1
 metadata/_edit_lock_ = true
 
 [node name="r_farmer3" parent="Mobs" instance=ExtResource("16_2xcba")]
@@ -660,14 +661,3 @@ position = Vector2(6084, 647)
 
 [node name="bread9" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(7558, 474)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
-offset_left = 7.0
-offset_top = 9.0
-offset_right = 1058.0
-offset_bottom = 496.0
-scale = Vector2(0.15, 0.15)
-value = 100.0
-texture_progress = ExtResource("25_iyyfr")

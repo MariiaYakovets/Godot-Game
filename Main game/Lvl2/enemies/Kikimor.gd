@@ -5,6 +5,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var distance : int
 @export var patrol_speed: int
 @export var chase_speed: int
+@export var damage : int
 var end_x
 var start_x
 var player
@@ -32,6 +33,17 @@ func _physics_process(delta):
 		chase()
 	else:
 		patrol()
+	#number of collisions
+	var collision_count = get_slide_collision_count()
+	#itterate  number of collisions
+	for i in collision_count:
+		#get_slide_collision returns 2D collision object
+		var collision_object : KinematicCollision2D = get_slide_collision(i)
+	#gettin the body of a collided object
+		var collision_body : Object = collision_object.get_collider() 
+		#if the body is a player - do damage
+		if collision_body.is_in_group('player'):
+			collision_body.update_hp(damage)
 	move_and_slide()
 	#print(self.position.x)
 
@@ -41,7 +53,7 @@ func chase():
 	elif self.position.x <= player.position.x:
 		direction = 1
 	velocity.x = chase_speed * direction 
-	print(flag_chase)
+	#print(flag_chase)
 	
 func patrol():
 	if self.position.x <= start_x:
@@ -65,10 +77,3 @@ func _on_player_detection_body_exited(body):
 	if flag_chase == true:
 		if body.is_in_group('player'):
 			flag_chase = false
-
-
-
-#func _on_damage_body_entered(body):
-#	if body.is_in_group('player'):
-#		player.currentHealth -=2
-#		print(player.currentHealth)
