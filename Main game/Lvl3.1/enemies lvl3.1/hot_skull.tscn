@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://yybnmw7q073r"]
+
+[ext_resource type="Texture2D" uid="uid://dvmyhrmieyslx" path="res://Main game/Lvl3.1/enemies lvl3.1/IMG_8194-removebg-preview.png" id="1_ssi60"]
+[ext_resource type="Texture2D" uid="uid://buiomwyb5y5yw" path="res://Main game/Lvl3.1/enemies lvl3.1/IMG_8195-removebg-preview.png" id="2_4s0qe"]
+[ext_resource type="Texture2D" uid="uid://chkproqjmbcd6" path="res://Main game/Lvl3.1/enemies lvl3.1/IMG_8196-removebg-preview.png" id="3_pnbth"]
+[ext_resource type="Texture2D" uid="uid://ij0l88s28c2t" path="res://Main game/Lvl3.1/enemies lvl3.1/IMG_8197-removebg-preview.png" id="4_htuna"]
+[ext_resource type="Texture2D" uid="uid://dve880ol30okb" path="res://Main game/Lvl3.1/enemies lvl3.1/IMG_8198-removebg-preview.png" id="5_1ea4b"]
+[ext_resource type="Texture2D" uid="uid://reh2usutyxdd" path="res://Main game/Lvl3.1/enemies lvl3.1/IMG_8199-removebg-preview.png" id="6_o5riq"]
+[ext_resource type="Texture2D" uid="uid://br5d3vys3tyol" path="res://Main game/Lvl3.1/enemies lvl3.1/IMG_8200-removebg-preview.png" id="7_i22w1"]
+[ext_resource type="Texture2D" uid="uid://u3udg6nwgwnh" path="res://Main game/Lvl3.1/enemies lvl3.1/IMG_8201-removebg-preview.png" id="8_7q5ye"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ujn3o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ssi60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4s0qe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pnbth")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_htuna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1ea4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o5riq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i22w1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7q5ye")
+}],
+"loop": true,
+"name": &"skull spin",
+"speed": 15.0
+}]
+
+[node name="hot skull" type="CharacterBody2D"]
+position = Vector2(-6, -2)
+
+[node name="animation skull" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.700073, -5.49998)
+scale = Vector2(0.104356, 0.100442)
+sprite_frames = SubResource("SpriteFrames_ujn3o")
+animation = &"skull spin"
+frame = 2
+frame_progress = 0.49655
+
+[node name="collision skull" type="CollisionPolygon2D" parent="."]
+position = Vector2(-625.3, -217.5)
+polygon = PackedVector2Array(620, 232, 622, 233, 624, 234, 626, 233, 629, 232, 631, 232, 632, 231, 633, 229, 634, 227, 636, 224, 637, 222, 637, 220, 638, 217, 639, 215, 637, 212, 636, 211, 634, 214, 633, 214, 631, 212, 631, 210, 632, 207, 633, 197, 635, 191, 634, 189, 632, 189, 631, 190, 630, 192, 630, 193, 630, 195, 630, 197, 631, 200, 630, 203, 630, 205, 630, 206, 627, 204, 627, 206, 626, 208, 625, 208, 623, 205, 623, 201, 621, 199, 621, 198, 615, 190, 613, 191, 614, 193, 615, 196, 618, 198, 620, 202, 618, 205, 618, 208, 621, 212, 619, 212, 618, 211, 617, 214, 616, 213, 614, 211, 614, 209, 616, 208, 615, 206, 613, 208, 611, 210, 610, 213, 610, 215, 610, 217, 611, 220, 613, 212, 614, 216, 615, 217, 616, 219, 616, 221, 615, 223, 615, 224, 616, 227, 617, 229, 617, 230)

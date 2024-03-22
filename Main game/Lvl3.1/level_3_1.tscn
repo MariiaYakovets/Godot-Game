@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dccgfna5p47vc"]
+[gd_scene load_steps=11 format=3 uid="uid://dccgfna5p47vc"]
 
 [ext_resource type="Script" path="res://Main game/Lvl3.1/platforms/moving_platform(up;down).gd" id="1_2m33y"]
 [ext_resource type="PackedScene" uid="uid://cjs64t4d30ia5" path="res://Main game/Lvl3.1/assets/tilemap/tilemap_lvl_3_1.tscn" id="2_0c0xc"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://00aye5u46r4t" path="res://Main game/Lvl3.1/platforms/MovingPlatform.tscn" id="7_p0lgj"]
 [ext_resource type="PackedScene" uid="uid://xj8285dejdm1" path="res://Main game/Lvl3.1/platforms/moving_platform(up;down).tscn" id="8_y7it2"]
 [ext_resource type="PackedScene" uid="uid://l6ymrijs25b2" path="res://Main game/Lvl3.1/platforms/moving_platform(diagonal).tscn" id="9_7q421"]
+[ext_resource type="PackedScene" uid="uid://yybnmw7q073r" path="res://Main game/Lvl3.1/enemies lvl3.1/hot_skull.tscn" id="10_u66pd"]
 
 [node name="level3_1" type="Node2D"]
 script = ExtResource("1_2m33y")
@@ -103,3 +104,18 @@ position = Vector2(3271, 806)
 
 [node name="MovingPlatform(diagonal)" parent="Platforms" instance=ExtResource("9_7q421")]
 position = Vector2(5785, 972)
+
+[node name="hot skull" parent="." instance=ExtResource("10_u66pd")]
+position = Vector2(1665, 534)
+
+[node name="hot skull2" parent="." instance=ExtResource("10_u66pd")]
+position = Vector2(2987, 494)
+
+[node name="hot skull3" parent="." instance=ExtResource("10_u66pd")]
+position = Vector2(3629, 509)
+
+[node name="hot skull4" parent="." instance=ExtResource("10_u66pd")]
+position = Vector2(4103, 472)
+
+[node name="hot skull5" parent="." instance=ExtResource("10_u66pd")]
+position = Vector2(11545, 482)
