@@ -178,12 +178,14 @@ libraries = {
 }
 
 [node name="chase" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chase"]
 position = Vector2(-2, -2)
 shape = SubResource("RectangleShape2D_554bi")
 
 [node name="damage" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
 position = Vector2(1, 14.75)

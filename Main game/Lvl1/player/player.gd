@@ -83,3 +83,7 @@ func shoot():
 		bullet.direction = -1
 	#adding the bullet to the player scene za lapky
 	get_parent().add_child(bullet)
+
+
+func _on_menu_pressed():
+	get_tree().change_scene_to_file()
