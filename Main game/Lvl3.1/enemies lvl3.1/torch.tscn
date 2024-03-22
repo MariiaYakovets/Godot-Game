@@ -1,37 +1,37 @@
-[gd_scene load_steps=11 format=3 uid="uid://di7o8u21fyjkv"]
+[gd_scene load_steps=12 format=3 uid="uid://di7o8u21fyjkv"]
 
-[ext_resource type="Texture2D" uid="uid://bkq5d11r8y5tu" path="res://Main game/Lvl3.1/assets/enemies/fire.png" id="1_nxtm7"]
+[ext_resource type="Texture2D" uid="uid://bkq5d11r8y5tu" path="res://Main game/Lvl3.1/enemies lvl3.1/fire.png" id="1_nikq2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f430k"]
-atlas = ExtResource("1_nxtm7")
+atlas = ExtResource("1_nikq2")
 region = Rect2(8, 1, 69, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ra2c"]
-atlas = ExtResource("1_nxtm7")
+atlas = ExtResource("1_nikq2")
 region = Rect2(77, 1, 69, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j88hh"]
-atlas = ExtResource("1_nxtm7")
+atlas = ExtResource("1_nikq2")
 region = Rect2(146, 1, 69, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_phd4n"]
-atlas = ExtResource("1_nxtm7")
+atlas = ExtResource("1_nikq2")
 region = Rect2(215, 1, 69, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m0b7r"]
-atlas = ExtResource("1_nxtm7")
+atlas = ExtResource("1_nikq2")
 region = Rect2(284, 1, 69, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6y7x"]
-atlas = ExtResource("1_nxtm7")
+atlas = ExtResource("1_nikq2")
 region = Rect2(353, 1, 69, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aa1c1"]
-atlas = ExtResource("1_nxtm7")
+atlas = ExtResource("1_nikq2")
 region = Rect2(422, 1, 69, 95)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_np7y0"]
-atlas = ExtResource("1_nxtm7")
+atlas = ExtResource("1_nikq2")
 region = Rect2(491, 1, 69, 95)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_uqnd3"]
@@ -62,14 +62,24 @@ animations = [{
 "texture": SubResource("AtlasTexture_np7y0")
 }],
 "loop": true,
-"name": &"default",
+"name": &"fire",
 "speed": 5.0
 }]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_av7d1"]
+height = 50.0
 
 [node name="torch" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+modulate = Color(1, 0, 0, 1)
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_uqnd3")
-frame_progress = 0.210518
+animation = &"fire"
+frame_progress = 0.881419
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, 14)
+shape = SubResource("CapsuleShape2D_av7d1")

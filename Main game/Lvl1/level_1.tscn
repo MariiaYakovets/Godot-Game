@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=29 format=3 uid="uid://dxy4dioy61tca"]
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
@@ -24,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://djv3jewuc7p6f" path="res://Main game/Lvl1/signs/pixil-frame-0 (12).png" id="18_41ws8"]
 [ext_resource type="PackedScene" uid="uid://c14wi2cs5ijco" path="res://Main game/Lvl1/food/cheese.tscn" id="23_gh4c8"]
 [ext_resource type="PackedScene" uid="uid://mm34b7a3r6x6" path="res://Main game/Lvl1/food/bread.tscn" id="24_t5ov3"]
-[ext_resource type="Script" path="res://Main game/health/health.gd" id="25_ei8k3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gqd8"]
 size = Vector2(4, 4)
@@ -660,24 +659,3 @@ position = Vector2(6084, 647)
 
 [node name="bread9" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(7558, 474)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
-texture_filter = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -233.0
-offset_top = 32.0
-offset_right = -17.0
-offset_bottom = 62.0
-grow_horizontal = 0
-step = 0.1
-value = 100.0
-script = ExtResource("25_ei8k3")
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0

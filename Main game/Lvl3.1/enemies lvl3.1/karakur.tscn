@@ -1,77 +1,77 @@
-[gd_scene load_steps=26 format=3 uid="uid://qarroidxuwsr"]
+[gd_scene load_steps=27 format=3 uid="uid://qarroidxuwsr"]
 
-[ext_resource type="Texture2D" uid="uid://d0xsxn6c5ofsi" path="res://Main game/Lvl3.1/assets/enemies/krakur.png" id="1_plysw"]
+[ext_resource type="Texture2D" uid="uid://d0xsxn6c5ofsi" path="res://Main game/Lvl3.1/enemies lvl3.1/krakur.png" id="1_k0ekl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wjisa"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(327, 237, 185, 106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdi31"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(342, 343, 185, 106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fxqsp"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(354, 454, 185, 106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0mu5i"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(559, 0, 185, 93)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jiv3m"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(569, 103, 185, 103)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_goph2"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(575, 212, 185, 106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pdk63"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(573, 323, 185, 106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wxenw"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(568, 433, 185, 107)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y14gr"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(757, 94, 249, 94)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8rkct"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(766, 203, 252, 98)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kgk1t"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(795, 306, 265, 102)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlvyr"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(803, 416, 265, 104)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dt8md"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(76, 40, 185, 106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x2sih"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(83, 148, 185, 106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2d25s"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(98, 254, 185, 106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eoj2f"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(108, 365, 185, 106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_42fkr"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(318, 11, 185, 106)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_03nw4"]
-atlas = ExtResource("1_plysw")
+atlas = ExtResource("1_k0ekl")
 region = Rect2(318, 117, 185, 106)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rhggf"]
@@ -146,6 +146,36 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="Animation" id="Animation_1k778"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_rvcfa"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
 [sub_resource type="Animation" id="Animation_jv7o8"]
 resource_name = "idle"
 length = 0.2
@@ -160,21 +190,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_1k778"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
 }
 
 [sub_resource type="Animation" id="Animation_75x2i"]
@@ -193,21 +208,6 @@ tracks/0/keys = {
 "values": [0, 1, 2, 3, 4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_rvcfa"]
-resource_name = "attack"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_laa2t"]
 _data = {
 "RESET": SubResource("Animation_1k778"),
@@ -216,18 +216,29 @@ _data = {
 "run": SubResource("Animation_75x2i")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_bm8r6"]
+radius = 67.082
+
 [node name="krakur" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+polygon = PackedVector2Array(-20, -3, 0, -8, 32, 9, 34, 46, -2, 47, -19, 46, -13, 24, -23, 10)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_rhggf")
-animation = &"attack"
+animation = &"run"
 frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
 libraries = {
 "": SubResource("AnimationLibrary_laa2t")
 }
+
+[node name="detect_player" type="Area2D" parent="CharacterBody2D"]
+visible = false
+texture_filter = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/detect_player"]
+shape = SubResource("CircleShape2D_bm8r6")

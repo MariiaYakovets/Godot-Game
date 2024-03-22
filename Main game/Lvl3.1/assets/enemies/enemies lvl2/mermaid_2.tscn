@@ -55,7 +55,7 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
-[node name="mermaid_2" type="CharacterBody2D" parent="."]
+[node name="mermaid_2" type="CharacterBody2D" parent="." groups=["Enemies"]]
 script = ExtResource("1_l858n")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mermaid_2"]
