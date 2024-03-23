@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=27 format=3 uid="uid://dxy4dioy61tca"]
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
@@ -18,9 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dsmj1g1tkh1ei" path="res://Main game/Lvl1/enemy/weat.tscn" id="12_ili7s"]
 [ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="13_16uuo"]
 [ext_resource type="PackedScene" uid="uid://clylld6yyi3ma" path="res://Main game/Lvl1/enemy/wise_man.tscn" id="14_sf4wv"]
-[ext_resource type="PackedScene" uid="uid://2ok27tiw4fvb" path="res://Main game/Lvl1/enemy/g_farmer.tscn" id="15_npjbj"]
-[ext_resource type="PackedScene" uid="uid://b7atnel0hjimp" path="res://Main game/Lvl1/enemy/r_farmer.tscn" id="16_2xcba"]
-[ext_resource type="PackedScene" uid="uid://bbseg340rsohi" path="res://Main game/Lvl1/enemy/f_farmer.tscn" id="17_f71tc"]
+[ext_resource type="PackedScene" uid="uid://bbseg340rsohi" path="res://Main game/Lvl1/enemy/farmer.tscn" id="17_f71tc"]
 [ext_resource type="Texture2D" uid="uid://djv3jewuc7p6f" path="res://Main game/Lvl1/signs/pixil-frame-0 (12).png" id="18_41ws8"]
 [ext_resource type="PackedScene" uid="uid://c14wi2cs5ijco" path="res://Main game/Lvl1/food/cheese.tscn" id="23_gh4c8"]
 [ext_resource type="PackedScene" uid="uid://mm34b7a3r6x6" path="res://Main game/Lvl1/food/bread.tscn" id="24_t5ov3"]
@@ -57,7 +55,7 @@ _data = {
 [node name="Level 1" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_offset = Vector2(-5227.09, -1000)
+scroll_offset = Vector2(-6123.34, 632.536)
 
 [node name="bg_main" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1464.17, 0)
@@ -382,11 +380,8 @@ position = Vector2(0, 4.75)
 scale = Vector2(0.21, 0.2225)
 texture = ExtResource("12_5vpw0")
 
-[node name="Player" type="Node2D" parent="."]
-position = Vector2(21, 43)
-
-[node name="Player" parent="Player" instance=ExtResource("3_s5mkt")]
-position = Vector2(2624, 423)
+[node name="Player" parent="." instance=ExtResource("3_s5mkt")]
+position = Vector2(2642, 418)
 
 [node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
 position = Vector2(15, -88)
@@ -490,75 +485,75 @@ metadata/_edit_lock_ = true
 [node name="Mobs" type="Node2D" parent="."]
 position = Vector2(21, 43)
 
-[node name="RigidBody2D" parent="Mobs" instance=ExtResource("12_ili7s")]
+[node name="weat" parent="Mobs" instance=ExtResource("12_ili7s")]
 position = Vector2(4024, 511)
 start_x = 4000
 end_x = 4250
 speed = 2
 
-[node name="RigidBody2D2" parent="Mobs" instance=ExtResource("12_ili7s")]
+[node name="weat2" parent="Mobs" instance=ExtResource("12_ili7s")]
 position = Vector2(5152, 208)
 start_x = 5100
 end_x = 5250
 speed = 2
 
-[node name="RigidBody2D3" parent="Mobs" instance=ExtResource("12_ili7s")]
+[node name="weat3" parent="Mobs" instance=ExtResource("12_ili7s")]
 position = Vector2(6807, 355)
 start_x = 6750
 end_x = 7000
 speed = 1
 
-[node name="g_farmer" parent="Mobs" instance=ExtResource("15_npjbj")]
+[node name="g_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(1821, 350)
-metadata/_edit_lock_ = true
+farmer_amination = "green_farmer"
 
-[node name="r_farmer" parent="Mobs" instance=ExtResource("16_2xcba")]
+[node name="r_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(2600, 474)
-metadata/_edit_lock_ = true
+farmer_amination = "red_farmer"
 
-[node name="r_farmer6" parent="Mobs" instance=ExtResource("16_2xcba")]
+[node name="r_farmer6" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(1815, 432)
-metadata/_edit_lock_ = true
+farmer_amination = "red_farmer"
 
-[node name="g_farmer2" parent="Mobs" instance=ExtResource("15_npjbj")]
+[node name="g_farmer2" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(2248, 448)
-metadata/_edit_lock_ = true
+farmer_amination = "green_farmer"
 
-[node name="g_farmer3" parent="Mobs" instance=ExtResource("15_npjbj")]
+[node name="g_farmer3" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(5233, 497)
-metadata/_edit_lock_ = true
+farmer_amination = "green_farmer"
 
-[node name="r_farmer2" parent="Mobs" instance=ExtResource("16_2xcba")]
+[node name="r_farmer2" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(5357, 496)
-metadata/_edit_lock_ = true
+farmer_amination = "red_farmer"
 
-[node name="r_farmer5" parent="Mobs" instance=ExtResource("16_2xcba")]
+[node name="r_farmer5" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(5034, 516)
-metadata/_edit_lock_ = true
+farmer_amination = "red_farmer"
 
-[node name="g_farmer4" parent="Mobs" instance=ExtResource("15_npjbj")]
+[node name="g_farmer4" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(6239, 271)
-metadata/_edit_lock_ = true
+farmer_amination = "green_farmer"
 
-[node name="g_farmer5" parent="Mobs" instance=ExtResource("15_npjbj")]
+[node name="g_farmer5" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(5946, 360)
-metadata/_edit_lock_ = true
+farmer_amination = "green_farmer"
 
-[node name="r_farmer3" parent="Mobs" instance=ExtResource("16_2xcba")]
+[node name="r_farmer3" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(6512, 216)
-metadata/_edit_lock_ = true
+farmer_amination = "red_farmer"
 
-[node name="r_farmer4" parent="Mobs" instance=ExtResource("16_2xcba")]
+[node name="r_farmer4" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(7349, 404)
-metadata/_edit_lock_ = true
+farmer_amination = "red_farmer"
 
 [node name="f_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(3274, 519)
-metadata/_edit_lock_ = true
+farmer_amination = "fork_farmer"
 
 [node name="f_farmer2" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(4818, 428)
-metadata/_edit_lock_ = true
+farmer_amination = "fork_farmer"
 
 [node name="boosts" type="Node2D" parent="."]
 

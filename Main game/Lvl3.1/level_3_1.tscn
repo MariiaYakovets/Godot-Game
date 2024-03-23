@@ -9,17 +9,16 @@
 [ext_resource type="PackedScene" uid="uid://00aye5u46r4t" path="res://Main game/Lvl3.1/platforms/MovingPlatform.tscn" id="7_p0lgj"]
 [ext_resource type="PackedScene" uid="uid://xj8285dejdm1" path="res://Main game/Lvl3.1/platforms/moving_platform(up;down).tscn" id="8_y7it2"]
 [ext_resource type="PackedScene" uid="uid://l6ymrijs25b2" path="res://Main game/Lvl3.1/platforms/moving_platform(diagonal).tscn" id="9_7q421"]
-[ext_resource type="PackedScene" uid="uid://yybnmw7q073r" path="res://Main game/Lvl3.1/enemies lvl3.1/hot_skull.tscn" id="10_u66pd"]
+[ext_resource type="PackedScene" path="res://Main game/Lvl3.1/enemies lvl3.1/hot_skull.tscn" id="10_u66pd"]
 
 [node name="level3_1" type="Node2D"]
 script = ExtResource("1_2m33y")
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_xix4b")]
 
 [node name="tilemap_lvl3_1" parent="." instance=ExtResource("2_0c0xc")]
 position = Vector2(4, 343)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(-373.603, -336.317)
 
 [node name="Top" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1411.15, 0)
@@ -44,6 +43,9 @@ texture = ExtResource("4_scamy")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="Player" parent="." instance=ExtResource("3_xix4b")]
+position = Vector2(186, 363)
+
 [node name="jump boost" parent="." instance=ExtResource("5_3gynl")]
 position = Vector2(503, 333)
 y_multiplier = 1.5
@@ -55,14 +57,6 @@ y_multiplier = 1.5
 [node name="jump boost3" parent="." instance=ExtResource("5_3gynl")]
 position = Vector2(3091, 399)
 y_multiplier = 1.5
-
-[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D2"]
 
 [node name="Platforms" type="Node2D" parent="."]
 

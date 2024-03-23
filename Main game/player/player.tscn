@@ -395,6 +395,7 @@ limit_left = 20
 limit_top = -500
 limit_bottom = 805
 position_smoothing_enabled = true
+position_smoothing_speed = 2.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(12, 9.00001)

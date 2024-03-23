@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://drdjduwr8bbng" path="res://Main game/bullets/bullets.png" id="1_ad27a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01ay0"]
-size = Vector2(19, 1)
+size = Vector2(11, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tw3a5"]
 atlas = ExtResource("1_ad27a")
@@ -35,7 +35,7 @@ speed = 10
 damage = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 1.5)
+position = Vector2(-1.5, 1.5)
 shape = SubResource("RectangleShape2D_01ay0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

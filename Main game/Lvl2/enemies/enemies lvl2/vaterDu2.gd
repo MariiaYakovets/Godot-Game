@@ -32,7 +32,7 @@ func _process(delta):
 	#gettin the body of a collided object
 		var collision_body : Object = collision_object.get_collider() 
 		#if the body is a player - do damage
-		print(collision_body)
+		#print(collision_body)
 		if collision_body:
 			if collision_body.is_in_group('player'):
 				collision_body.update_hp(damage)

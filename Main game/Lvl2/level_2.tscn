@@ -66,8 +66,8 @@ position = Vector2(18982, 329)
 [node name="back tree 10" parent="back trees" instance=ExtResource("29_1e08u")]
 position = Vector2(20039, 333)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(1074, 356)
+[node name="Player" parent="." instance=ExtResource("3_do26w")]
+position = Vector2(1516.97, 382.159)
 
 [node name="liana curtains" type="Node2D" parent="."]
 
@@ -248,7 +248,7 @@ position = Vector2(6838, 635)
 position = Vector2(-18, 148)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_offset = Vector2(-3615, -1593)
+scroll_offset = Vector2(-2210.94, -470.319)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1073.85, 0)
@@ -1310,6 +1310,7 @@ position = Vector2(952, 511)
 distance = 250
 patrol_speed = 30
 damage = 2
+hp = 10
 
 [node name="Kikimor2" parent="." instance=ExtResource("12_k6a36")]
 position = Vector2(3707, 716)

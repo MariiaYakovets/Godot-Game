@@ -5,12 +5,13 @@
 [sub_resource type="GDScript" id="GDScript_ett8v"]
 script/source = "extends CharacterBody2D
 var flag_chase = false
-var direction : int = -1
+var direction: int = -1
 var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
-@export var distance : int
+@export var distance: int
 @export var patrol_speed: int
 @export var chase_speed: int
-@export var damage : int
+@export var damage: int
+@export var hp: int
 var end_x
 var start_x
 var player
@@ -46,8 +47,9 @@ func _physics_process(delta):
 	#gettin the body of a collided object
 		var collision_body : Object = collision_object.get_collider() 
 		#if the body is a player - do damage
-		if collision_body.is_in_group('player'):
-			collision_body.update_hp(damage)
+		if collision_body:
+			if collision_body.is_in_group('player'):
+				collision_body.update_hp(damage)
 	move_and_slide()
 	#print(self.position.x)
 
