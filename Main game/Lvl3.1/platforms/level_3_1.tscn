@@ -1,0 +1,160 @@
+[gd_scene load_steps=10 format=3 uid="uid://dccgfna5p47vc"]
+
+[ext_resource type="PackedScene" uid="uid://cjs64t4d30ia5" path="res://Main game/Lvl3.1/assets/tilemap/tilemap_lvl_3_1.tscn" id="2_0c0xc"]
+[ext_resource type="Texture2D" uid="uid://b17ikjdbrrh8d" path="res://Main game/Lvl3.1/assets/bg/edit volc.png" id="3_41bgc"]
+[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/player/player.tscn" id="3_xix4b"]
+[ext_resource type="Texture2D" uid="uid://c61e56xqxarc8" path="res://Main game/Lvl3.1/assets/bg/botoom.png" id="4_scamy"]
+[ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="5_3gynl"]
+[ext_resource type="PackedScene" uid="uid://djj7eeeb42stn" path="res://Main game/Lvl3.1/platforms/moving_platform.tscn" id="7_t6t47"]
+[ext_resource type="PackedScene" uid="uid://dbsuwpnn318mu" path="res://Main game/Lvl3.1/platforms/moving_platform_up_down.tscn" id="8_ugux6"]
+[ext_resource type="PackedScene" uid="uid://yybnmw7q073r" path="res://Main game/Lvl3.1/enemies lvl3.1/hot_skull.tscn" id="10_u66pd"]
+
+[sub_resource type="GDScript" id="GDScript_t2ssq"]
+script/source = "extends Node2D
+
+var move = 0.0
+
+func _ready() -> void:
+#	$Path2D/PathFollow2D/AnimationPlayer.play(\"moving\")
+	pass
+func _process(delta: float) -> void:
+	move += delta
+	#$Path2D/PathFollow2D.progress = move * 100
+"
+
+[node name="level3_1" type="Node2D"]
+script = SubResource("GDScript_t2ssq")
+
+[node name="tilemap_lvl3_1" parent="." instance=ExtResource("2_0c0xc")]
+position = Vector2(4, 343)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(-373.603, -336.317)
+
+[node name="Top" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1411.15, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/Top"]
+modulate = Color(0.458824, 0.396078, 0.345098, 1)
+offset_right = 1412.0
+offset_bottom = 791.0
+texture = ExtResource("3_41bgc")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Bottom" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1411.15, 365)
+
+[node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/Bottom"]
+modulate = Color(0.458824, 0.396078, 0.345098, 1)
+offset_top = 790.0
+offset_right = 1413.0
+offset_bottom = 1159.0
+texture = ExtResource("4_scamy")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." instance=ExtResource("3_xix4b")]
+position = Vector2(186, 363)
+
+[node name="jump boost" parent="." instance=ExtResource("5_3gynl")]
+position = Vector2(503, 333)
+y_multiplier = 1.5
+
+[node name="jump boost2" parent="." instance=ExtResource("5_3gynl")]
+position = Vector2(3053, 475)
+y_multiplier = 1.5
+
+[node name="jump boost3" parent="." instance=ExtResource("5_3gynl")]
+position = Vector2(3091, 399)
+y_multiplier = 1.5
+
+[node name="hot skull" parent="." instance=ExtResource("10_u66pd")]
+position = Vector2(1665, 534)
+
+[node name="hot skull2" parent="." instance=ExtResource("10_u66pd")]
+position = Vector2(2987, 494)
+
+[node name="hot skull3" parent="." instance=ExtResource("10_u66pd")]
+position = Vector2(3629, 509)
+
+[node name="hot skull4" parent="." instance=ExtResource("10_u66pd")]
+position = Vector2(4103, 472)
+
+[node name="hot skull5" parent="." instance=ExtResource("10_u66pd")]
+position = Vector2(11545, 482)
+
+[node name="Moving_Platform" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(76, 553)
+
+[node name="Moving_PlatformUpDown" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(-92, 557)
+
+[node name="Moving_PlatformUpDown2" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(16, 810)
+
+[node name="Moving_PlatformUpDown3" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(459, 705)
+
+[node name="Moving_Platform2" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(542, 822)
+
+[node name="Moving_Platform3" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(599, 749)
+
+[node name="Moving_PlatformUpDown4" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(888, 790)
+
+[node name="Moving_PlatformUpDown5" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(957, 690)
+
+[node name="Moving_Platform5" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(878, 464)
+
+[node name="Moving_Platform6" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(1277, 814)
+
+[node name="Moving_Platform7" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(2767, 595)
+
+[node name="Moving_Platform8" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(3135, 884)
+
+[node name="Moving_PlatformUpDown6" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(3122, 856)
+
+[node name="Moving_PlatformUpDown7" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(3495, 856)
+
+[node name="Moving_Platform9" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(3546, 580)
+
+[node name="Moving_Platform10" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(5943, 1072)
+
+[node name="Moving_PlatformUpDown8" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(6323, 1108)
+
+[node name="Moving_PlatformUpDown9" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(5931, 1111)
+
+[node name="Moving_Platform11" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(5989, 836)
+
+[node name="Moving_PlatformUpDown10" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(6430, 817)
+
+[node name="Moving_Platform12" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(6146, 541)
+
+[node name="Moving_Platform13" parent="." instance=ExtResource("7_t6t47")]
+position = Vector2(6818, 927)
+
+[node name="Moving_PlatformUpDown11" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(7230, 925)
+
+[node name="Moving_PlatformUpDown12" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(7293, 785)
+
+[node name="Moving_PlatformUpDown13" parent="." instance=ExtResource("8_ugux6")]
+position = Vector2(7347, 595)

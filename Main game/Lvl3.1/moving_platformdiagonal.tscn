@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://chfhkehvior13"]
+
+[ext_resource type="Texture2D" uid="uid://okcvxtub3bcs" path="res://Main game/Lvl3.1/platforms/pl2.png" id="1_2ll7d"]
+
+[sub_resource type="Curve2D" id="Curve2D_rqqwi"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 300, -150, 0, 0, 0, 0, 0, 0)
+}
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ty0ot"]
+size = Vector2(54, 15)
+
+[sub_resource type="Animation" id="Animation_6wxs7"]
+resource_name = "movingdiagonal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_vy1md"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ucvml"]
+_data = {
+"RESET": SubResource("Animation_vy1md"),
+"movingdiagonal": SubResource("Animation_6wxs7")
+}
+
+[node name="Moving_Platformdiagonal" type="Path2D"]
+position = Vector2(363, 289)
+curve = SubResource("Curve2D_rqqwi")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(106.074, -53.0372)
+rotation = 2.91935
+
+[node name="Pl2" type="Sprite2D" parent="AnimatableBody2D"]
+position = Vector2(7.62939e-06, -1.90735e-06)
+rotation = -2.91935
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_2ll7d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(0.110208, -0.487703)
+rotation = -2.91935
+shape = SubResource("RectangleShape2D_ty0ot")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+rotation = 2.91935
+rotates = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PathFollow2D"]
+libraries = {
+"": SubResource("AnimationLibrary_ucvml")
+}
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
+remote_path = NodePath("../../AnimatableBody2D")
