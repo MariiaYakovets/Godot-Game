@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cf7kxe5mmuysi"]
+[gd_scene load_steps=10 format=3 uid="uid://cf7kxe5mmuysi"]
 
 [ext_resource type="Texture2D" uid="uid://bauk8eun1qynl" path="res://Main game/Lvl2/enemies/Swamp/mermaid (purple redraw).png" id="1_tuk34"]
 
@@ -15,6 +15,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+
+
+func _on_area_2d_area_entered(area):
+	if area.is_in_group('player'):
+		print('collided')
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t70bk"]
@@ -60,6 +65,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gi5y"]
+size = Vector2(151.5, 20)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="mermaid_2" type="CharacterBody2D" parent="." groups=["Enemies"]]
@@ -101,6 +109,14 @@ scale = Vector2(0.7925, 0.7925)
 sprite_frames = SubResource("SpriteFrames_vjljn")
 animation = &"mermaid"
 autoplay = "mermaid"
-frame = 3
-frame_progress = 0.442949
+frame = 1
+frame_progress = 0.695737
 metadata/_edit_lock_ = true
+
+[node name="Area2D" type="Area2D" parent="mermaid_2" groups=["mermaid"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mermaid_2/Area2D"]
+position = Vector2(38, -9)
+shape = SubResource("RectangleShape2D_2gi5y")
+
+[connection signal="area_entered" from="mermaid_2/Area2D" to="mermaid_2" method="_on_area_2d_area_entered"]
