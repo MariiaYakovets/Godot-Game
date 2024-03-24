@@ -5,7 +5,7 @@ var direction : int = -1
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var chase_speed: int
 @export var damage : int
-@onready var player = get_parent().get_node('CharacterBody2D')
+@onready var player = get_parent().get_node("Player")
 @export var hp : int
 
 # Called when the node enters the scene tree for the first time.

@@ -43,7 +43,7 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vsgsi"]
 
-[node name="mushroom" type="Area2D"]
+[node name="mushroom" type="Area2D" groups=["Food"]]
 rotation = 0.0698132
 script = ExtResource("1_n0juo")
 

@@ -4,6 +4,8 @@ extends CharacterBody2D
 @export var damage: int = 1
 var direction = 1
 @onready var player = get_node("../../Player")
+var isHurt: bool = false
+@onready var bullet = get_node('yellow_bullet')
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#getting AnimationPlayer node with animations
@@ -34,3 +36,14 @@ func _physics_process(delta):
 		if collision_body.is_in_group('player'):
 			collision_body.update_hp(damage)
 	move_and_slide()
+func update_hp(hp: int):
+	pass
+
+
+func _on_damage_body_entered(body):
+	if body.is_in_group('Bullets'):
+		isHurt = true
+
+func damage_from_bullet():
+	if isHurt :
+		hp -= bullet.damage

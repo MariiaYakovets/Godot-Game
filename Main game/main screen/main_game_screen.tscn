@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdvkbfw1us3fr"]
+[gd_scene load_steps=7 format=3 uid="uid://cdvkbfw1us3fr"]
 
 [ext_resource type="Script" path="res://Main game/main screen/main_game_screen.gd" id="1_0u6ws"]
-[ext_resource type="Texture2D" uid="uid://bt4jllud4px5o" path="res://Main game/main screen/main screen tempotaty bg.png" id="1_qh688"]
+[ext_resource type="Texture2D" uid="uid://kwxj821jph2g" path="res://Main game/main screen/main_background1.png" id="2_fscql"]
+[ext_resource type="Texture2D" uid="uid://dsuf4u1ra4q0n" path="res://Main game/main screen/pixil-frame-0 (16).png" id="3_7nmml"]
+[ext_resource type="Texture2D" uid="uid://yfg8h1rq7f0a" path="res://Main game/main screen/pixil-frame-0 (19).png" id="4_fhyfx"]
+[ext_resource type="Texture2D" uid="uid://wkk076t6khog" path="res://Main game/main screen/pixil-frame-0 (18).png" id="6_yg8og"]
+[ext_resource type="Texture2D" uid="uid://bnsr26trua2co" path="res://Main game/main screen/pixil-frame-0 (24).png" id="7_7uueb"]
 
 [node name="Main game screen" type="Node2D"]
 script = ExtResource("1_0u6ws")
@@ -9,34 +13,51 @@ script = ExtResource("1_0u6ws")
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(0, -9)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture_filter = 1
-position = Vector2(575.5, 327.5)
-scale = Vector2(2.33, 1.314)
-texture = ExtResource("1_qh688")
+position = Vector2(574, 332)
+scale = Vector2(0.442591, 0.437885)
+texture = ExtResource("2_fscql")
 
 [node name="Play button" type="Button" parent="."]
-offset_left = 394.0
-offset_top = 86.0
-offset_right = 739.0
-offset_bottom = 217.0
-text = "PLAY"
+offset_left = 726.0
+offset_top = 87.0
+offset_right = 1277.0
+offset_bottom = 395.0
+scale = Vector2(0.55, 0.55)
+icon = ExtResource("3_7nmml")
+flat = true
 
 [node name="Quit button" type="Button" parent="."]
-offset_left = 394.0
-offset_top = 251.0
-offset_right = 739.0
-offset_bottom = 382.0
-text = "QUIT"
+offset_left = 725.0
+offset_top = 255.0
+offset_right = 1276.0
+offset_bottom = 563.0
+scale = Vector2(0.55, 0.55)
+icon = ExtResource("4_fhyfx")
+flat = true
+
+[node name="Resume button" type="Button" parent="."]
+offset_left = 727.0
+offset_top = 420.0
+offset_right = 1313.0
+offset_bottom = 728.0
+scale = Vector2(0.55, 0.55)
+icon = ExtResource("6_yg8og")
+flat = true
 
 [node name="Settings button" type="Button" parent="."]
-offset_left = 398.0
-offset_top = 412.0
-offset_right = 743.0
-offset_bottom = 543.0
-text = "SETTINGS"
+offset_left = 31.0
+offset_top = 538.0
+offset_right = 617.0
+offset_bottom = 846.0
+scale = Vector2(0.33, 0.33)
+icon = ExtResource("7_7uueb")
+flat = true
 
 [connection signal="pressed" from="Play button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Quit button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Resume button" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Settings button" to="." method="_on_settings_button_pressed"]

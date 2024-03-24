@@ -40,7 +40,7 @@ _data = {
 "cheese": SubResource("Animation_fchu5")
 }
 
-[node name="cheese" type="Area2D"]
+[node name="cheese" type="Area2D" groups=["Food"]]
 rotation = 0.0174533
 script = ExtResource("1_56t7s")
 

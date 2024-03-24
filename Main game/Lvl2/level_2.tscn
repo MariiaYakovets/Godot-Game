@@ -67,7 +67,7 @@ position = Vector2(18982, 329)
 position = Vector2(20039, 333)
 
 [node name="Player" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(1516.97, 382.159)
+position = Vector2(3057, 441)
 
 [node name="liana curtains" type="Node2D" parent="."]
 

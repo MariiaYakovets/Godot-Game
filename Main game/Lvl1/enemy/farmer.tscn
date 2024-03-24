@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bbseg340rsohi"]
+[gd_scene load_steps=19 format=3 uid="uid://bbseg340rsohi"]
 
 [ext_resource type="Texture2D" uid="uid://btelu2kak4xr0" path="res://Main game/Lvl1/enemy/Farmer with fork2 500x500.png" id="1_qrcag"]
 [ext_resource type="Script" path="res://Main game/Lvl1/enemy/farmer.gd" id="1_u17gg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c111h3ym244oi" path="res://Main game/Lvl1/enemy/Farmer in green coat 500x500.png" id="5_ewkef"]
 [ext_resource type="Texture2D" uid="uid://c0n5nx5vjvrbj" path="res://Main game/Lvl1/enemy/Farmer in red coat2 500x500.png" id="6_3ae3k"]
 [ext_resource type="Texture2D" uid="uid://b1cuxune1lgi3" path="res://Main game/Lvl1/enemy/Farmer in red coat 500x500.png" id="7_aouik"]
+[ext_resource type="Texture2D" uid="uid://cmhm6ldpfg504" path="res://Main game/health/progress_bar.png" id="8_mguno"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mijn5"]
 atlas = ExtResource("4_cnvfb")
@@ -201,6 +202,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4j8d8"]
 size = Vector2(13, 26)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plh40"]
+size = Vector2(13, 27)
+
 [node name="farmer" type="CharacterBody2D"]
 script = ExtResource("1_u17gg")
 
@@ -221,3 +225,22 @@ libraries = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 1)
 shape = SubResource("RectangleShape2D_4j8d8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = -18.0
+offset_top = -27.0
+offset_right = 149.0
+offset_bottom = 14.0
+scale = Vector2(0.215, 0.245)
+texture_under = ExtResource("8_mguno")
+
+[node name="damage" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_plh40")
+
+[connection signal="body_entered" from="damage" to="." method="_on_damage_body_entered"]

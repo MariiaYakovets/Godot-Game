@@ -56,6 +56,8 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY * jump_multiplier
 	move_and_slide()
 	
+	
+	
 func hurt_by_enemy(area):
 	currentHealth -=10
 	isHurt = true 
@@ -87,3 +89,7 @@ func shoot():
 
 #func _on_menu_pressed():
 #	get_tree().change_scene_to_file()
+
+
+func _on_child_entered_tree(node):
+	pass # Replace with function body.

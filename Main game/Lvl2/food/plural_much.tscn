@@ -43,7 +43,7 @@ _data = {
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qyc4l"]
 
-[node name="plural_much" type="Area2D"]
+[node name="plural_much" type="Area2D" groups=["Food"]]
 rotation = 0.0698132
 script = ExtResource("1_hmoau")
 

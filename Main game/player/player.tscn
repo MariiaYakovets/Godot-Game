@@ -410,30 +410,29 @@ one_shot = true
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = 59.0
-offset_top = 47.0
-offset_right = 1110.0
-offset_bottom = 534.0
+offset_left = 32.0
+offset_top = 26.0
+offset_right = 1083.0
+offset_bottom = 513.0
 scale = Vector2(0.395, 0.29)
 value = 100.0
 texture_progress = ExtResource("7_c61jo")
-metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = 50.0
-offset_top = 29.0
-offset_right = 184.0
-offset_bottom = 85.0
+offset_left = 23.0
+offset_top = 8.0
+offset_right = 157.0
+offset_bottom = 64.0
 texture = ExtResource("8_ojvuu")
 expand_mode = 1
 
 [node name="menu" type="Button" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = 562.0
-offset_top = 23.0
-offset_right = 1570.0
-offset_bottom = 1031.0
+offset_left = 1076.0
+offset_top = 18.0
+offset_right = 2084.0
+offset_bottom = 1026.0
 scale = Vector2(0.04, 0.04)
 icon = ExtResource("8_7el50")
 flat = true

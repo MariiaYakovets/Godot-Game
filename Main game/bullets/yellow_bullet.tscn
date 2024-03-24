@@ -28,17 +28,19 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="yellow_bullet" type="RigidBody2D"]
+[node name="yellow_bullet" type="Node2D"]
+
+[node name="yellow_bullet" type="RigidBody2D" parent="." groups=["Bullets"]]
 gravity_scale = 0.0
 script = ExtResource("1_36o7g")
 speed = 10
 damage = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="yellow_bullet"]
 position = Vector2(-1.5, 1.5)
 shape = SubResource("RectangleShape2D_01ay0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="yellow_bullet"]
 texture_filter = 1
 position = Vector2(1, 1)
 scale = Vector2(0.11875, 0.0934466)
@@ -47,4 +49,4 @@ animation = &"bullet"
 autoplay = "bullet"
 frame_progress = 0.533595
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="yellow_bullet"]

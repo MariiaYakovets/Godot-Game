@@ -18,7 +18,7 @@ var player
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group('Enemies')
-	player = get_parent().get_node('CharacterBody2D')
+	player = get_parent().get_node('Player')
 	start_x = self.position.x - distance/2
 	end_x = self.position.x + distance/2
 	#player = get_node(\"Player/Player\")
