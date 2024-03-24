@@ -239,7 +239,7 @@ scale = Vector2(1.29379, 1.02157)
 texture = ExtResource("5_saxcq")
 
 [node name="Merm_1" parent="." instance=ExtResource("2_sugcb")]
-position = Vector2(6854, -157)
+position = Vector2(6845, -159)
 
 [node name="Merm_2" parent="." instance=ExtResource("3_n85jb")]
 position = Vector2(6838, 635)
