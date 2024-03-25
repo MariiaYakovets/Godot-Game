@@ -391,7 +391,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" groups=["Persist", "player"]]
 position = Vector2(318, 180)
 script = ExtResource("1_5o2at")
 purple_bullet = ExtResource("2_3c02s")
