@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=48 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="PackedScene" uid="uid://dlfuq3y7an6p7" path="res://Main game/Lvl2/trees/back_tree.tscn" id="1_4q430"]
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl2/tilemap/liana.png" id="2_2cxvi"]
@@ -34,9 +34,68 @@
 [ext_resource type="Texture2D" uid="uid://bt4jllud4px5o" path="res://Main game/main screen/main screen tempotaty bg.png" id="31_0r86e"]
 [ext_resource type="PackedScene" uid="uid://boo8g7j3y0xs5" path="res://Main game/Lvl2/road_rock_sing/path_rock.tscn" id="33_xt82c"]
 [ext_resource type="PackedScene" uid="uid://bwb60yaqednoc" path="res://Main game/Lvl2/enemies/enemies lvl2/vaterDu2.tscn" id="34_oqrqb"]
+[ext_resource type="Texture2D" uid="uid://3bfvrju551sr" path="res://Main game/Lvl2/Chervyaki/penyok.png" id="36_lw2th"]
+[ext_resource type="Texture2D" uid="uid://bvib1jwhjj0sg" path="res://Main game/Lvl2/Chervyaki/chervyak1.png" id="36_ycgsi"]
+[ext_resource type="Texture2D" uid="uid://dqup81uod7n5c" path="res://Main game/Lvl2/Chervyaki/chervyak2.png" id="37_u4a6c"]
+[ext_resource type="Texture2D" uid="uid://ha3wn5ddf5kv" path="res://Main game/Lvl2/Chervyaki/chervyak3.png" id="38_qep18"]
+[ext_resource type="Texture2D" uid="uid://baqr6e1u2dxau" path="res://Main game/Lvl2/Chervyaki/chervyak6.png" id="39_t7c0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0xd8q"]
 size = Vector2(10, 14)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_olmlx"]
+radius = 22.0
+height = 175.578
+
+[sub_resource type="Animation" id="Animation_6c15h"]
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -20), Vector2(0, -50)]
+}
+
+[sub_resource type="Animation" id="Animation_2sfcf"]
+resource_name = "chervyak"
+length = 7.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -17.161), Vector2(0, -50), Vector2(0, -17.161), Vector2(0, -80)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fblrx"]
+_data = {
+"RESET": SubResource("Animation_6c15h"),
+"chervyak": SubResource("Animation_2sfcf")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k32gh"]
+radius = 93.3915
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e2336"]
+radius = 66.668
+height = 233.333
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s4c6h"]
+radius = 17.6992
+height = 124.0
 
 [node name="Level_2" type="Node2D"]
 
@@ -67,7 +126,7 @@ position = Vector2(18982, 329)
 position = Vector2(20039, 333)
 
 [node name="Player" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(3057, 441)
+position = Vector2(16041, 274)
 
 [node name="liana curtains" type="Node2D" parent="."]
 
@@ -1626,6 +1685,11 @@ y_multiplier = 1.7
 position = Vector2(2396, 201)
 y_multiplier = 1.8
 
+[node name="jump boost54" parent="boosts" instance=ExtResource("19_w765i")]
+position = Vector2(15527, 111)
+x_multiplier = 1.2
+y_multiplier = 1.5
+
 [node name="food" type="Node2D" parent="."]
 position = Vector2(9153, 389)
 rotation = 0.0698132
@@ -1864,5 +1928,69 @@ hp = 3
 
 [node name="VaterDu2" parent="." instance=ExtResource("34_oqrqb")]
 position = Vector2(3710, 380)
+
+[node name="Penyok" type="Sprite2D" parent="."]
+position = Vector2(16189, 315)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("36_lw2th")
+
+[node name="Chervyak" type="CharacterBody2D" parent="."]
+
+[node name="Chervyak1" type="Sprite2D" parent="Chervyak"]
+position = Vector2(16593.3, 710.05)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("36_ycgsi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chervyak"]
+position = Vector2(16593.3, 710.05)
+shape = SubResource("CapsuleShape2D_olmlx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Chervyak"]
+libraries = {
+"": SubResource("AnimationLibrary_fblrx")
+}
+autoplay = "chervyak"
+
+[node name="chervyak" type="CharacterBody2D" parent="."]
+
+[node name="Chervyak2" type="Sprite2D" parent="chervyak"]
+position = Vector2(16520, 671)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("37_u4a6c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chervyak"]
+position = Vector2(16521, 682)
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CircleShape2D_k32gh")
+
+[node name="chervyak2" type="CharacterBody2D" parent="."]
+position = Vector2(157, -25)
+
+[node name="Chervyak2" type="Sprite2D" parent="chervyak2"]
+position = Vector2(16509, 685)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("38_qep18")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chervyak2"]
+position = Vector2(16511, 688)
+scale = Vector2(0.3, 0.3)
+shape = SubResource("CapsuleShape2D_e2336")
+
+[node name="Chervyak2" type="CharacterBody2D" parent="."]
+
+[node name="Chervyak1" type="Sprite2D" parent="Chervyak2"]
+position = Vector2(16775.4, 686.1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("39_t7c0d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chervyak2"]
+position = Vector2(16774.1, 683.889)
+shape = SubResource("CapsuleShape2D_s4c6h")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Chervyak2"]
+libraries = {
+"": SubResource("AnimationLibrary_fblrx")
+}
+autoplay = "RESET"
 
 [connection signal="body_entered" from="button for pl" to="disap_platform" method="_on_button_for_pl_body_entered"]

@@ -62,12 +62,12 @@ position = Vector2(503, 333)
 y_multiplier = 1.5
 
 [node name="jump boost2" parent="." instance=ExtResource("5_3gynl")]
-position = Vector2(3053, 475)
+position = Vector2(816, 667)
 y_multiplier = 1.5
 
-[node name="jump boost3" parent="." instance=ExtResource("5_3gynl")]
-position = Vector2(3091, 399)
-y_multiplier = 1.5
+[node name="jump boost4" parent="." instance=ExtResource("5_3gynl")]
+position = Vector2(3059, 474)
+y_multiplier = 2.0
 
 [node name="hot skull" parent="." instance=ExtResource("10_u66pd")]
 position = Vector2(1665, 534)
@@ -84,77 +84,79 @@ position = Vector2(4103, 472)
 [node name="hot skull5" parent="." instance=ExtResource("10_u66pd")]
 position = Vector2(11545, 482)
 
-[node name="Moving_Platform" parent="." instance=ExtResource("7_t6t47")]
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Moving_Platform" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(76, 553)
 
-[node name="Moving_PlatformUpDown" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(-92, 557)
 
-[node name="Moving_PlatformUpDown2" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown2" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(16, 810)
 
-[node name="Moving_PlatformUpDown3" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown3" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(459, 705)
 
-[node name="Moving_Platform2" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform2" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(542, 822)
 
-[node name="Moving_Platform3" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform3" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(599, 749)
 
-[node name="Moving_PlatformUpDown4" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown4" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(888, 790)
 
-[node name="Moving_PlatformUpDown5" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown5" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(957, 690)
 
-[node name="Moving_Platform5" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform5" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(878, 464)
 
-[node name="Moving_Platform6" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform6" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(1277, 814)
 
-[node name="Moving_Platform7" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform7" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(2767, 595)
 
-[node name="Moving_Platform8" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform8" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(3135, 884)
 
-[node name="Moving_PlatformUpDown6" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown6" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(3122, 856)
 
-[node name="Moving_PlatformUpDown7" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown7" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(3495, 856)
 
-[node name="Moving_Platform9" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform9" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(3546, 580)
 
-[node name="Moving_Platform10" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform10" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(5943, 1072)
 
-[node name="Moving_PlatformUpDown8" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown8" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(6323, 1108)
 
-[node name="Moving_PlatformUpDown9" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown9" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(5931, 1111)
 
-[node name="Moving_Platform11" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform11" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(5989, 836)
 
-[node name="Moving_PlatformUpDown10" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown10" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(6430, 817)
 
-[node name="Moving_Platform12" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform12" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(6146, 541)
 
-[node name="Moving_Platform13" parent="." instance=ExtResource("7_t6t47")]
+[node name="Moving_Platform13" parent="Platforms" instance=ExtResource("7_t6t47")]
 position = Vector2(6818, 927)
 
-[node name="Moving_PlatformUpDown11" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown11" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(7230, 925)
 
-[node name="Moving_PlatformUpDown12" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown12" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(7293, 785)
 
-[node name="Moving_PlatformUpDown13" parent="." instance=ExtResource("8_ugux6")]
+[node name="Moving_PlatformUpDown13" parent="Platforms" instance=ExtResource("8_ugux6")]
 position = Vector2(7347, 595)

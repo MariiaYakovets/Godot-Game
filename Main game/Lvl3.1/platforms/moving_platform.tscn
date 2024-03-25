@@ -53,7 +53,7 @@ curve = SubResource("Curve2D_cs6xs")
 script = ExtResource("1_okb5t")
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
-position = Vector2(496, 257)
+position = Vector2(485, 256)
 rotation = 3.14159
 
 [node name="Pl2" type="Sprite2D" parent="AnimatableBody2D"]
@@ -68,7 +68,7 @@ rotation = -3.14159
 shape = SubResource("RectangleShape2D_33fch")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2(496, 257)
+position = Vector2(485, 256)
 rotation = 3.14159
 rotates = false
 

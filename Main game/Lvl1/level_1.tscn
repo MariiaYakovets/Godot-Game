@@ -380,9 +380,6 @@ position = Vector2(0, 4.75)
 scale = Vector2(0.21, 0.2225)
 texture = ExtResource("12_5vpw0")
 
-[node name="Player" parent="." instance=ExtResource("3_s5mkt")]
-position = Vector2(2642, 418)
-
 [node name="Lvl1" parent="." instance=ExtResource("5_lo0es")]
 position = Vector2(15, -88)
 
@@ -508,7 +505,7 @@ position = Vector2(1821, 350)
 farmer_amination = "green_farmer"
 
 [node name="r_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
-position = Vector2(2600, 474)
+position = Vector2(2601, 482)
 farmer_amination = "red_farmer"
 
 [node name="r_farmer6" parent="Mobs" instance=ExtResource("17_f71tc")]
@@ -654,3 +651,6 @@ position = Vector2(6084, 647)
 
 [node name="bread9" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(7558, 474)
+
+[node name="Player2" parent="." instance=ExtResource("3_s5mkt")]
+position = Vector2(2682, 460)
