@@ -1,26 +1,22 @@
-[gd_scene load_steps=19 format=3 uid="uid://bbseg340rsohi"]
+[gd_scene load_steps=16 format=3 uid="uid://bbseg340rsohi"]
 
-[ext_resource type="Texture2D" uid="uid://btelu2kak4xr0" path="res://Main game/Lvl1/enemy/Farmer with fork2 500x500.png" id="1_qrcag"]
 [ext_resource type="Script" path="res://Main game/Lvl1/enemy/farmer.gd" id="1_u17gg"]
-[ext_resource type="Texture2D" uid="uid://jwb7p0xtx658" path="res://Main game/Lvl1/enemy/Farmer with fork 500x500.png" id="2_kmpcj"]
-[ext_resource type="Texture2D" uid="uid://d27w4d1vn7pig" path="res://Main game/Lvl1/enemy/Farmer in green coat2 500x500.png" id="4_cnvfb"]
-[ext_resource type="Texture2D" uid="uid://c111h3ym244oi" path="res://Main game/Lvl1/enemy/Farmer in green coat 500x500.png" id="5_ewkef"]
-[ext_resource type="Texture2D" uid="uid://c0n5nx5vjvrbj" path="res://Main game/Lvl1/enemy/Farmer in red coat2 500x500.png" id="6_3ae3k"]
-[ext_resource type="Texture2D" uid="uid://b1cuxune1lgi3" path="res://Main game/Lvl1/enemy/Farmer in red coat 500x500.png" id="7_aouik"]
+[ext_resource type="Texture2D" uid="uid://bchyyu5ldg4dk" path="res://Main game/Lvl1/enemy/Farmer with fork2.png" id="2_j0tr6"]
+[ext_resource type="Texture2D" uid="uid://clua3nrtkr06w" path="res://Main game/Lvl1/enemy/Farmer with fork.png" id="3_r65bn"]
+[ext_resource type="Texture2D" uid="uid://c58jpqwqhud5p" path="res://Main game/Lvl1/enemy/Farmer in green coat2.png" id="4_jogdf"]
+[ext_resource type="Texture2D" uid="uid://bp7kuaq875r1w" path="res://Main game/Lvl1/enemy/Farmer in green coat.png" id="5_pxabi"]
+[ext_resource type="Texture2D" uid="uid://dglcsedctmj7u" path="res://Main game/Lvl1/enemy/Farmer in red coat2.png" id="6_tlbph"]
+[ext_resource type="Texture2D" uid="uid://cdfc8qpyy3x3d" path="res://Main game/Lvl1/enemy/Farmer in red coat.png" id="7_xshme"]
 [ext_resource type="Texture2D" uid="uid://cmhm6ldpfg504" path="res://Main game/health/progress_bar.png" id="8_mguno"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_mijn5"]
-atlas = ExtResource("4_cnvfb")
-region = Rect2(0, 0, 500, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bwu1l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_qrcag")
+"texture": ExtResource("2_j0tr6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_kmpcj")
+"texture": ExtResource("3_r65bn")
 }],
 "loop": true,
 "name": &"fork_farmer",
@@ -28,10 +24,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mijn5")
+"texture": ExtResource("4_jogdf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_ewkef")
+"texture": ExtResource("5_pxabi")
 }],
 "loop": true,
 "name": &"green_farmer",
@@ -39,22 +35,53 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_3ae3k")
+"texture": ExtResource("6_tlbph")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_aouik")
+"texture": ExtResource("7_xshme")
 }],
 "loop": true,
 "name": &"red_farmer",
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_mh3cq"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j8d8"]
+size = Vector2(13, 26)
+
+[sub_resource type="Animation" id="Animation_n7lfn"]
+resource_name = "green_farmer"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"green_farmer"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_4netg"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D:frame")
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -63,112 +90,15 @@ tracks/0/keys = {
 "update": 1,
 "values": [1]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"green_farmer"]
-}
 
-[sub_resource type="Animation" id="Animation_gegxv"]
-resource_name = "fork_farmer"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"fork_farmer"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_6bivi"]
-resource_name = "green_farmer"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"green_farmer"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_q7erq"]
-resource_name = "idle"
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"idle"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.6, 0.8, 1.2, 1.4, 1.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 0, 1, 0, 1, 0]
-}
-
-[sub_resource type="Animation" id="Animation_qkj05"]
+[sub_resource type="Animation" id="Animation_vtgvp"]
 resource_name = "red_farmer"
-length = 0.8
+length = 0.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../AnimatedSprite2D:animation")
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -180,7 +110,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../AnimatedSprite2D:frame")
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -190,57 +120,77 @@ tracks/1/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ba7ek"]
-_data = {
-"RESET": SubResource("Animation_mh3cq"),
-"fork_farmer": SubResource("Animation_gegxv"),
-"green_farmer": SubResource("Animation_6bivi"),
-"idle": SubResource("Animation_q7erq"),
-"red_farmer": SubResource("Animation_qkj05")
+[sub_resource type="Animation" id="Animation_kg1gc"]
+resource_name = "fork_farmer"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"fork_farmer"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j8d8"]
-size = Vector2(13, 26)
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_08x8n"]
+_data = {
+"RESET": SubResource("Animation_4netg"),
+"fork_farmer": SubResource("Animation_kg1gc"),
+"green_farmer": SubResource("Animation_n7lfn"),
+"red_farmer": SubResource("Animation_vtgvp")
+}
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_plh40"]
-size = Vector2(13, 27)
-
-[node name="farmer" type="CharacterBody2D"]
+[node name="farmer" type="CharacterBody2D" groups=["Enemies"]]
 script = ExtResource("1_u17gg")
+hp = 10
+f_damage = 5
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(6, -38)
+position = Vector2(7, -41)
 scale = Vector2(0.310375, 0.28025)
 sprite_frames = SubResource("SpriteFrames_bwu1l")
 animation = &"green_farmer"
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("")
-libraries = {
-"": SubResource("AnimationLibrary_ba7ek")
-}
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, 1)
 shape = SubResource("RectangleShape2D_4j8d8")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_08x8n")
+}
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 texture_filter = 1
-offset_left = -18.0
-offset_top = -27.0
-offset_right = 149.0
-offset_bottom = 14.0
+anchors_preset = -1
+anchor_left = 0.075
+anchor_top = -2.05
+anchor_right = 0.075
+anchor_bottom = -2.05
+offset_left = -16.0
+offset_top = -33.0
+offset_right = 151.0
+offset_bottom = 8.0
 scale = Vector2(0.215, 0.245)
-texture_under = ExtResource("8_mguno")
-
-[node name="damage" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
-position = Vector2(1.5, 1.5)
-shape = SubResource("RectangleShape2D_plh40")
-
-[connection signal="body_entered" from="damage" to="." method="_on_damage_body_entered"]
+max_value = 30.0
+value = 30.0
+texture_progress = ExtResource("8_mguno")
+metadata/_edit_use_anchors_ = true

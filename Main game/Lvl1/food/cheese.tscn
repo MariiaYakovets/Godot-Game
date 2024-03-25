@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://c14wi2cs5ijco"]
+[gd_scene load_steps=6 format=3 uid="uid://c8u2f52bdplvn"]
 
-[ext_resource type="Script" path="res://Main game/Lvl1/food/cheese.gd" id="1_56t7s"]
+[ext_resource type="Script" path="res://Main game/Lvl1/food/food.gd" id="1_oyks2"]
 [ext_resource type="Texture2D" uid="uid://b45nujufbdxbc" path="res://Main game/Lvl1/food/sir.png" id="2_v2356"]
 
 [sub_resource type="Animation" id="Animation_gfclj"]
@@ -42,7 +42,7 @@ _data = {
 
 [node name="cheese" type="Area2D" groups=["Food"]]
 rotation = 0.0174533
-script = ExtResource("1_56t7s")
+script = ExtResource("1_oyks2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

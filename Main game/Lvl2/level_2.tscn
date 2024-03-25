@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=35 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="PackedScene" uid="uid://dlfuq3y7an6p7" path="res://Main game/Lvl2/trees/back_tree.tscn" id="1_4q430"]
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl2/tilemap/liana.png" id="2_2cxvi"]
@@ -28,7 +28,6 @@
 [ext_resource type="PackedScene" uid="uid://b47pvw3lepf4g" path="res://Main game/Lvl2/food/mushroom.tscn" id="20_kemd5"]
 [ext_resource type="PackedScene" uid="uid://car3p2bqq2vo3" path="res://Main game/Lvl2/food/muchomor.tscn" id="21_vk4pk"]
 [ext_resource type="PackedScene" uid="uid://2ugk6g28nojt" path="res://Main game/Lvl2/food/plural_much.tscn" id="22_ne04x"]
-[ext_resource type="PackedScene" uid="uid://c4sx2453knyf8" path="res://Main game/Lvl1/boosts/long_boost.tscn" id="27_66aba"]
 [ext_resource type="PackedScene" uid="uid://wunttceuj5mj" path="res://Main game/Lvl2/trees/back_tree_3.tscn" id="29_1e08u"]
 [ext_resource type="PackedScene" uid="uid://c6ayp85wm41mt" path="res://Main game/Lvl2/platforms/disap_platform.tscn" id="30_s32qj"]
 [ext_resource type="Texture2D" uid="uid://bt4jllud4px5o" path="res://Main game/main screen/main screen tempotaty bg.png" id="31_0r86e"]
@@ -67,7 +66,7 @@ position = Vector2(18982, 329)
 position = Vector2(20039, 333)
 
 [node name="Player" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(3057, 441)
+position = Vector2(2888, 434)
 
 [node name="liana curtains" type="Node2D" parent="."]
 
@@ -1309,14 +1308,15 @@ metadata/_edit_lock_ = true
 position = Vector2(952, 511)
 distance = 250
 patrol_speed = 30
-damage = 2
-hp = 10
+damage = 15
+hp = 100
 
 [node name="Kikimor2" parent="." instance=ExtResource("12_k6a36")]
 position = Vector2(3707, 716)
 distance = 500
 patrol_speed = 60
 chase_speed = 210
+hp = 100
 
 [node name="platforms" type="Node2D" parent="."]
 position = Vector2(995, 542)
@@ -1610,22 +1610,6 @@ y_multiplier = 1.8
 position = Vector2(10537, -94)
 y_multiplier = 2.0
 
-[node name="long boost" parent="boosts" instance=ExtResource("27_66aba")]
-position = Vector2(2611, 202)
-y_multiplier = 1.7
-
-[node name="long boost2" parent="boosts" instance=ExtResource("27_66aba")]
-position = Vector2(2924, 203)
-y_multiplier = 1.7
-
-[node name="long boost3" parent="boosts" instance=ExtResource("27_66aba")]
-position = Vector2(3127, 202)
-y_multiplier = 1.7
-
-[node name="long boost4" parent="boosts" instance=ExtResource("27_66aba")]
-position = Vector2(2396, 201)
-y_multiplier = 1.8
-
 [node name="food" type="Node2D" parent="."]
 position = Vector2(9153, 389)
 rotation = 0.0698132
@@ -1860,9 +1844,10 @@ position = Vector2(20731, 380)
 [node name="VaterDu" parent="." instance=ExtResource("34_oqrqb")]
 position = Vector2(3423, 460)
 chase_speed = 100
-hp = 3
+hp = 50
 
 [node name="VaterDu2" parent="." instance=ExtResource("34_oqrqb")]
-position = Vector2(3710, 380)
+position = Vector2(3910, 375)
+hp = 50
 
 [connection signal="body_entered" from="button for pl" to="disap_platform" method="_on_button_for_pl_body_entered"]

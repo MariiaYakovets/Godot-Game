@@ -7,6 +7,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var damage : int
 @onready var player = get_parent().get_node("Player")
 @export var hp : int
+@onready var HPbar = $TextureProgressBar
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -35,7 +36,7 @@ func _process(delta):
 		#print(collision_body)
 		if collision_body:
 			if collision_body.is_in_group('player'):
-				collision_body.update_hp(damage)
+				collision_body.reduce_hp(damage)
 				
 	if not flag_chase :
 		$AnimatedSprite2D.play('jump')
@@ -60,3 +61,16 @@ func _on_chase_body_entered(body):
 		return
 	flag_chase = true
 	chase()
+
+
+func _on_chase_body_exited(body):
+	if body.is_in_group('player'):
+		flag_chase = false
+		velocity.x = 0
+		
+func reduce_hp(damage):
+	hp -= damage
+	HPbar.value = hp
+	print(hp)
+	if hp <= 0:
+		queue_free()

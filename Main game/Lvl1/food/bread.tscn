@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://mm34b7a3r6x6"]
 
 [ext_resource type="Texture2D" uid="uid://d2c5uejkh0nqk" path="res://Main game/Lvl1/food/chleb.png" id="1_1acd5"]
-[ext_resource type="Script" path="res://Main game/Lvl1/food/bread.gd" id="1_n24w5"]
+[ext_resource type="Script" path="res://Main game/Lvl1/food/food.gd" id="1_kyx4x"]
 
 [sub_resource type="Animation" id="Animation_gfclj"]
 length = 0.001
@@ -42,7 +42,7 @@ _data = {
 
 [node name="bread" type="Area2D" groups=["Food"]]
 rotation = 0.0174533
-script = ExtResource("1_n24w5")
+script = ExtResource("1_kyx4x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -3,14 +3,13 @@
 [ext_resource type="Script" path="res://Main game/Lvl1/boosts/jump_boost.gd" id="1_frhl0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_agmig"]
-size = Vector2(59.5, 10.5)
+size = Vector2(25, 10.25)
 
 [node name="jump boost" type="Area2D"]
 position = Vector2(1269, 579)
 script = ExtResource("1_frhl0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_agmig")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

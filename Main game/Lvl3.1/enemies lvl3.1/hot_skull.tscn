@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://yybnmw7q073r"]
+[gd_scene load_steps=13 format=3 uid="uid://cia1yr3ccir3f"]
 
 [ext_resource type="Texture2D" uid="uid://dvmyhrmieyslx" path="res://Main game/Lvl3.1/enemies lvl3.1/IMG_8194-removebg-preview.png" id="1_ssi60"]
 [ext_resource type="Texture2D" uid="uid://buiomwyb5y5yw" path="res://Main game/Lvl3.1/enemies lvl3.1/IMG_8195-removebg-preview.png" id="2_4s0qe"]
@@ -38,8 +38,58 @@ animations = [{
 }],
 "loop": true,
 "name": &"skull spin",
-"speed": 15.0
+"speed": 7.0
 }]
+
+[sub_resource type="Animation" id="Animation_6u77w"]
+resource_name = "skull"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation skull:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"skull spin"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("animation skull:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(2, 2, 2, 2, 2, 2, 2, 2),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_2o8ea"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("animation skull:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vrxem"]
+_data = {
+"RESET": SubResource("Animation_2o8ea"),
+"skull": SubResource("Animation_6u77w")
+}
 
 [node name="hot skull" type="CharacterBody2D"]
 position = Vector2(-6, -2)
@@ -49,9 +99,15 @@ position = Vector2(0.700073, -5.49998)
 scale = Vector2(0.104356, 0.100442)
 sprite_frames = SubResource("SpriteFrames_ujn3o")
 animation = &"skull spin"
-frame = 2
-frame_progress = 0.49655
+autoplay = "skull spin"
+frame = 1
 
 [node name="collision skull" type="CollisionPolygon2D" parent="."]
 position = Vector2(-625.3, -217.5)
 polygon = PackedVector2Array(620, 232, 622, 233, 624, 234, 626, 233, 629, 232, 631, 232, 632, 231, 633, 229, 634, 227, 636, 224, 637, 222, 637, 220, 638, 217, 639, 215, 637, 212, 636, 211, 634, 214, 633, 214, 631, 212, 631, 210, 632, 207, 633, 197, 635, 191, 634, 189, 632, 189, 631, 190, 630, 192, 630, 193, 630, 195, 630, 197, 631, 200, 630, 203, 630, 205, 630, 206, 627, 204, 627, 206, 626, 208, 625, 208, 623, 205, 623, 201, 621, 199, 621, 198, 615, 190, 613, 191, 614, 193, 615, 196, 618, 198, 620, 202, 618, 205, 618, 208, 621, 212, 619, 212, 618, 211, 617, 214, 616, 213, 614, 211, 614, 209, 616, 208, 615, 206, 613, 208, 611, 210, 610, 213, 610, 215, 610, 217, 611, 220, 613, 212, 614, 216, 615, 217, 616, 219, 616, 221, 615, 223, 615, 224, 616, 227, 617, 229, 617, 230)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vrxem")
+}
+autoplay = "skull"

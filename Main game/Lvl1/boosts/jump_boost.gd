@@ -2,6 +2,7 @@ extends Area2D
 
 @export var x_multiplier: float = 1
 @export var y_multiplier: float = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://car3p2bqq2vo3"]
 
-[ext_resource type="Script" path="res://Main game/Lvl2/food/muchomor.gd" id="1_dqjr8"]
+[ext_resource type="Script" path="res://Main game/Lvl1/food/food.gd" id="1_f5fq5"]
 [ext_resource type="Texture2D" uid="uid://vbpsxhnyhurp" path="res://Main game/Lvl2/food/muchomor.png" id="1_reuay"]
 
 [sub_resource type="Animation" id="Animation_kv01f"]
@@ -45,7 +45,7 @@ _data = {
 
 [node name="muchomor" type="Area2D" groups=["Food"]]
 rotation = 0.0698132
-script = ExtResource("1_dqjr8")
+script = ExtResource("1_f5fq5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

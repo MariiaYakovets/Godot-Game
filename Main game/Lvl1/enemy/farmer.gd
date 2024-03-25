@@ -1,11 +1,12 @@
 extends CharacterBody2D
 @export_enum("green_farmer", "fork_farmer", "red_farmer") var farmer_amination: String
 @export var hp: int
-@export var damage: int = 1
+@export var f_damage: int = 1
 var direction = 1
 @onready var player = get_node("../../Player")
 var isHurt: bool = false
-@onready var bullet = get_node('yellow_bullet')
+@onready var HPbar = $TextureProgressBar
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#getting AnimationPlayer node with animations
@@ -34,16 +35,14 @@ func _physics_process(delta):
 		if not collision_body:
 			break
 		if collision_body.is_in_group('player'):
-			collision_body.update_hp(damage)
+			collision_body.reduce_hp(f_damage)
 	move_and_slide()
-func update_hp(hp: int):
-	pass
+	
+func reduce_hp(damage):
+	hp -= damage
+	HPbar.value = hp
+	print(hp)
+	if hp <= 0:
+		queue_free()
+	
 
-
-func _on_damage_body_entered(body):
-	if body.is_in_group('Bullets'):
-		isHurt = true
-
-func damage_from_bullet():
-	if isHurt :
-		hp -= bullet.damage

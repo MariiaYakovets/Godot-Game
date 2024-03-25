@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://2ugk6g28nojt"]
 
 [ext_resource type="Texture2D" uid="uid://cqo3x4ftf0eyn" path="res://Main game/Lvl2/food/zborishe_kukoldov.png" id="1_a8umt"]
-[ext_resource type="Script" path="res://Main game/Lvl2/food/plural_much.gd" id="1_hmoau"]
+[ext_resource type="Script" path="res://Main game/Lvl1/food/food.gd" id="1_yrwac"]
 
 [sub_resource type="Animation" id="Animation_kv01f"]
 length = 0.001
@@ -45,7 +45,7 @@ _data = {
 
 [node name="plural_much" type="Area2D" groups=["Food"]]
 rotation = 0.0698132
-script = ExtResource("1_hmoau")
+script = ExtResource("1_yrwac")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
