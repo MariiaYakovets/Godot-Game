@@ -1,41 +1,34 @@
-[gd_scene load_steps=13 format=3 uid="uid://cff58e024vxby"]
+[gd_scene load_steps=12 format=3 uid="uid://cff58e024vxby"]
 
 [ext_resource type="Script" path="res://Main game/Lvl2/enemies/enemies lvl2/mermaid_1.gd" id="1_y6xjp"]
-[ext_resource type="Texture2D" uid="uid://peykv33m162n" path="res://Main game/Lvl2/enemies/Swamp/Mermaid1.png" id="2_df2om"]
+[ext_resource type="Texture2D" uid="uid://bsjose1cjhinj" path="res://Main game/Lvl2/enemies/Swamp/mermaid (no action).png" id="2_bfa36"]
+[ext_resource type="Texture2D" uid="uid://coiakgh50v01j" path="res://Main game/Lvl2/enemies/Swamp/Mermaid(redraw).png" id="3_0l31a"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_serfb"]
-atlas = ExtResource("2_df2om")
-region = Rect2(1200, 0, 200, 200)
+[sub_resource type="AtlasTexture" id="AtlasTexture_4q3ms"]
+atlas = ExtResource("3_0l31a")
+region = Rect2(0, 0, 203, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xpyt0"]
-atlas = ExtResource("2_df2om")
-region = Rect2(0, 0, 200, 200)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5j0iv"]
+atlas = ExtResource("3_0l31a")
+region = Rect2(203, 0, 203, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jf71w"]
-atlas = ExtResource("2_df2om")
-region = Rect2(200, 0, 200, 200)
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnx3g"]
+atlas = ExtResource("3_0l31a")
+region = Rect2(406, 0, 203, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_blun5"]
-atlas = ExtResource("2_df2om")
-region = Rect2(400, 0, 200, 200)
+[sub_resource type="AtlasTexture" id="AtlasTexture_8p23u"]
+atlas = ExtResource("3_0l31a")
+region = Rect2(609, 0, 203, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l36nt"]
-atlas = ExtResource("2_df2om")
-region = Rect2(600, 0, 200, 200)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yxagj"]
-atlas = ExtResource("2_df2om")
-region = Rect2(800, 0, 200, 200)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_klaju"]
-atlas = ExtResource("2_df2om")
-region = Rect2(1000, 0, 200, 200)
+[sub_resource type="AtlasTexture" id="AtlasTexture_tg4rs"]
+atlas = ExtResource("3_0l31a")
+region = Rect2(812, 0, 203, 200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jbglo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_serfb")
+"texture": ExtResource("2_bfa36")
 }],
 "loop": true,
 "name": &"idle",
@@ -43,22 +36,19 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xpyt0")
+"texture": SubResource("AtlasTexture_4q3ms")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jf71w")
+"texture": SubResource("AtlasTexture_5j0iv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_blun5")
+"texture": SubResource("AtlasTexture_dnx3g")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l36nt")
+"texture": SubResource("AtlasTexture_8p23u")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_yxagj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_klaju")
+"texture": SubResource("AtlasTexture_tg4rs")
 }],
 "loop": true,
 "name": &"jump",

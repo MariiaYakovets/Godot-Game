@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func _on_restart_pressed():
-	get_tree().change_scene_to_file("res://Main game/Lvl1/level_1.tscn")
+	get_tree().change_scene_to_file("res://Main game/main screen/main_game_screen.tscn")

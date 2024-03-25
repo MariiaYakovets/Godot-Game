@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dbmnlb0mwp468"]
+[gd_scene load_steps=11 format=3 uid="uid://dbmnlb0mwp468"]
 
 [ext_resource type="Texture2D" uid="uid://blpkl1cghvjks" path="res://Main game/Lvl2/enemies/Swamp/Kikimor.png" id="2_1y2xm"]
+[ext_resource type="Texture2D" uid="uid://cmhm6ldpfg504" path="res://Main game/health/progress_bar.png" id="2_2xocx"]
 
 [sub_resource type="GDScript" id="GDScript_ett8v"]
 script/source = "extends CharacterBody2D
@@ -12,6 +13,7 @@ var gravity = ProjectSettings.get_setting(\"physics/2d/default_gravity\")
 @export var chase_speed: int
 @export var damage: int
 @export var hp: int
+@onready var HPbar = $TextureProgressBar
 var end_x
 var start_x
 var player
@@ -49,7 +51,7 @@ func _physics_process(delta):
 		#if the body is a player - do damage
 		if collision_body:
 			if collision_body.is_in_group('player'):
-				collision_body.update_hp(damage)
+				collision_body.reduce_hp(damage)
 	move_and_slide()
 	#print(self.position.x)
 
@@ -83,6 +85,13 @@ func _on_player_detection_body_exited(body):
 	if flag_chase == true:
 		if body.is_in_group('player'):
 			flag_chase = false
+			
+func reduce_hp(damage):
+	hp -= damage
+	HPbar.value = hp
+	print(hp)
+	if hp <= 0:
+		queue_free()
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0ukm0"]
@@ -143,12 +152,12 @@ autoplay = "Kikimor"
 frame_progress = 0.252138
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
 position = Vector2(-0.999999, 5)
 scale = Vector2(1.93612, 1.83741)
 polygon = PackedVector2Array(-14, -20, -5, -21, 9, -13, 12, -8, 11, 3, 11, 13, 10.8464, 17.4158, -4.30294, 16.2597, -11.8794, 17.4158, -13.9454, 5.44244, -14.4619, -3.26547, -16, -9, -17, -16)
 
 [node name="player_detection" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_detection"]
 position = Vector2(28.5, 5)
@@ -157,10 +166,22 @@ shape = SubResource("RectangleShape2D_6rhrg")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="damage" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="damage"]
 position = Vector2(-4, 1)
 shape = SubResource("CapsuleShape2D_txbt2")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+texture_filter = 1
+offset_left = -21.0
+offset_top = -54.0
+offset_right = 146.0
+offset_bottom = -13.0
+scale = Vector2(0.215, 0.245)
+value = 100.0
+texture_progress = ExtResource("2_2xocx")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="player_detection" to="." method="_on_player_detection_body_entered"]
 [connection signal="body_exited" from="player_detection" to="." method="_on_player_detection_body_exited"]

@@ -28,7 +28,6 @@
 [ext_resource type="PackedScene" uid="uid://b47pvw3lepf4g" path="res://Main game/Lvl2/food/mushroom.tscn" id="20_kemd5"]
 [ext_resource type="PackedScene" uid="uid://car3p2bqq2vo3" path="res://Main game/Lvl2/food/muchomor.tscn" id="21_vk4pk"]
 [ext_resource type="PackedScene" uid="uid://2ugk6g28nojt" path="res://Main game/Lvl2/food/plural_much.tscn" id="22_ne04x"]
-[ext_resource type="PackedScene" uid="uid://c4sx2453knyf8" path="res://Main game/Lvl1/boosts/long_boost.tscn" id="27_66aba"]
 [ext_resource type="PackedScene" uid="uid://wunttceuj5mj" path="res://Main game/Lvl2/trees/back_tree_3.tscn" id="29_1e08u"]
 [ext_resource type="PackedScene" uid="uid://c6ayp85wm41mt" path="res://Main game/Lvl2/platforms/disap_platform.tscn" id="30_s32qj"]
 [ext_resource type="Texture2D" uid="uid://bt4jllud4px5o" path="res://Main game/main screen/main screen tempotaty bg.png" id="31_0r86e"]
@@ -98,6 +97,18 @@ radius = 17.6992
 height = 124.0
 
 [node name="Level_2" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(-2210.94, -470.319)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1073.85, 0)
+
+[node name="Pixil-frame-0(12)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color(0.427451, 0.631373, 0.639216, 1)
+position = Vector2(532, 418.187)
+scale = Vector2(1.074, 1.11665)
+texture = ExtResource("5_ep0ax")
 
 [node name="back trees" type="Node2D" parent="."]
 
@@ -298,25 +309,13 @@ scale = Vector2(1.29379, 1.02157)
 texture = ExtResource("5_saxcq")
 
 [node name="Merm_1" parent="." instance=ExtResource("2_sugcb")]
-position = Vector2(6854, -157)
+position = Vector2(6845, -159)
 
 [node name="Merm_2" parent="." instance=ExtResource("3_n85jb")]
 position = Vector2(6838, 635)
 
 [node name="Lvl2" parent="." instance=ExtResource("2_w80ak")]
 position = Vector2(-18, 148)
-
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-scroll_offset = Vector2(-2210.94, -470.319)
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1073.85, 0)
-
-[node name="Pixil-frame-0(12)" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-modulate = Color(0.427451, 0.631373, 0.639216, 1)
-position = Vector2(532, 418.187)
-scale = Vector2(1.074, 1.11665)
-texture = ExtResource("5_ep0ax")
 
 [node name="Lianas" type="Node2D" parent="."]
 
@@ -1368,14 +1367,15 @@ metadata/_edit_lock_ = true
 position = Vector2(952, 511)
 distance = 250
 patrol_speed = 30
-damage = 2
-hp = 10
+damage = 15
+hp = 100
 
 [node name="Kikimor2" parent="." instance=ExtResource("12_k6a36")]
 position = Vector2(3707, 716)
 distance = 500
 patrol_speed = 60
 chase_speed = 210
+hp = 100
 
 [node name="platforms" type="Node2D" parent="."]
 position = Vector2(995, 542)
@@ -1669,22 +1669,6 @@ y_multiplier = 1.8
 position = Vector2(10537, -94)
 y_multiplier = 2.0
 
-[node name="long boost" parent="boosts" instance=ExtResource("27_66aba")]
-position = Vector2(2611, 202)
-y_multiplier = 1.7
-
-[node name="long boost2" parent="boosts" instance=ExtResource("27_66aba")]
-position = Vector2(2924, 203)
-y_multiplier = 1.7
-
-[node name="long boost3" parent="boosts" instance=ExtResource("27_66aba")]
-position = Vector2(3127, 202)
-y_multiplier = 1.7
-
-[node name="long boost4" parent="boosts" instance=ExtResource("27_66aba")]
-position = Vector2(2396, 201)
-y_multiplier = 1.8
-
 [node name="jump boost54" parent="boosts" instance=ExtResource("19_w765i")]
 position = Vector2(15527, 111)
 x_multiplier = 1.2
@@ -1924,10 +1908,11 @@ position = Vector2(20731, 380)
 [node name="VaterDu" parent="." instance=ExtResource("34_oqrqb")]
 position = Vector2(3423, 460)
 chase_speed = 100
-hp = 3
+hp = 50
 
 [node name="VaterDu2" parent="." instance=ExtResource("34_oqrqb")]
-position = Vector2(3710, 380)
+position = Vector2(3910, 375)
+hp = 50
 
 [node name="Penyok" type="Sprite2D" parent="."]
 position = Vector2(16189, 315)

@@ -1,5 +1,5 @@
-extends Area2D
-@export var hp_cost: int
+extends Node
+@export var hp_value: int 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,5 +12,6 @@ func _process(delta):
 
 
 func _on_body_entered(body):
-	if body.is_in_group('player'):
+	if body.is_in_group("player"):
+		body.increase_hp(hp_value)
 		queue_free()

@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://clylld6yyi3ma" path="res://Main game/Lvl1/enemy/wise_man.tscn" id="14_sf4wv"]
 [ext_resource type="PackedScene" uid="uid://bbseg340rsohi" path="res://Main game/Lvl1/enemy/farmer.tscn" id="17_f71tc"]
 [ext_resource type="Texture2D" uid="uid://djv3jewuc7p6f" path="res://Main game/Lvl1/signs/pixil-frame-0 (12).png" id="18_41ws8"]
-[ext_resource type="PackedScene" uid="uid://c14wi2cs5ijco" path="res://Main game/Lvl1/food/cheese.tscn" id="23_gh4c8"]
+[ext_resource type="PackedScene" uid="uid://c8u2f52bdplvn" path="res://Main game/Lvl1/food/cheese.tscn" id="23_gh4c8"]
 [ext_resource type="PackedScene" uid="uid://mm34b7a3r6x6" path="res://Main game/Lvl1/food/bread.tscn" id="24_t5ov3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gqd8"]
@@ -503,54 +503,67 @@ speed = 1
 [node name="g_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(1821, 350)
 farmer_amination = "green_farmer"
-
-[node name="r_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
-position = Vector2(2601, 482)
-farmer_amination = "red_farmer"
+hp = 30
 
 [node name="r_farmer6" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(1815, 432)
 farmer_amination = "red_farmer"
+hp = 30
 
 [node name="g_farmer2" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(2248, 448)
 farmer_amination = "green_farmer"
+hp = 30
 
 [node name="g_farmer3" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(5233, 497)
 farmer_amination = "green_farmer"
+hp = 30
 
 [node name="r_farmer2" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(5357, 496)
 farmer_amination = "red_farmer"
+hp = 30
 
 [node name="r_farmer5" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(5034, 516)
 farmer_amination = "red_farmer"
+hp = 30
 
 [node name="g_farmer4" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(6239, 271)
 farmer_amination = "green_farmer"
+hp = 30
 
 [node name="g_farmer5" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(5946, 360)
 farmer_amination = "green_farmer"
+hp = 30
 
 [node name="r_farmer3" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(6512, 216)
 farmer_amination = "red_farmer"
+hp = 30
 
 [node name="r_farmer4" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(7349, 404)
 farmer_amination = "red_farmer"
+hp = 30
 
 [node name="f_farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(3274, 519)
 farmer_amination = "fork_farmer"
+hp = 30
 
 [node name="f_farmer2" parent="Mobs" instance=ExtResource("17_f71tc")]
 position = Vector2(4818, 428)
 farmer_amination = "fork_farmer"
+hp = 30
+
+[node name="farmer" parent="Mobs" instance=ExtResource("17_f71tc")]
+position = Vector2(2604, 468)
+farmer_amination = "red_farmer"
+hp = 30
 
 [node name="boosts" type="Node2D" parent="."]
 
@@ -615,42 +628,52 @@ new_position_y = 460
 
 [node name="cheese" parent="food_pot" instance=ExtResource("23_gh4c8")]
 position = Vector2(1442, 649)
+hp_value = 5
 
 [node name="bread" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(2620, 612)
+hp_value = 5
 
 [node name="bread2" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(2964, 454)
+hp_value = 5
 
 [node name="bread3" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(2600, 110)
+hp_value = 5
 
 [node name="cheese2" parent="food_pot" instance=ExtResource("23_gh4c8")]
 position = Vector2(3680, 212)
+hp_value = 5
 
 [node name="bread4" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(4059, 151)
+hp_value = 5
 
 [node name="bread5" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(4698, 521)
+hp_value = 5
 
 [node name="bread6" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(5953, 296)
+hp_value = 5
 
 [node name="cheese3" parent="food_pot" instance=ExtResource("23_gh4c8")]
 position = Vector2(6420, 432)
+hp_value = 5
 
 [node name="cheese4" parent="food_pot" instance=ExtResource("23_gh4c8")]
 position = Vector2(6225, 99)
+hp_value = 5
 
 [node name="bread7" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(6522, 485)
+hp_value = 5
 
 [node name="bread8" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(6084, 647)
+hp_value = 5
 
 [node name="bread9" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(7558, 474)
-
-[node name="Player2" parent="." instance=ExtResource("3_s5mkt")]
-position = Vector2(2682, 460)
+hp_value = 5

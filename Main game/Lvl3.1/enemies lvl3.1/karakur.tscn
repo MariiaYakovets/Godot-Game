@@ -1,6 +1,8 @@
-[gd_scene load_steps=27 format=3 uid="uid://qarroidxuwsr"]
+[gd_scene load_steps=29 format=3 uid="uid://qarroidxuwsr"]
 
 [ext_resource type="Texture2D" uid="uid://d0xsxn6c5ofsi" path="res://Main game/Lvl3.1/enemies lvl3.1/krakur.png" id="1_k0ekl"]
+[ext_resource type="Script" path="res://Main game/Lvl3.1/enemies lvl3.1/karakur.gd" id="1_yaxy1"]
+[ext_resource type="Texture2D" uid="uid://cmhm6ldpfg504" path="res://Main game/health/progress_bar.png" id="2_i7b10"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wjisa"]
 atlas = ExtResource("1_k0ekl")
@@ -219,26 +221,37 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_bm8r6"]
 radius = 67.082
 
-[node name="krakur" type="Node2D"]
+[node name="karakur" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="karakur" type="CharacterBody2D" parent="."]
+script = ExtResource("1_yaxy1")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="karakur"]
 polygon = PackedVector2Array(-20, -3, 0, -8, 32, 9, 34, 46, -2, 47, -19, 46, -13, 24, -23, 10)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="karakur"]
 sprite_frames = SubResource("SpriteFrames_rhggf")
 animation = &"run"
 frame = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="karakur"]
 libraries = {
 "": SubResource("AnimationLibrary_laa2t")
 }
 
-[node name="detect_player" type="Area2D" parent="CharacterBody2D"]
-visible = false
+[node name="detect_player" type="Area2D" parent="karakur"]
 texture_filter = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/detect_player"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="karakur/detect_player"]
 shape = SubResource("CircleShape2D_bm8r6")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+texture_filter = 1
+offset_left = -18.0
+offset_top = -34.0
+offset_right = 149.0
+offset_bottom = 7.0
+scale = Vector2(0.215, 0.245)
+value = 100.0
+texture_progress = ExtResource("2_i7b10")
+metadata/_edit_use_anchors_ = true

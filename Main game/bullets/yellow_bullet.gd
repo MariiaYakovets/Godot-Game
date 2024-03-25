@@ -25,8 +25,7 @@ func _process(delta):
 			queue_free()
 
 func damage_enemy(body):
-	body.hp -= damage
-	print('damage')
+	body.reduce_hp(damage)
 	queue_free()
 
 	

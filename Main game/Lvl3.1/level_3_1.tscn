@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://dccgfna5p47vc"]
 
-[ext_resource type="PackedScene" uid="uid://cjs64t4d30ia5" path="res://Main game/Lvl3.1/assets/tilemap/tilemap_lvl_3_1.tscn" id="2_0c0xc"]
-[ext_resource type="Texture2D" uid="uid://b17ikjdbrrh8d" path="res://Main game/Lvl3.1/assets/bg/edit volc.png" id="3_41bgc"]
-[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/player/player.tscn" id="3_xix4b"]
-[ext_resource type="Texture2D" uid="uid://c61e56xqxarc8" path="res://Main game/Lvl3.1/assets/bg/botoom.png" id="4_scamy"]
-[ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="5_3gynl"]
-[ext_resource type="PackedScene" uid="uid://djj7eeeb42stn" path="res://Main game/Lvl3.1/platforms/moving_platform.tscn" id="7_t6t47"]
-[ext_resource type="PackedScene" uid="uid://dbsuwpnn318mu" path="res://Main game/Lvl3.1/platforms/moving_platform_up_down.tscn" id="8_ugux6"]
-[ext_resource type="PackedScene" uid="uid://yybnmw7q073r" path="res://Main game/Lvl3.1/enemies lvl3.1/hot_skull.tscn" id="10_u66pd"]
+[ext_resource type="PackedScene" uid="uid://cjs64t4d30ia5" path="res://Main game/Lvl3.1/assets/tilemap/tilemap_lvl_3_1.tscn" id="1_vluyu"]
+[ext_resource type="Texture2D" uid="uid://b17ikjdbrrh8d" path="res://Main game/Lvl3.1/assets/bg/edit volc.png" id="2_yvc3o"]
+[ext_resource type="Texture2D" uid="uid://c61e56xqxarc8" path="res://Main game/Lvl3.1/assets/bg/botoom.png" id="3_6wle5"]
+[ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/player/player.tscn" id="4_2pbn3"]
+[ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="5_tyo0f"]
+[ext_resource type="PackedScene" uid="uid://cia1yr3ccir3f" path="res://Main game/Lvl3.1/enemies lvl3.1/hot_skull.tscn" id="6_d01vj"]
+[ext_resource type="PackedScene" uid="uid://djj7eeeb42stn" path="res://Main game/Lvl3.1/platforms/moving_platform.tscn" id="7_flk1k"]
+[ext_resource type="PackedScene" uid="uid://dbsuwpnn318mu" path="res://Main game/Lvl3.1/platforms/moving_platform_up_down.tscn" id="8_scj1p"]
 
 [sub_resource type="GDScript" id="GDScript_t2ssq"]
 script/source = "extends Node2D
@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 [node name="level3_1" type="Node2D"]
 script = SubResource("GDScript_t2ssq")
 
-[node name="tilemap_lvl3_1" parent="." instance=ExtResource("2_0c0xc")]
+[node name="tilemap_lvl3_1" parent="." instance=ExtResource("1_vluyu")]
 position = Vector2(4, 343)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -38,7 +38,7 @@ motion_mirroring = Vector2(1411.15, 0)
 modulate = Color(0.458824, 0.396078, 0.345098, 1)
 offset_right = 1412.0
 offset_bottom = 791.0
-texture = ExtResource("3_41bgc")
+texture = ExtResource("2_yvc3o")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -50,18 +50,18 @@ modulate = Color(0.458824, 0.396078, 0.345098, 1)
 offset_top = 790.0
 offset_right = 1413.0
 offset_bottom = 1159.0
-texture = ExtResource("4_scamy")
+texture = ExtResource("3_6wle5")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Player" parent="." instance=ExtResource("3_xix4b")]
+[node name="Player" parent="." instance=ExtResource("4_2pbn3")]
 position = Vector2(186, 363)
 
-[node name="jump boost" parent="." instance=ExtResource("5_3gynl")]
+[node name="jump boost" parent="." instance=ExtResource("5_tyo0f")]
 position = Vector2(503, 333)
 y_multiplier = 1.5
 
-[node name="jump boost2" parent="." instance=ExtResource("5_3gynl")]
+[node name="jump boost2" parent="." instance=ExtResource("5_tyo0f")]
 position = Vector2(816, 667)
 y_multiplier = 1.5
 
@@ -69,19 +69,19 @@ y_multiplier = 1.5
 position = Vector2(3059, 474)
 y_multiplier = 2.0
 
-[node name="hot skull" parent="." instance=ExtResource("10_u66pd")]
+[node name="hot skull" parent="." instance=ExtResource("6_d01vj")]
 position = Vector2(1665, 534)
 
-[node name="hot skull2" parent="." instance=ExtResource("10_u66pd")]
+[node name="hot skull2" parent="." instance=ExtResource("6_d01vj")]
 position = Vector2(2987, 494)
 
-[node name="hot skull3" parent="." instance=ExtResource("10_u66pd")]
+[node name="hot skull3" parent="." instance=ExtResource("6_d01vj")]
 position = Vector2(3629, 509)
 
-[node name="hot skull4" parent="." instance=ExtResource("10_u66pd")]
+[node name="hot skull4" parent="." instance=ExtResource("6_d01vj")]
 position = Vector2(4103, 472)
 
-[node name="hot skull5" parent="." instance=ExtResource("10_u66pd")]
+[node name="hot skull5" parent="." instance=ExtResource("6_d01vj")]
 position = Vector2(11545, 482)
 
 [node name="Platforms" type="Node2D" parent="."]

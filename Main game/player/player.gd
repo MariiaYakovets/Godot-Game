@@ -1,8 +1,8 @@
 extends CharacterBody2D
 #class_name Player
 #signal healthChanged
-@onready var HPbar = $"CanvasLayer/TextureProgressBar"
-const SPEED = 200.0
+@onready var HPbar = $Control/CanvasLayer/TextureProgressBar
+const SPEED = 120.0
 const JUMP_VELOCITY = -300.0
 var jump_multiplier : float = 1
 var move_multiplier : float = 1
@@ -32,7 +32,7 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	var direction: int = Input.get_axis("ui_left", "ui_right")
 	if direction == 1:
 		$AnimatedSprite2D.flip_h = false
 		face = true
@@ -46,7 +46,8 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if velocity.y ==0:
-			animation_player.play("idle")
+			if not animation_player.current_animation == "shoot":
+				animation_player.play("idle")
 			move_multiplier = 1
 	if velocity.y > 0:
 		animation_player.play("fall")
@@ -63,16 +64,25 @@ func hurt_by_enemy(area):
 	isHurt = true 
 	#healthChanges.emit()
 	
-func update_hp(hp: int):
+func reduce_hp(hp: int):
 	#print($Timer.time_left)
 	if $Timer.time_left == 0:
 		$Timer.start(0.4)
+		#if body.is_in_group('Enemies'):
 		currentHealth -= hp
+		#if body.is_in_group("Food"):
+			#currentHealth += hp_score
 		HPbar.value = currentHealth
 		if currentHealth <= 0:
-			get_tree().change_scene_to_file("res://Main game/main screen/main_game_screen.tscn")
-
+			get_tree().change_scene_to_file("res://Main game/main screen/game_over.tscn")
+	
+func increase_hp(hp: int):
+	if currentHealth + hp <= 100:
+		currentHealth += hp
+		HPbar.value = currentHealth
+		
 func shoot():
+	animation_player.play("shoot")
 	#creating an instance of bullet from the pack scene
 	var bullet = yellow_bullet.instantiate()
 	# face true = to the right
@@ -86,10 +96,12 @@ func shoot():
 	#adding the bullet to the player scene za lapky
 	get_parent().add_child(bullet)
 
-
+func _on_child_entered_tree(node):
+	if node.is_in_group('Food'):
+		currentHealth += node.hp_cost
+		
 #func _on_menu_pressed():
 #	get_tree().change_scene_to_file()
 
 
-func _on_child_entered_tree(node):
-	pass # Replace with function body.
+

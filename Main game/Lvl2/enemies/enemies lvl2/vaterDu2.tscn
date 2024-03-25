@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://bwb60yaqednoc"]
+[gd_scene load_steps=20 format=3 uid="uid://bwb60yaqednoc"]
 
 [ext_resource type="Script" path="res://Main game/Lvl2/enemies/enemies lvl2/vaterDu2.gd" id="1_5c8o1"]
 [ext_resource type="Texture2D" uid="uid://bfomyeyhj8qlo" path="res://Main game/Lvl2/enemies/Swamp/vaterDu.png" id="1_kllj4"]
+[ext_resource type="Texture2D" uid="uid://cmhm6ldpfg504" path="res://Main game/health/progress_bar.png" id="3_s66s2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4opq8"]
 atlas = ExtResource("1_kllj4")
@@ -189,5 +190,18 @@ shape = SubResource("RectangleShape2D_554bi")
 position = Vector2(1, 14.75)
 shape = SubResource("RectangleShape2D_o2k8y")
 
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+texture_filter = 1
+offset_left = -18.0
+offset_top = -27.0
+offset_right = 149.0
+offset_bottom = 14.0
+scale = Vector2(0.215, 0.245)
+max_value = 50.0
+value = 50.0
+texture_progress = ExtResource("3_s66s2")
+metadata/_edit_use_anchors_ = true
+
 [connection signal="body_entered" from="chase" to="." method="_on_chase_body_entered"]
+[connection signal="body_exited" from="chase" to="." method="_on_chase_body_exited"]
 [connection signal="body_entered" from="damage" to="." method="_on_damage_body_entered"]
