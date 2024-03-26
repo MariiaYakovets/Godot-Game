@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx7axcsyditfh"
-path="res://.godot/imported/Rock on the road 100x100.png-189c3d4f2ee50e5da5c5006aae8b71a6.ctex"
+uid="uid://013pvblopfc"
+path="res://.godot/imported/pixil-frame-atack-activate.png-9c113af1d0e32c357b9959b8f8976bb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/road_rock_sing/Rock on the road 100x100.png"
-dest_files=["res://.godot/imported/Rock on the road 100x100.png-189c3d4f2ee50e5da5c5006aae8b71a6.ctex"]
+source_file="res://Main game/buttons/pixil-frame-atack-activate.png"
+dest_files=["res://.godot/imported/pixil-frame-atack-activate.png-9c113af1d0e32c357b9959b8f8976bb2.ctex"]
 
 [params]
 

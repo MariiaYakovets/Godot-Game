@@ -1,7 +1,22 @@
-[gd_scene load_steps=12 format=3 uid="uid://dsmj1g1tkh1ei"]
+[gd_scene load_steps=22 format=3 uid="uid://dsmj1g1tkh1ei"]
 
 [ext_resource type="Script" path="res://Main game/Lvl1/enemy/weat.gd" id="1_hpkdb"]
 [ext_resource type="Texture2D" uid="uid://cf6jkejps70l5" path="res://Main game/Lvl1/enemy/walkingweat.png" id="2_8eufd"]
+[ext_resource type="Texture2D" uid="uid://dl5ecgnrog6ad" path="res://Main game/Lvl1/enemy/weatAttack.png" id="2_cwffp"]
+[ext_resource type="Texture2D" uid="uid://d4an7qe5gim4" path="res://Main game/Lvl1/enemy/weatsprite.png" id="4_cuhja"]
+[ext_resource type="Texture2D" uid="uid://cmhm6ldpfg504" path="res://Main game/health/progress_bar.png" id="5_g78i0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd2db"]
+atlas = ExtResource("2_cwffp")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5iajc"]
+atlas = ExtResource("2_cwffp")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fonwt"]
+atlas = ExtResource("2_cwffp")
+region = Rect2(400, 0, 200, 200)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v77oe"]
 atlas = ExtResource("2_8eufd")
@@ -23,9 +38,38 @@ region = Rect2(600, 0, 200, 200)
 atlas = ExtResource("2_8eufd")
 region = Rect2(800, 0, 200, 200)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_evjq2"]
+atlas = ExtResource("4_cuhja")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ef31"]
+atlas = ExtResource("4_cuhja")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nolb"]
+atlas = ExtResource("4_cuhja")
+region = Rect2(600, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8s66p"]
+atlas = ExtResource("4_cuhja")
+region = Rect2(800, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8ahr"]
+atlas = ExtResource("4_cuhja")
+region = Rect2(1000, 0, 200, 200)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_b7ii4"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fd2db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5iajc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fonwt")
+}],
 "loop": true,
 "name": &"attack",
 "speed": 5.0
@@ -47,50 +91,42 @@ animations = [{
 "texture": SubResource("AtlasTexture_jjvsv")
 }],
 "loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evjq2")
+}],
+"loop": true,
+"name": &"sit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ef31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nolb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8s66p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8ahr")
+}],
+"loop": true,
 "name": &"walk",
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_d0asr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
+[sub_resource type="CircleShape2D" id="CircleShape2D_jatld"]
+radius = 160.028
 
-[sub_resource type="Animation" id="Animation_7qmnj"]
-resource_name = "walk"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwh2r"]
+size = Vector2(68, 53)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wjnaw"]
-_data = {
-"RESET": SubResource("Animation_d0asr"),
-"walk": SubResource("Animation_7qmnj")
-}
-
-[node name="RigidBody2D" type="RigidBody2D" groups=["Enemies"]]
-gravity_scale = 0.0
-lock_rotation = true
+[node name="weat" type="CharacterBody2D" groups=["Enemies"]]
 script = ExtResource("1_hpkdb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -106,7 +142,31 @@ position = Vector2(-37, -121)
 scale = Vector2(8.2716, 7.72859)
 polygon = PackedVector2Array(3.62687, 13.5859, 4.71493, 13.5859, 7.46667, 17.8781, 1.42222, 17.8781)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_wjnaw")
-}
+[node name="podkadulka" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="podkadulka"]
+shape = SubResource("CircleShape2D_jatld")
+
+[node name="attack" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attack"]
+position = Vector2(-1, -6)
+shape = SubResource("RectangleShape2D_xwh2r")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+texture_filter = 1
+offset_left = -21.0
+offset_top = -54.0
+offset_right = 146.0
+offset_bottom = -13.0
+scale = Vector2(0.215, 0.245)
+max_value = 25.0
+step = 5.0
+value = 25.0
+texture_progress = ExtResource("5_g78i0")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="podkadulka" to="." method="_on_podkadulka_body_entered"]
+[connection signal="body_exited" from="podkadulka" to="." method="_on_podkadulka_body_exited"]
+[connection signal="body_entered" from="attack" to="." method="_on_attack_body_entered"]
+[connection signal="body_exited" from="attack" to="." method="_on_attack_body_exited"]

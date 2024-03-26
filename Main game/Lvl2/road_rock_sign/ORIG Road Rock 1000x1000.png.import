@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqmwypdp7sul8"
-path="res://.godot/imported/rock_button_2.png-2c96b86de1891d997cab706fdd519745.ctex"
+uid="uid://gsdhgy1r11ki"
+path="res://.godot/imported/ORIG Road Rock 1000x1000.png-17d1a4c7dd07d789c4ce825c4a5b43c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/road_rock_sing/rock_button_2.png"
-dest_files=["res://.godot/imported/rock_button_2.png-2c96b86de1891d997cab706fdd519745.ctex"]
+source_file="res://Main game/Lvl2/road_rock_sign/ORIG Road Rock 1000x1000.png"
+dest_files=["res://.godot/imported/ORIG Road Rock 1000x1000.png-17d1a4c7dd07d789c4ce825c4a5b43c2.ctex"]
 
 [params]
 

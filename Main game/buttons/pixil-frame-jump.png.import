@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdx41aru728fb"
-path="res://.godot/imported/pixil-frame-settings2.png-10e726ff62556d6b7a6557c73ae20416.ctex"
+uid="uid://crai8xcn361ji"
+path="res://.godot/imported/pixil-frame-jump.png-a9065d4eca0aa87186a72f670b365e52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/pixil-frame-settings2.png"
-dest_files=["res://.godot/imported/pixil-frame-settings2.png-10e726ff62556d6b7a6557c73ae20416.ctex"]
+source_file="res://Main game/buttons/pixil-frame-jump.png"
+dest_files=["res://.godot/imported/pixil-frame-jump.png-a9065d4eca0aa87186a72f670b365e52.ctex"]
 
 [params]
 

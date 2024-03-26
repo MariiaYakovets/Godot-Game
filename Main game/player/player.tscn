@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://q7xeoqrnxt2h"]
+[gd_scene load_steps=59 format=3 uid="uid://q7xeoqrnxt2h"]
 
 [ext_resource type="Script" path="res://Main game/player/player.gd" id="1_5o2at"]
 [ext_resource type="PackedScene" uid="uid://dxwl5anjl28pj" path="res://Main game/bullets/purp_bullet.tscn" id="2_3c02s"]
@@ -9,6 +9,16 @@
 [ext_resource type="Texture2D" uid="uid://dqaf5n07rlp8a" path="res://Main game/health/health2.png" id="7_c61jo"]
 [ext_resource type="Texture2D" uid="uid://ddf4g05osqwde" path="res://Main game/health/empty_bar_frame.png" id="8_ojvuu"]
 [ext_resource type="Texture2D" uid="uid://4dk3hktlv0w0" path="res://Main game/buttons/settings1.png" id="9_hom40"]
+[ext_resource type="Texture2D" uid="uid://buv2l8beurh52" path="res://Main game/buttons/pixil-frame-go_right.png" id="10_f1mtl"]
+[ext_resource type="Texture2D" uid="uid://dyt0kwxh5ndpm" path="res://Main game/buttons/pixil-frame-go_right-activate.png" id="11_jos11"]
+[ext_resource type="Texture2D" uid="uid://6id73riikt6p" path="res://Main game/buttons/pixil-frame-go_left.png" id="12_bmxqw"]
+[ext_resource type="Texture2D" uid="uid://ccgo2tov7v5km" path="res://Main game/buttons/pixil-frame-go_left-activate.png" id="13_t36y4"]
+[ext_resource type="Texture2D" uid="uid://bwg6udp4dilgm" path="res://Main game/buttons/pixil-frame-atack.png" id="14_mbawp"]
+[ext_resource type="Texture2D" uid="uid://013pvblopfc" path="res://Main game/buttons/pixil-frame-atack-activate.png" id="15_uj1c4"]
+[ext_resource type="Texture2D" uid="uid://crai8xcn361ji" path="res://Main game/buttons/pixil-frame-jump.png" id="16_emlh6"]
+[ext_resource type="Texture2D" uid="uid://crbsahiolxkyv" path="res://Main game/buttons/pixil-frame-jump-activate.png" id="17_om8uv"]
+[ext_resource type="Texture2D" uid="uid://b6qer0w1o4goj" path="res://Main game/buttons/one yellow bul.png" id="18_axy2u"]
+[ext_resource type="Texture2D" uid="uid://npiuqfwjvk3e" path="res://Main game/buttons/one purp bul.png" id="19_8i3ha"]
 
 [sub_resource type="Animation" id="Animation_f8odf"]
 length = 0.001
@@ -391,6 +401,35 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwbg0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvg3f"]
+atlas = ExtResource("19_8i3ha")
+region = Rect2(0, 0, 290, 81)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx8st"]
+atlas = ExtResource("18_axy2u")
+region = Rect2(0, 0, 310, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wvpiv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvg3f")
+}],
+"loop": true,
+"name": &"purple",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx8st")
+}],
+"loop": true,
+"name": &"yellow",
+"speed": 5.0
+}]
+
 [node name="Player" type="CharacterBody2D" groups=["Persist", "player"]]
 position = Vector2(318, 180)
 script = ExtResource("1_5o2at")
@@ -414,7 +453,7 @@ position = Vector2(2, 3)
 zoom = Vector2(2.5, 2.5)
 limit_left = 20
 limit_top = -500
-limit_bottom = 805
+limit_bottom = 1000
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 
@@ -474,4 +513,56 @@ scale = Vector2(0.48, 0.48)
 icon = ExtResource("9_hom40")
 flat = true
 
+[node name="right" type="TouchScreenButton" parent="Control/CanvasLayer"]
+texture_filter = 1
+position = Vector2(197, 494)
+scale = Vector2(0.14, 0.144)
+texture_normal = ExtResource("10_f1mtl")
+texture_pressed = ExtResource("11_jos11")
+
+[node name="left" type="TouchScreenButton" parent="Control/CanvasLayer"]
+texture_filter = 1
+position = Vector2(28, 493)
+scale = Vector2(0.14, 0.145)
+texture_normal = ExtResource("12_bmxqw")
+texture_pressed = ExtResource("13_t36y4")
+
+[node name="fire" type="TouchScreenButton" parent="Control/CanvasLayer"]
+texture_filter = 1
+position = Vector2(1020, 401)
+scale = Vector2(0.13, 0.136)
+texture_normal = ExtResource("14_mbawp")
+texture_pressed = ExtResource("15_uj1c4")
+
+[node name="jump" type="TouchScreenButton" parent="Control/CanvasLayer"]
+texture_filter = 1
+position = Vector2(869, 498)
+scale = Vector2(0.14, 0.146)
+texture_normal = ExtResource("16_emlh6")
+texture_pressed = ExtResource("17_om8uv")
+
+[node name="changeBullet" type="TouchScreenButton" parent="Control/CanvasLayer"]
+texture_filter = 1
+position = Vector2(1090, 382)
+scale = Vector2(3.237, 1.429)
+shape = SubResource("RectangleShape2D_vwbg0")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control/CanvasLayer/changeBullet"]
+position = Vector2(-1.85356, -0.699783)
+scale = Vector2(0.146586, 0.539702)
+sprite_frames = SubResource("SpriteFrames_wvpiv")
+animation = &"yellow"
+autoplay = "yellow"
+
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
+[connection signal="pressed" from="Control/CanvasLayer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/right" to="." method="_on_right_pressed"]
+[connection signal="released" from="Control/CanvasLayer/right" to="." method="_on_right_released"]
+[connection signal="pressed" from="Control/CanvasLayer/left" to="." method="_on_left_pressed"]
+[connection signal="released" from="Control/CanvasLayer/left" to="." method="_on_left_released"]
+[connection signal="pressed" from="Control/CanvasLayer/fire" to="." method="_on_fire_pressed"]
+[connection signal="released" from="Control/CanvasLayer/fire" to="." method="_on_fire_released"]
+[connection signal="pressed" from="Control/CanvasLayer/jump" to="." method="_on_jump_pressed"]
+[connection signal="released" from="Control/CanvasLayer/jump" to="." method="_on_jump_released"]
+[connection signal="pressed" from="Control/CanvasLayer/changeBullet" to="." method="_on_change_bullet_pressed"]
+[connection signal="released" from="Control/CanvasLayer/changeBullet" to="." method="_on_change_bullet_released"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dya324ti53d37"
-path="res://.godot/imported/rockTiles.png-eb4485b368ba4f4782c7e8549c81eeba.ctex"
+uid="uid://bqmwypdp7sul8"
+path="res://.godot/imported/rock_button_2.png-3556354f030ae57391b55c8667e2afdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/road_rock_sing/rockTiles.png"
-dest_files=["res://.godot/imported/rockTiles.png-eb4485b368ba4f4782c7e8549c81eeba.ctex"]
+source_file="res://Main game/Lvl2/road_rock_sign/rock_button_2.png"
+dest_files=["res://.godot/imported/rock_button_2.png-3556354f030ae57391b55c8667e2afdd.ctex"]
 
 [params]
 

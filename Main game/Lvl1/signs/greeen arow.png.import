@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg2f0rv4cu6bb"
-path="res://.godot/imported/rock_button_1.png-693dc5ab4a56a5515d432e73e81e7359.ctex"
+uid="uid://dikf5f67d1y12"
+path="res://.godot/imported/greeen arow.png-56381f27c6c5feb787413b57977237f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Main game/Lvl2/road_rock_sing/rock_button_1.png"
-dest_files=["res://.godot/imported/rock_button_1.png-693dc5ab4a56a5515d432e73e81e7359.ctex"]
+source_file="res://Main game/Lvl1/signs/greeen arow.png"
+dest_files=["res://.godot/imported/greeen arow.png-56381f27c6c5feb787413b57977237f5.ctex"]
 
 [params]
 

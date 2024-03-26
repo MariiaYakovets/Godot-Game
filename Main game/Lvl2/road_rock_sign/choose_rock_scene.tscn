@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://bcyxmlca8vxhw"]
 
-[ext_resource type="Script" path="res://Main game/Lvl2/road_rock_sing/choose_rock_scene.gd" id="1_mtt86"]
+[ext_resource type="Script" path="res://Main game/Lvl2/road_rock_sign/choose_rock_scene.gd" id="1_mtt86"]
 [ext_resource type="Texture2D" uid="uid://bt4jllud4px5o" path="res://Main game/main screen/main screen tempotaty bg.png" id="1_u88ki"]
-[ext_resource type="Texture2D" uid="uid://gsdhgy1r11ki" path="res://Main game/Lvl2/road_rock_sing/ORIG Road Rock 1000x1000.png" id="2_4a535"]
-[ext_resource type="Texture2D" uid="uid://dg2f0rv4cu6bb" path="res://Main game/Lvl2/road_rock_sing/rock_button_1.png" id="3_23ie3"]
-[ext_resource type="Texture2D" uid="uid://bqmwypdp7sul8" path="res://Main game/Lvl2/road_rock_sing/rock_button_2.png" id="4_i1los"]
-[ext_resource type="Texture2D" uid="uid://baeolcu4fcie8" path="res://Main game/Lvl2/road_rock_sing/rock_button_3.png" id="5_ksl2o"]
+[ext_resource type="Texture2D" uid="uid://gsdhgy1r11ki" path="res://Main game/Lvl2/road_rock_sign/ORIG Road Rock 1000x1000.png" id="2_4a535"]
+[ext_resource type="Texture2D" uid="uid://dg2f0rv4cu6bb" path="res://Main game/Lvl2/road_rock_sign/rock_button_1.png" id="3_23ie3"]
+[ext_resource type="Texture2D" uid="uid://bqmwypdp7sul8" path="res://Main game/Lvl2/road_rock_sign/rock_button_2.png" id="4_i1los"]
+[ext_resource type="Texture2D" uid="uid://baeolcu4fcie8" path="res://Main game/Lvl2/road_rock_sign/rock_button_3.png" id="5_ksl2o"]
 
 [sub_resource type="Image" id="Image_2vmbt"]
 data = {

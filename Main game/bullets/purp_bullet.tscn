@@ -31,8 +31,8 @@ animations = [{
 [node name="purp_bullet" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_8io0v")
-speed = 10
-damage = 5
+speed = 20
+damage = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1.5)
@@ -46,5 +46,3 @@ sprite_frames = SubResource("SpriteFrames_lpc7w")
 animation = &"bullet"
 autoplay = "bullet"
 frame_progress = 0.439382
-
-[node name="Timer" type="Timer" parent="."]

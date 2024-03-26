@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://p4cj7wg14vmi"]
+[gd_scene load_steps=47 format=3 uid="uid://p4cj7wg14vmi"]
 
 [ext_resource type="PackedScene" uid="uid://dlfuq3y7an6p7" path="res://Main game/Lvl2/trees/back_tree.tscn" id="1_4q430"]
 [ext_resource type="Texture2D" uid="uid://d10oiylthak38" path="res://Main game/Lvl2/tilemap/liana.png" id="2_2cxvi"]
@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://wunttceuj5mj" path="res://Main game/Lvl2/trees/back_tree_3.tscn" id="29_1e08u"]
 [ext_resource type="PackedScene" uid="uid://c6ayp85wm41mt" path="res://Main game/Lvl2/platforms/disap_platform.tscn" id="30_s32qj"]
 [ext_resource type="Texture2D" uid="uid://bt4jllud4px5o" path="res://Main game/main screen/main screen tempotaty bg.png" id="31_0r86e"]
-[ext_resource type="PackedScene" uid="uid://boo8g7j3y0xs5" path="res://Main game/Lvl2/road_rock_sing/path_rock.tscn" id="33_xt82c"]
+[ext_resource type="PackedScene" uid="uid://boo8g7j3y0xs5" path="res://Main game/Lvl2/road_rock_sign/path_rock.tscn" id="33_xt82c"]
 [ext_resource type="PackedScene" uid="uid://bwb60yaqednoc" path="res://Main game/Lvl2/enemies/enemies lvl2/vaterDu2.tscn" id="34_oqrqb"]
 [ext_resource type="Texture2D" uid="uid://3bfvrju551sr" path="res://Main game/Lvl2/Chervyaki/penyok.png" id="36_lw2th"]
 [ext_resource type="Texture2D" uid="uid://bvib1jwhjj0sg" path="res://Main game/Lvl2/Chervyaki/chervyak1.png" id="36_ycgsi"]
@@ -137,7 +137,7 @@ position = Vector2(18982, 329)
 position = Vector2(20039, 333)
 
 [node name="Player" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(16041, 274)
+position = Vector2(610, 300)
 
 [node name="liana curtains" type="Node2D" parent="."]
 

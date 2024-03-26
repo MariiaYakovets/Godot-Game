@@ -1,4 +1,5 @@
 extends CharacterBody2D
+
 @export_enum("green_farmer", "fork_farmer", "red_farmer") var farmer_amination: String
 @export var hp: int
 @export var f_damage: int = 1
