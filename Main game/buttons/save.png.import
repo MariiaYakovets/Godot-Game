@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch5fdrqwlaw6x"
-path="res://.godot/imported/pixil-frame-1.png-ad93a550e7a02ba3dcd3532114ce39ec.ctex"
+uid="uid://bhwwxh0cs5wyh"
+path="res://.godot/imported/save.png-57c7dd6d9be90b5e348c161df9fce122.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixil-frame-1.png"
-dest_files=["res://.godot/imported/pixil-frame-1.png-ad93a550e7a02ba3dcd3532114ce39ec.ctex"]
+source_file="res://Main game/buttons/save.png"
+dest_files=["res://.godot/imported/save.png-57c7dd6d9be90b5e348c161df9fce122.ctex"]
 
 [params]
 

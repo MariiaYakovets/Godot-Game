@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var start_x = 0
 @export var end_x = 0
 @export var speed_podkradulka: int = 0
-#@export var atttack_speed: int = 0
 var speed = 0
 var direction = 0
 var animation_enemy
@@ -50,14 +49,14 @@ func reduce_hp(damage):
 	if hp <= 0:
 		queue_free()
 
-func _on_podkadulka_body_entered(body):
+func _on_podkradulka_body_entered(body):
 	if body.is_in_group('player'):
 		animation_enemy.play("walk")
 		speed = speed_podkradulka
 		player = body
 		HPbar.visible = false		
 
-func _on_podkadulka_body_exited(body):
+func _on_podkradulka_body_exited(body):
 	if body.is_in_group('player'):
 		animation_enemy.play('sit')
 		speed = 0

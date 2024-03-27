@@ -1,0 +1,105 @@
+[gd_scene load_steps=15 format=3 uid="uid://cvb7fk6h1dlui"]
+
+[ext_resource type="Texture2D" uid="uid://cth0pq57ppc4i" path="res://Main game/main screen/pixil-frame-0 (25).png" id="1_7ofai"]
+[ext_resource type="Script" path="res://Main game/main screen/pause_menu.gd" id="1_m87gc"]
+[ext_resource type="Texture2D" uid="uid://bhwwxh0cs5wyh" path="res://Main game/buttons/save.png" id="2_g0jdu"]
+[ext_resource type="Texture2D" uid="uid://qunxgierq41g" path="res://Main game/main screen/pixil-frame-0 (22).png" id="3_xbuav"]
+[ext_resource type="Texture2D" uid="uid://mbvfcv0ft2qk" path="res://Main game/main screen/pixil-frame-0 (26).png" id="4_2xr4n"]
+[ext_resource type="Texture2D" uid="uid://dwrujpwy7beo3" path="res://Main game/buttons/pause.png" id="5_igbb5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6kh0u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2h22j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogyyy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4urjp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83aif"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gpo6f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_omp2t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_022ho"]
+
+[node name="Pause menu" type="Control"]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m87gc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -261.0
+offset_right = 289.0
+offset_bottom = 273.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.5
+offset_top = -145.0
+offset_right = 420.5
+offset_bottom = 1099.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+
+[node name="Resume" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6kh0u")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2h22j")
+icon = ExtResource("1_7ofai")
+flat = true
+
+[node name="Save" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ogyyy")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4urjp")
+icon = ExtResource("2_g0jdu")
+flat = true
+
+[node name="Menu" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_83aif")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gpo6f")
+icon = ExtResource("3_xbuav")
+flat = true
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_omp2t")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_022ho")
+icon = ExtResource("4_2xr4n")
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 4.0
+offset_right = 463.0
+offset_bottom = 132.0
+texture = ExtResource("5_igbb5")
+expand_mode = 1
+
+[connection signal="pressed" from="Panel/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

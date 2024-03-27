@@ -142,9 +142,9 @@ position = Vector2(-37, -121)
 scale = Vector2(8.2716, 7.72859)
 polygon = PackedVector2Array(3.62687, 13.5859, 4.71493, 13.5859, 7.46667, 17.8781, 1.42222, 17.8781)
 
-[node name="podkadulka" type="Area2D" parent="."]
+[node name="podkradulka" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="podkadulka"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="podkradulka"]
 shape = SubResource("CircleShape2D_jatld")
 
 [node name="attack" type="Area2D" parent="."]
@@ -166,7 +166,7 @@ value = 25.0
 texture_progress = ExtResource("5_g78i0")
 metadata/_edit_use_anchors_ = true
 
-[connection signal="body_entered" from="podkadulka" to="." method="_on_podkadulka_body_entered"]
-[connection signal="body_exited" from="podkadulka" to="." method="_on_podkadulka_body_exited"]
+[connection signal="body_entered" from="podkradulka" to="." method="_on_podkradulka_body_entered"]
+[connection signal="body_exited" from="podkradulka" to="." method="_on_podkradulka_body_exited"]
 [connection signal="body_entered" from="attack" to="." method="_on_attack_body_entered"]
 [connection signal="body_exited" from="attack" to="." method="_on_attack_body_exited"]

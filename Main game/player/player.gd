@@ -103,13 +103,26 @@ func shoot():
 	#adding the bullet to the player scene za lapky
 	get_parent().add_child(bullet)
 
+func get_data_to_save():
+	var data = {
+		'currentHealth': currentHealth,
+		'level': get_parent().name,
+		'position': self.position
+	}
+	return data
+
+func load_data_from_save(data: Dictionary):
+	currentHealth = data.currentHealth
+	position = data.position
+
 func _on_child_entered_tree(node):
 	if node.is_in_group('Food'):
 		currentHealth += node.hp_cost
 		
 func _on_menu_pressed():
-	get_parent().visibility.modulate
-
+	get_tree().paused = true
+	$"Control/CanvasLayer/Pause menu".visible = true
+	
 func _on_right_pressed():
 	direction = 1
 	

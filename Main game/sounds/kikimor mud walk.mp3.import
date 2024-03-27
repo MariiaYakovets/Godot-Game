@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://csntwv5cj28sy"
+path="res://.godot/imported/kikimor mud walk.mp3-7b4a201c449f99b0b6a887b9f80ca80a.mp3str"
+
+[deps]
+
+source_file="res://Main game/sounds/kikimor mud walk.mp3"
+dest_files=["res://.godot/imported/kikimor mud walk.mp3-7b4a201c449f99b0b6a887b9f80ca80a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

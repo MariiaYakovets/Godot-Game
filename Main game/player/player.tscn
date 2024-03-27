@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://q7xeoqrnxt2h"]
+[gd_scene load_steps=61 format=3 uid="uid://q7xeoqrnxt2h"]
 
 [ext_resource type="Script" path="res://Main game/player/player.gd" id="1_5o2at"]
 [ext_resource type="PackedScene" uid="uid://dxwl5anjl28pj" path="res://Main game/bullets/purp_bullet.tscn" id="2_3c02s"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://crbsahiolxkyv" path="res://Main game/buttons/pixil-frame-jump-activate.png" id="17_om8uv"]
 [ext_resource type="Texture2D" uid="uid://b6qer0w1o4goj" path="res://Main game/buttons/one yellow bul.png" id="18_axy2u"]
 [ext_resource type="Texture2D" uid="uid://npiuqfwjvk3e" path="res://Main game/buttons/one purp bul.png" id="19_8i3ha"]
+[ext_resource type="PackedScene" uid="uid://cvb7fk6h1dlui" path="res://Main game/main screen/pause_menu.tscn" id="20_hw2fj"]
 
 [sub_resource type="Animation" id="Animation_f8odf"]
 length = 0.001
@@ -401,6 +402,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5yymk"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwbg0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvg3f"]
@@ -446,7 +449,8 @@ texture_filter = 1
 position = Vector2(1.00136e-05, 13)
 scale = Vector2(0.186683, 0.189987)
 sprite_frames = SubResource("SpriteFrames_42lpn")
-animation = &"shoot"
+animation = &"idle"
+frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(2, 3)
@@ -510,6 +514,7 @@ offset_top = 8.0
 offset_right = 1245.0
 offset_bottom = 209.0
 scale = Vector2(0.48, 0.48)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5yymk")
 icon = ExtResource("9_hom40")
 flat = true
 
@@ -553,6 +558,13 @@ scale = Vector2(0.146586, 0.539702)
 sprite_frames = SubResource("SpriteFrames_wvpiv")
 animation = &"yellow"
 autoplay = "yellow"
+
+[node name="Pause menu" parent="Control/CanvasLayer" instance=ExtResource("20_hw2fj")]
+visible = false
+offset_left = -2.0
+offset_top = -5.0
+offset_right = -2.0
+offset_bottom = -5.0
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
 [connection signal="pressed" from="Control/CanvasLayer/Menu" to="." method="_on_menu_pressed"]
