@@ -3947,7 +3947,7 @@ texture = ExtResource("3_3rcss")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_untdc"]
 texture = ExtResource("4_kiggu")
-margins = Vector2i(9, 6)
+margins = Vector2i(11, 6)
 11:19/0 = 0
 11:19/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 11:19/0/physics_layer_0/angular_velocity = 0.0

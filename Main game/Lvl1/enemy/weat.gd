@@ -54,7 +54,7 @@ func _on_podkradulka_body_entered(body):
 		animation_enemy.play("walk")
 		speed = speed_podkradulka
 		player = body
-		HPbar.visible = false		
+		HPbar.visible = false
 
 func _on_podkradulka_body_exited(body):
 	if body.is_in_group('player'):

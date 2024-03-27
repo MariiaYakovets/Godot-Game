@@ -517,6 +517,7 @@ scale = Vector2(0.48, 0.48)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5yymk")
 icon = ExtResource("9_hom40")
 flat = true
+metadata/_edit_use_anchors_ = true
 
 [node name="right" type="TouchScreenButton" parent="Control/CanvasLayer"]
 texture_filter = 1
