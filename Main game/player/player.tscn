@@ -471,11 +471,10 @@ wait_time = 0.4
 one_shot = true
 
 [node name="MarkerRight" type="Marker2D" parent="."]
-position = Vector2(21, 17)
+position = Vector2(27, 18)
 
 [node name="MarkerLeft" type="Marker2D" parent="."]
-visible = false
-position = Vector2(-26, -11)
+position = Vector2(-25, 19)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

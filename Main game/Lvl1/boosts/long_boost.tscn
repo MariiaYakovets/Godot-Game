@@ -7,7 +7,11 @@ size = Vector2(342.25, 9)
 
 [node name="long boost" type="Area2D"]
 script = ExtResource("1_dna1i")
+y_multiplier = 1.5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_gd1u0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
