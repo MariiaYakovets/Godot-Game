@@ -453,7 +453,7 @@ animation = &"idle"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2, 3)
+position = Vector2(4, 5)
 zoom = Vector2(2.5, 2.5)
 limit_left = 20
 limit_top = -500
@@ -464,7 +464,7 @@ position_smoothing_speed = 2.0
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(12, 9.00001)
 scale = Vector2(1.42857, 1.33984)
-polygon = PackedVector2Array(-14, -11.1954, -17.5, -5.22452, -16.8, 8.20992, -16.8, 16.4198, -8.39999, 16.4198, -2.8, 16.4198, -4.2, 8.20992, -4.90001, 2.23906, -3.5, -3.73181, -4.90001, -7.46359, -7.7, -10.449)
+polygon = PackedVector2Array(-14, -11.1954, -17.5, -5.22452, -16.8, 8.20992, -16.8, 16.4198, -8.39999, 16.4198, -4.2, 16.4198, -4.2, 8.20992, -4.90001, 2.23906, -3.5, -3.73181, -4.90001, -7.46359, -7.7, -10.449)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.4
@@ -483,13 +483,15 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+layer = 0
+follow_viewport_scale = 1000.0
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Control/CanvasLayer"]
 texture_filter = 1
-offset_left = 34.0
-offset_top = 35.0
-offset_right = 1085.0
-offset_bottom = 522.0
+offset_left = 189.0
+offset_top = 115.0
+offset_right = 1240.0
+offset_bottom = 602.0
 scale = Vector2(0.63, 0.71)
 value = 100.0
 texture_progress = ExtResource("7_c61jo")
@@ -500,10 +502,10 @@ texture_filter = 1
 anchors_preset = -1
 anchor_right = 0.0807292
 anchor_bottom = 0.0833333
-offset_left = 7.0
-offset_top = 7.0
-offset_right = 141.0
-offset_bottom = 63.0
+offset_left = 162.0
+offset_top = 87.0
+offset_right = 296.0
+offset_bottom = 143.0
 texture = ExtResource("8_ojvuu")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
@@ -521,14 +523,14 @@ metadata/_edit_use_anchors_ = true
 
 [node name="right" type="TouchScreenButton" parent="Control/CanvasLayer"]
 texture_filter = 1
-position = Vector2(197, 494)
+position = Vector2(243, 498)
 scale = Vector2(0.14, 0.144)
 texture_normal = ExtResource("10_f1mtl")
 texture_pressed = ExtResource("11_jos11")
 
 [node name="left" type="TouchScreenButton" parent="Control/CanvasLayer"]
 texture_filter = 1
-position = Vector2(28, 493)
+position = Vector2(46, 492)
 scale = Vector2(0.14, 0.145)
 texture_normal = ExtResource("12_bmxqw")
 texture_pressed = ExtResource("13_t36y4")

@@ -19,7 +19,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if player.position.x > self.position.x:
+	if player.position.x > self.position.x + 10:
 		direction = 1
 	elif player.position.x <= self.position.x:
 		direction = -1
@@ -27,6 +27,7 @@ func _physics_process(delta):
 		$AnimatedSprite2D.flip_h = true
 	elif direction == -1:
 		$AnimatedSprite2D.flip_h = false
+		
 	
 	var collision_object: KinematicCollision2D = move_and_collide(velocity)
 

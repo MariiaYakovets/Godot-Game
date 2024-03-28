@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dxy4dioy61tca"]
+[gd_scene load_steps=32 format=3 uid="uid://dxy4dioy61tca"]
 
 [ext_resource type="Texture2D" uid="uid://ynv3b20ih62d" path="res://Main game/Lvl1/bg/village bg final.png" id="1_m75ei"]
 [ext_resource type="Texture2D" uid="uid://xl028wl5xjxs" path="res://Main game/Lvl1/tilemap/pixil-frame-0 (6).png" id="3_cso8c"]
@@ -10,10 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://y85bqkkvlybj" path="res://Main game/Lvl1/bg/cloud2.png" id="7_icxq7"]
 [ext_resource type="Texture2D" uid="uid://dc0i77anr88bt" path="res://Main game/Lvl1/tilemap/pixilart-drawing.png" id="7_kbmu3"]
 [ext_resource type="Texture2D" uid="uid://d3hgts5enjmdw" path="res://Main game/Lvl1/bg/cloud4.png" id="8_33ax0"]
+[ext_resource type="PackedScene" uid="uid://dlfuq3y7an6p7" path="res://Main game/Lvl2/trees/back_tree.tscn" id="8_iqfj6"]
 [ext_resource type="Texture2D" uid="uid://dikf5f67d1y12" path="res://Main game/Lvl1/signs/greeen arow.png" id="8_u4t84"]
 [ext_resource type="Texture2D" uid="uid://c0vgoxr6iav25" path="res://Main game/Lvl1/signs/pixil-frame-0 (10).png" id="9_3gxwq"]
+[ext_resource type="PackedScene" uid="uid://d2u4qnl0drwhl" path="res://Main game/Lvl2/trees/back_tree_4.tscn" id="9_nbcmc"]
+[ext_resource type="PackedScene" uid="uid://wunttceuj5mj" path="res://Main game/Lvl2/trees/back_tree_3.tscn" id="10_gpefw"]
 [ext_resource type="Texture2D" uid="uid://c50kobqf23wch" path="res://Main game/Lvl1/signs/pixil-frame-0 (14).png" id="10_ycisu"]
 [ext_resource type="Texture2D" uid="uid://b6xufvlvxcl70" path="res://Main game/Lvl1/signs/pixil-frame-0 (13).png" id="11_0ps4t"]
+[ext_resource type="PackedScene" uid="uid://bomrbfcmnviv5" path="res://Main game/Lvl2/trees/back_tree_5.tscn" id="11_741dp"]
+[ext_resource type="Script" path="res://Main game/Lvl1/level change/level change.gd" id="12_1ibt5"]
 [ext_resource type="PackedScene" uid="uid://dsmj1g1tkh1ei" path="res://Main game/Lvl1/enemy/weat.tscn" id="12_ili7s"]
 [ext_resource type="PackedScene" uid="uid://dieskvj0ahfgg" path="res://Main game/Lvl1/boosts/jump_boost.tscn" id="13_16uuo"]
 [ext_resource type="PackedScene" uid="uid://q7xeoqrnxt2h" path="res://Main game/player/player.tscn" id="14_li8s2"]
@@ -21,6 +26,9 @@
 [ext_resource type="PackedScene" uid="uid://bbseg340rsohi" path="res://Main game/Lvl1/enemy/farmer.tscn" id="17_f71tc"]
 [ext_resource type="PackedScene" uid="uid://c8u2f52bdplvn" path="res://Main game/Lvl1/food/cheese.tscn" id="23_gh4c8"]
 [ext_resource type="PackedScene" uid="uid://mm34b7a3r6x6" path="res://Main game/Lvl1/food/bread.tscn" id="24_t5ov3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_203m2"]
+size = Vector2(154.5, 105)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gqd8"]
 size = Vector2(4, 4)
@@ -110,6 +118,39 @@ texture = ExtResource("7_icxq7")
 [node name="ParallaxBackground_Clouds#Cloud4" type="Sprite2D" parent="ParallaxBackground/Clouds"]
 position = Vector2(917, 303)
 texture = ExtResource("8_33ax0")
+
+[node name="back trees" type="Node2D" parent="."]
+
+[node name="Back tree 2" parent="back trees" instance=ExtResource("8_iqfj6")]
+position = Vector2(8312, 409)
+scale = Vector2(0.8, 0.8)
+
+[node name="back tree 6" parent="back trees" instance=ExtResource("9_nbcmc")]
+position = Vector2(7942, 416)
+scale = Vector2(0.8, 0.8)
+
+[node name="back tree 3" parent="back trees" instance=ExtResource("10_gpefw")]
+position = Vector2(8170, 410)
+scale = Vector2(0.8, 0.8)
+
+[node name="back tree 5" parent="back trees" instance=ExtResource("11_741dp")]
+position = Vector2(8353, 496)
+scale = Vector2(0.8, 0.8)
+
+[node name="back tree 7" parent="back trees" instance=ExtResource("11_741dp")]
+position = Vector2(8449, 475)
+scale = Vector2(0.8, 0.8)
+
+[node name="back tree 13" parent="back trees" instance=ExtResource("11_741dp")]
+position = Vector2(8119, 478)
+scale = Vector2(0.8, 0.8)
+
+[node name="level change" type="Area2D" parent="back trees"]
+script = ExtResource("12_1ibt5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back trees/level change"]
+position = Vector2(8333, 444)
+shape = SubResource("RectangleShape2D_203m2")
 
 [node name="sings" type="Node2D" parent="."]
 
@@ -364,7 +405,7 @@ texture = ExtResource("11_0ps4t")
 position = Vector2(15, -88)
 
 [node name="Player" parent="." instance=ExtResource("14_li8s2")]
-position = Vector2(4274, 488)
+position = Vector2(7801, 409)
 
 [node name="Weat" type="Node2D" parent="."]
 position = Vector2(21, 43)
@@ -545,7 +586,7 @@ farmer_amination = "fork_farmer"
 hp = 30
 
 [node name="f_farmer2" parent="Mobs" instance=ExtResource("17_f71tc")]
-position = Vector2(4818, 428)
+position = Vector2(4823, 420)
 farmer_amination = "fork_farmer"
 hp = 30
 
@@ -661,3 +702,28 @@ hp_value = 5
 [node name="bread9" parent="food_pot" instance=ExtResource("24_t5ov3")]
 position = Vector2(7558, 474)
 hp_value = 5
+
+[node name="trees" type="Node2D" parent="."]
+position = Vector2(8044, 464)
+
+[node name="back tree 12" parent="trees" instance=ExtResource("10_gpefw")]
+position = Vector2(-207, -52)
+scale = Vector2(0.8, 0.8)
+
+[node name="back tree 4" parent="trees" instance=ExtResource("9_nbcmc")]
+position = Vector2(309, -50)
+scale = Vector2(0.8, 0.8)
+
+[node name="Back tree 1" parent="trees" instance=ExtResource("8_iqfj6")]
+position = Vector2(252, -51)
+scale = Vector2(0.8, 0.8)
+
+[node name="back tree 11" parent="trees" instance=ExtResource("11_741dp")]
+position = Vector2(226, 7)
+scale = Vector2(0.8, 0.8)
+
+[node name="Back tree 5" parent="trees" instance=ExtResource("8_iqfj6")]
+position = Vector2(399, -49)
+scale = Vector2(0.8, 0.8)
+
+[connection signal="body_entered" from="back trees/level change" to="back trees/level change" method="_on_body_entered"]

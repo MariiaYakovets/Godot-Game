@@ -15,6 +15,10 @@ run/main_scene="res://Main game/Lvl1/level_1.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
@@ -35,3 +39,4 @@ pointing/emulate_touch_from_mouse=true
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

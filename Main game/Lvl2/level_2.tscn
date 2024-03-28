@@ -471,7 +471,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("12_6t0fj")
 
 [node name="Player" parent="." instance=ExtResource("3_do26w")]
-position = Vector2(6725, 556)
+position = Vector2(2771, 460)
 
 [node name="prosto_chervyaki" type="Node2D" parent="."]
 
@@ -1023,6 +1023,7 @@ hp = 30
 damage = 5
 
 [node name="Merm_2" parent="." instance=ExtResource("3_n85jb")]
+visible = true
 position = Vector2(6838, 635)
 
 [node name="Lvl2" parent="." instance=ExtResource("2_w80ak")]
