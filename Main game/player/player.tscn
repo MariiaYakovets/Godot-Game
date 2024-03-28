@@ -402,8 +402,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5yymk"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vwbg0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvg3f"]
@@ -433,6 +431,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5yymk"]
+
 [node name="Player" type="CharacterBody2D" groups=["Persist", "player"]]
 position = Vector2(318, 180)
 script = ExtResource("1_5o2at")
@@ -453,18 +453,18 @@ animation = &"idle"
 frame = 1
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(4, 5)
+position = Vector2(2, 3)
 zoom = Vector2(2.5, 2.5)
 limit_left = 20
 limit_top = -500
-limit_bottom = 1000
+limit_bottom = 800
 position_smoothing_enabled = true
 position_smoothing_speed = 2.0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(12, 9.00001)
 scale = Vector2(1.42857, 1.33984)
-polygon = PackedVector2Array(-14, -11.1954, -17.5, -5.22452, -16.8, 8.20992, -16.8, 16.4198, -8.39999, 16.4198, -4.2, 16.4198, -4.2, 8.20992, -4.90001, 2.23906, -3.5, -3.73181, -4.90001, -7.46359, -7.7, -10.449)
+polygon = PackedVector2Array(-14, -11.1954, -17.5, -5.22452, -16.8, 8.20992, -16.8, 16.4198, -8.39999, 16.4198, -2.8, 16.4198, -4.2, 8.20992, -4.90001, 2.23906, -3.5, -3.73181, -4.90001, -7.46359, -7.7, -10.449)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.4
@@ -474,95 +474,98 @@ one_shot = true
 position = Vector2(21, 17)
 
 [node name="MarkerLeft" type="Marker2D" parent="."]
-position = Vector2(-32, 17)
+visible = false
+position = Vector2(-26, -11)
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
-layer = 0
-follow_viewport_scale = 1000.0
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Control/CanvasLayer"]
+[node name="changeBullet" type="TouchScreenButton" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = 189.0
-offset_top = 115.0
-offset_right = 1240.0
-offset_bottom = 602.0
-scale = Vector2(0.63, 0.71)
+position = Vector2(1080, 395)
+scale = Vector2(3.237, 1.429)
+shape = SubResource("RectangleShape2D_vwbg0")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer/changeBullet"]
+position = Vector2(-4.32498, -1.39957)
+scale = Vector2(0.146586, 0.539702)
+sprite_frames = SubResource("SpriteFrames_wvpiv")
+animation = &"yellow"
+autoplay = "yellow"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 39.0
+offset_top = 4.0
+offset_right = 339.0
+offset_bottom = 104.0
+scale = Vector2(0.62, 0.7)
 value = 100.0
 texture_progress = ExtResource("7_c61jo")
 metadata/_edit_use_anchors_ = true
 
-[node name="TextureRect" type="TextureRect" parent="Control/CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 texture_filter = 1
 anchors_preset = -1
-anchor_right = 0.0807292
-anchor_bottom = 0.0833333
-offset_left = 162.0
-offset_top = 87.0
-offset_right = 296.0
-offset_bottom = 143.0
+anchor_left = 0.325
+anchor_top = 0.375
+anchor_right = 0.405729
+anchor_bottom = 0.458333
+offset_left = -365.4
+offset_top = -269.0
+offset_right = -231.4
+offset_bottom = -213.0
 texture = ExtResource("8_ojvuu")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Menu" type="Button" parent="Control/CanvasLayer"]
-offset_left = 1055.0
-offset_top = 8.0
-offset_right = 1245.0
-offset_bottom = 209.0
+[node name="Menu" type="Button" parent="CanvasLayer"]
+offset_left = 1063.0
+offset_top = 3.0
+offset_right = 1253.0
+offset_bottom = 204.0
 scale = Vector2(0.48, 0.48)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5yymk")
 icon = ExtResource("9_hom40")
 flat = true
 metadata/_edit_use_anchors_ = true
 
-[node name="right" type="TouchScreenButton" parent="Control/CanvasLayer"]
+[node name="right" type="TouchScreenButton" parent="CanvasLayer"]
 texture_filter = 1
-position = Vector2(243, 498)
+position = Vector2(237, 508)
 scale = Vector2(0.14, 0.144)
 texture_normal = ExtResource("10_f1mtl")
 texture_pressed = ExtResource("11_jos11")
 
-[node name="left" type="TouchScreenButton" parent="Control/CanvasLayer"]
+[node name="left" type="TouchScreenButton" parent="CanvasLayer"]
 texture_filter = 1
-position = Vector2(46, 492)
+position = Vector2(68, 507)
 scale = Vector2(0.14, 0.145)
 texture_normal = ExtResource("12_bmxqw")
 texture_pressed = ExtResource("13_t36y4")
 
-[node name="fire" type="TouchScreenButton" parent="Control/CanvasLayer"]
+[node name="fire" type="TouchScreenButton" parent="CanvasLayer"]
 texture_filter = 1
-position = Vector2(1020, 401)
+position = Vector2(1011, 416)
 scale = Vector2(0.13, 0.136)
 texture_normal = ExtResource("14_mbawp")
 texture_pressed = ExtResource("15_uj1c4")
 
-[node name="jump" type="TouchScreenButton" parent="Control/CanvasLayer"]
+[node name="jump" type="TouchScreenButton" parent="CanvasLayer"]
 texture_filter = 1
-position = Vector2(869, 498)
+position = Vector2(852, 505)
 scale = Vector2(0.14, 0.146)
 texture_normal = ExtResource("16_emlh6")
 texture_pressed = ExtResource("17_om8uv")
 
-[node name="changeBullet" type="TouchScreenButton" parent="Control/CanvasLayer"]
-texture_filter = 1
-position = Vector2(1090, 382)
-scale = Vector2(3.237, 1.429)
-shape = SubResource("RectangleShape2D_vwbg0")
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 358.0
+offset_top = 194.0
+offset_right = 398.0
+offset_bottom = 234.0
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Control/CanvasLayer/changeBullet"]
-position = Vector2(-1.85356, -0.699783)
-scale = Vector2(0.146586, 0.539702)
-sprite_frames = SubResource("SpriteFrames_wvpiv")
-animation = &"yellow"
-autoplay = "yellow"
-
-[node name="Pause menu" parent="Control/CanvasLayer" instance=ExtResource("20_hw2fj")]
+[node name="Pause menu" parent="CanvasLayer" instance=ExtResource("20_hw2fj")]
 visible = false
 offset_left = -2.0
 offset_top = -5.0
@@ -570,14 +573,14 @@ offset_right = -2.0
 offset_bottom = -5.0
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
-[connection signal="pressed" from="Control/CanvasLayer/Menu" to="." method="_on_menu_pressed"]
-[connection signal="pressed" from="Control/CanvasLayer/right" to="." method="_on_right_pressed"]
-[connection signal="released" from="Control/CanvasLayer/right" to="." method="_on_right_released"]
-[connection signal="pressed" from="Control/CanvasLayer/left" to="." method="_on_left_pressed"]
-[connection signal="released" from="Control/CanvasLayer/left" to="." method="_on_left_released"]
-[connection signal="pressed" from="Control/CanvasLayer/fire" to="." method="_on_fire_pressed"]
-[connection signal="released" from="Control/CanvasLayer/fire" to="." method="_on_fire_released"]
-[connection signal="pressed" from="Control/CanvasLayer/jump" to="." method="_on_jump_pressed"]
-[connection signal="released" from="Control/CanvasLayer/jump" to="." method="_on_jump_released"]
-[connection signal="pressed" from="Control/CanvasLayer/changeBullet" to="." method="_on_change_bullet_pressed"]
-[connection signal="released" from="Control/CanvasLayer/changeBullet" to="." method="_on_change_bullet_released"]
+[connection signal="pressed" from="CanvasLayer/changeBullet" to="." method="_on_change_bullet_pressed"]
+[connection signal="released" from="CanvasLayer/changeBullet" to="." method="_on_change_bullet_released"]
+[connection signal="pressed" from="CanvasLayer/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="CanvasLayer/right" to="." method="_on_right_pressed"]
+[connection signal="released" from="CanvasLayer/right" to="." method="_on_right_released"]
+[connection signal="pressed" from="CanvasLayer/left" to="." method="_on_left_pressed"]
+[connection signal="released" from="CanvasLayer/left" to="." method="_on_left_released"]
+[connection signal="pressed" from="CanvasLayer/fire" to="." method="_on_fire_pressed"]
+[connection signal="released" from="CanvasLayer/fire" to="." method="_on_fire_released"]
+[connection signal="pressed" from="CanvasLayer/jump" to="." method="_on_jump_pressed"]
+[connection signal="released" from="CanvasLayer/jump" to="." method="_on_jump_released"]

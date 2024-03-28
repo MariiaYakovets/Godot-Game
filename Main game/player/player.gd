@@ -1,7 +1,7 @@
 extends CharacterBody2D
 #class_name Player
 #signal healthChanged
-@onready var HPbar = $Control/CanvasLayer/TextureProgressBar
+@onready var HPbar = $CanvasLayer/TextureProgressBar
 const SPEED = 120.0
 const JUMP_VELOCITY = -300.0
 var jump_multiplier : float = 1
@@ -19,21 +19,25 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var animation_player
 var button_bullet = 'yellow'
 var current_bullet 
-
+@onready var camera: Camera2D = get_node('Camera2D')
 
 func _ready():
 	animation_player = get_node("AnimationPlayer")
 	current_bullet = yellow_bullet
-	
+	if get_parent().name == 'level3_1':
+		camera.limit_bottom = 1100
 func _physics_process(delta):
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		if position.y > 1500:
+			get_tree().change_scene_to_file("res://Main game/main screen/main_game_screen.tscn")
 	#print($Timer.time_left)
 	if Input.is_action_just_pressed("D"):
 		shoot()
 	# Handle jump
-
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	#direction = Input.get_axis("ui_left", "ui_right")
@@ -121,7 +125,7 @@ func _on_child_entered_tree(node):
 		
 func _on_menu_pressed():
 	get_tree().paused = true
-	$"Control/CanvasLayer/Pause menu".visible = true
+	$"CanvasLayer/Pause menu".visible = true
 	
 func _on_right_pressed():
 	direction = 1
@@ -154,4 +158,6 @@ func _on_change_bullet_pressed():
 	elif button_bullet == 'purple':
 		button_bullet = 'yellow'
 		current_bullet = yellow_bullet
-	$Control/CanvasLayer/changeBullet/AnimatedSprite2D2.play(button_bullet)
+	$CanvasLayer/changeBullet/AnimatedSprite2D2.play(button_bullet)
+
+

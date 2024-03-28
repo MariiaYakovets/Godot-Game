@@ -11,8 +11,7 @@ func _process(delta):
 
 func _on_save_pressed():
 	var data
-	print(config.get_section_keys('player'))
-	print(player.get_data_to_save())
+	#print(player.get_data_to_save())
 	#перебрать словарь и записать в конфиг все значения и ключи 
 	config.save('user://save.cfg')
 	

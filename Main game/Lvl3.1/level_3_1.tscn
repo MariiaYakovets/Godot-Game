@@ -42,10 +42,10 @@ texture = ExtResource("2_yvc3o")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Bottom" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1411.15, 365)
+[node name="bg_main" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(1411.15, 0)
 
-[node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/Bottom"]
+[node name="bg" type="TextureRect" parent="ParallaxBackground/bg_main"]
 modulate = Color(0.458824, 0.396078, 0.345098, 1)
 offset_top = 790.0
 offset_right = 1413.0
@@ -55,7 +55,7 @@ expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." instance=ExtResource("4_2pbn3")]
-position = Vector2(186, 363)
+position = Vector2(714, 935)
 
 [node name="jump boost" parent="." instance=ExtResource("5_tyo0f")]
 position = Vector2(503, 333)
